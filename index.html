@@ -1,90 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- skill:chrome -->
-<style>
-/* Credit line — bottom-right */
-.design-ui-credit {
-  position: fixed;
-  bottom: 12px;
-  right: 12px;
-  font: 11px/1 system-ui, sans-serif;
-  color: rgba(128,128,128,0.5);
-  pointer-events: none;
-  z-index: 2147483647;
-  transition: opacity 0.4s ease;
-  user-select: none;
-  letter-spacing: 0.02em;
-}
-
-/* Hide chrome on touch devices */
-@media (hover: none) {
-  .design-ui-credit { display: none; }
-}
-
-/* Print fixes */
-@media print {
-  * {
-    transition: none !important;
-    animation: none !important;
-    box-shadow: none !important;
-  }
-  body {
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-  }
-  .design-ui-credit { display: none !important; }
-}
-
-
-</style>
-<script>
-(function () {
-    // Design-ui pages are single compositions, so the whole body is editable.
-    function markEditable() {
-        document.body.classList.add('artifact-editable');
-    }
-
-    // Credit badge with idle-fade. Hover devices only.
-    function initChromeUI() {
-        if (!matchMedia('(hover: hover)').matches) return;
-
-        var credit = document.createElement('div');
-        credit.className = 'design-ui-credit';
-        credit.setAttribute('aria-hidden', 'true');
-        credit.innerHTML = '\u{1F49C} by ClickUp Brain';
-        document.body.appendChild(credit);
-
-        var timer = null;
-        var fade = function (out) { credit.style.opacity = out ? '0' : ''; };
-        fade(true);
-        var show = function () {
-            fade(false);
-            clearTimeout(timer);
-            timer = setTimeout(function () { fade(true); }, 3000);
-        };
-        document.addEventListener('mousemove', show);
-        show();
-    }
-
-    function init() {
-        markEditable();
-        initChromeUI();
-    }
-
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
-})();
-
-</script>
-<!-- /skill:chrome -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EAP 100: Future Focused — Fall 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -198,6 +120,14 @@ details[open] .week-chevron { transform: rotate(90deg); }
 
 .site-footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 0.8125rem; color: var(--text-muted); text-align: center; }
 
+.info-banner { background: oklch(95% 0.03 285); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 24px; font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.6; }
+.info-banner strong { color: var(--text); }
+
+.faq-item { border-bottom: 1px solid var(--border-light); padding: 16px 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-item summary { font-weight: 600; font-size: 0.9375rem; cursor: pointer; padding: 4px 0; }
+.faq-item p { margin-top: 8px; font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; }
+
 @media (max-width: 640px) {
   .content { padding: 32px 16px 64px; }
   .hero { margin-bottom: 48px; }
@@ -215,646 +145,461 @@ details[open] .week-chevron { transform: rotate(90deg); }
 <body>
 
 <nav class="nav">
-  <div class="nav-inner">
-    <span class="nav-brand">EAP 100</span>
-    <a href="#resources">Resources</a>
-    <a href="#policies">Policies</a>
-    <a href="#faq">FAQ</a>
-    <a href="#assessments">Assessments</a>
-    <a href="#schedule">Weekly Schedule</a>
-    <a href="#instructor">Instructor</a>
-    <select id="week-jump" style="font-size: 0.8125rem; font-weight: 500; padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface); color: var(--text-secondary); cursor: pointer; margin-left: 8px;" onchange="if(this.value){document.getElementById(this.value).scrollIntoView({behavior:'smooth'});document.getElementById(this.value).querySelector('details').open=true;this.selectedIndex=0;}">
-      <option value="">Jump to week…</option>
-      <option value="week-1">Week 1</option>
-      <option value="week-2">Week 2</option>
-      <option value="week-3">Week 3</option>
-      <option value="week-4">Week 4</option>
-      <option value="week-5">Week 5</option>
-      <option value="week-6">Week 6</option>
-      <option value="week-7">Week 7</option>
-      <option value="week-8">Week 8</option>
-      <option value="week-9">Week 9</option>
-      <option value="week-10">Week 10</option>
-      <option value="week-11">Week 11</option>
-      <option value="week-12">Week 12</option>
-      <option value="week-13">Week 13</option>
-      <option value="week-14">Week 14</option>
-    </select>
-  </div>
+<div class="nav-inner">
+<span class="nav-brand">EAP 100</span>
+<a href="#resources">Resources</a>
+<a href="#policies">Policies</a>
+<a href="#faq">FAQ</a>
+<a href="#assessments">Assessments</a>
+<a href="#schedule">Weekly Schedule</a>
+<a href="#instructor">Instructor</a>
+</div>
 </nav>
 
 <main class="content">
 
-  <section class="hero">
-    <p class="hero-eyebrow">NYU Shanghai · English for Academic Purposes</p>
-    <h1>Future Focused</h1>
-    <p class="hero-sub">What will work look like in the future, and how can I prepare for it?</p>
-    <div class="hero-meta">
-      <span><strong>Days:</strong> Tuesdays &amp; Thursdays</span>
-      <span><strong>Sections:</strong> 9:45–11:00 · 11:15–12:30 · 2:15–3:30</span>
-      <span><strong>Room:</strong> EB 219</span>
-      <span><strong>Term:</strong> Fall 2026 (Sep 1 – Dec 13)</span>
-    </div>
-  
-    <div style="margin-top: 20px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-      <a id="go-to-week-btn" style="display: none; align-items: center; gap: 6px; background: var(--accent); color: white; font-size: 0.8125rem; font-weight: 600; padding: 8px 16px; border-radius: 6px; text-decoration: none; cursor: pointer;"></a>
-      <span id="next-deadline" style="display: none; font-size: 0.8125rem; color: var(--text-secondary); background: oklch(94% 0.04 15); padding: 6px 14px; border-radius: 6px;"></span>
-    </div>
+<!-- HERO -->
+<section class="hero">
+<p class="hero-eyebrow">NYU Shanghai &middot; English for Academic Purposes</p>
+<h1>Future Focused</h1>
+<p class="hero-sub">What will work look like in the future, and how can I prepare for it?</p>
+<div class="hero-meta">
+<span><strong>Days:</strong> Tuesdays &amp; Thursdays</span>
+<span><strong>Sections:</strong> 9:45&ndash;11:00 &middot; 11:15&ndash;12:30 &middot; 2:15&ndash;3:30</span>
+<span><strong>Room:</strong> EB 219</span>
+<span><strong>Term:</strong> Fall 2026 (Sep 1 &ndash; Dec 13)</span>
+<span><strong>Workload:</strong> 8&ndash;10 hours/week outside class</span>
+</div>
 </section>
 
-  <div class="quick-links">
-    <a class="quick-link" href="https://brightspace.nyu.edu/d2l/le/lessons/618371/units/13637025" target="_blank" rel="noopener"><span class="ql-icon">🎓</span> Brightspace</a>
-    <a class="quick-link" href="https://drive.google.com/drive/u/0/folders/1axJ_JelR0zhu0Hkz6K2f_SzgJOcYphnQ" target="_blank" rel="noopener"><span class="ql-icon">📁</span> Google Drive Folder</a>
-    <a class="quick-link" href="https://drive.google.com/drive/u/0/folders/1FAPe2Us22fKf7ZyL5GtVwPZWy-LYQS4g" target="_blank" rel="noopener">
-      <span class="ql-icon">📂</span> Your Student Folder
-    </a>
-    <a class="quick-link" href="eap100-deadlines.ics" download style="background: oklch(45% 0.15 155); color: white; border-color: oklch(45% 0.15 155);">
-      <span class="ql-icon">📅</span> Add all deadlines to your calendar
-    </a>
-    <a class="quick-link" href="https://www.eapfoundation.com/" target="_blank" rel="noopener"><span class="ql-icon">🌐</span> EAP Foundation (Skills Support)</a>
-    <a class="quick-link" href="resources.html" style="background: var(--accent); color: white; border-color: var(--accent);">
-      <span class="ql-icon">📚</span> Full Course Materials
-    </a>
-  </div>
+<!-- IMPORTANT DATES BANNER -->
+<div class="info-banner">
+<strong>No classes:</strong> Fri Sep 25 (Mid-Autumn) &middot; Thu Oct 1 &ndash; Wed Oct 7 (National Day) &middot; Thu Nov 26 &ndash; Fri Nov 27 (Thanksgiving)<br>
+<strong>Legislative day:</strong> Sun Nov 8 follows a Thursday schedule. EAP 100 will not meet on this day.
+</div>
 
-  <!-- First Week Checklist -->
-  <div style="background: oklch(94% 0.04 155); border-radius: var(--radius); padding: 24px; margin-bottom: 48px;">
-    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 600; margin-bottom: 12px; color: oklch(30% 0.1 155);">🚀 First Week Checklist</h3>
-    <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 12px;">New here? Complete these before your second class:</p>
-    <ol style="font-size: 0.875rem; color: var(--text-secondary); padding-left: 20px; margin: 0;">
-      <li style="margin-bottom: 6px;">Watch the <strong>Cornell Notes video</strong> (3 min, embedded in Week 1 below)</li>
-      <li style="margin-bottom: 6px;">Set up your <strong>portfolio</strong> (Google Drive folder or notebook)</li>
-      <li style="margin-bottom: 6px;">Complete 3 <strong>CCD online courses</strong> on Brightspace: <a href="https://brightspace.nyu.edu/d2l/le/lessons/111955/units/7012499" target="_blank" rel="noopener" style="color: oklch(30% 0.1 155);">Industry Exploration, Write Your First Winning Resume, Become an Interview Master Today</a> (must be done by end of Week 7)</li>
-      <li style="margin-bottom: 6px;">Read <strong>Reading 1: What Counts as Work?</strong> (in your Reading Packet)</li>
-      <li style="margin-bottom: 6px;">Write your first <strong>DEIP reflection</strong> (~200 words)</li>
-    </ol>
-  </div>
+<!-- QUICK LINKS -->
+<div class="quick-links">
+<a class="quick-link" href="https://brightspace.nyu.edu"><span class="ql-icon">🎓</span> Brightspace</a>
+<a class="quick-link" href="#"><span class="ql-icon">📁</span> Google Drive Folder</a>
+<a class="quick-link" href="#"><span class="ql-icon">📂</span> Your Student Folder</a>
+<a class="quick-link" href="#"><span class="ql-icon">📅</span> Add deadlines to calendar</a>
+<a class="quick-link" href="https://www.eapfoundation.com/"><span class="ql-icon">🌐</span> EAP Foundation</a>
+<a class="quick-link" href="#resources"><span class="ql-icon">📚</span> Full Course Materials</a>
+</div>
 
-  <section id="resources">
-    <div class="section-header" style="display: flex; align-items: center; justify-content: space-between;">
-      <h2>Course Resources</h2>
-      <button onclick="var d=document.getElementById('resources-content');d.style.display=d.style.display==='none'?'block':'none';this.textContent=d.style.display==='none'?'Show documents ▼':'Hide documents ▲';" style="font-size: 0.8125rem; font-weight: 500; padding: 6px 14px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface); color: var(--text-secondary); cursor: pointer;">Hide documents ▲</button>
-    </div>
-    <div id="resources-content">
-    <h4 style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px;">📘 Core Documents</h4>
-    <div class="resources-grid">
-      <a class="resource-item" href="https://drive.google.com/file/d/1vRP-kajqPyvRgkCuQpb3uJphzGXCBFkz/view" target="_blank" rel="noopener">
-        <div class="resource-icon">📘</div>
-        <h3>Student Guide</h3>
-        <p>Course overview, learning outcomes, DEIP framework, and quick-reference reminders</p>
-      </a>
-      <a class="resource-item" href="https://drive.google.com/file/d/1MS2EAyhb-p6U6xTjsgJiwBTY_IyPPlzb/view" target="_blank" rel="noopener">
-        <div class="resource-icon">📋</div>
-        <h3>Assignment Tables</h3>
-        <p>Every task, week by week, with what, why, and how to submit</p>
-      </a>
-      <a class="resource-item" href="https://drive.google.com/file/d/1xqS_h9PwbjGCNKzKH57a2KRfwQairddA/view" target="_blank" rel="noopener">
-        <div class="resource-icon">📂</div>
-        <h3>Portfolio Structure</h3>
-        <p>How to organize your portfolio, artifact selection, and reflection guidance</p>
-      </a><a class="resource-item" href="https://docs.google.com/document/d/1RMW_A-eV3rVe0p3-we9mGKREdnsn26QWvnXd6yf9SDY/edit?usp=drive_link" target="_blank">
-  <div class="resource-icon">📋</div>
-  <h3>Portfolio Assignment Guide</h3>
-  <p>Step-by-step guide for building your portfolio: artifact selection, DEIP reflections, and submission format</p>
-</a>
-      <a class="resource-item" href="https://drive.google.com/file/d/1KWl0o7vzEUDtQexOmiAxFGHU9x96Eh-1/view" target="_blank" rel="noopener">
-        <div class="resource-icon">🎤</div>
-        <h3>Speech &amp; Rubrics</h3>
-        <p>Informative presentation and persuasive speech requirements and marking criteria</p>
-      </a>
-      <a class="resource-item" href="https://drive.google.com/file/d/1BXSS_HB1kSGSsZUiMaL-E3TUWmu4jS_E/view" target="_blank" rel="noopener">
-        <div class="resource-icon">🛠️</div>
-        <h3>Templates &amp; Tools</h3>
-        <p>Cornell notes, DEIP reflection, Planning Guide, CCD Visit Log, and more</p>
-      </a>
-    </div>
-    <h4 style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin: 24px 0 12px;">📖 Reference &amp; Practice</h4>
-    <div class="resources-grid">
-      <a class="resource-item" href="https://drive.google.com/file/d/15pIYF_aa80AERFDN139zF-qr3T7ZS4aW/view" target="_blank" rel="noopener">
-        <div class="resource-icon">📄</div>
-        <h3>Syllabus</h3>
-        <p>Full course policies, grading, attendance, academic integrity, and support</p>
-      </a>
-      <a class="resource-item" href="https://drive.google.com/file/d/1By4YGbt0qzPxoM5Fi7TNYSCZfGXI17kv/view" target="_blank" rel="noopener">
-        <div class="resource-icon">📖</div>
-        <h3>Reading Task Sheets</h3>
-        <p>Weekly reading tasks with guided questions and note-taking formats</p>
-      </a>
-      <a class="resource-item" href="https://drive.google.com/file/d/1ivrdhiXrE4MGP0XZwqqG1wV0OF_dJ51m/view" target="_blank" rel="noopener">
-        <div class="resource-icon">📖</div>
-        <h3>Reading Packet</h3>
-        <p>All 10 course readings with glossaries, comprehension questions, and seminar discussion prompts</p>
-      </a>
-      <a class="resource-item" href="https://drive.google.com/file/d/1Kk79QJWClneBAhS852rihbkEy5DuJnyZ/view" target="_blank" rel="noopener">
-        <div class="resource-icon">📋</div>
-        <h3>Week 8 Meeting Prep Sheet</h3>
-        <p>Mandatory individual meeting: what to bring, self-rating, questions, and action planning</p>
-      </a>
-      <a class="resource-item" href="https://drive.google.com/file/d/1BujC2LGVTgYAsS-26oUj1jNaWjDFH8H8/view" target="_blank" rel="noopener">
-        <div class="resource-icon">📆</div>
-        <h3>Semester Timeline</h3>
-        <p>One-page overview: all assessments, portfolio builds, CCD visits, videos, and readings by week</p>
-      </a>
-      <a class="resource-item" href="https://drive.google.com/file/d/165s3HQmWHKnzbEUu4QwiXKvXfdlIJ5hw/view" target="_blank" rel="noopener">
-        <div class="resource-icon">📊</div>
-        <h3>Assessment Information</h3>
-        <p>Assessment descriptions, weighting, and marking criteria</p>
-      </a>
-      <a class="resource-item" href="https://drive.google.com/file/d/15i5HBf1DSRgx_jc9YHSeEaF4a5Xy3D4R/view" target="_blank" rel="noopener">
-        <div class="resource-icon">📓</div>
-        <h3>Student Workbook</h3>
-        <p>In-class activities, exercises, and structured tasks for each week</p>
-      </a>
-    </div>
-    <h4 style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin: 24px 0 12px;">🎯 CCD &amp; Career</h4>
-    <div class="resources-grid">
-      <a class="resource-item" href="https://docs.google.com/document/d/171CUgMEXdJtxZXIA4YjtDx9iNukZgohDjVY6ozQOps8/edit" target="_blank" rel="noopener">
-        <div class="resource-icon">📋</div>
-        <h3>Experiential Learning Tracker</h3>
-        <p>Track your CCD online courses + 4 in-person visits with DEIP reflections (File → Make a copy)</p>
-      </a>
-      <a class="resource-item" href="https://docs.google.com/spreadsheets/d/1ysEj7phr0nacRE0RJYY2-mwCGUBgTvQ9jJ_cwNH4FLo/edit?gid=1909347099#gid=1909347099" target="_blank" rel="noopener">
-        <div class="resource-icon">📅</div>
-        <h3>CCD Event Calendar</h3>
-        <p>Schedule of Career Development Center events, visits, and deadlines</p>
-      </a>
-      <a class="resource-item" href="https://brightspace.nyu.edu/d2l/le/lessons/111955/units/7012499" target="_blank" rel="noopener">
-        <div class="resource-icon">🎓</div>
-        <h3>CCD Training Modules</h3>
-        <p>Complete by Week 7: Industry Exploration, Write Your First Winning Resume, Become an Interview Master Today</p>
-      </a>
-    </div>
+<!-- FIRST WEEK CHECKLIST -->
+<div class="policies-box">
+<h3>🚀 First Week Checklist</h3>
+<p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:12px;">New here? Complete these before your second class:</p>
+<ol style="font-size:0.875rem; color:var(--text-secondary); padding-left:20px; display:flex; flex-direction:column; gap:8px;">
+<li>Watch the Cornell Notes video (3 min, embedded in Week 1 below)</li>
+<li>Set up your portfolio in your Student Folder on the course Google Drive</li>
+<li>Begin the <a href="https://brightspace.nyu.edu/d2l/home/111955">Career Development Online Course</a> on Brightspace (must be completed by end of Week 7)</li>
+<li>Read Reading 1: What Counts as Work? (in your Reading Packet)</li>
+<li>Write your first DEIP reflection (~200 words)</li>
+</ol>
+</div>
 
-    </div>
+<!-- RESOURCES -->
+<div class="section-header" id="resources">
+<h2>Course Resources</h2>
+</div>
 
-    <!-- CCD Recommended Visit Schedule -->
-    <div style="background: oklch(96% 0.02 80); border-radius: var(--radius); padding: 24px; margin-top: 24px;">
-      <h3 style="font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 600; margin-bottom: 14px;">Mandatory CCD In-Person Attendance</h3>
-      <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 14px;">Experiential learning has two parts: <strong>online courses</strong> (Brightspace) and <strong>in-person attendance</strong> (4 events). Both are mandatory.</p>
-      <h4 style="font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: var(--text-muted); margin: 16px 0 8px;">💻 Online (Brightspace) — complete by end of Week 7</h4>
-      <div style="background: oklch(94% 0.03 285); border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; font-size: 0.8125rem;">
-        <p style="margin: 0;">Complete all 3 courses at <a href="https://brightspace.nyu.edu/d2l/le/lessons/111955/units/7012499" target="_blank" rel="noopener" style="color: var(--accent); font-weight: 500;">CCD CareerLab on Brightspace</a>:</p>
-        <ol style="margin: 8px 0 0; padding-left: 20px;">
-          <li style="margin-bottom: 4px;"><strong>Industry Exploration</strong> — Connect Your Interests to Society</li>
-          <li style="margin-bottom: 4px;"><strong>Write Your First Winning Resume</strong></li>
-          <li style="margin-bottom: 4px;"><strong>Become an Interview Master Today</strong></li>
-        </ol>
-      </div>
-      <h4 style="font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: var(--text-muted); margin: 16px 0 8px;">🏢 In-Person (4 visits required)</h4>
-      <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 14px;">Attend all 4 events below and write a reflection log for each.</p>
-      <table style="width: 100%; border-collapse: collapse; font-size: 0.875rem;">
-        <tr style="border-bottom: 2px solid oklch(85% 0.03 80);"><th style="text-align: left; padding: 8px;">Visit</th><th style="text-align: left; padding: 8px;">Requirement</th><th style="text-align: left; padding: 8px;">Details</th></tr>
-        <tr style="border-bottom: 1px solid oklch(90% 0.02 80);"><td style="padding: 8px; font-weight: 600;">1</td><td style="padding: 8px;">Career Coaching Session</td><td style="padding: 8px;">Book on <a href="https://app.joinhandshake.com/login" target="_blank" rel="noopener" style="color: var(--accent);">Handshake</a>. Refine your interests, explore opportunities, get feedback.</td></tr>
-        <tr style="border-bottom: 1px solid oklch(90% 0.02 80);"><td style="padding: 8px; font-weight: 600;">2</td><td style="padding: 8px;">Fall Career Fair</td><td style="padding: 8px;">Fri Oct 16, 2:30–5:30 PM, E901–904. Attend and engage with employers.</td></tr>
-        <tr style="border-bottom: 1px solid oklch(90% 0.02 80);"><td style="padding: 8px; font-weight: 600;">3</td><td style="padding: 8px;">CCD Open House (any one)</td><td style="padding: 8px;">Attend 1 Open House event (listed in yellow on the <a href="https://docs.google.com/spreadsheets/d/1ysEj7phr0nacRE0RJYY2-mwCGUBgTvQ9jJ_cwNH4FLo/edit?gid=1909347099#gid=1909347099" target="_blank" rel="noopener" style="color: var(--accent);">CCD Calendar</a>).</td></tr>
-        <tr><td style="padding: 8px; font-weight: 600;">4</td><td style="padding: 8px;">1 event of your choice (1–2 hours)</td><td style="padding: 8px;">Any CCD event from the calendar. Choose something relevant to your interests or career goals.</td></tr>
-      </table>
-    </div>
-    </div>
-  </section>
+<h4 style="font-size:0.8125rem; font-weight:600; letter-spacing:0.03em; text-transform:uppercase; color:var(--text-muted); margin-bottom:12px;">📘 Core Documents</h4>
+<div class="resources-grid">
+<a class="resource-item" href="https://drive.google.com/file/d/1vRP-kajqPyvRgkCuQpb3uJphzGXCBFkz/view"><div class="resource-icon">📘</div><h3>Student Guide</h3><p>Course overview, learning outcomes, DEIP framework, and quick-reference reminders</p></a>
+<a class="resource-item" href="https://drive.google.com/file/d/1MS2EAyhb-p6U6xTjsgJiwBTY_IyPPlzb/view"><div class="resource-icon">📋</div><h3>Assignment Tables</h3><p>Every task, week by week, with what, why, and how to submit</p></a>
+<a class="resource-item" href="https://drive.google.com/file/d/1xqS_h9PwbjGCNKzKH57a2KRfwQairddA/view"><div class="resource-icon">📂</div><h3>Portfolio Structure</h3><p>How to organize your portfolio, artifact selection, and reflection guidance</p></a>
+<a class="resource-item" href="https://drive.google.com/file/d/1KWl0o7vzEUDtQexOmiAxFGHU9x96Eh-1/view"><div class="resource-icon">🎤</div><h3>Speech &amp; Rubrics</h3><p>Informative presentation and persuasive speech requirements and marking criteria</p></a>
+<a class="resource-item" href="https://drive.google.com/file/d/1BXSS_HB1kSGSsZUiMaL-E3TUWmu4jS_E/view"><div class="resource-icon">🛠️</div><h3>Templates &amp; Tools</h3><p>Cornell notes, DEIP reflection, Planning Guide, and more</p></a>
+</div>
 
-  <section id="policies">
-    <div class="section-header"><h2>Class Policies</h2></div>
-    <div class="policies-box">
-      <h3>Quick Reminders</h3>
-      <ul class="policies-list">
-        <li><span class="p-icon">❓</span><span><strong>Ask questions in the moment.</strong> Do not wait until the end of class. If something is unclear, raise your hand or speak up right away.</span></li>
-        <li><span class="p-icon">🗣️</span><span><strong>Check information with your instructor.</strong> You are welcome to speak to classmates, but do not assume what they tell you is correct. When in doubt, ask me directly.</span></li>
-        <li><span class="p-icon">📅</span><span><strong>Office hours:</strong> Walk-in on Tuesdays, 13:00–14:15 (Room N745). For other times, <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0rjJ8XF-q-2kit7hcXn-3nWBfnCGxBwpqnpDtJiHclYi-ZuQouLjw9ImkdU6HGePFv4kvFpue5" target="_blank" rel="noopener">book an appointment</a> at least 24 hours in advance.</span></li>
-      </ul>
-    </div>
-  </section>
+<h4 style="font-size:0.8125rem; font-weight:600; letter-spacing:0.03em; text-transform:uppercase; color:var(--text-muted); margin-bottom:12px;">📖 Reference &amp; Practice</h4>
+<div class="resources-grid">
+<a class="resource-item" href="https://drive.google.com/file/d/15pIYF_aa80AERFDN139zF-qr3T7ZS4aW/view"><div class="resource-icon">📄</div><h3>Syllabus</h3><p>Full course policies, grading, attendance, academic integrity, and support</p></a>
+<a class="resource-item" href="https://drive.google.com/file/d/1By4YGbt0qzPxoM5Fi7TNYSCZfGXI17kv/view"><div class="resource-icon">📖</div><h3>Reading Task Sheets</h3><p>Weekly reading tasks with guided questions and note-taking formats</p></a>
+<a class="resource-item" href="#"><div class="resource-icon">📖</div><h3>Reading Packet</h3><p>All 10 course readings with glossaries, comprehension questions, and discussion prompts</p></a>
+<a class="resource-item" href="#"><div class="resource-icon">📋</div><h3>Week 8 Meeting Prep Sheet</h3><p>Mandatory individual meeting: what to bring, self-rating, questions, and action planning</p></a>
+<a class="resource-item" href="#"><div class="resource-icon">📆</div><h3>Semester Timeline</h3><p>One-page overview: all assessments, portfolio builds, CCD visits, videos, and readings by week</p></a>
+<a class="resource-item" href="https://drive.google.com/file/d/165s3HQmWHKnzbEUu4QwiXKvXfdlIJ5hw/view"><div class="resource-icon">📊</div><h3>Assessment Information</h3><p>Assessment descriptions, weighting, and marking criteria</p></a>
+<a class="resource-item" href="https://drive.google.com/file/d/15i5HBf1DSRgx_jc9YHSeEaF4a5Xy3D4R/view"><div class="resource-icon">📓</div><h3>Student Workbook</h3><p>In-class activities, exercises, and structured tasks for each week</p></a>
+</div>
 
-  <section id="faq">
-    <div class="section-header"><h2>FAQ</h2></div>
-    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 48px;">
-      <details style="margin-bottom: 16px;">
-        <summary style="font-weight: 600; font-size: 0.9375rem; cursor: pointer; padding: 8px 0;">Where do I submit my work?</summary>
-        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 8px; padding-left: 4px;">Upload all assignments to <a href="https://drive.google.com/drive/u/0/folders/1FAPe2Us22fKf7ZyL5GtVwPZWy-LYQS4g" target="_blank" rel="noopener" style="color: var(--accent);">Your Student Folder</a> on Google Drive. Use the week label from the assignment (e.g., "Week 1 Reading 1 Paragraph"). Keep a copy of portfolio-related work in your portfolio.</p>
-      </details>
-      <details style="margin-bottom: 16px;">
-        <summary style="font-weight: 600; font-size: 0.9375rem; cursor: pointer; padding: 8px 0;">How do I book office hours?</summary>
-        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 8px; padding-left: 4px;"><strong>Walk-in:</strong> Tuesdays, 13:00–14:15, Room N745. No appointment needed, first come first served.<br><strong>By appointment:</strong> <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0rjJ8XF-q-2kit7hcXn-3nWBfnCGxBwpqnpDtJiHclYi-ZuQouLjw9ImkdU6HGePFv4kvFpue5" target="_blank" rel="noopener" style="color: var(--accent);">Book here</a> at least 24 hours in advance for other times.</p>
-      </details>
-      <details style="margin-bottom: 16px;">
-        <summary style="font-weight: 600; font-size: 0.9375rem; cursor: pointer; padding: 8px 0;">What if I miss a class?</summary>
-        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 8px; padding-left: 4px;">You have 2 free absences (no explanation needed). For each absence, check with a classmate about what was covered. 3 absences = participation deduction. 4 = F for participation. 5 = course failure. If you know in advance, notify me before class.</p>
-      </details>
-      <details style="margin-bottom: 16px;">
-        <summary style="font-weight: 600; font-size: 0.9375rem; cursor: pointer; padding: 8px 0;">What if my assignment is late?</summary>
-        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 8px; padding-left: 4px;">5% deducted per day late. Not accepted after 7 days. If you have extenuating circumstances, email me <strong>before</strong> the due date. An absence does not excuse a late submission.</p>
-      </details>
-      <details>
-        <summary style="font-weight: 600; font-size: 0.9375rem; cursor: pointer; padding: 8px 0;">Can I use AI tools for assignments?</summary>
-        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 8px; padding-left: 4px;">AI use is sometimes restricted and task-specific. Your instructor will tell you when AI is permitted. Submitting AI-generated content as your own work is never allowed. When AI use is permitted, you must include an AI disclosure statement. See the Syllabus for full details.</p>
-      </details>
-    </div>
-  </section>
+<h4 style="font-size:0.8125rem; font-weight:600; letter-spacing:0.03em; text-transform:uppercase; color:var(--text-muted); margin-bottom:12px;">🎯 CCD &amp; Career</h4>
+<div class="resources-grid">
+<a class="resource-item" href="#"><div class="resource-icon">📋</div><h3>Experiential Learning Tracker</h3><p>Track your Career Development Online Course + 4 in-person visits with reflections (File &rarr; Make a copy)</p></a>
+<a class="resource-item" href="#"><div class="resource-icon">📅</div><h3>CCD Event Calendar</h3><p>Schedule of Career Development Center events, visits, and deadlines</p></a>
+<a class="resource-item" href="https://brightspace.nyu.edu/d2l/home/111955"><div class="resource-icon">🎓</div><h3>Career Development Online Course</h3><p>Complete by end of Week 7 on Brightspace</p></a>
+</div>
 
-  <section id="assessments">
-    <div class="section-header"><h2>Assessment Overview</h2></div>
-    <table class="assessment-table">
-      <thead><tr><th>Assessment</th><th>When</th><th>Weight</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Listening Exam 1</strong></td><td>Week 6 (Oct 13/15)</td><td><span class="weight-badge exam">20%</span></td></tr>
-        <tr><td><strong>Informative Presentation</strong></td><td>Week 7 (Oct 20/22)</td><td><span class="weight-badge speech">20%</span></td></tr>
-        <tr><td><strong>Listening Exam 2</strong></td><td>Week 13 (Dec 1)</td><td><span class="weight-badge exam">20%</span></td></tr>
-        <tr><td><strong>Persuasive Speech</strong></td><td>Week 12 (Nov 24)</td><td><span class="weight-badge speech">20%</span></td></tr>
-        <tr><td><strong>Final Portfolio</strong></td><td>Sun Dec 13</td><td><span class="weight-badge">10%</span></td></tr>
-        <tr><td><strong>Participation</strong></td><td>Ongoing</td><td><span class="weight-badge">10%</span></td></tr>
-      </tbody>
-    </table>
-  </section>
+<!-- CCD SECTION -->
+<div class="policies-box">
+<h3>Mandatory CCD Engagement</h3>
+<p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:14px;">Experiential learning has two parts: the online course (Brightspace) and in-person attendance (4 visits). Both are mandatory. All CCD visits take place at <strong>Room W309</strong>.</p>
 
-  <section id="schedule">
-    <div class="section-header"><h2>Weekly Schedule</h2></div>
+<h4 style="font-size:0.8125rem; font-weight:600; margin:16px 0 8px;">💻 Online (Brightspace) &mdash; complete by end of Week 7</h4>
+<p style="font-size:0.875rem; color:var(--text-secondary);">Complete the full <a href="https://brightspace.nyu.edu/d2l/home/111955">Career Development Online Course</a> on Brightspace.</p>
 
-    <!-- Semester Timeline -->
-    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 24px; overflow-x: auto;">
-      <h4 style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px;">Semester at a Glance</h4>
-      <div style="display: flex; gap: 2px; min-width: 700px;">
-        <div style="flex:1; text-align:center; padding: 8px 4px; background: oklch(94% 0.03 285); border-radius: 4px; font-size: 0.625rem;"><div style="font-weight:700;">W1</div><div style="color:var(--text-muted);">Setup</div></div>
-        <div style="flex:1; text-align:center; padding: 8px 4px; background: oklch(94% 0.03 80); border-radius: 4px; font-size: 0.625rem;"><div style="font-weight:700;">W2</div><div style="color:var(--text-muted);">CCD 1</div></div>
-        <div style="flex:1; text-align:center; padding: 8px 4px; background: oklch(94% 0.03 285); border-radius: 4px; font-size: 0.625rem;"><div style="font-weight:700;">W3</div><div style="color:var(--text-muted);">Build 1</div></div>
-        <div style="flex:1; text-align:center; padding: 8px 4px; background: oklch(96% 0.01 285); border-radius: 4px; font-size: 0.625rem;"><div style="font-weight:700;">W4</div><div style="color:var(--text-muted);"></div></div>
-        <div style="flex:1; text-align:center; padding: 8px 4px; background: oklch(92% 0.03 200); border-radius: 4px; font-size: 0.625rem;"><div style="font-weight:700;">W5</div><div style="color:var(--text-muted);">Break</div></div>
-        <div style="flex:1; text-align:center; padding: 8px 4px; background: oklch(92% 0.05 15); border-radius: 4px; font-size: 0.625rem;"><div style="font-weight:700; color: oklch(45% 0.15 15);">W6</div><div style="color:oklch(45% 0.15 15);">Exam 1</div></div>
-        <div style="flex:1; text-align:center; padding: 8px 4px; background: oklch(92% 0.05 155); border-radius: 4px; font-size: 0.625rem;"><div style="font-weight:700; color: oklch(40% 0.12 155);">W7</div><div style="color:oklch(40% 0.12 155);">Speech 1</div></div>
-        <div style="flex:1; text-align:center; padding: 8px 4px; background: oklch(94% 0.03 50); border-radius: 4px; font-size: 0.625rem;"><div style="font-weight:700;">W8</div><div style="color:var(--text-muted);">Meeting</div></div>
-        <div style="flex:1; text-align:center; padding: 8px 4px; background: oklch(96% 0.01 285); border-radius: 4px; font-size: 0.625rem;"><div style="font-weight:700;">W9</div><div style="color:var(--text-muted);">Prep</div></div>
-        <div style="flex:1; text-align:center; padding: 8px 4px; background: oklch(96% 0.01 285); border-radius: 4px; font-size: 0.625rem;"><div style="font-weight:700;">W10</div><div style="color:var(--text-muted);"></div></div>
-        <div style="flex:1; text-align:center; padding: 8px 4px; background: oklch(94% 0.03 285); border-radius: 4px; font-size: 0.625rem;"><div style="font-weight:700;">W11</div><div style="color:var(--text-muted);">Build 3</div></div>
-        <div style="flex:1; text-align:center; padding: 8px 4px; background: oklch(92% 0.05 155); border-radius: 4px; font-size: 0.625rem;"><div style="font-weight:700; color: oklch(40% 0.12 155);">W12</div><div style="color:oklch(40% 0.12 155);">Speech 2</div></div>
-        <div style="flex:1; text-align:center; padding: 8px 4px; background: oklch(92% 0.05 15); border-radius: 4px; font-size: 0.625rem;"><div style="font-weight:700; color: oklch(45% 0.15 15);">W13</div><div style="color:oklch(45% 0.15 15);">Exam 2</div></div>
-        <div style="flex:1; text-align:center; padding: 8px 4px; background: oklch(92% 0.05 285); border-radius: 4px; font-size: 0.625rem;"><div style="font-weight:700; color: var(--accent);">W14</div><div style="color:var(--accent);">Showcase</div></div>
-      </div>
-    </div>
+<h4 style="font-size:0.8125rem; font-weight:600; margin:16px 0 8px;">🏢 In-Person &mdash; CCD, Room W309 (4 visits required)</h4>
+<p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:10px;">Attend all 4 visits and write a reflection for each.</p>
+<table style="width:100%; font-size:0.8125rem; border-collapse:collapse;">
+<tr style="border-bottom:1px solid var(--border);"><th style="text-align:left; padding:8px; font-weight:600;">Visit</th><th style="text-align:left; padding:8px; font-weight:600;">When</th><th style="text-align:left; padding:8px; font-weight:600;">Details</th></tr>
+<tr style="border-bottom:1px solid var(--border-light);"><td style="padding:8px;">1</td><td style="padding:8px;">Week 2</td><td style="padding:8px;">Mandatory open-house visit. Write Reflection 1.</td></tr>
+<tr style="border-bottom:1px solid var(--border-light);"><td style="padding:8px;">2</td><td style="padding:8px;">Week 6</td><td style="padding:8px;">Career Fair sessions. Write Reflection 2.</td></tr>
+<tr style="border-bottom:1px solid var(--border-light);"><td style="padding:8px;">3</td><td style="padding:8px;">Week 8</td><td style="padding:8px;">Professional interaction visit. Write Reflection 3.</td></tr>
+<tr><td style="padding:8px;">4</td><td style="padding:8px;">Week 11</td><td style="padding:8px;">Employability and self-presentation. Write Reflection 4.</td></tr>
+</table>
 
-    <div class="week-module" id="week-1"><details><summary><span class="week-num">Week 1</span><span class="week-title">What Counts as Work?</span><span class="week-dates">Sep 1 / Sep 3</span><span class="week-badges"><span class="badge badge-portfolio">Portfolio Setup</span></span><svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></summary>
-      <div class="week-content">
-        <h4>Reading &amp; Writing</h4>
-        <ul class="task-list"><li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 1 Paragraph</strong><div class="desc">Read "What Counts as Work?" and write a 200–250 word paragraph defining work more broadly than paid employment, using 2+ ideas from the reading.</div><div class="submit">Submit to Student Folder → Week 1; copy to portfolio</div></div></li></ul>
-        <h4>Listening</h4>
-        <ul class="task-list"><li><span class="task-icon">🎧</span><div class="task-detail"><strong>Video 1 (Sugata Mitra, "The Future of Work"): Cornell Notes + Vocabulary</strong><div class="desc">Watch the video, take Cornell listening notes, choose 5–10 academic vocabulary words and write brief meanings.</div><div class="submit">Submit to Student Folder → Week 1 Listening</div></div></li></ul>
-                <a href="https://www.youtube.com/watch?v=nX-xshA_0m8" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; background: var(--accent-light); border-radius: 8px; padding: 14px 16px; margin: 12px 0 16px; text-decoration: none; transition: opacity 200ms;"><span style="font-size: 1.5rem;">▶️</span><span style="flex: 1;"><strong style="color: var(--text); font-size: 0.875rem;">How to Use Cornell Notes</strong><br><span style="font-size: 0.75rem; color: var(--text-muted);">Cornell University</span></span><span style="font-size: 0.8125rem; color: var(--text-muted); white-space: nowrap;">3 min</span></a>
-        <a href="https://www.youtube.com/watch?v=jrH3_NANVJA" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; background: var(--accent-light); border-radius: 8px; padding: 14px 16px; margin: 12px 0 16px; text-decoration: none; transition: opacity 200ms;"><span style="font-size: 1.5rem;">▶️</span><span style="flex: 1;"><strong style="color: var(--text); font-size: 0.875rem;">Sugata Mitra: The Future of Work</strong><br><span style="font-size: 0.75rem; color: var(--text-muted);">TEDxNIITUniversity</span></span><span style="font-size: 0.8125rem; color: var(--text-muted); white-space: nowrap;">~18 min</span></a>
-        <h4>CCD Online Courses (Experiential Learning)</h4>
-        <ul class="task-list"><li><span class="task-icon">🎓</span><div class="task-detail"><strong>Complete 3 CCD Brightspace courses</strong><div class="desc">Go to <a href="https://brightspace.nyu.edu/d2l/le/lessons/111955/units/7012499" target="_blank" rel="noopener" style="color: var(--accent);">CCD CareerLab on Brightspace</a> and complete: (1) Industry Exploration: Connect Your Interests to Society, (2) Write Your First Winning Resume, (3) Become an Interview Master Today.</div><div class="submit" style="color: oklch(50% 0.16 15); font-style: normal; font-weight: 600;">⚠️ Must be completed by end of Week 7 (Oct 22). Start now, do not leave until the last week.</div></div></li></ul>
-        <h4>Portfolio &amp; Reflection</h4>
-        <ul class="task-list">
-          <li><span class="task-icon">📂</span><div class="task-detail"><strong>Portfolio Setup &amp; Orientation Notes</strong><div class="desc">Create your EAP 100 portfolio and write 5–10 bullet points about what you think the course is about and your initial goals.</div></div></li>
-          <li><span class="task-icon">✍️</span><div class="task-detail"><strong>DEIP Reflection: Past Work/English Experience</strong><div class="desc">Write a ~200 word DEIP reflection on one past experience of work or English learning.</div><div class="submit">Submit to Student Folder → Week 1 DEIP Reflection; copy to portfolio</div></div></li>
-        </ul>
-      </div>
-    </details></div>
+<p style="font-size:0.8125rem; color:var(--text-muted); margin-top:12px; font-style:italic;">If you miss a scheduled CCD visit, check the CCD calendar for alternative events, speak directly to the CCD to arrange attendance, and then inform your instructor.</p>
+</div>
 
-    <div class="week-module" id="week-2"><details><summary><span class="week-num">Week 2</span><span class="week-title">Learning for the Future Workplace</span><span class="week-dates">Sep 8 / Sep 10</span><span class="week-badges"><span class="badge badge-ccd">CCD Visit 1</span></span><svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></summary>
-      <div class="week-content">
-        <h4>Reading &amp; Writing</h4>
-        <ul class="task-list"><li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 2 Two-Column Notes</strong><div class="desc">Create a two-column chart: main claims about future-ready learning and how each connects to EAP 100.</div></div></li></ul>
-        <h4>Listening</h4>
-        <ul class="task-list"><li><span class="task-icon">🎧</span><div class="task-detail"><strong>Video 2 (Brynjolfsson, "Race with the Machines"): Cornell Notes + Vocabulary</strong><div class="desc">Watch video, take Cornell notes, record 5–10 vocabulary words about technology, productivity, and work.</div></div></li></ul>
-        <a href="https://www.youtube.com/watch?v=sod-eJBf9Y0" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; background: var(--accent-light); border-radius: 8px; padding: 14px 16px; margin: 12px 0 16px; text-decoration: none; transition: opacity 200ms;"><span style="font-size: 1.5rem;">▶️</span><span style="flex: 1;"><strong style="color: var(--text); font-size: 0.875rem;">Erik Brynjolfsson: The Key to Growth? Race with the Machines</strong><br><span style="font-size: 0.75rem; color: var(--text-muted);">TED2013</span></span><span style="font-size: 0.8125rem; color: var(--text-muted); white-space: nowrap;">12:01</span></a>
-        <h4>CCD &amp; Self-Management</h4>
-        <ul class="task-list">
-          <li><span class="task-icon">🏢</span><div class="task-detail"><strong>CCD Visit 1 Reflection</strong><div class="desc">Attend CCD open-house visit, write 150–200 word reflection on what you learned.</div></div></li>
-          <li><span class="task-icon">⏱️</span><div class="task-detail"><strong>Homework Time Tracking &amp; Mini-Reflection</strong><div class="desc">Track your EAP homework time for one week, write 100–150 words on what took longest.</div></div></li>
-          <li><span class="task-icon">📝</span><div class="task-detail"><strong>EAP Planning Guide (Part 1)</strong><div class="desc">Complete sections on goals, weekly schedule, and known busy periods.</div></div></li>
-        </ul>
-      </div>
-    </details></div>
+<!-- POLICIES -->
+<div class="section-header" id="policies">
+<h2>Class Policies</h2>
+</div>
 
-    <div class="week-module" id="week-3"><details><summary><span class="week-num">Week 3</span><span class="week-title">Future-Proofing Your Career</span><span class="week-dates">Sep 15 / Sep 17</span><span class="week-badges"><span class="badge badge-portfolio">Portfolio Build 1</span></span><svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></summary>
-      <div class="week-content">
-        <h4>Reading &amp; Writing</h4>
-        <ul class="task-list"><li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 3 Guided Notes</strong><div class="desc">Complete guided note sheet with key ideas, examples, and questions.</div></div></li></ul>
-        <h4>Listening</h4>
-        <ul class="task-list"><li><span class="task-icon">🎧</span><div class="task-detail"><strong>Video 3 (Jacob Morgan, "Future-Proof Your Career"): Cornell Notes + Vocabulary</strong><div class="desc">Cornell notes + 5–10 vocabulary words about adaptability, skills, and careers.</div></div></li></ul>
-        <a href="https://www.youtube.com/watch?v=7ANNusBBWsg" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; background: var(--accent-light); border-radius: 8px; padding: 14px 16px; margin: 12px 0 16px; text-decoration: none; transition: opacity 200ms;"><span style="font-size: 1.5rem;">▶️</span><span style="flex: 1;"><strong style="color: var(--text); font-size: 0.875rem;">Jacob Morgan: How to Future-Proof Your Career</strong><br><span style="font-size: 0.75rem; color: var(--text-muted);">TEDxAcademy</span></span><span style="font-size: 0.8125rem; color: var(--text-muted); white-space: nowrap;">~15 min</span></a>
-        <h4>Portfolio</h4>
-        <ul class="task-list"><li><span class="task-icon">📂</span><div class="task-detail"><strong>Portfolio Build 1</strong><div class="desc">Choose 2–3 early artifacts and write a 250–300 word DEIP reflection on what they show about your learning.</div></div></li></ul>
-      </div>
-    </details></div>
+<div class="policies-box">
+<h3>Quick Reminders</h3>
+<ul class="policies-list">
+<li><span class="p-icon">❓</span> <strong>Ask questions in the moment.</strong> Do not wait until the end of class. If something is unclear, raise your hand or speak up right away.</li>
+<li><span class="p-icon">🗣️</span> <strong>Check information with your instructor.</strong> You are welcome to speak to classmates, but do not assume what they tell you is correct. When in doubt, ask me directly.</li>
+<li><span class="p-icon">📅</span> <strong>Office hours:</strong> Walk-in on Tuesdays, 13:00&ndash;14:15 (Room N745). For other times, book an appointment at least 24 hours in advance.</li>
+<li><span class="p-icon">🤖</span> <strong>AI policy:</strong> Submitting AI-generated content as your own work is never allowed. When AI use is permitted on a task, you must include a disclosure statement. Your instructor will tell you when AI is permitted.</li>
+</ul>
+</div>
 
-    <div class="week-module" id="week-4"><details><summary><span class="week-num">Week 4</span><span class="week-title">Technology, AI, and the Changing Workplace</span><span class="week-dates">Sep 22 / Sep 24</span><span class="week-badges"></span><svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></summary>
-      <div class="week-content">
-        <h4>Reading &amp; Writing</h4>
-        <ul class="task-list"><li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 4 Source-Based Questions</strong><div class="desc">Answer source-based question set about technology, AI, and the changing workplace.</div></div></li></ul>
-        <h4>Listening</h4>
-        <ul class="task-list"><li><span class="task-icon">🎧</span><div class="task-detail"><strong>Video 4 (Rainer Strack, "Workforce Crisis of 2030"): Cornell Notes + Vocabulary</strong><div class="desc">Cornell notes + 5–10 vocabulary words related to demographics and labour markets.</div></div></li></ul>
-        <a href="https://www.youtube.com/watch?v=ux1GxExRUUY" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; background: var(--accent-light); border-radius: 8px; padding: 14px 16px; margin: 12px 0 16px; text-decoration: none; transition: opacity 200ms;"><span style="font-size: 1.5rem;">▶️</span><span style="flex: 1;"><strong style="color: var(--text); font-size: 0.875rem;">Rainer Strack: The Workforce Crisis of 2030</strong><br><span style="font-size: 0.75rem; color: var(--text-muted);">TED@BCG</span></span><span style="font-size: 0.8125rem; color: var(--text-muted); white-space: nowrap;">12:47</span></a>
-      </div>
-    </details></div>
+<!-- FAQ -->
+<div class="section-header" id="faq">
+<h2>FAQ</h2>
+</div>
 
-    <div class="week-module" id="week-5"><details><summary><span class="week-num">Week 5</span><span class="week-title">Transferable Skills &amp; Employability</span><span class="week-dates">Sep 29 – Oct 8</span><span class="week-badges"><span class="badge" style="background: oklch(92% 0.04 200); color: oklch(40% 0.12 200);">Break Week</span></span><svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></summary>
-      <div class="week-content">
-        <h4>Independent Work (due before Week 6)</h4>
-        <ul class="task-list">
-          <li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 5 Pre-Listening Task</strong><div class="desc">Predict main ideas, highlight key vocabulary, write 2–3 questions to prepare for Listening Exam 1.</div></div></li>
-          <li><span class="task-icon">🎧</span><div class="task-detail"><strong>Listening Exam Practice</strong><div class="desc">Complete practice tasks with Cornell notes and 5–10 vocabulary words for at least one recording.</div></div></li>
-          <li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 6: Relevant Information Task</strong><div class="desc">Short task identifying key vs. extra information in listening situations.</div></div></li>
-        </ul>
-      </div>
-        <div style="background: oklch(94% 0.04 15); border-radius: 8px; padding: 16px; margin-top: 16px; font-size: 0.8125rem;">
-          <strong style="color: oklch(45% 0.15 15);">🎯 Listening Exam 1 Prep Checklist:</strong>
-          <ul style="margin: 8px 0 0; padding-left: 18px; color: var(--text-secondary);">
-            <li>Reviewed Cornell notes from Videos 1–4</li>
-            <li>Practised identifying main points vs. supporting details</li>
-            <li>Completed the listening practice recording with time stamps</li>
-            <li>Can write a 3–5 sentence summary after one listen</li>
-            <li>Know 30+ academic vocabulary words from Weeks 1–4</li>
-          </ul>
-        </div>
-    </details></div>
+<details class="faq-item"><summary>Where do I submit my work?</summary><p>Upload all assignments to your Student Folder on the course Google Drive. Use the week label from the assignment (e.g., "Week 1 Reading 1 Paragraph"). Keep a copy of portfolio-related work in your portfolio.</p></details>
 
-    <div class="week-module" id="week-6"><details><summary><span class="week-num">Week 6</span><span class="week-title">Automation and Labour</span><span class="week-dates">Oct 13 / Oct 15</span><span class="week-badges"><span class="badge badge-exam">Listening Exam 1</span><span class="badge badge-ccd">CCD Visit 2</span></span><svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></summary>
-      <div class="week-content">
-        <h4>Assessment</h4>
-        <ul class="task-list"><li><span class="task-icon">🔴</span><div class="task-detail"><strong>Listening Exam 1 (20%)</strong><div class="desc">In-class exam: ~20 min academic lecture, short answers, true-false, synthesis question.</div></div></li></ul>
-        <h4>Reading &amp; Listening</h4>
-        <ul class="task-list">
-          <li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 7 Short Response</strong><div class="desc">3 key points + 1 question.</div></div></li>
-          <li><span class="task-icon">🎧</span><div class="task-detail"><strong>Video 5 (David Autor, "Will Automation Take Away All Our Jobs?"): Cornell Notes + Vocabulary</strong><div class="desc">Automation and labour vocabulary.</div></div></li>
-        </ul>
-        <a href="https://www.youtube.com/watch?v=th3nnEpITz0" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; background: var(--accent-light); border-radius: 8px; padding: 14px 16px; margin: 12px 0 16px; text-decoration: none; transition: opacity 200ms;"><span style="font-size: 1.5rem;">▶️</span><span style="flex: 1;"><strong style="color: var(--text); font-size: 0.875rem;">David Autor: Will Automation Take Away All Our Jobs?</strong><br><span style="font-size: 0.75rem; color: var(--text-muted);">TEDxCambridge</span></span><span style="font-size: 0.8125rem; color: var(--text-muted); white-space: nowrap;">18:24</span></a>
-        <h4>CCD</h4>
-        <ul class="task-list"><li><span class="task-icon">🏢</span><div class="task-detail"><strong>CCD Visit 2 Reflection</strong><div class="desc">150–200 word reflection connecting visit to portfolio and future plans.</div></div></li></ul>
-      </div>
-    </details></div>
+<details class="faq-item"><summary>How do I book office hours?</summary><p>Walk-in: Tuesdays, 13:00&ndash;14:15, Room N745. No appointment needed, first come first served. By appointment: <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0rjJ8XF-q-2kit7hcXn-3nWBfnCGxBwpqnpDtJiHclYi-ZuQouLjw9ImkdU6HGePFv4kvFpue5">Book here</a> at least 24 hours in advance.</p></details>
 
-    <div class="week-module" id="week-7"><details><summary><span class="week-num">Week 7</span><span class="week-title">AI and the Future of Jobs</span><span class="week-dates">Oct 20 / Oct 22</span><span class="week-badges"><span class="badge badge-speech">Informative Presentation</span><span class="badge badge-portfolio">Portfolio Build 2</span></span><svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></summary>
-      <div class="week-content">
-        <h4>Assessment</h4>
-        <ul class="task-list"><li><span class="task-icon">🟢</span><div class="task-detail"><strong>Informative Presentation (20%)</strong><div class="desc">3–4 min informative presentation. Explain one topic, define key terms, 2–3 sources with oral citations, 3 visual aids, signposting, answer 1+ audience question.</div></div></li></ul>
-        <h4>Listening (homework)</h4>
-        <ul class="task-list"><li><span class="task-icon">🎧</span><div class="task-detail"><strong>Video 7 (Vinciane Beauchêne, "Will AI Take Your Job?"): Cornell Notes + Vocabulary</strong><div class="desc">Watch the video, take Cornell notes, record 5–10 vocabulary words about AI, jobs, and organizational change.</div><div class="submit">Submit to Student Folder → Week 7 Listening</div></div></li></ul>
-        <div style="background: oklch(92% 0.05 15); border-radius: 8px; padding: 14px 16px; margin-top: 12px; font-size: 0.8125rem;">
-          <strong style="color: oklch(45% 0.15 15);">⚠️ Deadline this week:</strong> All 3 CCD Brightspace courses (Industry Exploration, Resume, Interview) must be completed by the end of this week. Check your progress at <a href="https://brightspace.nyu.edu/d2l/le/lessons/111955/units/7012499" target="_blank" rel="noopener" style="color: oklch(45% 0.15 15);">Brightspace CCD</a>.
-        </div>
-        <a href="https://www.youtube.com/watch?v=lX2V8p-hByE" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; background: var(--accent-light); border-radius: 8px; padding: 14px 16px; margin: 12px 0 16px; text-decoration: none; transition: opacity 200ms;"><span style="font-size: 1.5rem;">▶️</span><span style="flex: 1;"><strong style="color: var(--text); font-size: 0.875rem;">Vinciane Beauchêne: Will AI Take Your Job in the Next 10 Years?</strong><br><span style="font-size: 0.75rem; color: var(--text-muted);">TED@BCG</span></span><span style="font-size: 0.8125rem; color: var(--text-muted); white-space: nowrap;">12:17</span></a>
-        <h4>Portfolio</h4>
-        <ul class="task-list"><li><span class="task-icon">📂</span><div class="task-detail"><strong>Portfolio Build 2</strong><div class="desc">Add artifacts from Weeks 4–7, write 300–400 word DEIP reflection on growth over first seven weeks.</div></div></li></ul>
-      </div>
-    </details></div>
+<details class="faq-item"><summary>What if I miss a class?</summary><p>You have 2 free absences (no explanation needed). For each absence, check with a classmate about what was covered. 3 absences = participation deduction. 4 = F for participation. 5 = course failure. If you know in advance, notify me before class.</p></details>
 
-    <div class="week-module" id="week-8"><details><summary><span class="week-num">Week 8</span><span class="week-title">Ethics, Citizenship, and Technology</span><span class="week-dates">Oct 27 / Oct 29</span><span class="week-badges"><span class="badge badge-ccd">CCD Visit 3</span><span class="badge" style="background: oklch(92% 0.04 50); color: oklch(40% 0.14 50);">Meeting</span></span><svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></summary>
-      <div class="week-content">
-        <h4>Mandatory Meeting</h4>
-        <ul class="task-list"><li><span class="task-icon">👤</span><div class="task-detail"><strong>12-Minute Individual Meeting</strong><div class="desc">Bring Planning Guide and portfolio/key artifacts. Review progress, set goals for second half.</div></div></li></ul>
-        <h4>Reading &amp; Listening</h4>
-        <ul class="task-list">
-          <li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 8 Question Set</strong><div class="desc">Short questions about one ethical issue and technology/work.</div></div></li>
-          <li><span class="task-icon">🎧</span><div class="task-detail"><strong>Video 6 (Akram Awad, "Will AI Make Humans Useless?"): Cornell Notes</strong><div class="desc">Ethics, identity, and AI vocabulary.</div></div></li>
-        </ul>
-        <a href="https://www.youtube.com/watch?v=kND0iGErBk8" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; background: var(--accent-light); border-radius: 8px; padding: 14px 16px; margin: 12px 0 16px; text-decoration: none; transition: opacity 200ms;"><span style="font-size: 1.5rem;">▶️</span><span style="flex: 1;"><strong style="color: var(--text); font-size: 0.875rem;">Akram Awad: Will AI Make Humans Useless?</strong><br><span style="font-size: 0.75rem; color: var(--text-muted);">TED@BCG</span></span><span style="font-size: 0.8125rem; color: var(--text-muted); white-space: nowrap;">12:34</span></a>
-        <h4>CCD</h4>
-        <ul class="task-list"><li><span class="task-icon">🏢</span><div class="task-detail"><strong>CCD Visit 3 Reflection</strong><div class="desc">150–200 words on professional interaction and insights.</div></div></li></ul>
-      </div>
-    </details></div>
+<details class="faq-item"><summary>What if my assignment is late?</summary><p>5% deducted per day late. Not accepted after 7 days. If you have extenuating circumstances, email me before the due date. An absence does not excuse a late submission.</p></details>
 
-    <div class="week-module" id="week-9"><details><summary><span class="week-num">Week 9</span><span class="week-title">Speech Preparation</span><span class="week-dates">Nov 3 / Nov 5</span><span class="week-badges"></span><svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></summary>
-      <div class="week-content">
-        <h4>Tasks</h4>
-        <ul class="task-list">
-          <li><span class="task-icon">✍️</span><div class="task-detail"><strong>Mini Portfolio Reflection</strong><div class="desc">~200 words: one strength and one area for growth.</div></div></li>
-          <li><span class="task-icon">🎤</span><div class="task-detail"><strong>Model Persuasive Speech Analysis</strong><div class="desc">Analyze structure, evidence, audience moves, and language of a model speech.</div></div></li>
-          <li><span class="task-icon">📝</span><div class="task-detail"><strong>Language Review Task</strong><div class="desc">Signposting phrases, hedging, or pronunciation work for Q&A.</div></div></li>
-        </ul>
-      </div>
-    </details></div>
+<details class="faq-item"><summary>Can I use AI tools for assignments?</summary><p>AI use is sometimes restricted and task-specific. Your instructor will tell you when AI is permitted. Submitting AI-generated content as your own work is never allowed. When AI use is permitted, you must include an AI disclosure statement. See the Syllabus for full details.</p></details>
 
-    <div class="week-module" id="week-10"><details><summary><span class="week-num">Week 10</span><span class="week-title">Sustainability &amp; Professional Communication</span><span class="week-dates">Nov 10 / Nov 12</span><span class="week-badges"><span class="badge badge-exam" style="opacity:0.5">Exam moved to Dec 1</span></span><svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></summary>
-      <div class="week-content">
-        <h4>Assessment</h4>
-        <ul class="task-list"><li><span class="task-icon">🔴</span><div class="task-detail"><strong>Listening Exam 2 (20%)</strong><div class="desc">In-class exam: more advanced listening, synthesis, selection of relevant information.</div></div></li></ul>
-        <h4>Reading &amp; Writing</h4>
-        <ul class="task-list">
-          <li><span class="task-icon">📖</span><div class="task-detail"><strong>Sustainability &amp; Resilience guided notes</strong></div></li>
-          <li><span class="task-icon">📖</span><div class="task-detail"><strong>Academic to Professional Communication</strong><div class="desc">~200 word response on how one EAP practice prepares you for professional communication.</div></div></li>
-          <li><span class="task-icon">📝</span><div class="task-detail"><strong>Assessment Planning Task</strong><div class="desc">Brainstorm 2–3 topics for Persuasive Speech + 2–3 portfolio artifacts.</div></div></li>
-        </ul>
-      </div>
-    </details></div>
+<details class="faq-item"><summary>What if I miss a CCD visit?</summary><p>Check the CCD calendar for alternative events, speak directly to the CCD (Room W309) to arrange attendance at another session, and then inform your instructor. All 4 visits and reflections are required.</p></details>
 
-    <div class="week-module" id="week-11"><details><summary><span class="week-num">Week 11</span><span class="week-title">Employability and Self-Presentation</span><span class="week-dates">Nov 17 / Nov 19</span><span class="week-badges"><span class="badge badge-ccd">CCD Visit 4</span><span class="badge badge-portfolio">Portfolio Build 3</span></span><svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></summary>
-      <div class="week-content">
-        <h4>Tasks</h4>
-        <ul class="task-list">
-          <li><span class="task-icon">🏢</span><div class="task-detail"><strong>CCD Visit 4 Reflection</strong><div class="desc">150–200 words on employability-facing skills and presenting them to employers.</div></div></li>
-          <li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 10 Guided Response</strong><div class="desc">Short summary + connection to portfolio or future work.</div></div></li>
-          <li><span class="task-icon">📂</span><div class="task-detail"><strong>Portfolio Build 3</strong><div class="desc">Refine artifact selection, write 400–500 word reflection on growth in Future-Ready Competencies.</div></div></li>
-        </ul>
-      </div>
-    </details></div>
+<!-- ASSESSMENTS -->
+<div class="section-header" id="assessments">
+<h2>Assessment Overview</h2>
+</div>
 
-    <div class="week-module" id="week-12"><details><summary><span class="week-num">Week 12</span><span class="week-title">Persuasion in Professional Life</span><span class="week-dates">Nov 24 (Tue only)</span><span class="week-badges"><span class="badge badge-speech">Persuasive Speech</span></span><svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></summary>
-      <div class="week-content">
-        <h4>Assessment</h4>
-        <ul class="task-list"><li><span class="task-icon">🟢</span><div class="task-detail"><strong>Persuasive Speech (20%)</strong><div class="desc">5–6 min persuasive speech. Clear claim, 3–4 sources, address counterargument, recommendations, 4 visual aids, signposting, answer 1+ audience question.</div><div class="submit">Thursday Nov 26 is Thanksgiving (no class)</div></div></li></ul>
-      </div>
-        <div style="background: oklch(94% 0.04 155); border-radius: 8px; padding: 16px; margin-top: 12px; font-size: 0.8125rem;">
-          <strong style="color: oklch(40% 0.12 155);">🎤 Speech Day Checklist:</strong>
-          <ul style="margin: 8px 0 0; padding-left: 18px; color: var(--text-secondary);">
-            <li>Outline/cue cards (not a full script)</li>
-            <li>4 visual aids ready to display</li>
-            <li>References slide (APA format)</li>
-            <li>Timer set for 5–6 minutes</li>
-            <li>Prepared for at least one audience question</li>
-          </ul>
-        </div>
-    </details></div>
+<table class="assessment-table">
+<thead><tr><th>Assessment</th><th>When</th><th>Weight</th></tr></thead>
+<tbody>
+<tr><td>Listening Exam 1</td><td>Week 6 (Oct 13/15)</td><td><span class="weight-badge exam">20%</span></td></tr>
+<tr><td>Informative Presentation</td><td>Week 7 (Oct 20/22)</td><td><span class="weight-badge speech">20%</span></td></tr>
+<tr><td>Listening Exam 2</td><td>Week 13 (Tue Dec 1)</td><td><span class="weight-badge exam">20%</span></td></tr>
+<tr><td>Persuasive Speech</td><td>Week 12 (Tue Nov 24)</td><td><span class="weight-badge speech">20%</span></td></tr>
+<tr><td>Final Portfolio</td><td>Sun Dec 13</td><td><span class="weight-badge">10%</span></td></tr>
+<tr><td>Participation</td><td>Ongoing</td><td><span class="weight-badge">10%</span></td></tr>
+</tbody>
+</table>
 
-    <div class="week-module" id="week-13"><details><summary><span class="week-num">Week 13</span><span class="week-title">Showcase Preparation</span><span class="week-dates">Dec 1 / Dec 3</span><span class="week-badges"><span class="badge badge-exam">Listening Exam 2</span></span><svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></summary>
-      <div class="week-content">
-        <h4>Assessment</h4>
-        <ul class="task-list"><li><span class="task-icon">🔴</span><div class="task-detail"><strong>Listening Exam 2 (20%)</strong><div class="desc">In-class exam (Tue Dec 1): ~20 min academic lecture, advanced listening, synthesis, and selection of relevant information.</div></div></li></ul>
-        <h4>Tasks</h4>
-        <ul class="task-list">
-        <li><span class="task-icon">🎤</span><div class="task-detail"><strong>Portfolio Showcase Preparation</strong><div class="desc">Choose 2–3 artifacts for Student Showcase, prepare short oral explanation of each.</div></div></li>
-          <li><span class="task-icon">📄</span><div class="task-detail"><strong>Resume peer feedback session</strong></div></li>
-        </ul>
-      </div>
-    </details></div>
+<!-- WEEKLY SCHEDULE -->
+<div class="section-header" id="schedule">
+<h2>Weekly Schedule</h2>
+</div>
 
-    <div class="week-module" id="week-14"><details><summary><span class="week-num">Week 14</span><span class="week-title">Course Synthesis</span><span class="week-dates">Dec 8 / Dec 10</span><span class="week-badges"><span class="badge badge-speech">Student Showcase</span></span><svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></summary>
-      <div class="week-content">
-        <h4>Tasks</h4>
-        <ul class="task-list">
-          <li><span class="task-icon">✍️</span><div class="task-detail"><strong>End-of-Course Reflection</strong><div class="desc">300–400 words on how EAP 100 has affected your reading, listening, speaking, writing, and future preparation.</div></div></li>
-          <li><span class="task-icon">🎤</span><div class="task-detail"><strong>Student Showcase (Thu Dec 10)</strong><div class="desc">Present 2–3 artifacts and explain what they show, why they matter, and how they connect to your learning.</div></div></li>
-        </ul>
-        <h4 style="margin-top:20px; color: var(--exam); font-weight: 700;">Final Portfolio due Sun Dec 13</h4>
-        <ul class="task-list"><li><span class="task-icon">📂</span><div class="task-detail"><strong>Final Portfolio</strong><div class="desc">5 artifacts with captions, DEIP reflection (300–500 words), future-facing closing statement (100–150 words).</div></div></li></ul>
-      </div>
-    </details></div>
+<!-- SEMESTER AT A GLANCE -->
+<div style="display:flex; gap:4px; flex-wrap:wrap; margin-bottom:24px; font-size:0.6875rem; font-weight:600;">
+<span style="padding:4px 8px; border-radius:4px; background:var(--accent-light); color:var(--accent);">W1 Setup</span>
+<span style="padding:4px 8px; border-radius:4px; background:oklch(92% 0.05 80); color:oklch(45% 0.12 80);">W2 CCD 1</span>
+<span style="padding:4px 8px; border-radius:4px; background:oklch(92% 0.05 285); color:var(--accent);">W3 Build 1</span>
+<span style="padding:4px 8px; border-radius:4px; background:var(--border-light);">W4</span>
+<span style="padding:4px 8px; border-radius:4px; background:var(--border-light);">W5 Break</span>
+<span style="padding:4px 8px; border-radius:4px; background:oklch(92% 0.04 15); color:var(--exam);">W6 Exam 1</span>
+<span style="padding:4px 8px; border-radius:4px; background:oklch(92% 0.05 155); color:var(--success);">W7 Speech 1</span>
+<span style="padding:4px 8px; border-radius:4px; background:var(--accent-light); color:var(--accent);">W8 Meeting</span>
+<span style="padding:4px 8px; border-radius:4px; background:var(--border-light);">W9 Prep</span>
+<span style="padding:4px 8px; border-radius:4px; background:var(--border-light);">W10</span>
+<span style="padding:4px 8px; border-radius:4px; background:oklch(92% 0.05 285); color:var(--accent);">W11 Build 3</span>
+<span style="padding:4px 8px; border-radius:4px; background:oklch(92% 0.05 155); color:var(--success);">W12 Speech 2</span>
+<span style="padding:4px 8px; border-radius:4px; background:oklch(92% 0.04 15); color:var(--exam);">W13 Exam 2</span>
+<span style="padding:4px 8px; border-radius:4px; background:var(--accent-light); color:var(--accent);">W14 Showcase</span>
+</div>
 
-  </section>
 
-  <section id="instructor">
-    <div class="section-header"><h2>Instructor</h2></div>
-    <div class="instructor-card">
-      <h3>Katherine Tosi</h3>
-      <dl class="instructor-details">
-        <div><dt>Email</dt><dd>kt1992@nyu.edu</dd></div>
-        <div><dt>Office</dt><dd>Room N745</dd></div>
-        <div><dt>Walk-in Hours</dt><dd>Tuesdays, 13:00–14:15</dd></div>
-        <div><dt>By Appointment</dt><dd><a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0rjJ8XF-q-2kit7hcXn-3nWBfnCGxBwpqnpDtJiHclYi-ZuQouLjw9ImkdU6HGePFv4kvFpue5" target="_blank" rel="noopener">Book here</a> (24 hours advance required)</dd></div>
-        <div><dt>Response Time</dt><dd>Within 24 hours on working days (Mon–Fri)</dd></div>
-      </dl>
-    </div>
-  </section>
+<!-- WEEK 1 -->
+<div class="week-module" id="week1"><details>
+<summary><span class="week-num">Week 1</span><span class="week-title">What Counts as Work?</span><span class="week-dates">Sep 1 / Sep 3</span><div class="week-badges"><span class="badge badge-portfolio">Portfolio Setup</span></div><svg class="week-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg></summary>
+<div class="week-content">
+<h4>Reading &amp; Writing</h4>
+<ul class="task-list">
+<li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 1 Paragraph</strong><div class="desc">Read "What Counts as Work?" and write a 200&ndash;250 word paragraph defining work more broadly than paid employment, using 2+ ideas from the reading.</div><div class="submit">Submit to Student Folder &rarr; Week 1; copy to portfolio</div></div></li>
+</ul>
+<h4>Listening</h4>
+<ul class="task-list">
+<li><span class="task-icon">🎧</span><div class="task-detail"><strong>Video 1 (Sugata Mitra, "The Future of Work"): Cornell Notes + Vocabulary</strong><div class="desc">Watch the video, take Cornell listening notes, choose 5&ndash;10 academic vocabulary words and write brief meanings.</div><div class="submit">Submit to Student Folder &rarr; Week 1 Listening</div></div></li>
+</ul>
+<div class="video-callout"><span class="v-icon">▶️</span><span class="v-title">How to Use Cornell Notes &mdash; Cornell University</span><span class="v-length">3 min</span></div>
+<div class="video-callout"><span class="v-icon">▶️</span><span class="v-title">Sugata Mitra: The Future of Work &mdash; TEDxNIITUniversity</span><span class="v-length">~18 min</span></div>
+<h4>Career Development Online Course</h4>
+<ul class="task-list">
+<li><span class="task-icon">🎓</span><div class="task-detail"><strong>Begin the Career Development Online Course</strong><div class="desc">Go to the <a href="https://brightspace.nyu.edu/d2l/home/111955">Career Development Online Course</a> on Brightspace and start working through the modules.</div><div class="submit">⚠️ Must be completed by end of Week 7 (Oct 22). Start now.</div></div></li>
+</ul>
+<h4>Portfolio &amp; Reflection</h4>
+<ul class="task-list">
+<li><span class="task-icon">📂</span><div class="task-detail"><strong>Portfolio Setup &amp; Orientation Notes</strong><div class="desc">Create your EAP 100 portfolio in your Student Folder on Google Drive. Write 5&ndash;10 bullet points about what you think the course is about and your initial goals.</div></div></li>
+<li><span class="task-icon">✍️</span><div class="task-detail"><strong>DEIP Reflection: Past Work/English Experience</strong><div class="desc">Write a ~200 word DEIP reflection on one past experience of work or English learning.</div><div class="submit">Submit to Student Folder &rarr; Week 1 DEIP Reflection; copy to portfolio</div></div></li>
+</ul>
+</div>
+</details></div>
 
-  <footer class="site-footer">
-    <p>EAP 100: Future Focused · NYU Shanghai · Fall 2026</p>
-    <p style="margin-top:4px;">Last updated: August 2026</p>
-    <p style="margin-top: 8px;">Katherine Tosi · kt1992@nyu.edu · Room N745 · Walk-in Tue 1:00–2:15 PM · <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0rjJ8XF-q-2kit7hcXn-3nWBfnCGxBwpqnpDtJiHclYi-ZuQouLjw9ImkdU6HGePFv4kvFpue5" target="_blank" rel="noopener" style="color: var(--accent);">Book appointment</a></p>
-  </footer>
+<!-- WEEK 2 -->
+<div class="week-module" id="week2"><details>
+<summary><span class="week-num">Week 2</span><span class="week-title">Learning for the Future Workplace</span><span class="week-dates">Sep 8 / Sep 10</span><div class="week-badges"><span class="badge badge-ccd">CCD Visit 1</span></div><svg class="week-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg></summary>
+<div class="week-content">
+<h4>Reading &amp; Writing</h4>
+<ul class="task-list">
+<li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 2 Two-Column Notes</strong><div class="desc">Create a two-column chart: main claims about future-ready learning and how each connects to EAP 100.</div></div></li>
+</ul>
+<h4>Listening</h4>
+<ul class="task-list">
+<li><span class="task-icon">🎧</span><div class="task-detail"><strong>Video 2 (Brynjolfsson, "Race with the Machines"): Cornell Notes + Vocabulary</strong><div class="desc">Watch video, take Cornell notes, record 5&ndash;10 vocabulary words about technology, productivity, and work.</div></div></li>
+</ul>
+<div class="video-callout"><span class="v-icon">▶️</span><span class="v-title">Erik Brynjolfsson: The Key to Growth? Race with the Machines &mdash; TED2013</span><span class="v-length">12:01</span></div>
+<h4>CCD &amp; Self-Management</h4>
+<ul class="task-list">
+<li><span class="task-icon">🏢</span><div class="task-detail"><strong>CCD Visit 1 Reflection</strong><div class="desc">Attend CCD open-house visit (Room W309), write 150&ndash;200 word reflection on what you learned.</div></div></li>
+<li><span class="task-icon">⏱️</span><div class="task-detail"><strong>Homework Time Tracking &amp; Mini-Reflection</strong><div class="desc">Track your EAP homework time for one week, write 100&ndash;150 words on what took longest.</div></div></li>
+<li><span class="task-icon">📝</span><div class="task-detail"><strong>EAP Planning Guide (Part 1)</strong><div class="desc">Complete sections on goals, weekly schedule, and known busy periods.</div></div></li>
+</ul>
+</div>
+</details></div>
+
+<!-- WEEK 3 -->
+<div class="week-module" id="week3"><details>
+<summary><span class="week-num">Week 3</span><span class="week-title">Future-Proofing Your Career</span><span class="week-dates">Sep 15 / Sep 17</span><div class="week-badges"><span class="badge badge-portfolio">Portfolio Build 1</span></div><svg class="week-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg></summary>
+<div class="week-content">
+<h4>Reading &amp; Writing</h4>
+<ul class="task-list">
+<li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 3 Guided Notes</strong><div class="desc">Complete guided note sheet with key ideas, examples, and questions.</div></div></li>
+</ul>
+<h4>Listening</h4>
+<ul class="task-list">
+<li><span class="task-icon">🎧</span><div class="task-detail"><strong>Video 3 (Jacob Morgan, "Future-Proof Your Career"): Cornell Notes + Vocabulary</strong><div class="desc">Cornell notes + 5&ndash;10 vocabulary words about adaptability, skills, and careers.</div></div></li>
+</ul>
+<div class="video-callout"><span class="v-icon">▶️</span><span class="v-title">Jacob Morgan: How to Future-Proof Your Career &mdash; TEDxAcademy</span><span class="v-length">~15 min</span></div>
+<h4>Portfolio</h4>
+<ul class="task-list">
+<li><span class="task-icon">📂</span><div class="task-detail"><strong>Portfolio Build 1</strong><div class="desc">Choose 2&ndash;3 early artifacts and write a 250&ndash;300 word DEIP reflection on what they show about your learning so far.</div><div class="submit">Submit to Student Folder &rarr; Week 3 Portfolio Build 1; organize in your portfolio</div></div></li>
+</ul>
+</div>
+</details></div>
+
+<!-- WEEK 4 -->
+<div class="week-module" id="week4"><details>
+<summary><span class="week-num">Week 4</span><span class="week-title">Technology, AI, and the Changing Workplace</span><span class="week-dates">Sep 22 / Sep 24</span><svg class="week-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg></summary>
+<div class="week-content">
+<h4>Reading &amp; Writing</h4>
+<ul class="task-list">
+<li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 4 Source-Based Questions</strong><div class="desc">Answer source-based question set about technology, AI, and the changing workplace.</div></div></li>
+</ul>
+<h4>Listening</h4>
+<ul class="task-list">
+<li><span class="task-icon">🎧</span><div class="task-detail"><strong>Video 4 (Rainer Strack, "Workforce Crisis of 2030"): Cornell Notes + Vocabulary</strong><div class="desc">Cornell notes + 5&ndash;10 vocabulary words related to demographics and labour markets.</div></div></li>
+</ul>
+<div class="video-callout"><span class="v-icon">▶️</span><span class="v-title">Rainer Strack: The Workforce Crisis of 2030 &mdash; TED@BCG</span><span class="v-length">12:47</span></div>
+</div>
+</details></div>
+
+<!-- WEEK 5 -->
+<div class="week-module" id="week5"><details>
+<summary><span class="week-num">Week 5</span><span class="week-title">Transferable Skills &amp; Employability</span><span class="week-dates">Sep 29 &ndash; Oct 8</span><div class="week-badges"><span class="badge" style="background:var(--border-light);">Break Week</span></div><svg class="week-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg></summary>
+<div class="week-content">
+<h4>Independent Work (due before Week 6)</h4>
+<ul class="task-list">
+<li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 5 Pre-Listening Task</strong><div class="desc">Predict main ideas, highlight key vocabulary, write 2&ndash;3 questions to prepare for Listening Exam 1.</div></div></li>
+<li><span class="task-icon">🎧</span><div class="task-detail"><strong>Listening Exam Practice</strong><div class="desc">Complete practice tasks with Cornell notes and 5&ndash;10 vocabulary words for at least one recording.</div></div></li>
+<li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 6: Relevant Information Task</strong><div class="desc">Short task identifying key vs. extra information in listening situations.</div></div></li>
+</ul>
+<div class="info-banner" style="margin-top:16px;"><strong>🎯 Listening Exam 1 Prep Checklist:</strong><br>Reviewed Cornell notes from Videos 1&ndash;4 &bull; Practised identifying main points vs. supporting details &bull; Completed listening practice with time stamps &bull; Can write a 3&ndash;5 sentence summary after one listen &bull; Know 30+ academic vocabulary words from Weeks 1&ndash;4</div>
+</div>
+</details></div>
+
+
+<!-- WEEK 6 -->
+<div class="week-module" id="week6"><details>
+<summary><span class="week-num">Week 6</span><span class="week-title">Automation and Labour</span><span class="week-dates">Oct 13 / Oct 15</span><div class="week-badges"><span class="badge badge-exam">Listening Exam 1</span><span class="badge badge-ccd">CCD Visit 2</span></div><svg class="week-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg></summary>
+<div class="week-content">
+<h4>Assessment</h4>
+<ul class="task-list">
+<li><span class="task-icon">🔴</span><div class="task-detail"><strong>Listening Exam 1 (20%)</strong><div class="desc">In-class exam: ~20 min academic lecture, short answers, true-false, synthesis question.</div></div></li>
+</ul>
+<h4>Reading &amp; Listening</h4>
+<ul class="task-list">
+<li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 7 Short Response</strong><div class="desc">3 key points + 1 question connecting to the Week 6 video.</div></div></li>
+<li><span class="task-icon">🎧</span><div class="task-detail"><strong>Video 5 (David Autor, "Will Automation Take Away All Our Jobs?"): Cornell Notes + Vocabulary</strong><div class="desc">Automation and labour vocabulary. Cornell notes + 5&ndash;10 words.</div></div></li>
+</ul>
+<div class="video-callout"><span class="v-icon">▶️</span><span class="v-title">David Autor: Will Automation Take Away All Our Jobs? &mdash; TEDxCambridge</span><span class="v-length">18:24</span></div>
+<h4>CCD</h4>
+<ul class="task-list">
+<li><span class="task-icon">🏢</span><div class="task-detail"><strong>CCD Visit 2 Reflection</strong><div class="desc">Attend Career Fair sessions (Room W309). Write 150&ndash;200 word reflection connecting visit to portfolio and future plans.</div></div></li>
+</ul>
+</div>
+</details></div>
+
+<!-- WEEK 7 -->
+<div class="week-module" id="week7"><details>
+<summary><span class="week-num">Week 7</span><span class="week-title">AI and the Future of Jobs</span><span class="week-dates">Oct 20 / Oct 22</span><div class="week-badges"><span class="badge badge-speech">Informative Presentation</span><span class="badge badge-portfolio">Portfolio Build 2</span></div><svg class="week-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg></summary>
+<div class="week-content">
+<h4>Assessment</h4>
+<ul class="task-list">
+<li><span class="task-icon">🟢</span><div class="task-detail"><strong>Informative Presentation (20%)</strong><div class="desc">3&ndash;4 min informative presentation. Explain one topic, define key terms, 2&ndash;3 sources with oral citations, 3 visual aids, signposting, answer 1+ audience question.</div></div></li>
+</ul>
+<h4>Listening</h4>
+<ul class="task-list">
+<li><span class="task-icon">🎧</span><div class="task-detail"><strong>Video 7 (Vinciane Beauch&ecirc;ne, "Will AI Take Your Job?"): Cornell Notes + Vocabulary</strong><div class="desc">Cornell notes + 5&ndash;10 vocabulary words about AI, jobs, and organizational change.</div></div></li>
+</ul>
+<div class="video-callout"><span class="v-icon">▶️</span><span class="v-title">Vinciane Beauch&ecirc;ne: Will AI Take Your Job in the Next 10 Years? &mdash; TED@BCG</span><span class="v-length">12:17</span></div>
+<div class="info-banner" style="margin-top:16px;">⚠️ <strong>Deadline this week:</strong> Career Development Online Course must be completed by end of this week.</div>
+<h4>Portfolio</h4>
+<ul class="task-list">
+<li><span class="task-icon">📂</span><div class="task-detail"><strong>Portfolio Build 2</strong><div class="desc">Add artifacts from Weeks 4&ndash;7, write 300&ndash;400 word DEIP reflection on growth over first seven weeks.</div><div class="submit">Submit to Student Folder &rarr; Week 7 Portfolio Build 2; ensure artifacts are in portfolio</div></div></li>
+</ul>
+</div>
+</details></div>
+
+<!-- WEEK 8 -->
+<div class="week-module" id="week8"><details>
+<summary><span class="week-num">Week 8</span><span class="week-title">Ethics, Citizenship, and Technology</span><span class="week-dates">Oct 27 / Oct 29</span><div class="week-badges"><span class="badge badge-ccd">CCD Visit 3</span><span class="badge" style="background:var(--accent-light); color:var(--accent);">Meeting</span></div><svg class="week-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg></summary>
+<div class="week-content">
+<h4>Mandatory Meeting</h4>
+<ul class="task-list">
+<li><span class="task-icon">👤</span><div class="task-detail"><strong>12-Minute Individual Meeting</strong><div class="desc">Bring Planning Guide and portfolio/key artifacts. Review progress, ask questions, set goals for second half. Bring rough resume draft.</div></div></li>
+</ul>
+<h4>Reading &amp; Listening</h4>
+<ul class="task-list">
+<li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 8 Question Set</strong><div class="desc">Short questions about one ethical issue connected to technology and work.</div></div></li>
+<li><span class="task-icon">🎧</span><div class="task-detail"><strong>Video 6 (Akram Awad, "Will AI Make Humans Useless?"): Cornell Notes</strong><div class="desc">Ethics, identity, and AI vocabulary. Cornell notes + 5&ndash;10 words.</div></div></li>
+</ul>
+<div class="video-callout"><span class="v-icon">▶️</span><span class="v-title">Akram Awad: Will AI Make Humans Useless? &mdash; TED@BCG</span><span class="v-length">12:34</span></div>
+<h4>CCD</h4>
+<ul class="task-list">
+<li><span class="task-icon">🏢</span><div class="task-detail"><strong>CCD Visit 3 Reflection</strong><div class="desc">Attend CCD visit (Room W309). Write 150&ndash;200 word reflection on professional interaction and insights.</div></div></li>
+</ul>
+</div>
+</details></div>
+
+<!-- WEEK 9 -->
+<div class="week-module" id="week9"><details>
+<summary><span class="week-num">Week 9</span><span class="week-title">Speech Preparation</span><span class="week-dates">Nov 3 / Nov 5</span><svg class="week-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg></summary>
+<div class="week-content">
+<h4>Tasks</h4>
+<ul class="task-list">
+<li><span class="task-icon">✍️</span><div class="task-detail"><strong>Mini Portfolio Reflection</strong><div class="desc">~200 words: identify one strength and one area for growth in your EAP 100 work so far.</div><div class="submit">Submit to Student Folder &rarr; Week 9 Mini Portfolio Reflection</div></div></li>
+<li><span class="task-icon">🎤</span><div class="task-detail"><strong>Model Persuasive Speech Analysis</strong><div class="desc">Study a model persuasive speech. Complete analysis sheet on structure, evidence, audience moves, and language.</div><div class="submit">Submit to Student Folder &rarr; Week 9 Model Speech Analysis</div></div></li>
+<li><span class="task-icon">📝</span><div class="task-detail"><strong>Language Review Task</strong><div class="desc">Signposting phrases, hedging, or pronunciation work for Q&amp;A. Prepare your language toolkit for the Persuasive Speech.</div><div class="submit">Submit to Student Folder &rarr; Week 9 Language Review</div></div></li>
+</ul>
+</div>
+</details></div>
+
+<!-- WEEK 10 -->
+<div class="week-module" id="week10"><details>
+<summary><span class="week-num">Week 10</span><span class="week-title">Sustainability &amp; Professional Communication</span><span class="week-dates">Nov 10 / Nov 12</span><svg class="week-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg></summary>
+<div class="week-content">
+<h4>Reading &amp; Writing</h4>
+<ul class="task-list">
+<li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 10a: Sustainability &amp; Resilience</strong><div class="desc">Complete the guided note sheet on resilience, sustainability, uncertainty, and environmental stewardship.</div><div class="submit">Submit to Student Folder &rarr; Week 10 Sustainability &amp; Resilience</div></div></li>
+<li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 10b: Academic to Professional Communication</strong><div class="desc">Write a ~200 word response explaining how one EAP 100 practice prepares you for professional communication.</div><div class="submit">Submit to Student Folder &rarr; Week 10 Communication Response</div></div></li>
+</ul>
+<h4>Assessment Planning</h4>
+<ul class="task-list">
+<li><span class="task-icon">📝</span><div class="task-detail"><strong>Assessment Planning Task</strong><div class="desc">Brainstorm 2&ndash;3 possible topics for your Persuasive Speech and list 2&ndash;3 artifacts for your Portfolio Showcase.</div><div class="submit">Submit to Student Folder &rarr; Week 10 Assessment Planning</div></div></li>
+</ul>
+</div>
+</details></div>
+
+<!-- WEEK 11 -->
+<div class="week-module" id="week11"><details>
+<summary><span class="week-num">Week 11</span><span class="week-title">Employability and Self-Presentation</span><span class="week-dates">Nov 17 / Nov 19</span><div class="week-badges"><span class="badge badge-ccd">CCD Visit 4</span><span class="badge badge-portfolio">Portfolio Build 3</span></div><svg class="week-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg></summary>
+<div class="week-content">
+<h4>CCD</h4>
+<ul class="task-list">
+<li><span class="task-icon">🏢</span><div class="task-detail"><strong>CCD Visit 4 Reflection</strong><div class="desc">Attend CCD visit (Room W309). Write 150&ndash;200 word reflection on employability-facing skills and presenting them to employers.</div><div class="submit">Submit to Student Folder &rarr; Week 11 CCD Visit 4; add to portfolio</div></div></li>
+</ul>
+<h4>Reading</h4>
+<ul class="task-list">
+<li><span class="task-icon">📖</span><div class="task-detail"><strong>Reading 10 Guided Response</strong><div class="desc">Short summary + connection to your portfolio or future work.</div><div class="submit">Submit to Student Folder &rarr; Week 11 Reading 10 Response</div></div></li>
+</ul>
+<h4>Portfolio</h4>
+<ul class="task-list">
+<li><span class="task-icon">📂</span><div class="task-detail"><strong>Portfolio Build 3</strong><div class="desc">Refine your portfolio artifact selection. Write a 400&ndash;500 word reflection explaining your growth in key Future-Ready Competencies.</div><div class="submit">Submit to Student Folder &rarr; Week 11 Portfolio Build 3; ensure artifacts are in portfolio</div></div></li>
+</ul>
+</div>
+</details></div>
+
+<!-- WEEK 12 -->
+<div class="week-module" id="week12"><details>
+<summary><span class="week-num">Week 12</span><span class="week-title">Persuasion in Professional Life</span><span class="week-dates">Nov 24 (Tue only)</span><div class="week-badges"><span class="badge badge-speech">Persuasive Speech</span></div><svg class="week-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg></summary>
+<div class="week-content">
+<h4>Assessment</h4>
+<ul class="task-list">
+<li><span class="task-icon">🟢</span><div class="task-detail"><strong>Persuasive Speech (20%)</strong><div class="desc">5&ndash;6 min persuasive speech, delivered in small groups, video recorded and submitted. Clear claim, 3&ndash;4 sources, address counterargument, recommendations, 4 visual aids, signposting, answer 1+ audience question.</div><div class="submit">Upload outline/slides to Student Folder &rarr; Week 12 Persuasive Speech; add to portfolio</div></div></li>
+</ul>
+<p style="font-size:0.8125rem; color:var(--text-muted); margin-top:12px;">Thursday Nov 26 is Thanksgiving (no class). Legislative day Sun Nov 8 follows a Thursday schedule &mdash; EAP 100 will not meet.</p>
+<div class="info-banner" style="margin-top:16px;"><strong>🎤 Speech Day Checklist:</strong><br>Outline/cue cards (not a full script) &bull; 4 visual aids ready to display &bull; References slide (APA format) &bull; Timer set for 5&ndash;6 minutes &bull; Prepared for at least one audience question</div>
+</div>
+</details></div>
+
+<!-- WEEK 13 -->
+<div class="week-module" id="week13"><details>
+<summary><span class="week-num">Week 13</span><span class="week-title">Showcase Preparation</span><span class="week-dates">Dec 1 / Dec 3</span><div class="week-badges"><span class="badge badge-exam">Listening Exam 2</span></div><svg class="week-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg></summary>
+<div class="week-content">
+<h4>Assessment</h4>
+<ul class="task-list">
+<li><span class="task-icon">🔴</span><div class="task-detail"><strong>Listening Exam 2 (20%)</strong><div class="desc">In-class exam (Tue Dec 1): ~20 min academic lecture, advanced listening, synthesis, and selection of relevant information.</div></div></li>
+</ul>
+<h4>Tasks</h4>
+<ul class="task-list">
+<li><span class="task-icon">🎤</span><div class="task-detail"><strong>Portfolio Showcase Preparation</strong><div class="desc">Choose 2&ndash;3 artifacts for your Student Showcase. Prepare a short oral explanation of each artifact.</div><div class="submit">Bring materials to class; keep preparation notes in portfolio</div></div></li>
+<li><span class="task-icon">📄</span><div class="task-detail"><strong>Resume Peer Feedback Session</strong><div class="desc">Share your final resume draft in class for peer feedback.</div></div></li>
+</ul>
+</div>
+</details></div>
+
+<!-- WEEK 14 -->
+<div class="week-module" id="week14"><details>
+<summary><span class="week-num">Week 14</span><span class="week-title">Course Synthesis</span><span class="week-dates">Dec 8 / Dec 10</span><div class="week-badges"><span class="badge" style="background:var(--accent-light); color:var(--accent);">Student Showcase</span></div><svg class="week-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg></summary>
+<div class="week-content">
+<h4>Tasks</h4>
+<ul class="task-list">
+<li><span class="task-icon">✍️</span><div class="task-detail"><strong>End-of-Course Reflection</strong><div class="desc">300&ndash;400 words on how EAP 100 has affected your reading, listening, speaking, writing, and preparation for the future of work.</div><div class="submit">Submit to Student Folder &rarr; End-of-Course Reflection; add to portfolio as a final piece</div></div></li>
+<li><span class="task-icon">🎤</span><div class="task-detail"><strong>Student Showcase (Thu Dec 10)</strong><div class="desc">Present 2&ndash;3 selected portfolio artifacts and explain what they show, why they matter, and how they connect to your learning.</div><div class="submit">Deliver in class on Thursday Dec 10</div></div></li>
+</ul>
+<div class="info-banner" style="margin-top:16px;"><strong>📂 Final Portfolio due Sun Dec 13</strong><br>5 artifacts with captions, DEIP reflection (300&ndash;500 words), future-facing closing statement (100&ndash;150 words). Submit to your Student Folder by midnight.</div>
+</div>
+</details></div>
+
+<!-- INSTRUCTOR -->
+<div class="section-header" id="instructor">
+<h2>Instructor</h2>
+</div>
+
+<div class="instructor-card">
+<h3>Katherine Tosi</h3>
+<dl class="instructor-details">
+<dt>Email</dt><dd><a href="mailto:kt1992@nyu.edu">kt1992@nyu.edu</a></dd>
+<dt>Office</dt><dd>Room N745</dd>
+<dt>Walk-in Hours</dt><dd>Tuesdays, 13:00&ndash;14:15</dd>
+<dt>By Appointment</dt><dd><a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0rjJ8XF-q-2kit7hcXn-3nWBfnCGxBwpqnpDtJiHclYi-ZuQouLjw9ImkdU6HGePFv4kvFpue5">Book here</a> (24 hours advance required)</dd>
+<dt>Response Time</dt><dd>Within 24 hours on working days (Mon&ndash;Fri)</dd>
+</dl>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+<p>EAP 100: Future Focused &middot; NYU Shanghai &middot; Fall 2026</p>
+</footer>
 
 </main>
-
-
-<script>
-(function() {
-  // Semester week dates (Monday of each week)
-  var weekStarts = [
-    new Date(2026, 8, 1),   // Week 1: Sep 1
-    new Date(2026, 8, 8),   // Week 2: Sep 8
-    new Date(2026, 8, 15),  // Week 3: Sep 15
-    new Date(2026, 8, 22),  // Week 4: Sep 22
-    new Date(2026, 8, 29),  // Week 5: Sep 29
-    new Date(2026, 9, 13),  // Week 6: Oct 13
-    new Date(2026, 9, 20),  // Week 7: Oct 20
-    new Date(2026, 9, 27),  // Week 8: Oct 27
-    new Date(2026, 10, 3),  // Week 9: Nov 3
-    new Date(2026, 10, 10), // Week 10: Nov 10
-    new Date(2026, 10, 17), // Week 11: Nov 17
-    new Date(2026, 10, 24), // Week 12: Nov 24
-    new Date(2026, 11, 1),  // Week 13: Dec 1
-    new Date(2026, 11, 8),  // Week 14: Dec 8
-  ];
-
-  var deadlines = [
-    {date: new Date(2026, 8, 7), text: "Reading 1 Paragraph"},
-    {date: new Date(2026, 8, 7), text: "Video 1 Cornell Notes"},
-    {date: new Date(2026, 8, 7), text: "Portfolio Setup"},
-    {date: new Date(2026, 8, 7), text: "DEIP Reflection 1"},
-    {date: new Date(2026, 8, 14), text: "CCD Visit 1 Reflection"},
-    {date: new Date(2026, 8, 14), text: "Reading 2 Two-Column Notes"},
-    {date: new Date(2026, 8, 14), text: "Video 2 Cornell Notes"},
-    {date: new Date(2026, 8, 14), text: "Time Tracking + Reflection"},
-    {date: new Date(2026, 8, 14), text: "Planning Guide Part 1"},
-    {date: new Date(2026, 8, 17), text: "Portfolio Build 1"},
-    {date: new Date(2026, 8, 21), text: "Reading 3 Guided Notes"},
-    {date: new Date(2026, 8, 21), text: "Video 3 Cornell Notes"},
-    {date: new Date(2026, 8, 28), text: "Reading 4 Source-Based Questions"},
-    {date: new Date(2026, 8, 28), text: "Video 4 Cornell Notes"},
-    {date: new Date(2026, 9, 12), text: "Reading 5 Pre-Listening Task"},
-    {date: new Date(2026, 9, 12), text: "Listening Exam Practice"},
-    {date: new Date(2026, 9, 12), text: "Reading 6 Relevant Info Task"},
-    {date: new Date(2026, 9, 13), text: "⚠️ LISTENING EXAM 1 (20%)"},
-    {date: new Date(2026, 9, 16), text: "⭐ Fall Career Fair"},
-    {date: new Date(2026, 9, 19), text: "CCD Visit 2 Reflection"},
-    {date: new Date(2026, 9, 19), text: "Reading 7 Short Response"},
-    {date: new Date(2026, 9, 19), text: "Video 5 Cornell Notes"},
-    {date: new Date(2026, 9, 20), text: "⚠️ INFORMATIVE PRESENTATION (20%)"},
-    {date: new Date(2026, 9, 22), text: "⚠️ CCD Online Courses must be completed (Industry Exploration, Resume, Interview)"},
-    {date: new Date(2026, 9, 26), text: "Portfolio Build 2"},
-    {date: new Date(2026, 9, 26), text: "Video 7 Cornell Notes"},
-    {date: new Date(2026, 9, 27), text: "Mandatory Individual Meeting"},
-    {date: new Date(2026, 10, 2), text: "CCD Visit 3 Reflection"},
-    {date: new Date(2026, 10, 2), text: "Reading 8 Question Set"},
-    {date: new Date(2026, 10, 2), text: "Video 6 Cornell Notes"},
-    {date: new Date(2026, 10, 9), text: "Mini Portfolio Reflection"},
-    {date: new Date(2026, 10, 9), text: "Model Speech Analysis"},
-    {date: new Date(2026, 10, 9), text: "Language Review Task"},
-    {date: new Date(2026, 10, 16), text: "Sustainability & Resilience notes"},
-    {date: new Date(2026, 10, 16), text: "Academic to Professional Communication"},
-    {date: new Date(2026, 10, 16), text: "Assessment Planning Task"},
-    {date: new Date(2026, 10, 19), text: "CCD Visit 4 Reflection"},
-    {date: new Date(2026, 10, 19), text: "Reading 10 Guided Response"},
-    {date: new Date(2026, 10, 19), text: "Portfolio Build 3"},
-    {date: new Date(2026, 10, 24), text: "⚠️ PERSUASIVE SPEECH (20%)"},
-    {date: new Date(2026, 11, 1), text: "⚠️ LISTENING EXAM 2 (20%)"},
-    {date: new Date(2026, 11, 3), text: "Resume peer feedback in class"},
-    {date: new Date(2026, 11, 10), text: "End-of-Course Reflection"},
-    {date: new Date(2026, 11, 10), text: "⭐ STUDENT SHOWCASE"},
-    {date: new Date(2026, 11, 13), text: "🚨 FINAL PORTFOLIO DUE"},
-  ];
-
-  var now = new Date();
-
-  // Find current week
-  var currentWeek = 0;
-  for (var i = weekStarts.length - 1; i >= 0; i--) {
-    if (now >= weekStarts[i]) { currentWeek = i + 1; break; }
-  }
-
-  // Highlight current week
-  if (currentWeek > 0 && currentWeek <= 14) {
-    var el = document.getElementById("week-" + currentWeek);
-    if (el) {
-      el.style.border = "2px solid oklch(45% 0.18 285)";
-      el.style.borderRadius = "var(--radius)";
-      el.querySelector("details").open = true;
-    }
-  }
-
-  // Find all deadlines in next 7 days
-  var upcoming = [];
-  var sevenDays = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
-  var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  var days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-  for (var j = 0; j < deadlines.length; j++) {
-    if (deadlines[j].date >= now && deadlines[j].date <= sevenDays) {
-      upcoming.push(deadlines[j]);
-    }
-  }
-
-  // Also find the very next deadline regardless of 7-day window
-  var nextDeadline = null;
-  for (var k = 0; k < deadlines.length; k++) {
-    if (deadlines[k].date > now) { nextDeadline = deadlines[k]; break; }
-  }
-
-  // Display
-  var banner = document.getElementById("next-deadline");
-  if (banner) {
-    if (upcoming.length > 0) {
-      var html = "⏰ <strong>Due this week (" + upcoming.length + "):</strong> ";
-      html += "<span style=\"cursor:pointer;text-decoration:underline;\"" +
-              " onclick=\"var d=this.nextElementSibling;d.style.display=d.style.display==='none'?'block':'none';\">" +
-              upcoming[0].text + (upcoming.length > 1 ? " + " + (upcoming.length-1) + " more ▼" : "") + "</span>";
-      html += "<div style=\"display:none;margin-top:8px;padding:8px 12px;background:white;border-radius:6px;border:1px solid #e5e5e5;font-size:0.8125rem;\">";
-      for (var m = 0; m < upcoming.length; m++) {
-        var d = upcoming[m].date;
-        html += "<div style=\"padding:4px 0;border-bottom:1px solid #f0f0f0;\">" +
-                days[d.getDay()] + " " + months[d.getMonth()] + " " + d.getDate() + ": " +
-                upcoming[m].text + "</div>";
-      }
-      html += "</div>";
-      banner.innerHTML = html;
-      banner.style.display = "block";
-    } else if (nextDeadline) {
-      var dateStr = months[nextDeadline.date.getMonth()] + " " + nextDeadline.date.getDate();
-      banner.innerHTML = "⏰ <strong>Next deadline:</strong> " + nextDeadline.text + " — " + dateStr;
-      banner.style.display = "block";
-    }
-  }
-
-  // "Go to my week" button
-  var btn = document.getElementById("go-to-week-btn");
-  if (btn && currentWeek > 0) {
-    btn.textContent = "→ Go to Week " + currentWeek;
-    btn.style.display = "inline-flex";
-    btn.addEventListener("click", function() {
-      var target = document.getElementById("week-" + currentWeek);
-      if (target) {
-        target.scrollIntoView({behavior: "smooth"});
-        target.querySelector("details").open = true;
-      }
-    });
-  }
-})();
-</script>
 </body>
 </html>
