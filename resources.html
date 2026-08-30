@@ -1,89 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- skill:chrome -->
-<style>
-/* Credit line — bottom-right */
-.design-ui-credit {
-  position: fixed;
-  bottom: 12px;
-  right: 12px;
-  font: 11px/1 system-ui, sans-serif;
-  color: rgba(128,128,128,0.5);
-  pointer-events: none;
-  z-index: 2147483647;
-  transition: opacity 0.4s ease;
-  user-select: none;
-  letter-spacing: 0.02em;
-}
-
-/* Hide chrome on touch devices */
-@media (hover: none) {
-  .design-ui-credit { display: none; }
-}
-
-/* Print fixes */
-@media print {
-  * {
-    transition: none !important;
-    animation: none !important;
-    box-shadow: none !important;
-  }
-  body {
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-  }
-  .design-ui-credit { display: none !important; }
-}
-
-</style>
-<script>
-(function () {
-    // Design-ui pages are single compositions, so the whole body is editable.
-    function markEditable() {
-        document.body.classList.add('artifact-editable');
-    }
-
-    // Credit badge with idle-fade. Hover devices only.
-    function initChromeUI() {
-        if (!matchMedia('(hover: hover)').matches) return;
-
-        var credit = document.createElement('div');
-        credit.className = 'design-ui-credit';
-        credit.setAttribute('aria-hidden', 'true');
-        credit.innerHTML = '\u{1F49C} by ClickUp Brain';
-        document.body.appendChild(credit);
-
-        var timer = null;
-        var fade = function (out) { credit.style.opacity = out ? '0' : ''; };
-        fade(true);
-        var show = function () {
-            fade(false);
-            clearTimeout(timer);
-            timer = setTimeout(function () { fade(true); }, 3000);
-        };
-        document.addEventListener('mousemove', show);
-        show();
-    }
-
-    function init() {
-        markEditable();
-        initChromeUI();
-    }
-
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
-})();
-
-</script>
-<!-- /skill:chrome -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EAP 100: Course Materials — Full Reference</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<title>EAP 100: Full Course Materials &mdash; Fall 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -100,38 +23,41 @@
   --radius: 10px;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
-body { font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.6; color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased; }
-h1, h2, h3, h4, h5 { font-family: 'Outfit', system-ui, sans-serif; text-wrap: balance; line-height: 1.2; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 16px; line-height: 1.6; color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { font-family: 'Outfit', system-ui, sans-serif; text-wrap: balance; line-height: 1.2; }
 
-/* TOC sidebar */
-.layout { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+.layout { display: grid; grid-template-columns: 268px 1fr; min-height: 100vh; }
 .toc { position: sticky; top: 0; height: 100vh; overflow-y: auto; padding: 32px 20px; border-right: 1px solid var(--border); background: var(--surface); }
-.toc h2 { font-size: 0.875rem; font-weight: 600; color: var(--accent); margin-bottom: 16px; letter-spacing: 0.04em; text-transform: uppercase; }
+.toc h2 { font-size: 0.75rem; font-weight: 600; color: var(--accent); margin-bottom: 14px; letter-spacing: 0.06em; text-transform: uppercase; }
 .toc a { display: block; font-size: 0.8125rem; color: var(--text-secondary); text-decoration: none; padding: 6px 12px; border-radius: 6px; margin-bottom: 2px; transition: all 150ms var(--ease-out); }
 .toc a:hover { background: var(--accent-light); color: var(--accent); }
+.toc .toc-group { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin: 18px 0 6px 12px; }
 .toc .back-link { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); font-weight: 500; color: var(--accent); }
 
 .main { padding: 48px 48px 96px; max-width: 900px; }
+.main h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 8px; font-weight: 700; }
+.lede { color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 32px; }
 
-/* Section styling */
-.doc-section { margin-bottom: 64px; padding-bottom: 48px; border-bottom: 1px solid var(--border); }
-.doc-section:last-child { border-bottom: none; }
-.doc-section h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
-.doc-section .doc-sub { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 24px; }
-.doc-section h3 { font-size: 1.25rem; font-weight: 600; margin-top: 32px; margin-bottom: 12px; }
-.doc-section h4 { font-size: 1rem; font-weight: 600; margin-top: 24px; margin-bottom: 8px; }
-.doc-section p { margin-bottom: 12px; max-width: 70ch; }
-.doc-section ul, .doc-section ol { margin-bottom: 12px; padding-left: 24px; }
+.notice { background: var(--accent-light); border-radius: var(--radius); padding: 16px 20px; margin: 20px 0 40px; font-size: 0.875rem; color: var(--text-secondary); }
+.notice a { color: var(--accent); font-weight: 500; }
+
+.doc-section { margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
+.doc-section:last-of-type { border-bottom: none; }
+.doc-section h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 6px; }
+.doc-section .doc-sub { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 10px; }
+.doc-section h3 { font-size: 1.0625rem; font-weight: 600; margin: 26px 0 10px; }
+.doc-section p { margin-bottom: 12px; max-width: 70ch; font-size: 0.9375rem; color: var(--text-secondary); }
+.doc-section ol, .doc-section ul { margin: 0 0 12px 22px; font-size: 0.9375rem; color: var(--text-secondary); }
 .doc-section li { margin-bottom: 6px; }
-.doc-section table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 0.875rem; }
-.doc-section th { text-align: left; font-weight: 600; padding: 10px 12px; border-bottom: 2px solid var(--border); background: oklch(96% 0.005 285); }
-.doc-section td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); vertical-align: top; }
-.doc-section blockquote { border-left: 3px solid var(--accent-mid); padding-left: 16px; margin: 16px 0; color: var(--text-secondary); font-style: italic; }
+.doc-section blockquote { border-left: 3px solid var(--accent-mid); padding-left: 16px; margin: 14px 0 18px; color: var(--text); font-style: italic; }
+.when { font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 12px; }
+.when b { color: var(--text-secondary); font-weight: 600; }
+.open-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #fff; text-decoration: none; font-size: 0.8125rem; font-weight: 600; padding: 9px 16px; border-radius: 8px; transition: all 200ms var(--ease-out); }
+.open-btn:hover { background: oklch(38% 0.18 285); }
+.reminder { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 18px; margin-bottom: 10px; font-size: 0.875rem; color: var(--text-secondary); }
+.reminder b { color: var(--text); }
+.site-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 0.8125rem; color: var(--text-muted); text-align: center; }
 
-/* Notice box */
-.notice { background: var(--accent-light); border-radius: var(--radius); padding: 16px 20px; margin: 16px 0; font-size: 0.875rem; }
-
-/* Responsive */
 @media (max-width: 768px) {
   .layout { grid-template-columns: 1fr; }
   .toc { position: relative; height: auto; border-right: none; border-bottom: 1px solid var(--border); padding: 20px 16px; }
@@ -144,31 +70,39 @@ h1, h2, h3, h4, h5 { font-family: 'Outfit', system-ui, sans-serif; text-wrap: ba
 <div class="layout">
 
 <nav class="toc">
-  <h2>Course Materials</h2>
-  <a href="#student-guide">Student Guide</a>
-  <a href="#assignment-tables">Assignment Tables</a>
-  <a href="#syllabus">Syllabus</a>
-  <a href="#portfolio-structure">Portfolio Structure</a>
-  <a href="#speech-rubrics">Speech & Rubrics</a>
-  <a href="#assessment-info">Assessment Information</a>
-  <a href="#templates-tools">Templates & Tools</a>
-  <a href="#reading-tasks">Reading Task Sheets</a>
-  <a href="#student-workbook">Student Workbook</a>
-  <a href="#reading-packet">Reading Packet</a>
-  <a href="index.html" class="back-link">← Back to Course Home</a>
+<h2>Course Materials</h2>
+<p class="toc-group">Start here</p>
+<a href="#student-guide">Student Guide</a>
+<a href="#semester-timeline">Semester Timeline</a>
+<a href="#syllabus">Syllabus</a>
+<p class="toc-group">This week's work</p>
+<a href="#assignment-tables">Assignment Tables</a>
+<a href="#templates-tools">Templates &amp; Tools</a>
+<a href="#reading-tasks">Reading Task Sheets</a>
+<a href="#reading-packet">Reading Packet</a>
+<a href="#student-workbook">Student Workbook</a>
+<p class="toc-group">Assessments &amp; portfolio</p>
+<a href="#assessment-info">Assessment Information</a>
+<a href="#speech-rubrics">Speech Assignments &amp; Rubrics</a>
+<a href="#portfolio-structure">Portfolio Structure</a>
+<a href="#week8-meeting">Week 8 Meeting Prep Sheet</a>
+<p class="toc-group">CCD &amp; career</p>
+<a href="#experiential-tracker">Experiential Learning Tracker</a>
+<a href="index.html" class="back-link">&larr; Back to Course Home</a>
 </nav>
 
 <main class="main">
 
-<h1 style="font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 8px;">EAP 100: Full Course Materials</h1>
-<p style="color: var(--text-muted); margin-bottom: 48px;">NYU Shanghai · English for Academic Purposes · Fall 2026<br>All student-facing documents in one place. Use the sidebar to jump to any section.</p>
+<h1>EAP 100: Full Course Materials</h1>
+<p class="lede">NYU Shanghai &middot; English for Academic Purposes &middot; Fall 2026<br>Every student-facing document in one place, in the order you will need it.</p>
 
-<div class="notice">This page contains the complete text of all course documents. For printable PDFs, use the resource cards on the <a href="index.html">course homepage</a>.</div>
+<div class="notice">This page tells you <b>what each document is for and when you open it</b>, then links straight to it. The Student Guide summary below is reproduced in full; the other documents open as PDFs or Google Docs. For the week-by-week view with due dates, use the <a href="index.html#schedule">course homepage</a>.</div>
 
 <!-- STUDENT GUIDE -->
 <section class="doc-section" id="student-guide">
 <h2>Student Guide</h2>
-<p class="doc-sub">Course overview, learning outcomes, and quick-reference reminders</p>
+<p class="doc-sub">Course overview, learning outcomes, Future-Ready framing, and quick-reference reminders</p>
+<p class="when"><b>When you need it:</b> Week 1, and any time you are unsure what the course is asking of you.</p>
 
 <h3>Big Course Question</h3>
 <blockquote>What will work look like in the future, and how can I prepare for it?</blockquote>
@@ -187,92 +121,131 @@ h1, h2, h3, h4, h5 { font-family: 'Outfit', system-ui, sans-serif; text-wrap: ba
 </ol>
 
 <h3>Future-Ready Framing</h3>
-<p>EAP 100 is grounded in Future-Ready Competencies drawn from major international education and workforce frameworks. In this course, those competencies support, not replace, the core goals of academic English development. As you explore the future of work, you strengthen:</p>
-<ul>
-<li>Critical and creative thinking</li>
-<li>Self-direction and adaptability</li>
-<li>Collaboration and communication</li>
-<li>Empathy and ethical responsibility</li>
-<li>Citizenship</li>
+<p>EAP 100 is grounded in Future-Ready Competencies drawn from major international education and workforce frameworks. In this course those competencies support, not replace, the core goals of academic English development. As you explore the future of work, you strengthen all seven:</p>
+<ol>
+<li>Critical, analytical and creative thinking</li>
+<li>Self-direction, adaptability and learning-to-learn</li>
+<li>Collaboration, communication and empathy</li>
+<li>Ethics, responsibility and citizenship</li>
 <li>Digital and technological fluency</li>
-</ul>
+<li>Sustainability and global / planetary awareness</li>
+<li>Resilience, wellbeing, and acting under uncertainty</li>
+</ol>
+<p>Your portfolio is where that development becomes visible &mdash; to you, and to a future employer.</p>
 
 <h3>Quick-Reference Reminders</h3>
-<p><strong>🎧 Listening task reminder:</strong> Every listening task should include Cornell-style notes, 5–10 academic vocabulary words, main ideas and supporting details, and a short summary or takeaway.</p>
-<p><strong>📝 DEIP reflection reminder:</strong> Describe (What did I do?) → Explain (Why was this important in EAP 100?) → Interpret (What did I learn?) → Plan (What will I change next time?)</p>
-<p><strong>📂 Portfolio reminder:</strong> Keep copies of portfolio-related work as you complete it. Add short reflective notes to explain why an artifact matters. The Student Showcase is Thu Dec 10; Final Portfolio is due Sun Dec 13.</p>
+<div class="reminder">🎧 <b>Listening task reminder:</b> every listening task includes Cornell-style notes, 5&ndash;10 academic vocabulary words, main ideas and supporting details, and a short summary or takeaway.</div>
+<div class="reminder">📝 <b>DEIP reflection reminder:</b> Describe (What did I do?) &rarr; Explain (Why was this important in EAP 100?) &rarr; Interpret (What did I learn?) &rarr; Plan (What will I change next time?)</div>
+<div class="reminder">📂 <b>Portfolio reminder:</b> keep copies of portfolio-related work as you complete it, and add short reflective notes explaining why an artifact matters. The Student Showcase is Thu Dec 10; the Final Portfolio is due Sun Dec 13.</div>
+<p style="margin-top:18px;"><a class="open-btn" target="_blank" href="https://drive.google.com/file/d/1vRP-kajqPyvRgkCuQpb3uJphzGXCBFkz/view">Open the Student Guide (PDF)</a></p>
+</section>
 
+<!-- SEMESTER TIMELINE -->
 <section class="doc-section" id="semester-timeline">
 <h2>Semester Timeline</h2>
-<p class="doc-sub">One-page visual overview of all assessments, deadlines, and milestones</p>
-<p>Download the full semester timeline as a printable PDF: <a href="https://drive.google.com/file/d/1BujC2LGVTgYAsS-26oUj1jNaWjDFH8H8/view" target="_blank">Semester Timeline (PDF)</a></p>
+<p class="doc-sub">One-page overview of assessments, portfolio builds, CCD visits, videos and readings by week</p>
+<p class="when"><b>When you need it:</b> print it in Week 1 and keep it visible. Use it to see crunch weeks coming.</p>
+<p>Fall 2026 runs 14 weeks, Sep 1 to Dec 13. Listening Exam 1 is in Week 6 (Oct 13/15), the Informative Presentation in Week 7, Listening Exam 2 in Week 10 (Tue Nov 10), the Persuasive Speech in Week 12 (Tue Nov 24), the Student Showcase on Thu Dec 10, and the Final Portfolio is due Sun Dec 13.</p>
+<p><a class="open-btn" target="_blank" href="https://drive.google.com/file/d/1BujC2LGVTgYAsS-26oUj1jNaWjDFH8H8/view">Open the Semester Timeline (PDF)</a></p>
 </section>
 
-</section>
-
-<!-- Placeholder for remaining sections - this page is being built in stages due to size -->
-<section class="doc-section" id="assignment-tables">
-<h2>Assignment Tables</h2>
-<p class="doc-sub">Every task, week by week: what you are doing, why, and how to submit</p>
-<p>For the complete week-by-week assignment tables with full details, see the <a href="https://drive.google.com/file/d/1MS2EAyhb-p6U6xTjsgJiwBTY_IyPPlzb/view" target="_blank">printable PDF version</a>.</p>
-<div class="notice">The Assignment Tables document contains detailed task descriptions for all 14 weeks including EAP skills for each task. It is best viewed as a PDF for reference during the semester.</div>
-</section>
-
+<!-- SYLLABUS -->
 <section class="doc-section" id="syllabus">
 <h2>Syllabus</h2>
-<p class="doc-sub">Full course policies, grading, attendance, and support</p>
-<p>For the complete syllabus including all institutional policies, see the <a href="https://drive.google.com/file/d/15pIYF_aa80AERFDN139zF-qr3T7ZS4aW/view" target="_blank">printable PDF version</a>.</p>
+<p class="doc-sub">Full course policies, grading, attendance, academic integrity, AI policy and support</p>
+<p class="when"><b>When you need it:</b> Week 1, and before you ask about absences, late work, or AI use.</p>
+<p>The syllabus is the authoritative document for policies and weighting: Listening Exam 1 20%, Informative Presentation 20%, Listening Exam 2 20%, Persuasive Speech 20%, Final Portfolio 10%, Participation 10%. It also states the expected workload of 8&ndash;10 hours per week outside class.</p>
+<p><a class="open-btn" target="_blank" href="https://drive.google.com/file/d/15pIYF_aa80AERFDN139zF-qr3T7ZS4aW/view">Open the Syllabus (PDF)</a></p>
 </section>
 
-<section class="doc-section" id="portfolio-structure">
-<h2>Portfolio Structure</h2>
-<p class="doc-sub">Working Portfolio and Final Showcase Portfolio requirements</p>
-<p>For full portfolio requirements, checkpoints, artifact structure, and assessment criteria, see the <a href="https://drive.google.com/file/d/1xqS_h9PwbjGCNKzKH57a2KRfwQairddA/view" target="_blank">printable PDF version</a>.</p>
+<!-- ASSIGNMENT TABLES -->
+<section class="doc-section" id="assignment-tables">
+<h2>Assignment Tables</h2>
+<p class="doc-sub">Every task, week by week: what you are doing, why you are doing it, and how to submit</p>
+<p class="when"><b>When you need it:</b> every week, when you start your homework.</p>
+<p>Each row gives the week assigned and due, the task, what you are doing, why you are doing it in relation to the course outcomes, where to submit it, and the EAP skills it develops. All 14 weeks are covered.</p>
+<p><a class="open-btn" target="_blank" href="https://drive.google.com/file/d/1MS2EAyhb-p6U6xTjsgJiwBTY_IyPPlzb/view">Open the Assignment Tables (PDF)</a></p>
 </section>
 
-<section class="doc-section" id="speech-rubrics">
-<h2>Speech Assignments & Rubrics</h2>
-<p class="doc-sub">Informative Presentation and Persuasive Speech requirements and marking criteria</p>
-<p>For full rubrics and the speech preparation checklist, see the <a href="https://drive.google.com/file/d/1KWl0o7vzEUDtQexOmiAxFGHU9x96Eh-1/view" target="_blank">printable PDF version</a>.</p>
+<!-- TEMPLATES & TOOLS -->
+<section class="doc-section" id="templates-tools">
+<h2>Templates &amp; Tools</h2>
+<p class="doc-sub">DEIP Student Guide, Project Guide Tool, Cornell notes and reading templates, Academic Listening Survival Guide, CCD Visit Log</p>
+<p class="when"><b>When you need it:</b> every week. Every listening task and every reflection starts from a template here.</p>
+<p><a class="open-btn" target="_blank" href="https://drive.google.com/file/d/1BXSS_HB1kSGSsZUiMaL-E3TUWmu4jS_E/view">Open Templates &amp; Tools (PDF)</a></p>
 </section>
 
+<!-- READING TASK SHEETS -->
+<section class="doc-section" id="reading-tasks">
+<h2>Reading Task Sheets</h2>
+<p class="doc-sub">Comprehension questions, guided notes, vocabulary work and the written response task for each reading</p>
+<p class="when"><b>When you need it:</b> alongside each reading, in the week it is assigned. These sheets tell you what to produce; the Reading Packet holds the text itself.</p>
+<p><a class="open-btn" target="_blank" href="https://drive.google.com/file/d/1By4YGbt0qzPxoM5Fi7TNYSCZfGXI17kv/view">Open the Reading Task Sheets (PDF)</a></p>
+</section>
+
+<!-- READING PACKET -->
+<section class="doc-section" id="reading-packet">
+<h2>Reading Packet</h2>
+<p class="doc-sub">The ten course readings, with glossaries, comprehension questions and seminar discussion prompts</p>
+<p class="when"><b>When you need it:</b> before every seminar. Read twice: once for the argument, once to annotate, and record 5&ndash;10 academic vocabulary words each time.</p>
+<p>Every reading is assigned in one specific week and feeds one specific task. The readings are the evidence you will use in your notes, your seminars, your presentations and your portfolio, so they are not background material.</p>
+<p><a class="open-btn" target="_blank" href="https://drive.google.com/file/d/1kSm7ol0NVyTPWlxg1fxrmSgvqML_1J43/view">Open the Reading Packet (PDF)</a></p>
+</section>
+
+<!-- STUDENT WORKBOOK -->
+<section class="doc-section" id="student-workbook">
+<h2>Student Workbook</h2>
+<p class="doc-sub">Eight skills units: critical thinking, source analysis, presentation skills, academic writing, vocabulary building, reflection writing, goal setting, group work</p>
+<p class="when"><b>When you need it:</b> mostly in class, and whenever a task asks you to use a framework &mdash; Bloom's taxonomy, ACAPS, OCIE synthesis, DEIP, or S.M.A.R.T. goals.</p>
+<p><a class="open-btn" target="_blank" href="https://drive.google.com/file/d/15i5HBf1DSRgx_jc9YHSeEaF4a5Xy3D4R/view">Open the Student Workbook (PDF)</a></p>
+</section>
+
+<!-- ASSESSMENT INFORMATION -->
 <section class="doc-section" id="assessment-info">
 <h2>Assessment Information</h2>
 <p class="doc-sub">Assessment descriptions, weighting, and what each assessment measures</p>
-<p>For full assessment descriptions, see the <a href="https://drive.google.com/file/d/165s3HQmWHKnzbEUu4QwiXKvXfdlIJ5hw/view" target="_blank">printable PDF version</a>.</p>
+<p class="when"><b>When you need it:</b> two weeks before each assessment, when you start preparing.</p>
+<p><a class="open-btn" target="_blank" href="https://drive.google.com/file/d/165s3HQmWHKnzbEUu4QwiXKvXfdlIJ5hw/view">Open Assessment Information (PDF)</a></p>
 </section>
 
-<section class="doc-section" id="templates-tools">
-<h2>Templates & Tools</h2>
-<p class="doc-sub">DEIP Guide, Project Guide Tool, Listening & Reading Templates, Academic Listening Survival Guide, CCD Visit Log</p>
-<p>For all reusable templates, see the <a href="https://drive.google.com/file/d/1BXSS_HB1kSGSsZUiMaL-E3TUWmu4jS_E/view" target="_blank">printable PDF version</a>.</p>
+<!-- SPEECH RUBRICS -->
+<section class="doc-section" id="speech-rubrics">
+<h2>Speech Assignments &amp; Rubrics</h2>
+<p class="doc-sub">Informative Presentation and Persuasive Speech requirements and marking criteria</p>
+<p class="when"><b>When you need it:</b> Week 6 onward for the Informative Presentation (Week 7), and Week 9 onward for the Persuasive Speech (Tue Nov 24). Read the rubric before you plan, not after you rehearse.</p>
+<p><a class="open-btn" target="_blank" href="https://drive.google.com/file/d/1KWl0o7vzEUDtQexOmiAxFGHU9x96Eh-1/view">Open Speech Assignments &amp; Rubrics (PDF)</a></p>
 </section>
 
-<section class="doc-section" id="reading-tasks">
-<h2>Reading Task Sheets</h2>
-<p class="doc-sub">Comprehension questions, guided notes, vocabulary work, and written response tasks for each reading</p>
-<p>For the complete reading task sheets (Readings 1–10), see the <a href="https://drive.google.com/file/d/1By4YGbt0qzPxoM5Fi7TNYSCZfGXI17kv/view" target="_blank">printable PDF version</a>.</p>
+<!-- PORTFOLIO STRUCTURE -->
+<section class="doc-section" id="portfolio-structure">
+<h2>Portfolio Structure</h2>
+<p class="doc-sub">Working Portfolio and Final Showcase Portfolio requirements, artifact selection and reflection guidance</p>
+<p class="when"><b>When you need it:</b> Week 1 when you set the portfolio up, at each Portfolio Build, and in Week 13 when you curate the final version.</p>
+<p>The Working Portfolio is your evidence bank from Weeks 1 to 13. The Final Showcase Portfolio, due Sun Dec 13, is your curated argument about your own growth &mdash; and the artifact you can show a future employer.</p>
+<p><a class="open-btn" target="_blank" href="https://drive.google.com/file/d/1xqS_h9PwbjGCNKzKH57a2KRfwQairddA/view">Open the Portfolio Structure (PDF)</a></p>
 </section>
 
-<section class="doc-section" id="student-workbook">
-<h2>Student Workbook</h2>
-<p class="doc-sub">Critical Thinking, Source Analysis, Presentation Skills, Academic Writing, Vocabulary Building, Reflection Writing, Goal Setting, Group Work</p>
-<p>For the complete workbook with all 8 units, see the <a href="https://drive.google.com/file/d/15i5HBf1DSRgx_jc9YHSeEaF4a5Xy3D4R/view" target="_blank">printable PDF version</a>.</p>
+<!-- WEEK 8 MEETING -->
+<section class="doc-section" id="week8-meeting">
+<h2>Week 8 Meeting Prep Sheet</h2>
+<p class="doc-sub">Your mandatory individual meeting: what to bring, self-rating, questions and action planning</p>
+<p class="when"><b>When you need it:</b> Week 8 only (Oct 27 and 29), Room N745, about 12 minutes. Required even if we have already met. It counts toward participation and feeds Portfolio Build 2.</p>
+<p>Book a slot at least 24 hours in advance rather than using the Tuesday walk-in hour, so you get the full twelve minutes.</p>
+<p><a class="open-btn" target="_blank" href="https://drive.google.com/file/d/1Kk79QJWClneBAhS852rihbkEy5DuJnyZ/view">Open the Week 8 Meeting Prep Sheet (PDF)</a></p>
 </section>
 
-<section class="doc-section" id="reading-packet">
-<h2>Reading Packet</h2>
-<p class="doc-sub">Ten course readings with glossaries, comprehension questions, seminar discussion prompts, and writing tasks</p>
-<p>The Reading Packet contains the full text of all ten course readings. It is provided separately and is not reproduced on this page. Your instructor will provide access.</p>
+<!-- EXPERIENTIAL TRACKER -->
+<section class="doc-section" id="experiential-tracker">
+<h2>Experiential Learning Tracker</h2>
+<p class="doc-sub">The 3 online CCD modules and 4 in-person visits, with a DEIP reflection log for each</p>
+<p class="when"><b>When you need it:</b> after every CCD activity. This is the record that proves the requirement is met, and Part C feeds Portfolio Build 3. File &rarr; Make a copy first.</p>
+<p>Online: all three Brightspace modules &mdash; Industry Exploration, Write Your First Winning Resume, Become an Interview Master Today &mdash; complete by end of Week 7 (Oct 22). In person: Career Coaching Session, Fall Career Fair (Fri Oct 16, 14:30&ndash;17:30, E901&ndash;904), a CCD Open House, and one event of your own choice.</p>
+<p><a class="open-btn" target="_blank" href="https://docs.google.com/document/d/171CUgMEXdJtxZXIA4YjtDx9iNukZgohDjVY6ozQOps8/edit">Open the Experiential Learning Tracker (Google Doc)</a></p>
 </section>
 
-<footer style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 0.8125rem; color: var(--text-muted); text-align: center;">
-<p>EAP 100: Future Focused · NYU Shanghai · Fall 2026</p>
-<p style="margin-top: 4px;">Last updated: August 2026</p>
-</footer>
+<footer class="site-footer">EAP 100: Future Focused &middot; NYU Shanghai &middot; Fall 2026 (Sep 1 &ndash; Dec 13) &middot; <a href="index.html" style="color:var(--accent);">Course home</a></footer>
 
 </main>
 </div>
-
 </body>
 </html>
