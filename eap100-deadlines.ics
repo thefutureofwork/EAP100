@@ -53,7 +53,7 @@ DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260901
 DTEND;VALUE=DATE:20260901
 SUMMARY:EAP 100: Start the CCD online course (3 modules)
-DESCRIPTION:Begin the CCD Brightspace modules (Resume\, Networking\, Interview Skills) in Week 1. All three must be complete by Thu Oct 22.
+DESCRIPTION:Begin the CCD Brightspace modules (Industry Exploration\, Write Your First Winning Resume\, Become an Interview Master Today) in Week 1. All three must be complete by Thu Oct 22.
 END:VEVENT
 BEGIN:VEVENT
 UID:308f9901-ddc4-4c1a-9c36-328986cde36f
@@ -221,7 +221,7 @@ DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261022
 SUMMARY:EAP 100: All 3 CCD online modules complete
-DESCRIPTION:Resume\, Networking and Interview Skills modules must all be finished by end of day.
+DESCRIPTION:Industry Exploration\, Write Your First Winning Resume\, and Become an Interview Master Today modules must all be finished by end of day.
 END:VEVENT
 BEGIN:VEVENT
 UID:9bde13d1-e312-4cac-bb10-8edd47c31ca4
@@ -306,10 +306,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:847e8bcd-adb9-4d0d-bf53-bad4d781233f
 DTSTAMP:20260831T060800Z
-DTSTART;TZID=Asia/Shanghai:20261110T094500
-DTEND;TZID=Asia/Shanghai:20261110T094500
+DTSTART;TZID=Asia/Shanghai:20261201T094500
+DTEND;TZID=Asia/Shanghai:20261201T094500
 SUMMARY:⚠️ EAP 100: LISTENING EXAM 2 (20%)
-DESCRIPTION:In-class exam\, Week 10 (Tue Nov 10). ~20 minute academic lecture\, advanced listening + synthesis.
+DESCRIPTION:In-class exam\, Week 13 (Tue Dec 1). ~20 minute academic lecture\, advanced listening + synthesis.
 END:VEVENT
 BEGIN:VEVENT
 UID:fb4724c1-ee2c-49ec-81a7-14c2ef3868d6
