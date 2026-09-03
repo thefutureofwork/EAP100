@@ -3,8 +3,237 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EAP 100: Course Info</title>
-<meta http-equiv="refresh" content="0; url=https://thefutureofwork.github.io/EAP100/course-info.html">
+<title>EAP 100: Course Info &mdash; Materials, Assessment &amp; Policies</title>
+<meta name="description" content="EAP 100: Future Focused. NYU Shanghai. Course materials, assessment, CCD requirement, portfolio structure, policies and FAQ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Public+Sans:wght@400;500;600;700&family=Azeret+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --board:#14161A;--board-2:#1E2127;--amber:#F2A81D;--paper:#FAF9F7;--card:#FFFFFF;
+  --ink:#1A1C20;--ink-2:#4A4E56;--ink-3:#787D86;--rule:#DEDAD2;--rule-2:#EBE8E2;
+  --signal:#B02418;--signal-bg:#FBEDEB;--go:#1F6B4A;--go-bg:#EAF3EE;--amber-bg:#FDF3DF;--r:4px;
+}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Public Sans',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Archivo',system-ui,sans-serif;line-height:1.08;letter-spacing:-.02em}
+a{color:inherit}
+.mast{position:sticky;top:0;z-index:60;background:var(--board);border-bottom:3px solid var(--amber)}
+.mast-in{max-width:1180px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+.mark{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 118,'wght' 800;font-size:15px;letter-spacing:.1em;color:#fff;text-decoration:none;white-space:nowrap}
+.mark span{color:var(--amber)}
+.mast nav{margin-left:auto;display:flex;gap:4px}
+.mast nav a{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:#A9AEB8;text-decoration:none;padding:8px 14px;border-radius:var(--r);transition:background .18s,color .18s}
+.mast nav a:hover{background:var(--board-2);color:#fff}
+.mast nav a[aria-current]{color:var(--board);background:var(--amber)}
+.shell{max-width:1180px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:216px 1fr;gap:52px;align-items:start}
+.toc{position:sticky;top:84px;padding:48px 0 40px}
+.toc h4{font-family:'Azeret Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px}
+.toc a{display:block;font-size:14px;font-weight:500;color:var(--ink-2);text-decoration:none;padding:7px 12px;border-left:2px solid var(--rule-2);transition:all .16s}
+.toc a:hover{color:var(--ink);border-left-color:var(--amber);background:#fff}
+.toc .back{margin-top:20px;padding-top:16px;border-top:1px solid var(--rule);border-left:none;font-family:'Azeret Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--ink)}
+.toc .back:hover{border-left:none;background:none;color:var(--amber)}
+.main{padding:48px 0 80px;min-width:0;max-width:760px}
+.page-h{margin-bottom:12px}
+.kicker{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+.page-h h1{font-variation-settings:'wdth' 116,'wght' 800;font-size:clamp(2.1rem,6vw,3.3rem);text-transform:uppercase;letter-spacing:-.025em}
+.lede{font-size:1.05rem;color:var(--ink-2);margin-top:14px;max-width:56ch}
+section{scroll-margin-top:76px;margin-top:60px}
+.sh{display:flex;align-items:baseline;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:22px}
+.sh h2{font-variation-settings:'wdth' 112,'wght' 800;font-size:1.32rem;text-transform:uppercase}
+.sh .num{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:700;color:var(--amber);letter-spacing:.1em}
+p{margin-bottom:14px;max-width:68ch;color:var(--ink-2)}
+p strong,li strong{color:var(--ink);font-weight:600}
+h3{font-size:1.05rem;font-weight:700;font-variation-settings:'wdth' 105,'wght' 700;margin:30px 0 10px;color:var(--ink)}
+.docs{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:12px;margin-bottom:8px}
+.doc{background:var(--card);border:1px solid var(--rule);border-radius:var(--r);padding:17px 19px;text-decoration:none;display:flex;flex-direction:column;transition:all .18s}
+.doc:hover{border-color:var(--ink);transform:translateY(-2px);box-shadow:0 8px 22px rgba(20,22,26,.07)}
+.doc .dn{font-family:'Azeret Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--amber);margin-bottom:7px}
+.doc .dt{font-weight:700;font-size:15px;line-height:1.3;margin-bottom:5px}
+.doc .dd{font-size:13.5px;color:var(--ink-3);line-height:1.45}
+.doc .dw{font-family:'Azeret Mono',monospace;font-size:10.5px;color:var(--ink-2);margin-top:11px;padding-top:10px;border-top:1px dashed var(--rule);line-height:1.45}
+table{border-collapse:collapse;width:100%;margin:6px 0 18px;font-size:14.5px;background:var(--card);border:1px solid var(--rule);border-radius:var(--r);overflow:hidden}
+th{text-align:left;font-family:'Azeret Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#fff;background:var(--board);padding:11px 15px}
+td{padding:13px 15px;border-top:1px solid var(--rule-2);vertical-align:top;color:var(--ink-2);line-height:1.5}
+td strong{color:var(--ink)}
+tbody tr:nth-child(even){background:#FCFBFA}
+.pct{font-family:'Azeret Mono',monospace;font-weight:700;color:var(--ink);white-space:nowrap}
+.when{font-family:'Azeret Mono',monospace;font-size:13px;white-space:nowrap;color:var(--ink)}
+.hot{color:var(--signal);font-weight:700}
+.callout{background:var(--amber-bg);border-left:3px solid var(--amber);border-radius:3px;padding:15px 19px;margin:18px 0;font-size:15px;line-height:1.55;color:var(--ink-2)}
+.callout b{color:var(--ink)}
+.callout.red{background:var(--signal-bg);border-left-color:var(--signal)}
+ul,ol{margin:0 0 16px 22px;color:var(--ink-2);font-size:15.5px}
+li{margin-bottom:7px;line-height:1.55}
+.faq{border-top:1px solid var(--rule-2)}
+.faq details{border-bottom:1px solid var(--rule-2)}
+.faq summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:700;font-size:15.5px;display:flex;align-items:center;gap:14px;transition:color .16s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--amber)}
+.faq summary::after{content:"+";margin-left:auto;font-family:'Azeret Mono',monospace;font-size:17px;color:var(--ink-3);font-weight:400}
+.faq details[open] summary::after{content:"\2013"}
+.faq details[open] summary{color:var(--ink)}
+.faq .a{padding:0 0 18px 0;font-size:15px;color:var(--ink-2);line-height:1.62;max-width:66ch}
+.faq .a p{margin-bottom:10px}
+.faq .a p:last-child{margin-bottom:0}
+.qn{font-family:'Azeret Mono',monospace;font-size:11px;font-weight:700;color:var(--amber);flex-shrink:0}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:var(--r);padding:24px 26px;margin-top:18px}
+.card dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+.card dt{font-family:'Azeret Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px}
+.card dd{font-size:15px;font-weight:500}
+.card dd a{color:var(--ink);font-weight:600}
+.foot{background:var(--board);margin-top:80px;padding:40px 0;color:#6E7480}
+.foot-in{max-width:1180px;margin:0 auto;padding:0 24px;font-family:'Azeret Mono',monospace;font-size:11px;letter-spacing:.05em;display:flex;gap:20px;flex-wrap:wrap}
+.foot-in a{color:#B4BAC4;text-decoration:none}
+.foot-in a:hover{color:var(--amber)}
+@media(max-width:940px){
+  .shell{grid-template-columns:1fr;gap:0}
+  .toc{position:static;padding:32px 0 0;display:flex;flex-wrap:wrap;gap:5px}
+  .toc h4{width:100%;margin-bottom:8px}
+  .toc a{border-left:none;border:1px solid var(--rule);border-radius:var(--r);background:#fff;font-size:13px;padding:7px 13px}
+  .toc .back{margin-top:0;padding-top:7px;border:1px solid var(--ink);border-radius:var(--r)}
+  .main{padding-top:34px}
+}
+@media(max-width:620px){
+  body{font-size:16px}
+  .shell,.mast-in,.foot-in{padding-left:16px;padding-right:16px}
+  .docs{grid-template-columns:1fr}
+  table{font-size:13.5px}
+  th,td{padding:10px 11px}
+  .mast nav a{padding:8px 10px;font-size:10.5px}
+}
+</style>
 </head>
-<body><p>Loading...</p></body>
+<body>
+<header class="mast"><div class="mast-in"><a class="mark" href="index.html">EAP<span>100</span></a><nav><a href="index.html">Schedule</a><a href="course-info.html" aria-current="page">Course Info</a></nav></div></header>
+<div class="shell">
+<aside class="toc"><h4>On this page</h4><a href="#materials">Materials</a><a href="#assessment">Assessment</a><a href="#ccd">CCD Requirement</a><a href="#portfolio">Portfolio</a><a href="#policies">Policies</a><a href="#faq">FAQ</a><a href="#instructor">Instructor</a><a class="back" href="index.html">&larr; Weekly Schedule</a></aside>
+<main class="main">
+<div class="page-h"><p class="kicker">NYU Shanghai &middot; English for Academic Purposes &middot; Fall 2026</p><h1>Course Info</h1><p class="lede">Everything that is not week-by-week. For what is due and when, use the <a href="index.html" style="font-weight:600;border-bottom:2px solid var(--amber)">weekly schedule</a>.</p></div>
+<section id="materials"><div class="sh"><span class="num">01</span><h2>Materials</h2></div><p>Every course document lives here. Each card tells you when you would open it.</p>
+<div class="docs">
+<a class="doc" href="https://drive.google.com/file/d/1vRP-kajqPyvRgkCuQpb3uJphzGXCBFkz/view" target="_blank" rel="noopener"><span class="dn">01</span><span class="dt">Student Guide</span><span class="dd">Course overview, learning outcomes and the DEIP model.</span><span class="dw">Read in Week 1</span></a>
+<a class="doc" href="https://drive.google.com/file/d/15pIYF_aa80AERFDN139zF-qr3T7ZS4aW/view" target="_blank" rel="noopener"><span class="dn">02</span><span class="dt">Syllabus</span><span class="dd">Policies, grading, attendance, academic integrity, AI use.</span><span class="dw">When you need a rule</span></a>
+<a class="doc" href="https://drive.google.com/file/d/1BujC2LGVTgYAsS-26oUj1jNaWjDFH8H8/view" target="_blank" rel="noopener"><span class="dn">03</span><span class="dt">Semester Timeline</span><span class="dd">One page: every assessment, build, visit and reading by week.</span><span class="dw">Print it in Week 1</span></a>
+<a class="doc" href="https://drive.google.com/file/d/1kSm7ol0NVyTPWlxg1fxrmSgvqML_1J43/view" target="_blank" rel="noopener"><span class="dn">04</span><span class="dt">Reading Packet</span><span class="dd">All 10 readings with glossaries and seminar prompts.</span><span class="dw">Before every reading task</span></a>
+<a class="doc" href="https://drive.google.com/file/d/1By4YGbt0qzPxoM5Fi7TNYSCZfGXI17kv/view" target="_blank" rel="noopener"><span class="dn">05</span><span class="dt">Reading Task Sheets</span><span class="dd">The sheet you fill in for each reading.</span><span class="dw">Alongside the reading</span></a>
+<a class="doc" href="https://drive.google.com/file/d/1BXSS_HB1kSGSsZUiMaL-E3TUWmu4jS_E/view" target="_blank" rel="noopener"><span class="dn">06</span><span class="dt">Templates &amp; Tools</span><span class="dd">Cornell notes, DEIP, Planning Guide, CCD Visit Log.</span><span class="dw">Every week</span></a>
+<a class="doc" href="https://drive.google.com/file/d/1MS2EAyhb-p6U6xTjsgJiwBTY_IyPPlzb/view" target="_blank" rel="noopener"><span class="dn">07</span><span class="dt">Assignment Tables</span><span class="dd">Every task for all 14 weeks, in one printable PDF.</span><span class="dw">Offline backup for the schedule</span></a>
+<a class="doc" href="https://drive.google.com/file/d/15i5HBf1DSRgx_jc9YHSeEaF4a5Xy3D4R/view" target="_blank" rel="noopener"><span class="dn">08</span><span class="dt">Student Workbook</span><span class="dd">Eight skills units, used mostly in class.</span><span class="dw">Bring to class</span></a>
+<a class="doc" href="https://drive.google.com/file/d/1KWl0o7vzEUDtQexOmiAxFGHU9x96Eh-1/view" target="_blank" rel="noopener"><span class="dn">09</span><span class="dt">Speech Rubrics</span><span class="dd">Requirements and marking criteria for both speeches.</span><span class="dw">Before you plan, not after you rehearse</span></a>
+<a class="doc" href="https://drive.google.com/file/d/165s3HQmWHKnzbEUu4QwiXKvXfdlIJ5hw/view" target="_blank" rel="noopener"><span class="dn">10</span><span class="dt">Assessment Information</span><span class="dd">What each assessment measures and how it is marked.</span><span class="dw">Two weeks before each assessment</span></a>
+<a class="doc" href="https://docs.google.com/document/d/171CUgMEXdJtxZXIA4YjtDx9iNukZgohDjVY6ozQOps8/edit" target="_blank" rel="noopener"><span class="dn">11</span><span class="dt">Experiential Learning Tracker</span><span class="dd">Your CCD record. File &rarr; Make a copy first.</span><span class="dw">After every CCD activity</span></a>
+<a class="doc" href="https://drive.google.com/file/d/1Kk79QJWClneBAhS852rihbkEy5DuJnyZ/view" target="_blank" rel="noopener"><span class="dn">12</span><span class="dt">Week 8 Meeting Prep Sheet</span><span class="dd">What to bring, self-rating, questions, action planning.</span><span class="dw">Week 8 only</span></a>
+<a class="doc" href="https://docs.google.com/document/d/1RMW_A-eV3rVe0p3-we9mGKREdnsn26QWvnXd6yf9SDY/edit" target="_blank" rel="noopener"><span class="dn">13</span><span class="dt">Portfolio Assignment Guide</span><span class="dd">Weekly portfolio tasks with dates and checkboxes.</span><span class="dw">Every week alongside the schedule</span></a>
+</div>
+<div class="callout"><b>Where things go.</b> Almost everything is submitted to your <a href="https://drive.google.com/drive/folders/1FAPe2Us22fKf7ZyL5GtVwPZWy-LYQS4g" target="_blank" rel="noopener" style="font-weight:600">Student Folder</a> on the <a href="https://drive.google.com/drive/folders/1TLIHiLTOamDrurCxBi1FIHnQ4ebWEArR" target="_blank" rel="noopener" style="font-weight:600">course Google Drive</a>. Label every upload with the week, for example &ldquo;Week 1 Reading 1 Paragraph&rdquo;. A few tasks are handed in on paper in class, and the CCD modules are tracked on Brightspace. The weekly schedule tells you which for each task.</div>
+</section>
+<section id="assessment"><div class="sh"><span class="num">02</span><h2>Assessment</h2></div>
+<table><thead><tr><th>Assessment</th><th>When</th><th>Weight</th></tr></thead><tbody>
+<tr><td><strong>Listening Exam 1</strong></td><td class="when">Week 6 &middot; Tue Oct 13</td><td class="pct">20%</td></tr>
+<tr><td><strong>Informative Presentation</strong></td><td class="when">Week 7 &middot; Tue Oct 20</td><td class="pct">20%</td></tr>
+<tr><td><strong>Persuasive Speech</strong></td><td class="when">Week 12 &middot; Tue Nov 24</td><td class="pct">20%</td></tr>
+<tr><td><strong>Listening Exam 2</strong></td><td class="when">Week 13 &middot; <span class="hot">Tue Dec 1</span></td><td class="pct">20%</td></tr>
+<tr><td><strong>Final Portfolio</strong></td><td class="when">Sun Dec 13, 23:59</td><td class="pct">10%</td></tr>
+<tr><td><strong>Participation</strong></td><td class="when">Ongoing</td><td class="pct">10%</td></tr>
+</tbody></table>
+<p>All four major assessments happen in class. Bring a notebook to both listening exams for Cornell notes. Upload your outline and slides to your Student Folder <strong>before</strong> you present for either speech.</p>
+</section>
+<section id="ccd"><div class="sh"><span class="num">03</span><h2>CCD Requirement</h2></div>
+<div class="callout"><b>Both parts are required.</b> Three online modules on Brightspace (all complete by <b>Thu Oct 22</b>) and four in-person events, each with a DEIP reflection log. Record everything in your Experiential Learning Tracker.</div>
+<h3>Online modules</h3>
+<p>Industry Exploration &middot; Write Your First Winning Resume &middot; Become an Interview Master Today. <a href="https://brightspace.nyu.edu/d2l/home/111955" target="_blank" rel="noopener" style="font-weight:600">Open the CCD course on Brightspace.</a> Start in Week 1. Do not leave all three until Week 7 &mdash; your resume draft is needed for the Week 8 meeting.</p>
+<h3>In-person visits</h3>
+<table><thead><tr><th>Visit</th><th>What it is</th><th>Log due</th></tr></thead><tbody>
+<tr><td><strong>1</strong></td><td><strong>Career Coaching Session.</strong> Book on <a href="https://app.joinhandshake.com/login" target="_blank" rel="noopener">Handshake</a>.</td><td class="when">Mon Sep 14</td></tr>
+<tr><td><strong>2</strong></td><td><strong>Fall Career Fair.</strong> Fri Oct 16, 14:30&ndash;17:30, E901&ndash;904. Speak with at least two employers.</td><td class="when">Mon Oct 19</td></tr>
+<tr><td><strong>3</strong></td><td><strong>CCD Open House.</strong> Any one Open House on the <a href="https://docs.google.com/spreadsheets/d/1ysEj7phr0nacRE0RJYY2-mwCGUBgTvQ9jJ_cwNH4FLo/edit?gid=1909347099#gid=1909347099" target="_blank" rel="noopener">CCD calendar</a> (highlighted yellow).</td><td class="when">Mon Nov 2</td></tr>
+<tr><td><strong>4</strong></td><td><strong>One event of your choice.</strong> Any CCD event of 1&ndash;2 hours that fits your goals.</td><td class="when">Thu Nov 19</td></tr>
+</tbody></table>
+<p>Each log is 150&ndash;200 words in DEIP form. File it in your Experiential Learning Tracker <em>and</em> your Student Folder.</p>
+</section>
+<section id="portfolio"><div class="sh"><span class="num">04</span><h2>Portfolio</h2></div>
+<p>Your portfolio has two lives. The <strong>Working Portfolio</strong> is your evidence bank from Weeks 1 to 13: developmental, cumulative, and not expected to look polished. The <strong>Final Showcase Portfolio</strong> is the curated version you submit on Dec 13 &mdash; smaller, more selective, and making an argument about your growth.</p>
+<div class="callout"><b>Two deliverables, one portfolio.</b> You <b>submit</b> the full curated portfolio (five artifacts, A&ndash;E, plus reflections). You <b>present</b> only two or three of them at the Student Showcase on Thu Dec 10.</div>
+<h3>How to organize the Working Portfolio</h3>
+<p>Six folders. Save meaningful work as you go and label it clearly.</p>
+<table><thead><tr><th>Folder</th><th>What goes in it</th></tr></thead><tbody>
+<tr><td><strong>Reading</strong></td><td>Reading responses, guided notes, source-based paragraphs, question sets</td></tr>
+<tr><td><strong>Listening</strong></td><td>Cornell notes, vocabulary lists, listening reflections</td></tr>
+<tr><td><strong>Speaking</strong></td><td>Outlines, slides, cue cards, feedback notes, rehearsal reflections</td></tr>
+<tr><td><strong>CCD</strong></td><td>Visit reflections, Planning Guide, career notes, self-assessment</td></tr>
+<tr><td><strong>Builds</strong></td><td>Portfolio Build 1, 2 and 3 materials and DEIP reflections</td></tr>
+<tr><td><strong>Final</strong></td><td>End-of-course reflection, showcase notes, closing statement drafts</td></tr>
+</tbody></table>
+<h3>Checkpoints</h3>
+<table><thead><tr><th>When</th><th>Checkpoint</th><th>What you do</th></tr></thead><tbody>
+<tr><td class="when">Week 1</td><td><strong>Setup</strong></td><td>Create the portfolio. Save orientation notes and DEIP Reflection 1.</td></tr>
+<tr><td class="when">Thu Sep 17</td><td><strong>Build 1</strong></td><td>2&ndash;3 early artifacts + a 250&ndash;300 word DEIP reflection.</td></tr>
+<tr><td class="when">Tue Nov 3</td><td><strong>Build 2</strong></td><td>Assigned Week 7. Add Weeks 4&ndash;7 materials + a 300&ndash;400 word DEIP reflection. Due after your Week 8 meeting on purpose.</td></tr>
+<tr><td class="when">Thu Nov 19</td><td><strong>Build 3</strong></td><td>Refine your selection + a 400&ndash;500 word DEIP reflection synthesizing all four CCD visits.</td></tr>
+<tr><td class="when">Week 13</td><td><strong>Showcase prep</strong></td><td>Choose your Showcase artifacts, rehearse, get peer feedback.</td></tr>
+</tbody></table>
+<h3>Final Portfolio structure &mdash; all 8 sections</h3>
+<table><thead><tr><th>Section</th><th>What it includes</th><th>Length</th></tr></thead><tbody>
+<tr><td><strong>1. Introduction</strong></td><td>Who you are as a learner, and what this portfolio shows.</td><td class="when">150&ndash;200 w</td></tr>
+<tr><td><strong>2. Artifact A</strong></td><td>Reading / source use</td><td class="when">+ 75&ndash;125 w</td></tr>
+<tr><td><strong>3. Artifact B</strong></td><td>Listening / note-taking</td><td class="when">+ 75&ndash;125 w</td></tr>
+<tr><td><strong>4. Artifact C</strong></td><td>Speaking</td><td class="when">+ 75&ndash;125 w</td></tr>
+<tr><td><strong>5. Artifact D</strong></td><td>CCD / experiential</td><td class="when">+ 75&ndash;125 w</td></tr>
+<tr><td><strong>6. Artifact E</strong></td><td>Reflective growth: your best evidence of revision or self-direction</td><td class="when">+ 75&ndash;125 w</td></tr>
+<tr><td><strong>7. Major DEIP reflection</strong></td><td>Pulls the whole portfolio together.</td><td class="when">300&ndash;500 w</td></tr>
+<tr><td><strong>8. Closing statement</strong></td><td>Where this takes you in future study and work.</td><td class="when">100&ndash;150 w</td></tr>
+</tbody></table>
+<p>Five artifacts is the minimum. Add more only if they strengthen the argument.</p>
+<h3>Every caption answers three things</h3>
+<ol><li>What is this artifact?</li><li>What skill does it demonstrate?</li><li>Why did you select it?</li></ol>
+<h3>How it is graded</h3>
+<ul>
+<li><strong>Selection.</strong> Judgment, not volume.</li>
+<li><strong>Captions.</strong> You can say why an artifact matters.</li>
+<li><strong>Evidence of growth.</strong> The portfolio clearly shows academic English development.</li>
+<li><strong>Coherence.</strong> One shaped presentation, not a folder of unrelated tasks.</li>
+<li><strong>Reflection quality.</strong> The major DEIP interprets growth, it does not just describe tasks.</li>
+<li><strong>Audience awareness.</strong> The final product is clear to an outside reader.</li>
+</ul>
+<div class="callout red"><b>The most common mistake.</b> Describing what you did (&ldquo;I wrote notes&rdquo;) instead of interpreting what it shows (&ldquo;My notes reveal that I can identify main ideas but miss supporting detail&rdquo;). Every DEIP reflection needs all four parts, especially <b>Plan</b>.</div>
+</section>
+<section id="policies"><div class="sh"><span class="num">05</span><h2>Policies</h2></div>
+<h3>Attendance</h3>
+<p>You have <strong>2 free absences</strong>, no explanation needed. Three absences means a participation deduction. Four means an F for participation. Five means course failure. If you know in advance, notify me before class. For any absence, check with a classmate about what was covered.</p>
+<h3>Late work</h3>
+<p><strong>5% deducted per day.</strong> Not accepted after 7 days. If you have extenuating circumstances, email me <strong>before</strong> the due date. An absence does not excuse a late submission.</p>
+<h3>Deadlines</h3>
+<p>Weekly reading, listening and reflection tasks are due at <strong>23:59 on the Monday after</strong> the week they belong to, unless the task says otherwise. Portfolio builds and CCD logs sometimes fall earlier in the week, so always check the date on the task itself.</p>
+<h3>AI use</h3>
+<p>AI use is <strong>task-specific and sometimes restricted</strong>. I will tell you when it is permitted. Submitting AI-generated content as your own work is never allowed. When AI use is permitted, include an AI disclosure statement. Full details are in the Syllabus.</p>
+<h3>Office hours</h3>
+<p>Walk-in: <strong>Tuesdays 13:00&ndash;14:15, Room N745</strong>, first come first served. For other times, <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0rjJ8XF-q-2kit7hcXn-3nWBfnCGxBwpqnpDtJiHclYi-ZuQouLjw9ImkdU6HGePFv4kvFpue5" target="_blank" rel="noopener">book an appointment</a> at least 24 hours in advance.</p>
+<div class="callout"><b>The Week 8 individual meeting uses a different link.</b> Book it <a href="https://calendar.app.google/BrYt5dNbwZgNiLW39" target="_blank" rel="noopener">here</a>. Do not use the Tuesday walk-in hour for it &mdash; you want the full twelve minutes.</div>
+<h3>In class</h3>
+<p><strong>Ask questions in the moment.</strong> Do not wait until the end. If something is unclear, raise your hand.</p>
+<p><strong>Check information with me, not only with classmates.</strong> You are welcome to talk to each other, but do not assume what you hear is correct. When in doubt, ask me directly.</p>
+<h3>Term dates</h3>
+<p><strong>No classes:</strong> Thu Oct 1 &ndash; Wed Oct 7 (National Day) &middot; Thu Nov 26 &ndash; Fri Nov 27 (Thanksgiving).<br><strong>Legislative day:</strong> Sun Nov 8 follows a Thursday schedule, but EAP 100 will not meet.</p>
+</section>
+<section id="faq"><div class="sh"><span class="num">06</span><h2>FAQ</h2></div>
+<div class="faq">
+<details><summary><span class="qn">Q1</span>Where do I submit my work?</summary><div class="a"><p>Three routes, and the task always tells you which one:</p><p><strong>1. Student Folder</strong> on the course Google Drive &mdash; almost everything. Label it with the week, for example &ldquo;Week 1 Reading 1 Paragraph&rdquo;.<br><strong>2. On paper, in class</strong> &mdash; a few tasks like the Planning Guide and the resume peer review.<br><strong>3. Brightspace</strong> &mdash; the three CCD online modules only.</p><p>Always keep a copy of portfolio-related work in your own portfolio folders.</p></div></details>
+<details><summary><span class="qn">Q2</span>When exactly is something due?</summary><div class="a"><p>Open the <a href="index.html">weekly schedule</a> and find the task. Every task has its own date chip. The general rule is 23:59 on the Monday after the week, but portfolio builds and CCD logs often fall on a Thursday instead.</p></div></details>
+<details><summary><span class="qn">Q3</span>How much time should this take?</summary><div class="a"><p>Plan for <strong>8&ndash;10 hours per week outside class</strong>. That includes reading, listening practice, exam revision and speech rehearsal. Your Week 2 time-tracking task gives you a personal baseline. If you are consistently over, come to office hours &mdash; that is useful information for both of us.</p></div></details>
+<details><summary><span class="qn">Q4</span>I missed a class. What now?</summary><div class="a"><p>Check with a classmate about what was covered, then open the week on the <a href="index.html">schedule</a> for the tasks. Missing class does not extend a deadline. You have 2 free absences before it affects your participation grade.</p></div></details>
+<details><summary><span class="qn">Q5</span>Can I use AI for my assignments?</summary><div class="a"><p>Sometimes, and I will tell you when. It is task-specific. Submitting AI-generated content as your own work is never allowed. When AI use is permitted, include an AI disclosure statement. See the Syllabus for the full policy.</p></div></details>
+<details><summary><span class="qn">Q6</span>What is DEIP?</summary><div class="a"><p>The reflection model used in every portfolio build: <strong>D</strong>escribe (what did I do?) &rarr; <strong>E</strong>xplain (why did it matter in EAP 100?) &rarr; <strong>I</strong>nterpret (what did I learn?) &rarr; <strong>P</strong>lan (what will I change next time?). All four parts, every time. Plan is the one people forget.</p></div></details>
+<details><summary><span class="qn">Q7</span>What does a listening task actually include?</summary><div class="a"><p>Every listening task has four parts: Cornell-style notes, 5&ndash;10 academic vocabulary words with brief meanings, main ideas plus supporting details, and a short summary or takeaway. The template is in Templates &amp; Tools.</p></div></details>
+<details><summary><span class="qn">Q8</span>How do I book office hours?</summary><div class="a"><p>Walk-in Tuesdays 13:00&ndash;14:15 in Room N745, no booking needed. For any other time, <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0rjJ8XF-q-2kit7hcXn-3nWBfnCGxBwpqnpDtJiHclYi-ZuQouLjw9ImkdU6HGePFv4kvFpue5" target="_blank" rel="noopener">book a slot</a> at least 24 hours ahead. The Week 8 individual meeting has a <a href="https://calendar.app.google/BrYt5dNbwZgNiLW39" target="_blank" rel="noopener">separate booking link</a>.</p></div></details>
+</div>
+</section>
+<section id="instructor"><div class="sh"><span class="num">07</span><h2>Instructor</h2></div>
+<div class="card"><dl><div><dt>Name</dt><dd>Katherine Tosi</dd></div><div><dt>Email</dt><dd><a href="mailto:kt1992@nyu.edu">kt1992@nyu.edu</a></dd></div><div><dt>Office</dt><dd>Room N745</dd></div><div><dt>Walk-in hours</dt><dd>Tuesdays 13:00&ndash;14:15</dd></div><div><dt>By appointment</dt><dd>24 hours notice</dd></div><div><dt>Reply time</dt><dd>Within 24 hours, Mon&ndash;Fri</dd></div></dl></div>
+</section>
+</main>
+</div>
+<footer class="foot"><div class="foot-in"><span>EAP 100: FUTURE FOCUSED / NYU SHANGHAI / FALL 2026</span><a href="index.html" style="margin-left:auto">WEEKLY SCHEDULE</a><a href="eap100-deadlines.ics">CALENDAR FILE</a></div></footer>
+</body>
 </html>
