@@ -41,6 +41,7 @@ a{color:inherit}
 .wk-num{font-family:'Azeret Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--amber)}
 .wk-head h2{font-variation-settings:'wdth' 112,'wght' 800;font-size:1.1rem;text-transform:uppercase}
 .wk-head .wk-dates{font-family:'Azeret Mono',monospace;font-size:11px;color:var(--ink-3);margin-left:auto;letter-spacing:.05em}
+.wk-hrs{font-family:'Azeret Mono',monospace;font-size:10.5px;font-weight:600;color:#5CB88A;letter-spacing:.04em;margin-left:8px}
 .wk-note{background:var(--amber-bg);border-left:3px solid var(--amber);border-radius:3px;padding:10px 15px;margin:12px 0 4px;font-size:13.5px;line-height:1.5;color:var(--ink-2)}
 .wk-note b{color:var(--ink)}
 .items{list-style:none}
@@ -62,6 +63,7 @@ a{color:inherit}
 .t-port{background:#EDEBFF;color:#3F3A8C}
 .t-ccd{background:var(--amber-bg);color:#8A5D06}
 .t-listen{background:#E8F4FD;color:#1A5276}
+.est{font-family:'Azeret Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.04em;padding:3px 7px;border-radius:3px;background:#1C2A22;color:#5CB88A;white-space:nowrap;margin-left:6px;vertical-align:middle}
 .foot{background:var(--board);margin-top:80px;padding:40px 0;color:#6E7480}
 .foot-in{max-width:1000px;margin:0 auto;padding:0 24px;font-family:'Azeret Mono',monospace;font-size:11px;letter-spacing:.05em;display:flex;gap:20px;flex-wrap:wrap}
 .foot-in a{color:#B4BAC4;text-decoration:none}
@@ -77,6 +79,7 @@ body{background:#fff;font-size:11pt}
 .due-chip.assess{background:#eee!important;font-weight:800}
 .wk-sec{break-inside:avoid}
 .legend{margin-bottom:18px}
+.est{background:#eee!important;color:#333!important;border:1px solid #999}
 }
 @media(max-width:620px){
 body{font-size:16px}
@@ -95,7 +98,7 @@ body{font-size:16px}
 <div class="page-h">
 <p class="kicker">NYU Shanghai &middot; English for Academic Purposes &middot; Fall 2026</p>
 <h1>Due Dates Checklist</h1>
-<p class="lede">Every task, every deadline, one page. Print it, pin it, check things off. Deadlines are <strong>23:59 Monday</strong> unless the date says otherwise.</p>
+<p class="lede">Every task, every deadline, one page. Print it, pin it, check things off. Green badges show estimated time. Deadlines are <strong>23:59 Monday</strong> unless the date says otherwise.</p>
 </div>
 
 <div class="actions">
@@ -109,155 +112,156 @@ body{font-size:16px}
 <span><span class="dot" style="background:#3F3A8C"></span> Portfolio</span>
 <span><span class="dot" style="background:#8A5D06"></span> CCD</span>
 <span><span class="dot" style="background:#1A5276"></span> Listening</span>
+<span><span class="dot" style="background:#1C2A22"></span> Time est.</span>
 </div>
 
 <!-- WEEK 1 -->
 <div class="wk-sec" id="week1">
-<div class="wk-head"><span class="wk-num">WEEK 01</span><h2>What Counts as Work?</h2><span class="wk-dates">Sep 1 / Sep 3</span></div>
+<div class="wk-head"><span class="wk-num">WEEK 01</span><h2>What Counts as Work?</h2><span class="wk-hrs">~4h homework</span><span class="wk-dates">Sep 1 / Sep 3</span></div>
 <ul class="items">
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 1 Paragraph</span><span class="sub">200&ndash;250 words defining work, using the reading. &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 7</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Video 1 Cornell Notes + Vocabulary<span class="tag t-listen">Listening</span></span><span class="sub">Cornell notes + 5&ndash;10 vocab words (Sugata Mitra). &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 7</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Portfolio Setup &amp; Orientation Notes<span class="tag t-port">Portfolio</span></span><span class="sub">Create portfolio folder + 5&ndash;10 bullet points on course goals. &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 7</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">DEIP Reflection 1<span class="tag t-port">Portfolio</span></span><span class="sub">~200 words on a past work/English experience using DEIP. &rarr; Student Folder + portfolio</span></div><span class="due-chip">Mon Sep 7</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 1 Paragraph<span class="est">~2h</span></span><span class="sub">200&ndash;250 words defining work, using the reading. &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 7</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Video 1 Cornell Notes + Vocabulary<span class="est">~1h</span><span class="tag t-listen">Listening</span></span><span class="sub">Cornell notes + 5&ndash;10 vocab words (Sugata Mitra). &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 7</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Portfolio Setup &amp; Orientation Notes<span class="est">~25min</span><span class="tag t-port">Portfolio</span></span><span class="sub">Create portfolio folder + 5&ndash;10 bullet points on course goals. &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 7</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">DEIP Reflection 1<span class="est">~40min</span><span class="tag t-port">Portfolio</span></span><span class="sub">~200 words on a past work/English experience using DEIP. &rarr; Student Folder + portfolio</span></div><span class="due-chip">Mon Sep 7</span></li>
 <li class="item"><input type="checkbox"><div class="info"><span class="nm">Start CCD online course (3 modules)<span class="tag t-ccd">CCD</span></span><span class="sub">Begin on Brightspace. All 3 due by Thu Oct 22.</span></div><span class="due-chip soft">Start now</span></li>
 </ul>
 </div>
 
 <!-- WEEK 2 -->
 <div class="wk-sec" id="week2">
-<div class="wk-head"><span class="wk-num">WEEK 02</span><h2>Learning for the Future Workplace</h2><span class="wk-dates">Sep 8 / Sep 10</span></div>
+<div class="wk-head"><span class="wk-num">WEEK 02</span><h2>Learning for the Future Workplace</h2><span class="wk-hrs">~5h 35min homework</span><span class="wk-dates">Sep 8 / Sep 10</span></div>
 <ul class="items">
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 2 Two-Column Notes</span><span class="sub">Main claims + connections to EAP 100. &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 14</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Video 2 Cornell Notes + Vocabulary<span class="tag t-listen">Listening</span></span><span class="sub">Cornell notes + 5&ndash;10 vocab words (Erik Brynjolfsson). &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 14</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">CCD Visit 1 log: Career Coaching<span class="tag t-ccd">CCD</span></span><span class="sub">Book on Handshake, attend, write 150&ndash;200 word DEIP log. &rarr; Tracker + Student Folder</span></div><span class="due-chip">Mon Sep 14</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Homework Time Tracking + Mini-Reflection</span><span class="sub">Track homework time for one week + 100&ndash;150 word reflection. &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 14</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">EAP Planning Guide (Part 1)</span><span class="sub">Goals, schedule, busy periods. On paper, bring to class.</span></div><span class="due-chip soft">Tue Sep 15</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 2 Two-Column Notes<span class="est">~1h 30m</span></span><span class="sub">Main claims + connections to EAP 100. &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 14</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Video 2 Cornell Notes + Vocabulary<span class="est">~50min</span><span class="tag t-listen">Listening</span></span><span class="sub">Cornell notes + 5&ndash;10 vocab words (Erik Brynjolfsson). &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 14</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">CCD Visit 1 log: Career Coaching<span class="est">~2h</span><span class="tag t-ccd">CCD</span></span><span class="sub">Book on Handshake, attend, write 150&ndash;200 word DEIP log. &rarr; Tracker + Student Folder</span></div><span class="due-chip">Mon Sep 14</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Homework Time Tracking + Mini-Reflection<span class="est">~25min</span></span><span class="sub">Track homework time for one week + 100&ndash;150 word reflection. &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 14</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">EAP Planning Guide (Part 1)<span class="est">~25min</span></span><span class="sub">Goals, schedule, busy periods. On paper, bring to class.</span></div><span class="due-chip soft">Tue Sep 15</span></li>
 </ul>
 </div>
 
 <!-- WEEK 3 -->
 <div class="wk-sec" id="week3">
-<div class="wk-head"><span class="wk-num">WEEK 03</span><h2>Future-Proofing Your Career</h2><span class="wk-dates">Sep 15 / Sep 17</span></div>
+<div class="wk-head"><span class="wk-num">WEEK 03</span><h2>Future-Proofing Your Career</h2><span class="wk-hrs">~3h 35min homework</span><span class="wk-dates">Sep 15 / Sep 17</span></div>
 <ul class="items">
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Portfolio Build 1<span class="tag t-port">Portfolio</span></span><span class="sub">2&ndash;3 artifacts + 250&ndash;300 word DEIP reflection. &rarr; Student Folder + portfolio</span></div><span class="due-chip">Thu Sep 17</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 3 Guided Notes</span><span class="sub">Key ideas, examples, and two questions. &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 21</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Video 3 Cornell Notes + Vocabulary<span class="tag t-listen">Listening</span></span><span class="sub">Cornell notes + 5&ndash;10 vocab words (Jacob Morgan). &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 21</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Portfolio Build 1<span class="est">~1h 15m</span><span class="tag t-port">Portfolio</span></span><span class="sub">2&ndash;3 artifacts + 250&ndash;300 word DEIP reflection. &rarr; Student Folder + portfolio</span></div><span class="due-chip">Thu Sep 17</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 3 Guided Notes<span class="est">~1h 30m</span></span><span class="sub">Key ideas, examples, and two questions. &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 21</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Video 3 Cornell Notes + Vocabulary<span class="est">~50min</span><span class="tag t-listen">Listening</span></span><span class="sub">Cornell notes + 5&ndash;10 vocab words (Jacob Morgan). &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 21</span></li>
 </ul>
 </div>
 
 <!-- WEEK 4 -->
 <div class="wk-sec" id="week4">
-<div class="wk-head"><span class="wk-num">WEEK 04</span><h2>Technology, AI, and the Changing Workplace</h2><span class="wk-dates">Sep 22 / Sep 24</span></div>
+<div class="wk-head"><span class="wk-num">WEEK 04</span><h2>Technology, AI, and the Changing Workplace</h2><span class="wk-hrs">~2h 50min homework</span><span class="wk-dates">Sep 22 / Sep 24</span></div>
 <div class="wk-note"><b>Light week.</b> Use the time to get ahead on CCD modules.</div>
 <ul class="items">
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 4 Source-Based Questions</span><span class="sub">Answer questions on tech and the workplace; quote or paraphrase. &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 28</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Video 4 Cornell Notes + Vocabulary<span class="tag t-listen">Listening</span></span><span class="sub">Cornell notes + 5&ndash;10 vocab words (Rainer Strack). &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 28</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 4 Source-Based Questions<span class="est">~2h</span></span><span class="sub">Answer questions on tech and the workplace; quote or paraphrase. &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 28</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Video 4 Cornell Notes + Vocabulary<span class="est">~50min</span><span class="tag t-listen">Listening</span></span><span class="sub">Cornell notes + 5&ndash;10 vocab words (Rainer Strack). &rarr; Student Folder</span></div><span class="due-chip">Mon Sep 28</span></li>
 </ul>
 </div>
 
 <!-- WEEK 5 -->
 <div class="wk-sec" id="week5">
-<div class="wk-head"><span class="wk-num">WEEK 05</span><h2>Transferable Skills &amp; Employability</h2><span class="wk-dates">Sep 29 &ndash; Oct 8</span></div>
+<div class="wk-head"><span class="wk-num">WEEK 05</span><h2>Transferable Skills &amp; Employability</h2><span class="wk-hrs">~3h 45min homework</span><span class="wk-dates">Sep 29 &ndash; Oct 8</span></div>
 <div class="wk-note"><b>No classes Thu Oct 1 &ndash; Wed Oct 7</b> (National Day). All three tasks due Mon Oct 12.</div>
 <ul class="items">
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 5 Pre-Listening Task</span><span class="sub">Predict main ideas, highlight vocab, write 2&ndash;3 questions. &rarr; Student Folder</span></div><span class="due-chip">Mon Oct 12</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Listening Exam Practice<span class="tag t-listen">Listening</span></span><span class="sub">Practice recording: Cornell notes, vocab, 3&ndash;5 sentence summary. &rarr; Student Folder</span></div><span class="due-chip">Mon Oct 12</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 6: Selecting Relevant Information</span><span class="sub">Key info vs. extra detail in listening. &rarr; Student Folder</span></div><span class="due-chip">Mon Oct 12</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 5 Pre-Listening Task<span class="est">~1h 15m</span></span><span class="sub">Predict main ideas, highlight vocab, write 2&ndash;3 questions. &rarr; Student Folder</span></div><span class="due-chip">Mon Oct 12</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Listening Exam Practice<span class="est">~1h 30m</span><span class="tag t-listen">Listening</span></span><span class="sub">Practice recording: Cornell notes, vocab, 3&ndash;5 sentence summary. &rarr; Student Folder</span></div><span class="due-chip">Mon Oct 12</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 6: Selecting Relevant Information<span class="est">~1h</span></span><span class="sub">Key info vs. extra detail in listening. &rarr; Student Folder</span></div><span class="due-chip">Mon Oct 12</span></li>
 </ul>
 </div>
 
 <!-- WEEK 6 -->
 <div class="wk-sec" id="week6">
-<div class="wk-head"><span class="wk-num">WEEK 06</span><h2>Automation and Labor</h2><span class="wk-dates">Oct 13 / Oct 15</span></div>
+<div class="wk-head"><span class="wk-num">WEEK 06</span><h2>Automation and Labor</h2><span class="wk-hrs">~5h 30min homework</span><span class="wk-dates">Oct 13 / Oct 15</span></div>
 <div class="wk-note"><b>Heaviest week of the term.</b> Exam, reading, listening, and Friday career fair.</div>
 <ul class="items">
 <li class="item"><input type="checkbox"><div class="info"><span class="nm">Listening Exam 1 (20%)<span class="tag t-exam">Exam</span></span><span class="sub">In-class exam: ~20 min lecture. Bring a notebook for Cornell notes.</span></div><span class="due-chip assess">Tue Oct 13</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 7 Short Response</span><span class="sub">3 key points + 1 question to the author. &rarr; Student Folder</span></div><span class="due-chip">Mon Oct 19</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Video 5 Cornell Notes + Vocabulary<span class="tag t-listen">Listening</span></span><span class="sub">Cornell notes + vocab (David Autor). &rarr; Student Folder</span></div><span class="due-chip">Mon Oct 19</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">CCD Visit 2 log: Fall Career Fair<span class="tag t-ccd">CCD</span></span><span class="sub">Fri Oct 16, 14:30&ndash;17:30, E901&ndash;904. 150&ndash;200 word DEIP log. &rarr; Tracker + Student Folder</span></div><span class="due-chip">Mon Oct 19</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 7 Short Response<span class="est">~1h</span></span><span class="sub">3 key points + 1 question to the author. &rarr; Student Folder</span></div><span class="due-chip">Mon Oct 19</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Video 5 Cornell Notes + Vocabulary<span class="est">~1h</span><span class="tag t-listen">Listening</span></span><span class="sub">Cornell notes + vocab (David Autor). &rarr; Student Folder</span></div><span class="due-chip">Mon Oct 19</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">CCD Visit 2 log: Fall Career Fair<span class="est">~2h 30m</span><span class="tag t-ccd">CCD</span></span><span class="sub">Fri Oct 16, 14:30&ndash;17:30, E901&ndash;904. 150&ndash;200 word DEIP log. &rarr; Tracker + Student Folder</span></div><span class="due-chip">Mon Oct 19</span></li>
 </ul>
 </div>
 
 <!-- WEEK 7 -->
 <div class="wk-sec" id="week7">
-<div class="wk-head"><span class="wk-num">WEEK 07</span><h2>AI and the Future of Jobs</h2><span class="wk-dates">Oct 20 / Oct 22</span></div>
+<div class="wk-head"><span class="wk-num">WEEK 07</span><h2>AI and the Future of Jobs</h2><span class="wk-hrs">~6h 20min homework</span><span class="wk-dates">Oct 20 / Oct 22</span></div>
 <ul class="items">
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Informative Presentation (20%)<span class="tag t-speech">Speech</span></span><span class="sub">3&ndash;4 min. Upload outline + slides before you present. &rarr; Student Folder</span></div><span class="due-chip assess">Tue Oct 20</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Informative Presentation (20%)<span class="est">~4h prep</span><span class="tag t-speech">Speech</span></span><span class="sub">3&ndash;4 min. Upload outline + slides before you present. &rarr; Student Folder</span></div><span class="due-chip assess">Tue Oct 20</span></li>
 <li class="item"><input type="checkbox"><div class="info"><span class="nm">All 3 CCD online modules complete<span class="tag t-ccd">CCD</span></span><span class="sub">Industry Exploration, Resume, Interview Master. Tracked on Brightspace.</span></div><span class="due-chip">Thu Oct 22</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Video 6 Cornell Notes + Vocabulary<span class="tag t-listen">Listening</span></span><span class="sub">Cornell notes + vocab (Vinciane Beauch&ecirc;ne). &rarr; Student Folder</span></div><span class="due-chip">Mon Oct 26</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Portfolio Build 2<span class="tag t-port">Portfolio</span></span><span class="sub">Weeks 4&ndash;7 artifacts + 300&ndash;400 word DEIP reflection. &rarr; Student Folder + portfolio</span></div><span class="due-chip">Tue Nov 3</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Video 6 Cornell Notes + Vocabulary<span class="est">~50min</span><span class="tag t-listen">Listening</span></span><span class="sub">Cornell notes + vocab (Vinciane Beauch&ecirc;ne). &rarr; Student Folder</span></div><span class="due-chip">Mon Oct 26</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Portfolio Build 2<span class="est">~1h 30m</span><span class="tag t-port">Portfolio</span></span><span class="sub">Weeks 4&ndash;7 artifacts + 300&ndash;400 word DEIP reflection. &rarr; Student Folder + portfolio</span></div><span class="due-chip">Tue Nov 3</span></li>
 </ul>
 </div>
 
 <!-- WEEK 8 -->
 <div class="wk-sec" id="week8">
-<div class="wk-head"><span class="wk-num">WEEK 08</span><h2>Ethics, Citizenship, and Technology</h2><span class="wk-dates">Oct 27 / Oct 29</span></div>
+<div class="wk-head"><span class="wk-num">WEEK 08</span><h2>Ethics, Citizenship, and Technology</h2><span class="wk-hrs">~4h 5min homework</span><span class="wk-dates">Oct 27 / Oct 29</span></div>
 <ul class="items">
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">12-minute individual meeting<span class="tag t-port">Portfolio</span></span><span class="sub">Room N745. Bring Meeting Prep Sheet, Planning Guide, portfolio, resume draft.</span></div><span class="due-chip soft">Book ahead</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 8 Question Set</span><span class="sub">Short answers on ethics and technology at work. &rarr; Student Folder</span></div><span class="due-chip">Mon Nov 2</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Video 7 Cornell Notes + Vocabulary<span class="tag t-listen">Listening</span></span><span class="sub">Cornell notes + vocab (Akram Awad). &rarr; Student Folder</span></div><span class="due-chip">Mon Nov 2</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">CCD Visit 3 log: CCD Open House<span class="tag t-ccd">CCD</span></span><span class="sub">Attend a yellow-marked CCD calendar event. 150&ndash;200 word DEIP log. &rarr; Tracker + Student Folder</span></div><span class="due-chip">Mon Nov 2</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">12-minute individual meeting<span class="est">~30min prep</span><span class="tag t-port">Portfolio</span></span><span class="sub">Room N745. Bring Meeting Prep Sheet, Planning Guide, portfolio, resume draft.</span></div><span class="due-chip soft">Book ahead</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 8 Question Set<span class="est">~1h 15m</span></span><span class="sub">Short answers on ethics and technology at work. &rarr; Student Folder</span></div><span class="due-chip">Mon Nov 2</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Video 7 Cornell Notes + Vocabulary<span class="est">~50min</span><span class="tag t-listen">Listening</span></span><span class="sub">Cornell notes + vocab (Akram Awad). &rarr; Student Folder</span></div><span class="due-chip">Mon Nov 2</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">CCD Visit 3 log: CCD Open House<span class="est">~2h</span><span class="tag t-ccd">CCD</span></span><span class="sub">Attend a yellow-marked CCD calendar event. 150&ndash;200 word DEIP log. &rarr; Tracker + Student Folder</span></div><span class="due-chip">Mon Nov 2</span></li>
 </ul>
 </div>
 
 <!-- WEEK 9 -->
 <div class="wk-sec" id="week9">
-<div class="wk-head"><span class="wk-num">WEEK 09</span><h2>Speech Preparation</h2><span class="wk-dates">Nov 3 / Nov 5</span></div>
+<div class="wk-head"><span class="wk-num">WEEK 09</span><h2>Speech Preparation</h2><span class="wk-hrs">~2h 40min homework</span><span class="wk-dates">Nov 3 / Nov 5</span></div>
 <div class="wk-note"><b>No class Sun Nov 8.</b> Legislative day follows Thursday schedule, but EAP 100 will not meet.</div>
 <ul class="items">
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Mini Portfolio Reflection<span class="tag t-port">Portfolio</span></span><span class="sub">~200 words: one strength, one growth area. &rarr; Student Folder + portfolio</span></div><span class="due-chip">Mon Nov 9</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Model Persuasive Speech Analysis</span><span class="sub">Analyze structure, evidence, audience moves, language. &rarr; Student Folder</span></div><span class="due-chip">Mon Nov 9</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Language Review Task</span><span class="sub">Signposting, hedging, or pronunciation for Q&amp;A. &rarr; Student Folder</span></div><span class="due-chip">Mon Nov 9</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Start gathering speech sources</span><span class="sub">Find 3&ndash;4 sources for Week 12 persuasive speech. Save in APA.</span></div><span class="due-chip soft">Recommended</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Mini Portfolio Reflection<span class="est">~40min</span><span class="tag t-port">Portfolio</span></span><span class="sub">~200 words: one strength, one growth area. &rarr; Student Folder + portfolio</span></div><span class="due-chip">Mon Nov 9</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Model Persuasive Speech Analysis<span class="est">~1h 15m</span></span><span class="sub">Analyze structure, evidence, audience moves, language. &rarr; Student Folder</span></div><span class="due-chip">Mon Nov 9</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Language Review Task<span class="est">~45min</span></span><span class="sub">Signposting, hedging, or pronunciation for Q&amp;A. &rarr; Student Folder</span></div><span class="due-chip">Mon Nov 9</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Start gathering speech sources<span class="est">~1h 15m</span></span><span class="sub">Find 3&ndash;4 sources for Week 12 persuasive speech. Save in APA.</span></div><span class="due-chip soft">Recommended</span></li>
 </ul>
 </div>
 
 <!-- WEEK 10 -->
 <div class="wk-sec" id="week10">
-<div class="wk-head"><span class="wk-num">WEEK 10</span><h2>Sustainability and Resilience</h2><span class="wk-dates">Nov 10 / Nov 12</span></div>
+<div class="wk-head"><span class="wk-num">WEEK 10</span><h2>Sustainability and Resilience</h2><span class="wk-hrs">~1h 30min homework</span><span class="wk-dates">Nov 10 / Nov 12</span></div>
 <div class="wk-note"><b>Breathe.</b> Week 11 has three deadlines on the same Thursday.</div>
 <ul class="items">
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 9 Guided Notes</span><span class="sub">Sustainability, resilience, acting under uncertainty. &rarr; Student Folder</span></div><span class="due-chip">Mon Nov 16</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 9 Guided Notes<span class="est">~1h 30m</span></span><span class="sub">Sustainability, resilience, acting under uncertainty. &rarr; Student Folder</span></div><span class="due-chip">Mon Nov 16</span></li>
 </ul>
 </div>
 
 <!-- WEEK 11 -->
 <div class="wk-sec" id="week11">
-<div class="wk-head"><span class="wk-num">WEEK 11</span><h2>Employability and Self-Presentation</h2><span class="wk-dates">Nov 17 / Nov 19</span></div>
+<div class="wk-head"><span class="wk-num">WEEK 11</span><h2>Employability and Self-Presentation</h2><span class="wk-hrs">~5h 15min homework</span><span class="wk-dates">Nov 17 / Nov 19</span></div>
 <div class="wk-note"><b>Heavy week.</b> Three deadlines fall on the same Thursday.</div>
 <ul class="items">
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">CCD Visit 4 log: event of your choice<span class="tag t-ccd">CCD</span></span><span class="sub">Any CCD event, 1&ndash;2 hours. 150&ndash;200 word DEIP log. &rarr; Tracker + Student Folder</span></div><span class="due-chip">Thu Nov 19</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 10 Guided Response</span><span class="sub">Summary + connection to portfolio/future work. &rarr; Student Folder</span></div><span class="due-chip">Thu Nov 19</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Portfolio Build 3<span class="tag t-port">Portfolio</span></span><span class="sub">Refine artifacts + 400&ndash;500 word DEIP reflection on all 4 CCD visits. &rarr; Student Folder + portfolio</span></div><span class="due-chip">Thu Nov 19</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">CCD Visit 4 log: event of your choice<span class="est">~2h</span><span class="tag t-ccd">CCD</span></span><span class="sub">Any CCD event, 1&ndash;2 hours. 150&ndash;200 word DEIP log. &rarr; Tracker + Student Folder</span></div><span class="due-chip">Thu Nov 19</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Reading 10 Guided Response<span class="est">~1h 15m</span></span><span class="sub">Summary + connection to portfolio/future work. &rarr; Student Folder</span></div><span class="due-chip">Thu Nov 19</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Portfolio Build 3<span class="est">~2h</span><span class="tag t-port">Portfolio</span></span><span class="sub">Refine artifacts + 400&ndash;500 word DEIP reflection on all 4 CCD visits. &rarr; Student Folder + portfolio</span></div><span class="due-chip">Thu Nov 19</span></li>
 </ul>
 </div>
 
 <!-- WEEK 12 -->
 <div class="wk-sec" id="week12">
-<div class="wk-head"><span class="wk-num">WEEK 12</span><h2>Persuasion in Professional Life</h2><span class="wk-dates">Nov 24 (Tue only)</span></div>
+<div class="wk-head"><span class="wk-num">WEEK 12</span><h2>Persuasion in Professional Life</h2><span class="wk-hrs">~4h prep homework</span><span class="wk-dates">Nov 24 (Tue only)</span></div>
 <div class="wk-note"><b>No class Thu Nov 26 &ndash; Fri Nov 27</b> (Thanksgiving). Everyone presents Tuesday.</div>
 <ul class="items">
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Persuasive Speech (20%)<span class="tag t-speech">Speech</span></span><span class="sub">5&ndash;6 min. Upload outline, slides, APA references before you present. &rarr; Student Folder</span></div><span class="due-chip assess">Tue Nov 24</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Persuasive Speech (20%)<span class="est">~4h prep</span><span class="tag t-speech">Speech</span></span><span class="sub">5&ndash;6 min. Upload outline, slides, APA references before you present. &rarr; Student Folder</span></div><span class="due-chip assess">Tue Nov 24</span></li>
 </ul>
 </div>
 
 <!-- WEEK 13 -->
 <div class="wk-sec" id="week13">
-<div class="wk-head"><span class="wk-num">WEEK 13</span><h2>Listening Exam 2 &amp; Showcase Prep</h2><span class="wk-dates">Dec 1 / Dec 3</span></div>
+<div class="wk-head"><span class="wk-num">WEEK 13</span><h2>Listening Exam 2 &amp; Showcase Prep</h2><span class="wk-hrs">exam week</span><span class="wk-dates">Dec 1 / Dec 3</span></div>
 <ul class="items">
 <li class="item"><input type="checkbox"><div class="info"><span class="nm">Listening Exam 2 (20%)<span class="tag t-exam">Exam</span></span><span class="sub">In-class exam: longer lecture, advanced listening + synthesis. Bring a notebook.</span></div><span class="due-chip assess">Tue Dec 1</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Portfolio Showcase Preparation</span><span class="sub">Choose 2&ndash;3 artifacts + prepare spoken explanation. Bring to class.</span></div><span class="due-chip soft">Thu Dec 3</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Resume peer feedback session</span><span class="sub">Bring finished resume to class for structured peer review.</span></div><span class="due-chip soft">Thu Dec 3</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Portfolio Showcase Preparation<span class="est">~1h</span></span><span class="sub">Choose 2&ndash;3 artifacts + prepare spoken explanation. Bring to class.</span></div><span class="due-chip soft">Thu Dec 3</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Resume peer feedback session<span class="est">~30min</span></span><span class="sub">Bring finished resume to class for structured peer review.</span></div><span class="due-chip soft">Thu Dec 3</span></li>
 </ul>
 </div>
 
 <!-- WEEK 14 -->
 <div class="wk-sec" id="week14">
-<div class="wk-head"><span class="wk-num">WEEK 14</span><h2>Course Synthesis</h2><span class="wk-dates">Dec 8 / Dec 10</span></div>
+<div class="wk-head"><span class="wk-num">WEEK 14</span><h2>Course Synthesis</h2><span class="wk-hrs">~6h 30min homework</span><span class="wk-dates">Dec 8 / Dec 10</span></div>
 <ul class="items">
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Student Showcase<span class="tag t-speech">Speech</span></span><span class="sub">Present 2&ndash;3 portfolio artifacts in class. Slides &rarr; Student Folder</span></div><span class="due-chip">Thu Dec 10</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">End-of-Course Reflection<span class="tag t-port">Portfolio</span></span><span class="sub">300&ndash;400 words on growth across reading, listening, speaking, writing. &rarr; Student Folder + portfolio</span></div><span class="due-chip">Thu Dec 10</span></li>
-<li class="item"><input type="checkbox"><div class="info"><span class="nm">Final Portfolio (10%)<span class="tag t-port">Portfolio</span></span><span class="sub">5 artifacts + captions, 300&ndash;500 word DEIP reflection, 100&ndash;150 word closing. &rarr; Student Folder</span></div><span class="due-chip assess">Sun Dec 13</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Student Showcase<span class="est">~1h 15m</span><span class="tag t-speech">Speech</span></span><span class="sub">Present 2&ndash;3 portfolio artifacts in class. Slides &rarr; Student Folder</span></div><span class="due-chip">Thu Dec 10</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">End-of-Course Reflection<span class="est">~1h 15m</span><span class="tag t-port">Portfolio</span></span><span class="sub">300&ndash;400 words on growth across reading, listening, speaking, writing. &rarr; Student Folder + portfolio</span></div><span class="due-chip">Thu Dec 10</span></li>
+<li class="item"><input type="checkbox"><div class="info"><span class="nm">Final Portfolio (10%)<span class="est">~4h</span><span class="tag t-port">Portfolio</span></span><span class="sub">5 artifacts + captions, 300&ndash;500 word DEIP reflection, 100&ndash;150 word closing. &rarr; Student Folder</span></div><span class="due-chip assess">Sun Dec 13</span></li>
 </ul>
 </div>
 
