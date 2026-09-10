@@ -73,10 +73,10 @@ DESCRIPTION:Video 2 (Erik Brynjolfsson\, Race with the Machines): Cornell notes 
 END:VEVENT
 BEGIN:VEVENT
 UID:71d9ef3d-a3a1-4b98-90ff-3d37ca6f373c
-DTSTAMP:20260910T071800Z
+DTSTAMP:20260910T085500Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261012
-SUMMARY:EAP 100: Arrange CCD visit due
+SUMMARY:EAP 100: CCD Visit 1 log due - CCD Orientation
 DESCRIPTION:Watch the CCD Orientation online or attend in person. Write a 150-200 word DEIP log. Submit to Experiential Learning Tracker + Student Folder > CCD.
 END:VEVENT
 BEGIN:VEVENT
@@ -86,14 +86,6 @@ DTSTART;VALUE=DATE:20260914
 DTEND;VALUE=DATE:20260914
 SUMMARY:EAP 100: Homework Time Tracking + Mini-Reflection due
 DESCRIPTION:Track your EAP homework time for one week\, then write a 100-150 word reflection. Submit to Student Folder > Week 2.
-END:VEVENT
-BEGIN:VEVENT
-UID:75a526ba-e34f-46da-84f2-4942c31ceff5
-DTSTAMP:20260831T060800Z
-DTSTART;VALUE=DATE:20260915
-DTEND;VALUE=DATE:20260915
-SUMMARY:EAP 100: EAP Planning Guide (Part 1) - bring to class
-DESCRIPTION:Goals\, weekly schedule\, known busy periods. Bring to class Tue Sep 15. Kept for reference\, not graded.
 END:VEVENT
 BEGIN:VEVENT
 UID:c4de7e44-0df2-430c-a048-0c1f7607d1b5
