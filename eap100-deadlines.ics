@@ -73,11 +73,11 @@ DESCRIPTION:Video 2 (Erik Brynjolfsson\, Race with the Machines): Cornell notes 
 END:VEVENT
 BEGIN:VEVENT
 UID:71d9ef3d-a3a1-4b98-90ff-3d37ca6f373c
-DTSTAMP:20260831T060800Z
-DTSTART;VALUE=DATE:20260914
-DTEND;VALUE=DATE:20260914
-SUMMARY:EAP 100: CCD Visit 1 log due - Career Coaching
-DESCRIPTION:CCD Visit 1 = Career Coaching Session. 150-200 word log/reflection. Submit to Student Folder > Week 2 CCD.
+DTSTAMP:20260910T071800Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261012
+SUMMARY:EAP 100: Arrange CCD visit due
+DESCRIPTION:Watch the CCD Orientation online or attend in person. Write a 150-200 word DEIP log. Submit to Experiential Learning Tracker + Student Folder > CCD.
 END:VEVENT
 BEGIN:VEVENT
 UID:4da4bc52-5f27-4d40-a88e-4d80afd4ec8d
