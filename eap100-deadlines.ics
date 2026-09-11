@@ -112,6 +112,30 @@ SUMMARY:EAP 100: Video 3 Cornell Notes due
 DESCRIPTION:Video 3 (Jacob Morgan\, Future-Proof Your Career): Cornell notes + 5-10 vocabulary words. Submit to Student Folder > Week 3 Listening.
 END:VEVENT
 BEGIN:VEVENT
+UID:2f1c8a64-7b90-4c3e-9d21-eap100libw03a
+DTSTAMP:20260911T085500Z
+DTSTART;TZID=Asia/Shanghai:20260915T160000
+DTEND;TZID=Asia/Shanghai:20260915T170000
+SUMMARY:📚 EAP Library Workshop: APA Citation Style
+DESCRIPTION:Toolkit for Academic Success series. Optional but recommended.
+END:VEVENT
+BEGIN:VEVENT
+UID:3b7d9e15-2c48-4f61-8a33-eap100libw03b
+DTSTAMP:20260911T085500Z
+DTSTART;TZID=Asia/Shanghai:20260916T173000
+DTEND;TZID=Asia/Shanghai:20260916T183000
+SUMMARY:📚 EAP Library Workshop: Cues, Clues, and Structure - Making Sense of Lectures
+DESCRIPTION:Toolkit for Academic Success series. Directly useful for Listening Exam 1.
+END:VEVENT
+BEGIN:VEVENT
+UID:4c8e0f26-3d59-4a72-9b44-eap100libw03c
+DTSTAMP:20260911T085500Z
+DTSTART;TZID=Asia/Shanghai:20260917T113000
+DTEND;TZID=Asia/Shanghai:20260917T123000
+SUMMARY:📚 EAP Library Workshop: E-Books on the Go
+DESCRIPTION:Toolkit for Academic Success series. Accessing library e-books anytime.
+END:VEVENT
+BEGIN:VEVENT
 UID:8fdbda8b-2b8d-46c2-9bc4-2df841fe2422
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260928
@@ -129,11 +153,11 @@ DESCRIPTION:Video 4 (Rainer Strack\, The Workforce Crisis of 2030): Cornell note
 END:VEVENT
 BEGIN:VEVENT
 UID:a77c1e55-2b31-4a77-8f22-eap100ahead04
-DTSTAMP:20260831T060800Z
-DTSTART;VALUE=DATE:20260922
-DTEND;VALUE=DATE:20260922
-SUMMARY:EAP 100: Get ahead while Week 4 is light (optional)
-DESCRIPTION:Optional\, no submission: read ahead\, tidy your portfolio\, or start the CCD modules while the workload is light.
+DTSTAMP:20260911T085500Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260928
+SUMMARY:EAP 100: Midterm Presentation - First Draft due
+DESCRIPTION:Begin building the first draft of your Midterm Presentation (3-4 hours). See the Assessment Folder for more information. Submit to Student Folder > Week 4.
 END:VEVENT
 BEGIN:VEVENT
 UID:7b433105-79ac-46c3-b8fe-8b73480ea96e
@@ -145,11 +169,11 @@ DESCRIPTION:Predict main ideas\, highlight vocabulary\, write 2-3 questions. Sub
 END:VEVENT
 BEGIN:VEVENT
 UID:7eedc688-5365-4ab5-9eee-ae5ce4bffb4e
-DTSTAMP:20260831T060800Z
+DTSTAMP:20260911T085500Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261012
-SUMMARY:EAP 100: Listening Exam Practice due
-DESCRIPTION:Practice listening tasks with Cornell notes. Submit to Student Folder > Week 5.
+SUMMARY:📝 EAP 100: Practice Listening Exam 1 due
+DESCRIPTION:Sit the full practice paper under real exam conditions the day before Listening Exam 1. Allow 70 minutes\, print the answer sheet first\, and watch the lecture ONCE ONLY - no pausing and no rewinding.\n\nThe lecture: Andrew McAfee\, "What will future jobs look like?" (TED2013\, 14:59)\nhttps://www.ted.com/talks/andrew_mcafee_what_will_future_jobs_look_like\n\nBring your Cornell notes to class on Tue Oct 13. Submit to Student Folder > Week 5.
 END:VEVENT
 BEGIN:VEVENT
 UID:46ea6628-2945-4ea2-a209-3c0ae74fe0bb
@@ -161,11 +185,11 @@ DESCRIPTION:Key vs. extra information in listening. Submit to Student Folder > W
 END:VEVENT
 BEGIN:VEVENT
 UID:36ec4313-d5a2-4298-9e62-d90de4429361
-DTSTAMP:20260831T060800Z
+DTSTAMP:20260911T085500Z
 DTSTART;TZID=Asia/Shanghai:20261013T094500
 DTEND;TZID=Asia/Shanghai:20261013T094500
 SUMMARY:⚠️ EAP 100: LISTENING EXAM 1 (20%)
-DESCRIPTION:In-class exam\, Week 6. ~20 minute academic lecture. Bring a notebook for Cornell notes.
+DESCRIPTION:In-class exam\, Week 6. ~20 minute academic lecture\, played ONCE only. Bring a notebook for Cornell notes.
 END:VEVENT
 BEGIN:VEVENT
 UID:75d75cfb-c602-4005-8142-b66a30a062c7
@@ -240,6 +264,14 @@ SUMMARY:EAP 100: 12-minute individual meeting (book in advance)
 DESCRIPTION:Week of Tue Oct 27\, Room N745. Bring the Week 8 Meeting Prep Sheet\, portfolio and resume draft.
 END:VEVENT
 BEGIN:VEVENT
+UID:5d9f1a37-4e6b-4183-ac55-eap100libw08
+DTSTAMP:20260911T085500Z
+DTSTART;TZID=Asia/Shanghai:20261028T154500
+DTEND;TZID=Asia/Shanghai:20261028T164500
+SUMMARY:📚 EAP Library Workshop: Note-Taking - From Ears to Action
+DESCRIPTION:Toolkit for Academic Success series. Directly relevant to Listening Exam 2 preparation.
+END:VEVENT
+BEGIN:VEVENT
 UID:5bfde8c0-f789-446f-8c89-7aa4ffa196aa
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20261102
@@ -296,12 +328,20 @@ SUMMARY:EAP 100: Start gathering persuasive speech sources (recommended)
 DESCRIPTION:Recommended this week\, no submission. Week 9 is light - collect 3-4 credible sources now for the Week 12 persuasive speech.
 END:VEVENT
 BEGIN:VEVENT
+UID:6e2b4c81-7f93-4d05-b166-eap100libw10
+DTSTAMP:20260911T085500Z
+DTSTART;TZID=Asia/Shanghai:20261111T173000
+DTEND;TZID=Asia/Shanghai:20261111T183000
+SUMMARY:📚 EAP Library Workshop: Talk This Way - Signposting for Confident Presentations
+DESCRIPTION:Toolkit for Academic Success series. Great preparation for the Week 12 Persuasive Speech.
+END:VEVENT
+BEGIN:VEVENT
 UID:847e8bcd-adb9-4d0d-bf53-bad4d781233f
-DTSTAMP:20260831T060800Z
+DTSTAMP:20260911T085500Z
 DTSTART;TZID=Asia/Shanghai:20261201T094500
 DTEND;TZID=Asia/Shanghai:20261201T094500
 SUMMARY:⚠️ EAP 100: LISTENING EXAM 2 (20%)
-DESCRIPTION:In-class exam\, Week 13 (Tue Dec 1). ~20 minute academic lecture\, advanced listening + synthesis.
+DESCRIPTION:In-class exam\, Week 13 (Tue Dec 1). ~20 minute academic lecture\, played ONCE only. Advanced listening + synthesis.
 END:VEVENT
 BEGIN:VEVENT
 UID:fb4724c1-ee2c-49ec-81a7-14c2ef3868d6
@@ -310,6 +350,22 @@ DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261116
 SUMMARY:EAP 100: Reading 9 Guided Notes due
 DESCRIPTION:Reading 9: Sustainability\, Resilience and Acting Under Uncertainty - guided note sheet. Submit to Student Folder > Week 10.
+END:VEVENT
+BEGIN:VEVENT
+UID:7f3a5d92-8c14-4e26-b877-eap100libw11a
+DTSTAMP:20260911T085500Z
+DTSTART;TZID=Asia/Shanghai:20261118T173000
+DTEND;TZID=Asia/Shanghai:20261118T183000
+SUMMARY:📚 EAP Library Workshop: Powerful Visuals, Powerful Stories
+DESCRIPTION:Toolkit for Academic Success series. How to design great presentation slides - directly relevant to your Persuasive Speech visuals.
+END:VEVENT
+BEGIN:VEVENT
+UID:8a4b6e03-9d25-4f37-c988-eap100libw11b
+DTSTAMP:20260911T085500Z
+DTSTART;TZID=Asia/Shanghai:20261123T154500
+DTEND;TZID=Asia/Shanghai:20261123T164500
+SUMMARY:📚 EAP Library Workshop: Listening Skills Practice Session
+DESCRIPTION:Toolkit for Academic Success series. Useful review before Listening Exam 2.
 END:VEVENT
 BEGIN:VEVENT
 UID:7528b870-973a-4510-a63b-2cf61ff52a90
@@ -342,6 +398,14 @@ DTSTART;TZID=Asia/Shanghai:20261124T094500
 DTEND;TZID=Asia/Shanghai:20261124T094500
 SUMMARY:⚠️ EAP 100: PERSUASIVE SPEECH (20%)
 DESCRIPTION:5-6 minutes\, delivered in class Tuesday Nov 24. Upload outline/slides to Student Folder > Week 12. Thursday = Thanksgiving\, no class.
+END:VEVENT
+BEGIN:VEVENT
+UID:9b5c7f14-0e36-4a48-da99-eap100libw12
+DTSTAMP:20260911T085500Z
+DTSTART;TZID=Asia/Shanghai:20261124T154500
+DTEND;TZID=Asia/Shanghai:20261124T164500
+SUMMARY:📚 EAP Library Workshop: Presentation Skills Practice Session
+DESCRIPTION:Toolkit for Academic Success series. Same day as the Persuasive Speech.
 END:VEVENT
 BEGIN:VEVENT
 UID:f0c9aa74-6d18-4f2e-b7c3-eap100prep13
