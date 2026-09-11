@@ -237,7 +237,7 @@ DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261027
 SUMMARY:EAP 100: 12-minute individual meeting (book in advance)
-DESCRIPTION:Week of Tue Oct 27\, Room N745. Bring the Week 8 Meeting Prep Sheet\, Planning Guide\, portfolio and resume draft.
+DESCRIPTION:Week of Tue Oct 27\, Room N745. Bring the Week 8 Meeting Prep Sheet\, portfolio and resume draft.
 END:VEVENT
 BEGIN:VEVENT
 UID:5bfde8c0-f789-446f-8c89-7aa4ffa196aa
