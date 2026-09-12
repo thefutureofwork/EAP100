@@ -393,11 +393,11 @@ DESCRIPTION:400-500 word DEIP reflection. Refine artifacts + synthesise your fou
 END:VEVENT
 BEGIN:VEVENT
 UID:8e38cdee-fb7d-45ee-8a3b-c50d9b31f9f3
-DTSTAMP:20260831T060800Z
+DTSTAMP:20260912T120000Z
 DTSTART;TZID=Asia/Shanghai:20261124T094500
 DTEND;TZID=Asia/Shanghai:20261124T094500
 SUMMARY:⚠️ EAP 100: PERSUASIVE SPEECH (20%)
-DESCRIPTION:5-6 minutes\, delivered in class Tuesday Nov 24. Upload outline/slides to Student Folder > Week 12. Thursday = Thanksgiving\, no class.
+DESCRIPTION:5-6 minutes\, delivered live in class on Tuesday Nov 24 and video recorded. Upload outline\, slides and APA reference list to Student Folder > Week 12 BEFORE you present. The recording is added afterwards and becomes a portfolio artifact. Thursday = Thanksgiving\, no class.
 END:VEVENT
 BEGIN:VEVENT
 UID:9b5c7f14-0e36-4a48-da99-eap100libw12
