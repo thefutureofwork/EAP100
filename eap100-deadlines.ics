@@ -170,10 +170,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:7eedc688-5365-4ab5-9eee-ae5ce4bffb4e
 DTSTAMP:20260911T085500Z
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261012
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260928
 SUMMARY:📝 EAP 100: Practice Listening Exam 1 due
-DESCRIPTION:Sit the full practice paper under real exam conditions the day before Listening Exam 1. Allow 70 minutes\, print the answer sheet first\, and watch the lecture ONCE ONLY - no pausing and no rewinding.\n\nThe lecture: Andrew McAfee\, "What will future jobs look like?" (TED2013\, 14:59)\nhttps://www.ted.com/talks/andrew_mcafee_what_will_future_jobs_look_like\n\nBring your Cornell notes to class on Tue Oct 13. Submit to Student Folder > Week 5.
+DESCRIPTION:Sit the full practice paper under real exam conditions. Allow 70 minutes\, print the answer sheet first\, and watch the lecture ONCE ONLY - no pausing and no rewinding.\n\nThe lecture: Andrew McAfee\, "What will future jobs look like?" (TED2013\, 14:59)\nhttps://www.ted.com/talks/andrew_mcafee_what_will_future_jobs_look_like\n\nBring your Cornell notes to class on Tue Oct 13. Submit to Student Folder > Week 5.
 END:VEVENT
 BEGIN:VEVENT
 UID:46ea6628-2945-4ea2-a209-3c0ae74fe0bb
