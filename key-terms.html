@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EAP 100: Key Terms, Weeks 1–5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Public+Sans:wght@400;500;600;700&family=Azeret+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--board:#14161A;--board-2:#1E2127;--amber:#F2A81D;--paper:#FAF9F7;--card:#FFFFFF;--ink:#1A1C20;--ink-2:#4A4E56;--ink-3:#787D86;--rule:#DEDAD2;--rule-2:#EBE8E2;--signal:#B02418;--signal-bg:#FBEDEB;--go:#1F6B4A;--go-bg:#EAF3EE;--amber-bg:#FDF3DF;--r:4px}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Public Sans',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Archivo',system-ui,sans-serif;line-height:1.08;letter-spacing:-.02em}
+a{color:inherit}
+.mast{position:sticky;top:0;z-index:60;background:var(--board);border-bottom:3px solid var(--amber)}
+.mast-in{max-width:1180px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+.mark{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 118,'wght' 800;font-size:15px;letter-spacing:.1em;color:#fff;text-decoration:none;white-space:nowrap}
+.mark span{color:var(--amber)}
+.mast nav{margin-left:auto;display:flex;gap:4px}
+.mast nav a{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:#A9AEB8;text-decoration:none;padding:8px 14px;border-radius:var(--r);transition:background .18s,color .18s}
+.mast nav a:hover{background:var(--board-2);color:#fff}
+.mast nav a[aria-current]{color:var(--board);background:var(--amber)}
+.shell{max-width:1180px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:216px 1fr;gap:52px;align-items:start}
+.toc{position:sticky;top:84px;padding:48px 0 40px}
+.toc h4{font-family:'Azeret Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px}
+.toc a{display:block;font-size:14px;font-weight:500;color:var(--ink-2);text-decoration:none;padding:7px 12px;border-left:2px solid var(--rule-2);transition:all .16s}
+.toc a:hover{color:var(--ink);border-left-color:var(--amber);background:#fff}
+.toc .back{margin-top:20px;padding-top:16px;border-top:1px solid var(--rule);border-left:none;font-family:'Azeret Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--ink)}
+.toc .back:hover{border-left:none;background:none;color:var(--amber)}
+.main{padding:48px 0 80px;min-width:0;max-width:760px}
+.page-h{margin-bottom:12px}
+.kicker{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+.page-h h1{font-variation-settings:'wdth' 116,'wght' 800;font-size:clamp(2.1rem,6vw,3.3rem);text-transform:uppercase;letter-spacing:-.025em}
+.lede{font-size:1.05rem;color:var(--ink-2);margin-top:14px;max-width:56ch}
+section{scroll-margin-top:76px;margin-top:60px}
+.sh{display:flex;align-items:baseline;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:22px}
+.sh h2{font-variation-settings:'wdth' 112,'wght' 800;font-size:1.32rem;text-transform:uppercase}
+.sh .num{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:700;color:var(--amber);letter-spacing:.1em}
+.term-list{list-style:none;counter-reset:term}
+.term-list li{counter-increment:term;display:flex;align-items:baseline;gap:14px;padding:13px 0;border-bottom:1px solid var(--rule-2);font-size:15.5px;color:var(--ink-2);line-height:1.55}
+.term-list li:last-child{border-bottom:none}
+.term-list li::before{content:counter(term,decimal-leading-zero);font-family:'Azeret Mono',monospace;font-size:11px;font-weight:700;color:var(--amber);min-width:26px;flex-shrink:0;letter-spacing:.05em}
+.term-list .t{font-weight:700;color:var(--ink)}
+.term-list .dash{color:var(--rule);margin:0 2px}
+.callout{background:var(--amber-bg);border-left:3px solid var(--amber);border-radius:3px;padding:15px 19px;margin:18px 0;font-size:15px;line-height:1.55;color:var(--ink-2)}
+.callout b{color:var(--ink)}
+.foot{background:var(--board);margin-top:80px;padding:40px 0;color:#6E7480}
+.foot-in{max-width:1180px;margin:0 auto;padding:0 24px;font-family:'Azeret Mono',monospace;font-size:11px;letter-spacing:.05em;display:flex;gap:20px;flex-wrap:wrap}
+.foot-in a{color:#B4BAC4;text-decoration:none}
+.foot-in a:hover{color:var(--amber)}
+@media(max-width:940px){.shell{grid-template-columns:1fr;gap:0}.toc{position:static;padding:32px 0 0;display:flex;flex-wrap:wrap;gap:5px}.toc h4{width:100%;margin-bottom:8px}.toc a{border-left:none;border:1px solid var(--rule);border-radius:var(--r);background:#fff;font-size:13px;padding:7px 13px}.toc .back{margin-top:0;padding-top:7px;border:1px solid var(--ink);border-radius:var(--r)}.main{padding-top:34px}}
+@media(max-width:620px){body{font-size:16px}.shell,.mast-in,.foot-in{padding-left:16px;padding-right:16px}.mast nav a{padding:8px 10px;font-size:10.5px}}
+</style>
+</head>
+<body>
+<header class="mast"><div class="mast-in"><a class="mark" href="index.html">EAP<span>100</span></a><nav><a href="index.html">Schedule</a><a href="course-info.html">Course Info</a><a href="due-dates.html">Checklist</a><a href="key-terms.html" aria-current="page">Key Terms</a></nav></div></header>
+<div class="shell">
+<aside class="toc"><h4>Weeks</h4><a href="#week1">Week 1</a><a href="#week2">Week 2</a><a href="#week3">Week 3</a><a href="#week4">Week 4</a><a href="#week5">Week 5</a><a class="back" href="index.html">&larr; Weekly Schedule</a></aside>
+<main class="main">
+<div class="page-h"><p class="kicker">NYU Shanghai &middot; English for Academic Purposes &middot; Fall 2026</p><h1>Key Terms, Weeks&nbsp;1&ndash;5</h1><p class="lede">These are the key academic terms from your course readings so far. For each term, write a short definition in your own words.</p></div>
+
+<section id="week1" style="margin-top:36px"><div class="sh"><span class="num">01</span><h2>Week 1: What Counts as Work?</h2></div>
+<ol class="term-list">
+<li><span class="t">work</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">paid labor</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">unpaid labor</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">invisible work</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">care labor</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">civic labor</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">emotional labor</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">social value</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">economic value</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">conceptual flexibility</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">social contract</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">environmental stewardship</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">four pillars of learning</span> <span class="dash">&mdash;</span></li>
+</ol>
+</section>
+
+<section id="week2"><div class="sh"><span class="num">02</span><h2>Week 2: Learning for the Future Workplace</h2></div>
+<ol class="term-list" style="counter-reset:term 13">
+<li><span class="t">student agency</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">lifelong learning</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">future-ready</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">learning to learn</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">digital fluency</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">adaptability</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">self-direction</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">analytical thinking</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">Education 4.0</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">labour markets</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">transferable knowledge</span> <span class="dash">&mdash;</span></li>
+</ol>
+</section>
+
+<section id="week3"><div class="sh"><span class="num">03</span><h2>Week 3: How to Future-Proof Your Career</h2></div>
+<ol class="term-list" style="counter-reset:term 24">
+<li><span class="t">future-proof</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">career uncertainty</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">personal skill development</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">economic change</span> <span class="dash">&mdash;</span></li>
+</ol>
+</section>
+
+<section id="week4"><div class="sh"><span class="num">04</span><h2>Week 4: Technology, AI, and the Changing Workplace</h2></div>
+<ol class="term-list" style="counter-reset:term 28">
+<li><span class="t">automation</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">augmentation</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">human-machine frontier</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">artificial intelligence</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">technological literacy</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">resilience</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">flexibility</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">agility</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">uneven change</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">human-centred capacities</span> <span class="dash">&mdash;</span></li>
+</ol>
+</section>
+
+<section id="week5"><div class="sh"><span class="num">05</span><h2>Week 5: Transferable Skills, Employability, and Academic English</h2></div>
+<ol class="term-list" style="counter-reset:term 38">
+<li><span class="t">employability</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">transferable skills</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">cognitive competencies</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">intrapersonal competencies</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">interpersonal competencies</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">self-management</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">persistence</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">source use</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">academic integrity</span> <span class="dash">&mdash;</span></li>
+<li><span class="t">relevant information</span> <span class="dash">&mdash;</span></li>
+</ol>
+</section>
+</main>
+</div>
+<footer class="foot"><div class="foot-in"><span>EAP 100: FUTURE FOCUSED / NYU SHANGHAI / FALL 2026</span><a href="index.html" style="margin-left:auto">WEEKLY SCHEDULE</a><a href="due-dates.html">CHECKLIST</a><a href="eap100-deadlines.ics">CALENDAR FILE</a></div></footer>
+</body>
+</html>
