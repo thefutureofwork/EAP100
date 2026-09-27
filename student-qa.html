@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EAP 100: Student Q&amp;A (Week 4)</title>
+<meta name="description" content="EAP 100: Future Focused. Real student questions, grouped by topic, with answers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Public+Sans:wght@400;500;600;700&family=Azeret+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--board:#14161A;--board-2:#1E2127;--amber:#F2A81D;--paper:#FAF9F7;--card:#FFFFFF;--ink:#1A1C20;--ink-2:#4A4E56;--ink-3:#787D86;--rule:#DEDAD2;--rule-2:#EBE8E2;--signal:#B02418;--signal-bg:#FBEDEB;--go:#1F6B4A;--go-bg:#EAF3EE;--amber-bg:#FDF3DF;--r:4px}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Public Sans',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Archivo',system-ui,sans-serif;line-height:1.08;letter-spacing:-.02em}
+a{color:inherit}
+.mast{position:sticky;top:0;z-index:60;background:var(--board);border-bottom:3px solid var(--amber)}
+.mast-in{max-width:1180px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+.mark{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 118,'wght' 800;font-size:15px;letter-spacing:.1em;color:#fff;text-decoration:none;white-space:nowrap}
+.mark span{color:var(--amber)}
+.mast nav{margin-left:auto;display:flex;gap:4px}
+.mast nav a{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:#A9AEB8;text-decoration:none;padding:8px 14px;border-radius:var(--r);transition:background .18s,color .18s}
+.mast nav a:hover{background:var(--board-2);color:#fff}
+.mast nav a[aria-current]{color:var(--board);background:var(--amber)}
+.shell{max-width:1180px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:216px 1fr;gap:52px;align-items:start}
+.toc{position:sticky;top:84px;padding:48px 0 40px}
+.toc h4{font-family:'Azeret Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px}
+.toc a{display:block;font-size:14px;font-weight:500;color:var(--ink-2);text-decoration:none;padding:7px 12px;border-left:2px solid var(--rule-2);transition:all .16s}
+.toc a:hover{color:var(--ink);border-left-color:var(--amber);background:#fff}
+.toc .back{margin-top:20px;padding-top:16px;border-top:1px solid var(--rule);border-left:none;font-family:'Azeret Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--ink)}
+.toc .back:hover{border-left:none;background:none;color:var(--amber)}
+.main{padding:48px 0 80px;min-width:0;max-width:760px}
+.page-h{margin-bottom:12px}
+.kicker{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+.page-h h1{font-variation-settings:'wdth' 116,'wght' 800;font-size:clamp(2.1rem,6vw,3.3rem);text-transform:uppercase;letter-spacing:-.025em}
+.lede{font-size:1.05rem;color:var(--ink-2);margin-top:14px;max-width:56ch}
+section{scroll-margin-top:76px;margin-top:60px}
+.sh{display:flex;align-items:baseline;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:22px}
+.sh h2{font-variation-settings:'wdth' 112,'wght' 800;font-size:1.32rem;text-transform:uppercase}
+.sh .num{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:700;color:var(--amber);letter-spacing:.1em}
+p{margin-bottom:14px;max-width:68ch;color:var(--ink-2)}
+p strong,li strong{color:var(--ink);font-weight:600}
+ul,ol{margin:0 0 16px 22px;color:var(--ink-2);font-size:15.5px}
+li{margin-bottom:7px;line-height:1.55}
+.callout{background:var(--amber-bg);border-left:3px solid var(--amber);border-radius:3px;padding:15px 19px;margin:18px 0;font-size:15px;line-height:1.55;color:var(--ink-2)}
+.callout b{color:var(--ink)}
+.callout.blue{background:#E8F0FE;border-left-color:#4285F4}
+.faq{border-top:1px solid var(--rule-2)}
+.faq details{border-bottom:1px solid var(--rule-2)}
+.faq summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:700;font-size:15.5px;display:flex;align-items:center;gap:14px;transition:color .16s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--amber)}
+.faq summary::after{content:"+";margin-left:auto;font-family:'Azeret Mono',monospace;font-size:17px;color:var(--ink-3);font-weight:400}
+.faq details[open] summary::after{content:"\2013"}
+.faq details[open] summary{color:var(--ink)}
+.faq .a{padding:0 0 18px 0;font-size:15px;color:var(--ink-2);line-height:1.62;max-width:66ch}
+.faq .a p{margin-bottom:10px}
+.faq .a p:last-child{margin-bottom:0}
+.faq .a ul,.faq .a ol{margin:8px 0 12px 22px;font-size:15px}
+.qn{font-family:'Azeret Mono',monospace;font-size:11px;font-weight:700;color:var(--amber);flex-shrink:0}
+.foot{background:var(--board);margin-top:80px;padding:40px 0;color:#6E7480}
+.foot-in{max-width:1180px;margin:0 auto;padding:0 24px;font-family:'Azeret Mono',monospace;font-size:11px;letter-spacing:.05em;display:flex;gap:20px;flex-wrap:wrap}
+.foot-in a{color:#B4BAC4;text-decoration:none}
+.foot-in a:hover{color:var(--amber)}
+@media(max-width:940px){.shell{grid-template-columns:1fr;gap:0}.toc{position:static;padding:32px 0 0;display:flex;flex-wrap:wrap;gap:5px}.toc h4{width:100%;margin-bottom:8px}.toc a{border-left:none;border:1px solid var(--rule);border-radius:var(--r);background:#fff;font-size:13px;padding:7px 13px}.toc .back{margin-top:0;padding-top:7px;border:1px solid var(--ink);border-radius:var(--r)}.main{padding-top:34px}}
+@media(max-width:620px){body{font-size:16px}.shell,.mast-in,.foot-in{padding-left:16px;padding-right:16px}.mast nav a{padding:8px 10px;font-size:10.5px}}
+</style>
+</head>
+<body>
+<header class="mast"><div class="mast-in"><a class="mark" href="index.html">EAP<span>100</span></a><nav><a href="index.html">Schedule</a><a href="course-info.html">Course Info</a><a href="due-dates.html">Checklist</a><a href="student-qa.html" aria-current="page">Q&amp;A</a></nav></div></header>
+<div class="shell">
+<aside class="toc"><h4>Topics</h4><a href="#planning">Planning &amp; Energy</a><a href="#language">Language &amp; Speaking</a><a href="#sources">Sources &amp; APA</a><a href="#portfolio">Portfolio &amp; DEIP</a><a href="#content">Course Content</a><a href="#listening">Listening Exam</a><a href="#presentation">Midterm Presentation</a><a href="#resources">Using Resources</a><a class="back" href="index.html">&larr; Weekly Schedule</a></aside>
+<main class="main">
+<div class="page-h"><p class="kicker">NYU Shanghai &middot; English for Academic Purposes &middot; Fall 2026 &middot; Week 4</p><h1>Student Q&amp;A</h1><p class="lede">Real questions from EAP 100 students, grouped by topic. Most answers point you to resources you already have. That is deliberate: part of becoming an independent learner is knowing where to look.</p></div>
+<div class="callout blue"><b>Before you read further, open three things:</b> the <a href="https://thefutureofwork.github.io/EAP100/" style="font-weight:600">course website</a>, your <a href="https://drive.google.com/drive/folders/1FAPe2Us22fKf7ZyL5GtVwPZWy-LYQS4g" target="_blank" rel="noopener" style="font-weight:600">Student Folder</a>, and the <a href="https://drive.google.com/file/d/1BXSS_HB1kSGSsZUiMaL-E3TUWmu4jS_E/view" target="_blank" rel="noopener" style="font-weight:600">Templates &amp; Tools</a> document. You will need all three.</div>
+<section id="planning" style="margin-top:36px"><div class="sh"><span class="num">01</span><h2>Planning, Energy, and Self-Management</h2></div>
+<div class="faq">
+<details><summary><span class="qn">Q1</span>I am always too ambitious but lack the energy to follow through. How do I make a realistic plan?</summary><div class="a"><p>This is the most common problem in university. Three things help:</p><ol><li><strong>Write SMART goals.</strong> "Study more" is not a plan. "Complete Reading 5 guided notes, Saturday 10:00 to 11:30, in the library" is a plan. Task, time, place.</li><li><strong>Block 8 to 10 hours of homework per week in your calendar.</strong> Treat those blocks like class. If it is not scheduled, it will not happen.</li><li><strong>Look at your Week 2 time tracking.</strong> What actually took longest? Cut the tasks that waste time (recopying, formatting) and protect the ones that build skill (reading, writing, practicing).</li></ol><p>Still struggling? Come to office hours (Tuesdays 13:00 to 14:15, N745) and we will build a weekly plan together.</p></div></details>
+<details><summary><span class="qn">Q2</span>Besides SMART goals, what else helps?</summary><div class="a"><ul><li><strong>Put a heading and a date on everything you submit.</strong> Week number, task name, date. Every single time. If I open your file and cannot tell what it is or when you wrote it, you have already lost marks for organization.</li><li><strong>Keep your Student Folder organized.</strong> Label files consistently. Keep weeks separate. A messy folder is a messy mind.</li><li><strong>Track deadlines</strong> using the <a href="due-dates.html" style="font-weight:600">Checklist page</a> or the calendar file.</li><li><strong>Review notes after class</strong>, not the night before an exam.</li><li><strong>Create a study group</strong> outside class time.</li><li><strong>Stop procrastinating.</strong> Make better choices with your free time.</li><li><strong>Take notes in class. Ask questions in class. Attend office hours.</strong></li><li><strong>Read assignment directions carefully</strong> before asking someone else.</li></ul><p>None of this is complicated. All of it requires discipline.</p></div></details>
+<details><summary><span class="qn">Q3</span>What is the key step in practicing SMART goals?</summary><div class="a"><p>Writing them down and then doing them. A SMART goal you do not follow is just a sentence.</p></div></details>
+<details><summary><span class="qn">Q4</span>I don't know what to do right now.</summary><div class="a"><p>Do not put the cart before the horse. You do not need to understand the whole semester to do this week's tasks. Open the <a href="index.html" style="font-weight:600">weekly schedule</a>. Look at Week 4. Do the first task you have not finished.</p><p>If you are confused about what a task requires, read the assignment directions on the website carefully. If you are still confused after that, email me at <a href="mailto:kt1992@nyu.edu">kt1992@nyu.edu</a>.</p><p><strong>Confused? Do what you can.</strong> I will teach you the skills you need. You need to keep up with the coursework. Do not use confusion as an excuse to do nothing.</p></div></details>
+</div></section>
+<section id="language"><div class="sh"><span class="num">02</span><h2>Language Accuracy and Speaking</h2></div>
+<div class="faq">
+<details><summary><span class="qn">Q5</span>How can I improve my language accuracy?</summary><div class="a"><p>There is no shortcut, but there are habits that work:</p><ul><li><strong>Read more English.</strong> Course readings count, but go beyond the course too.</li><li><strong>Listen to more English.</strong> Podcasts, TED talks, lectures. Immerse yourself.</li><li><strong>Write every week</strong> and review your own writing after you receive feedback.</li><li><strong>Book an ARC appointment.</strong> An EAP specialist will work on your specific errors with you.</li><li><strong>Use the <a href="https://www.eapfoundation.com/" target="_blank" rel="noopener">EAP Foundation website</a>.</strong> Grammar, vocabulary, and academic writing exercises, all free.</li></ul></div></details>
+<details><summary><span class="qn">Q6</span>How can I improve my spoken English more efficiently?</summary><div class="a"><p>Speak more English. That is the honest answer. Discuss readings with classmates in English. Practice your presentation out loud, not in your head. Come to office hours and talk through your ideas. Use CCD visits as speaking practice: ask questions, introduce yourself to professionals. The more you use it, the faster it improves.</p></div></details>
+<details><summary><span class="qn">Q7</span>How do I improve listening and writing at the same time?</summary><div class="a"><p>This is exactly what Cornell notes train. Stop trying to write everything. Listen for signposting phrases ("The main point is...", "There are three reasons...") and capture those. The <a href="https://drive.google.com/file/d/1BXSS_HB1kSGSsZUiMaL-E3TUWmu4jS_E/view" target="_blank" rel="noopener" style="font-weight:600">Cornell Notes template</a> separates listening from processing. Practice with Videos 1 through 4 before the exam.</p><p>The library is also running "Note-Taking: From Ears to Action" (Wed Oct 28, 3:45 to 4:45 PM).</p></div></details>
+<details><summary><span class="qn">Q8</span>How can I make my handwriting better?</summary><div class="a"><p>Write more by hand. Slow down until clarity catches up with speed. If your handwriting is genuinely illegible on an exam, print in block letters.</p></div></details>
+</div></section>
+<section id="sources"><div class="sh"><span class="num">03</span><h2>Sources, Citations, and APA</h2></div>
+<div class="faq">
+<details><summary><span class="qn">Q9</span>How do I use APA citation style?</summary><div class="a"><p>The <a href="https://drive.google.com/file/d/1BXSS_HB1kSGSsZUiMaL-E3TUWmu4jS_E/view" target="_blank" rel="noopener" style="font-weight:600">Templates &amp; Tools</a> document has an APA quick reference. The basic pattern:</p><ul><li><strong>In-text:</strong> (Author, Year) or Author (Year) states that...</li><li><strong>Reference list:</strong> Author, A. B. (Year). <em>Title of work.</em> Publisher.</li></ul><p>The library ran an APA workshop in Week 3. If you missed it, book time with a librarian. They will walk you through it.</p></div></details>
+<details><summary><span class="qn">Q10</span>Why is sourcing so important? Just for reliability?</summary><div class="a"><p>Reliability is part of it. But sourcing also means giving credit to the person whose idea you are using, letting your reader check your claim, and showing that your argument rests on evidence rather than opinion. An unsourced claim is an unfinished claim. Look at how every reading in the <a href="https://drive.google.com/file/d/1ivrdhiXrE4MGP0XZwqqG1wV0OF_dJ51m/view" target="_blank" rel="noopener" style="font-weight:600">Reading Packet</a> uses citations and practice doing the same.</p></div></details>
+<details><summary><span class="qn">Q11</span>Why cite the source if the source is the passage I was given?</summary><div class="a"><p>Because citing correctly is a skill you are building. The reader needs to know which part of the passage you mean. Name the author and year even when the source feels obvious. Practice now so it becomes automatic later.</p></div></details>
+</div></section>
+<section id="portfolio"><div class="sh"><span class="num">04</span><h2>Portfolio and DEIP</h2></div>
+<div class="faq">
+<details><summary><span class="qn">Q12</span>How can I make my portfolio better?</summary><div class="a"><ol><li><strong>Put a heading and a date on every artifact.</strong> Week number, task name, date. No exceptions.</li><li><strong>Choose artifacts that show growth</strong>, not just completion. A revised paragraph is more interesting than a first draft.</li><li><strong>Write stronger DEIP reflections.</strong> Describe, Explain, Interpret, Plan. Most students forget Plan.</li></ol><p>Full structure is in the <a href="https://docs.google.com/document/d/1RMW_A-eV3rVe0p3-we9mGKREdnsn26QWvnXd6yf9SDY/edit" target="_blank" rel="noopener" style="font-weight:600">Portfolio Assignment Guide</a>.</p></div></details>
+<details><summary><span class="qn">Q13</span>I have difficulty connecting DEIP reflections to EAP 100 skills.</summary><div class="a"><p>Open the <a href="https://drive.google.com/file/d/1vRP-kajqPyvRgkCuQpb3uJphzGXCBFkz/view" target="_blank" rel="noopener" style="font-weight:600">Student Guide</a> and look at the five learning outcomes. Every artifact connects to at least one. In your Interpret section, name the outcome explicitly: "This reading task helped me practice selecting relevant information (Outcome 2) because I had to decide which details supported the author's main claim."</p></div></details>
+<details><summary><span class="qn">Q14</span>What skills are linked to interpreting artifacts in the portfolio?</summary><div class="a"><p>Self-assessment, connecting your work to course outcomes, identifying strengths and weaknesses, and planning next steps. These are the same skills employers test when they ask "Tell me about a time you improved at something."</p></div></details>
+</div></section>
+<section id="content"><div class="sh"><span class="num">05</span><h2>Course Content and What Comes Next</h2></div>
+<div class="faq">
+<details><summary><span class="qn">Q15</span>What will we learn in future classes?</summary><div class="a"><p>Open the <a href="index.html" style="font-weight:600">weekly schedule</a>. Every week is listed with its topic, tasks, and resources. Do not worry about Week 10 right now. Focus on this week and next.</p></div></details>
+<details><summary><span class="qn">Q16</span>Is EAP 100 just academic English skills?</summary><div class="a"><p>No. EAP 100 teaches you to read critically, listen selectively, speak with evidence, write from sources, and present yourself professionally. These skills transfer directly into every course you take and every job you hold. Read the <a href="https://drive.google.com/file/d/1vRP-kajqPyvRgkCuQpb3uJphzGXCBFkz/view" target="_blank" rel="noopener" style="font-weight:600">Student Guide</a> introduction again.</p></div></details>
+<details><summary><span class="qn">Q17</span>How can we learn about work from TED talks recorded years ago?</summary><div class="a"><p>The TED talks are not instructions. They are sources: arguments made by researchers at a specific point in time. Your job is to evaluate those arguments, not to accept them. When Brynjolfsson (2013) talks about the second machine age, ask: has his prediction held up? That critical evaluation is the skill.</p></div></details>
+<details><summary><span class="qn">Q18</span>Are Cornell notes meant to capture all the details?</summary><div class="a"><p>No. Main ideas and key supporting details, not every word. Right column: notes during the lecture. Left column: questions and keywords added afterward. Bottom: summary you actually study from. See the <a href="https://drive.google.com/file/d/1BXSS_HB1kSGSsZUiMaL-E3TUWmu4jS_E/view" target="_blank" rel="noopener" style="font-weight:600">Cornell Notes template</a>.</p></div></details>
+</div></section>
+<section id="listening"><div class="sh"><span class="num">06</span><h2>Listening Exam Preparation</h2></div>
+<div class="faq">
+<details><summary><span class="qn">Q19</span>How do I prepare for the listening test? I can't recall all the sources from Weeks 1 through 5.</summary><div class="a"><p>You do not need to memorize every source. You need to:</p><ol><li><strong>Sit the <a href="practice-listening-exam-1.html" style="font-weight:600">Practice Listening Exam</a></strong> under real conditions (due Mon Sep 28). One viewing. No pausing.</li><li><strong>Review your Cornell notes</strong> from Videos 1 through 4. Know the main argument of each talk.</li><li><strong>Practice separating main points from supporting details.</strong> Reading 6 trains this.</li><li><strong>Know 30+ academic vocabulary words</strong> from Weeks 1 through 4.</li><li><strong>Be able to write a 3 to 5 sentence summary after a single listen.</strong></li></ol><p>Section C asks you to connect the exam lecture to one course source. Pick the two sources you know best and review those.</p></div></details>
+</div></section>
+<section id="presentation"><div class="sh"><span class="num">07</span><h2>Midterm Presentation</h2></div>
+<div class="faq">
+<details><summary><span class="qn">Q20</span>How do I make a boring but important topic interesting?</summary><div class="a"><p>Start with a question your audience cares about, not a definition. Use a real example, a surprising number, or a short story. Show visuals that explain, not decorate. Speak to your audience, not at your slides.</p></div></details>
+<details><summary><span class="qn">Q21</span>Where do I put my midterm presentation draft?</summary><div class="a"><p>Student Folder, labeled "Week 4 Midterm Presentation First Draft." Upload your outline and slides. Due Mon Sep 28.</p></div></details>
+</div></section>
+<section id="resources"><div class="sh"><span class="num">08</span><h2>Using Course Resources</h2></div>
+<div class="faq">
+<details><summary><span class="qn">Q22</span>I still don't know how to use the EAP Foundation website.</summary><div class="a"><p>Go to <a href="https://www.eapfoundation.com/" target="_blank" rel="noopener" style="font-weight:600">eapfoundation.com</a>. Browse the sections: Vocabulary, Reading, Writing, Listening, Speaking. Pick one area. Do one exercise. Nobody assigns this to you. You assign it to yourself. That is what independent learning looks like.</p></div></details>
+</div>
+<div class="callout" style="margin-top:30px"><b>The common thread in almost every question above: the answer is already available to you.</b> The course website, Templates &amp; Tools, the Student Guide, the Reading Packet, the EAP Foundation, the ARC, the library, office hours, your classmates, and your own effort. Read the information you have been given. Follow the instructions in the resources on the website. Check in with a classmate. Send me an email. Find solutions by yourself as an independent learner. Exploit the resources available to you. Do not use confusion as an excuse to do nothing.</div>
+</section>
+<section style="margin-top:50px;border-top:2px solid var(--rule);padding-top:30px"><p><strong>Have more questions?</strong> Email me at <a href="mailto:kt1992@nyu.edu" style="font-weight:600">kt1992@nyu.edu</a> or come to office hours, Tuesdays 13:00 to 14:15, Room N745.</p></section>
+</main>
+</div>
+<footer class="foot"><div class="foot-in"><span>EAP 100: FUTURE FOCUSED / NYU SHANGHAI / FALL 2026</span><a href="index.html" style="margin-left:auto">WEEKLY SCHEDULE</a><a href="due-dates.html">CHECKLIST</a><a href="eap100-deadlines.ics">CALENDAR FILE</a></div></footer>
+</body>
+</html>
