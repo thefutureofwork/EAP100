@@ -44,8 +44,8 @@ UID:bdc13f50-b900-49a2-b2f8-5a8446c15c99
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260907
 DTEND;VALUE=DATE:20260907
-SUMMARY:EAP 100: DEIP Reflection 1 due
-DESCRIPTION:~200 word DEIP reflection on a past work or English-learning experience. Submit to Student Folder > Week 1. Keep a copy in your portfolio.
+SUMMARY:EAP 100: DIEP Reflection 1 due
+DESCRIPTION:~200 word DIEP reflection on a past work or English-learning experience. Submit to Student Folder > Week 1. Keep a copy in your portfolio.
 END:VEVENT
 BEGIN:VEVENT
 UID:b1a4c2d0-1f00-4a11-9c01-eap100start01
@@ -77,7 +77,7 @@ DTSTAMP:20260910T085500Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261012
 SUMMARY:EAP 100: CCD Visit 1 log due - CCD Orientation
-DESCRIPTION:Watch the CCD Orientation online or attend in person. Write a 150-200 word DEIP log. Submit to Experiential Learning Tracker + Student Folder > CCD.
+DESCRIPTION:Watch the CCD Orientation online or attend in person. Write a 150-200 word DIEP log. Submit to Experiential Learning Tracker + Student Folder > CCD.
 END:VEVENT
 BEGIN:VEVENT
 UID:4da4bc52-5f27-4d40-a88e-4d80afd4ec8d
@@ -93,7 +93,7 @@ DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260917
 DTEND;VALUE=DATE:20260917
 SUMMARY:EAP 100: Portfolio Build 1 due
-DESCRIPTION:Choose 2-3 artifacts + 250-300 word DEIP reflection. Submit to Student Folder > Week 3.
+DESCRIPTION:Choose 2-3 artifacts + 250-300 word DIEP reflection. Submit to Student Folder > Week 3.
 END:VEVENT
 BEGIN:VEVENT
 UID:8f212a0d-4116-4d7c-9272-fb470d8dde61
@@ -260,7 +260,7 @@ SEQUENCE:1
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261103
 SUMMARY:EAP 100: Portfolio Build 2 due
-DESCRIPTION:Add Weeks 4-7 artifacts + 300-400 word DEIP reflection. Upload to the Assignments folder with a clear label. Due after the individual meeting.
+DESCRIPTION:Add Weeks 4-7 artifacts + 300-400 word DIEP reflection. Upload to the Assignments folder with a clear label. Due after the individual meeting.
 END:VEVENT
 BEGIN:VEVENT
 UID:c8ada9fa-0ec8-4fa1-87f7-f2882dab16b0
@@ -406,7 +406,7 @@ SEQUENCE:1
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261119
 SUMMARY:EAP 100: Portfolio Build 3 due
-DESCRIPTION:400-500 word DEIP reflection. Refine artifacts + synthesise your four CCD visits. Upload to the Assignments folder with a clear label.
+DESCRIPTION:400-500 word DIEP reflection. Refine artifacts + synthesise your four CCD visits. Upload to the Assignments folder with a clear label.
 END:VEVENT
 BEGIN:VEVENT
 UID:8e38cdee-fb7d-45ee-8a3b-c50d9b31f9f3
@@ -465,6 +465,6 @@ SEQUENCE:1
 DTSTART;TZID=Asia/Shanghai:20261213T235900
 DTEND;TZID=Asia/Shanghai:20261213T235900
 SUMMARY:🚨 EAP 100: FINAL PORTFOLIO DUE
-DESCRIPTION:5 artifacts + captions\, DEIP reflection (300-500 words) and closing statement (100-150 words). Upload to the Assignments folder with a clear label before midnight\, Sun Dec 13.
+DESCRIPTION:5 artifacts + captions\, DIEP reflection (300-500 words) and closing statement (100-150 words). Upload to the Assignments folder with a clear label before midnight\, Sun Dec 13.
 END:VEVENT
 END:VCALENDAR
