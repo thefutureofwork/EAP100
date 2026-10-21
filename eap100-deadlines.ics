@@ -264,11 +264,12 @@ DESCRIPTION:Add Weeks 4-7 artifacts + 300-400 word DIEP reflection. Upload to th
 END:VEVENT
 BEGIN:VEVENT
 UID:c8ada9fa-0ec8-4fa1-87f7-f2882dab16b0
-DTSTAMP:20260831T060800Z
-DTSTART;VALUE=DATE:20261027
-DTEND;VALUE=DATE:20261027
+DTSTAMP:20261021T081500Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261029
 SUMMARY:EAP 100: 12-minute individual meeting (book in advance)
-DESCRIPTION:Week of Tue Oct 27\, Room N745. Bring the Week 8 Meeting Prep Sheet\, portfolio and resume draft.
+DESCRIPTION:Slots Fri Oct 23\, Mon Oct 26\, Tue Oct 27 and Wed Oct 28\, Room N745. Book at least 24 hours ahead: https://calendar.app.google/ZoHhjLEWHfNayLut9\n\nBefore you come\, complete the Meeting Prep page: https://thefutureofwork.github.io/EAP100/meeting-prep.html\n\nBring your resume draft\, the filled-in prep page\, your portfolio and a pen.
 END:VEVENT
 BEGIN:VEVENT
 UID:5d9f1a37-4e6b-4183-ac55-eap100libw08
