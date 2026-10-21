@@ -41,9 +41,17 @@ th{font:700 11px ui-monospace,monospace;letter-spacing:.1em;text-transform:upper
 .rate label{font:700 12px ui-monospace,monospace;border:1px solid var(--rule);border-radius:3px;padding:3px 8px;cursor:pointer;margin-right:2px;display:inline-block}
 .rate input{position:absolute;opacity:0}
 .rate label:has(input:checked){background:var(--ink);color:#fff;border-color:var(--ink)}
+.faq details{border-top:1px solid #eeebe4;padding:0 16px}
+.faq details:first-child{border-top:0}
+.faq summary{cursor:pointer;font-weight:600;padding:11px 0;list-style:none;display:flex;gap:10px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";margin-left:auto;font-family:ui-monospace,monospace;color:var(--ink3)}
+.faq details[open] summary::after{content:"\2013"}
+.faq .qn{font:700 12px ui-monospace,monospace;color:var(--red);padding-top:3px;flex-shrink:0}
+.faq p{margin:0 0 12px 34px;font-size:15px;color:var(--ink2)}
 .done{display:none;background:var(--gobg);border:1px solid var(--go);color:var(--go);font-weight:700;padding:10px 14px;border-radius:4px;margin-top:14px}
-:where(a,button,input,textarea,label):focus-visible{outline:3px solid var(--blue);outline-offset:2px}
-@media print{.no-print{display:none!important}body{background:#fff;font-size:12.5px}main{padding:0;max-width:none}textarea{border:0;border-bottom:1px solid #999;min-height:34px}.why{display:block!important}}
+:where(a,button,input,textarea,label,summary):focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+@media print{.no-print{display:none!important}body{background:#fff;font-size:12.5px}main{padding:0;max-width:none}textarea{border:0;border-bottom:1px solid #999;min-height:34px}.why{display:block!important}.faq{display:none}}
 </style>
 </head>
 <body>
@@ -63,6 +71,7 @@ th{font:700 11px ui-monospace,monospace;letter-spacing:.1em;text-transform:upper
 <a class="btn go" href="https://calendar.app.google/ZoHhjLEWHfNayLut9" target="_blank" rel="noopener">Book your slot</a>
 <button class="btn" onclick="window.print()">Print / PDF</button>
 <button class="btn alt" id="reset">Clear</button>
+<a class="btn alt" href="#qa">Q&amp;A</a>
 <a class="btn alt" href="index.html#week8">Back to Week 8</a>
 </div>
 <p class="warn"><b>Book at least 24 hours ahead.</b> Do not use the Tuesday walk-in hour for this meeting. If no slot works, email me before Wed Oct 28 and we will find another time.</p>
@@ -97,6 +106,22 @@ th{font:700 11px ui-monospace,monospace;letter-spacing:.1em;text-transform:upper
 <span class="lbl">Action 1 (verb + what + by when)</span><textarea data-k="a1" placeholder="e.g. Rewrite my resume skills section using CCD feedback by Mon Nov 2"></textarea>
 <span class="lbl">Action 2 (verb + what + by when)</span><textarea data-k="a2"></textarea>
 <p class="why" style="margin:6px 16px 14px">Your Portfolio Build 2 DIEP reflection (due Tue Nov 3) must name at least one of these actions in the Plan section.</p>
+</section>
+
+<section class="sec faq" id="qa"><div class="sec-h"><span class="n">06</span><h2>Q&amp;A</h2></div>
+<div>
+<details><summary><span class="qn">Q1</span>Do I really have to come?</summary><p>Yes. Every student, even if we have already met this semester. It counts toward your participation grade.</p></details>
+<details><summary><span class="qn">Q2</span>How do I book?</summary><p>Use the <a href="https://calendar.app.google/ZoHhjLEWHfNayLut9" target="_blank" rel="noopener">booking link</a>. Book at least 24 hours ahead. Slots run until Wed Oct 28. All meetings are in Room N745.</p></details>
+<details><summary><span class="qn">Q3</span>The times on the booking page look wrong.</summary><p>Check the time zone at the top of the booking page. It must say <b>China Standard Time (GMT+8)</b>. If it shows another time zone, change it before you pick a slot.</p></details>
+<details><summary><span class="qn">Q4</span>None of the times work for me.</summary><p>Email me before Wed Oct 28 and we will find another time, in person or on Zoom. Do not just skip it.</p></details>
+<details><summary><span class="qn">Q5</span>Can I come to the Tuesday walk-in hour instead?</summary><p>No. Walk-in is first come, first served and for quick questions. This meeting needs a booked slot so you get the full 12 minutes.</p></details>
+<details><summary><span class="qn">Q6</span>I need to change or cancel my slot.</summary><p>Cancel using the link in your booking confirmation email, then book a new slot straight away. Do this at least 24 hours before your original time.</p></details>
+<details><summary><span class="qn">Q7</span>My resume is not finished.</summary><p>That is fine. A rough one-page draft is enough. It must exist, though. If you come with nothing, we spend your 12 minutes on what you should have done before.</p></details>
+<details><summary><span class="qn">Q8</span>Should I write Portfolio Build 2 before the meeting?</summary><p>No. Build 2 is due Tue Nov 3, after the meeting on purpose. Its Plan section must name at least one of the two actions we agree.</p></details>
+<details><summary><span class="qn">Q9</span>Is this a test, or a chance to talk about my grade?</summary><p>Neither. It is 12 minutes of focused attention on your work and your plan for the second half of the term. Students who arrive with specific questions get the most out of it.</p></details>
+<details><summary><span class="qn">Q10</span>What if I am late?</summary><p>Your slot ends on time because the next student is waiting. Arrive two minutes early with your resume and portfolio already open.</p></details>
+<details><summary><span class="qn">Q11</span>Paper or laptop?</summary><p>Either. Printed copies or files already open on your laptop both work. Bring a pen either way.</p></details>
+</div>
 </section>
 
 <div class="done" id="done">Ready. Everything in Parts 1 and 2 is ticked. See you in N745.</div>
