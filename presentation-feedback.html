@@ -5,204 +5,105 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EAP 100 Midterm Presentation: Feedback Checklist</title>
 <style>
-:root{--ink:#17191d;--ink2:#4a4e56;--ink3:#787d86;--paper:#fbfaf6;--rule:#d9d6cc;--red:#a81004;--blue:#22357a;--go:#1f6b4a;--gobg:#eaf3ee;--amber:#f2a81d;--amberbg:#fdf3df}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
-main{max-width:960px;margin:auto;padding:36px 22px 80px}
-header{border-bottom:2px solid var(--ink);padding-bottom:20px}
+:root{--ink:#17191d;--ink2:#4a4e56;--ink3:#787d86;--paper:#fbfaf6;--rule:#d9d6cc;--red:#a81004;--blue:#22357a;--go:#1f6b4a;--gobg:#eaf3ee;--amber:#f2a81d}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:860px;margin:auto;padding:30px 20px 60px}
+header{border-bottom:2px solid var(--ink);padding-bottom:16px}
 .k{font:700 12px ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
-h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.05;margin:10px 0 6px;letter-spacing:-.03em}
-h2{font-size:1.35rem;line-height:1.1;margin:0}
-.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:18px 0 6px}
-.meta label{font:700 11px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);display:flex;flex-direction:column;gap:4px}
-input[type=text],textarea{font:inherit;font-size:15px;border:1px solid var(--rule);background:#fff;padding:8px 10px;border-radius:3px;width:100%}
-textarea{min-height:70px;resize:vertical}
-.bar{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.btn{display:inline-flex;align-items:center;min-height:42px;background:var(--ink);color:#fff;padding:10px 14px;font:700 12px ui-monospace,monospace;text-transform:uppercase;letter-spacing:.04em;border:1px solid var(--ink);cursor:pointer;border-radius:3px;text-decoration:none}
+h1{font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.05;margin:8px 0 4px;letter-spacing:-.03em}
+h2{font-size:1.15rem;margin:0}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:14px 0 4px}
+.meta label,.lbl{font:700 11px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);display:flex;flex-direction:column;gap:4px}
+input[type=text],textarea{font:inherit;font-size:15px;border:1px solid var(--rule);background:#fff;padding:7px 9px;border-radius:3px;width:100%}
+textarea{min-height:56px;resize:vertical}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.btn{display:inline-flex;align-items:center;min-height:40px;background:var(--ink);color:#fff;padding:8px 13px;font:700 12px ui-monospace,monospace;text-transform:uppercase;letter-spacing:.04em;border:1px solid var(--ink);cursor:pointer;border-radius:3px;text-decoration:none}
 .btn.alt{background:#fff;color:var(--ink)}
-.btn[aria-pressed=true]{background:var(--amber);border-color:var(--amber);color:var(--ink)}
-.notice{background:var(--amberbg);border-left:4px solid var(--amber);padding:12px 16px;margin:20px 0;font-size:15px}
-.sec{background:#fff;border:1px solid var(--rule);border-radius:5px;margin:22px 0;overflow:hidden;break-inside:avoid-page}
-.sec-h{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid var(--rule);background:#f4f2ec;flex-wrap:wrap}
+.hint{font-size:14px;color:var(--ink2);margin:14px 0 0}
+.sec{background:#fff;border:1px solid var(--rule);border-radius:5px;margin:16px 0;overflow:hidden;break-inside:avoid-page}
+.sec-h{display:flex;align-items:center;gap:12px;padding:11px 16px;background:#f4f2ec;border-bottom:1px solid var(--rule);flex-wrap:wrap}
 .sec-h .n{font:700 13px ui-monospace,monospace;color:var(--red)}
-.score{margin-left:auto;font:700 12px ui-monospace,monospace;color:var(--ink2)}
-.bands{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--rule)}
-.band{display:block;padding:10px 12px;font-size:12.5px;line-height:1.4;color:var(--ink2);border-right:1px solid var(--rule);cursor:pointer}
-.band:last-child{border-right:0}
-.band b{display:flex;align-items:center;gap:6px;font:700 13px ui-monospace,monospace;color:var(--ink);margin-bottom:3px}
-.band input{margin:0}
-.band:has(input:checked){background:var(--gobg);color:var(--ink)}
-.sub{font:700 11px ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);padding:14px 20px 4px}
-.item{padding:10px 20px;border-top:1px solid #eeebe4}
+.bands{margin-left:auto;display:flex;gap:4px}
+.bands label{font:700 12px ui-monospace,monospace;border:1px solid var(--rule);border-radius:3px;padding:4px 9px;cursor:pointer;background:#fff}
+.bands input{position:absolute;opacity:0}
+.bands label:has(input:checked){background:var(--go);border-color:var(--go);color:#fff}
+.item{padding:8px 16px;border-top:1px solid #eeebe4}
 .item:first-of-type{border-top:0}
 .item label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-weight:600}
 .item input{width:18px;height:18px;margin-top:2px;flex-shrink:0}
-.tip{margin:6px 0 0 28px;font-size:14px;color:var(--ink2);background:var(--paper);border-left:3px solid var(--blue);padding:7px 11px}
-.tip::before{content:"How to improve: ";font-weight:700;color:var(--blue)}
+.tip{margin:3px 0 0 28px;font-size:14px;color:var(--blue)}
+.tip::before{content:"Try: ";font-weight:700}
 .item.met .tip{display:none}
-body.alltips .item.met .tip{display:block;opacity:.6}
 .item.met label{color:var(--go)}
-.notes{padding:12px 20px 18px;border-top:1px solid var(--rule)}
-.notes label{font:700 11px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:5px}
-.sum{background:#fff;border:2px solid var(--ink);border-radius:5px;padding:18px 20px;margin-top:28px}
-.sum table{width:100%;border-collapse:collapse;font-size:14.5px;margin:10px 0 16px}
-.sum th,.sum td{border:1px solid var(--rule);padding:7px 9px;text-align:left}
-.sum th{background:#f1efe8}
-.sum .g{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
-.sum label{font:700 11px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:5px}
+.sum{background:#fff;border:2px solid var(--ink);border-radius:5px;padding:16px;margin-top:22px;display:grid;gap:12px}
 :where(a,button,input,textarea,label):focus-visible{outline:3px solid var(--blue);outline-offset:2px}
-@media(max-width:700px){.bands{grid-template-columns:1fr 1fr}.band:nth-child(2){border-right:0}.band:nth-child(-n+2){border-bottom:1px solid var(--rule)}}
-@media print{.no-print{display:none!important}body{background:#fff;font-size:12.5px}main{padding:0;max-width:none}.sec{border-color:#999}.tip{border-left-color:#555}input[type=text],textarea{border:0;border-bottom:1px solid #999;padding:2px 0}textarea{min-height:40px}.band:has(input:checked){background:#e6e6e6;outline:2px solid #000;outline-offset:-2px}}
+@media print{.no-print{display:none!important}body{background:#fff;font-size:12.5px}main{padding:0;max-width:none}input[type=text],textarea{border:0;border-bottom:1px solid #999;padding:2px 0}textarea{min-height:36px}.bands label:has(input:checked){background:#000}}
 </style>
 </head>
 <body>
 <main id="main-content">
 <header>
 <div class="k">NYU Shanghai &middot; English for Academic Purposes &middot; Fall 2026</div>
-<h1>Midterm Presentation: Feedback Checklist</h1>
-<p>Informative Presentation (20%) &middot; 3&ndash;4 minutes &middot; built on the Midterm Presentation Rubric</p>
+<h1>Midterm Presentation Feedback</h1>
+<p>Informative Presentation (20%) &middot; 3&ndash;4 minutes</p>
 <div class="meta">
-<label>Student<input type="text" id="f-name"></label>
-<label>Topic<input type="text" id="f-topic"></label>
-<label>Date<input type="text" id="f-date"></label>
-<label>Time taken<input type="text" id="f-time" placeholder="e.g. 3:42"></label>
+<label>Student<input type="text"></label>
+<label>Topic<input type="text"></label>
+<label>Time taken<input type="text" placeholder="e.g. 3:42"></label>
 </div>
 <div class="bar no-print">
-<button class="btn" onclick="window.print()">Print / save as PDF</button>
-<button class="btn alt" id="tips" aria-pressed="false">Show tips for met items too</button>
-<button class="btn alt" id="reset">Clear for next student</button>
+<button class="btn" onclick="window.print()">Print / PDF</button>
+<button class="btn alt" id="reset">Clear</button>
 <a class="btn alt" href="index.html#week7">Back to Week 7</a>
 </div>
+<p class="hint no-print">Tick what the speaker did. Unticked items keep a tip. Pick a band (A&ndash;D) per criterion.</p>
 </header>
-<div class="notice no-print"><b>How to use this.</b> Tick every item the speaker <b>did</b>. Unticked items keep their &ldquo;How to improve&rdquo; tip, so the printout becomes a personal action list. Pick a band (A&ndash;D) for each rubric criterion, then fill in the summary at the bottom. Students can also use this page to self-check a rehearsal recording.</div>
 <div id="secs"></div>
 <section class="sum" aria-label="Summary">
-<h2>Summary</h2>
-<table><thead><tr><th>Criterion</th><th>Band</th></tr></thead><tbody id="sumrows"></tbody></table>
-<div class="g">
-<div><label for="s-str">Two strengths to keep</label><textarea id="s-str"></textarea></div>
-<div><label for="s-pri">Two priorities to work on</label><textarea id="s-pri"></textarea></div>
-</div>
-<div style="margin-top:12px"><label for="s-next">One action before the Persuasive Speech (Tue Nov 24)</label><textarea id="s-next"></textarea></div>
+<label class="lbl">Keep doing<textarea></textarea></label>
+<label class="lbl">Work on before the Persuasive Speech (Tue Nov 24)<textarea></textarea></label>
 </section>
 </main>
 <script>
 var S=[
-{t:"Task Requirements",note:"From the Week 7 assignment brief",items:[
-["Stayed within 3&ndash;4 minutes","Rehearse with a timer at least twice. If you run over, keep one example per main point and cut the rest. If you run short, add one explanation or example to each main point. Mark a halfway checkpoint in your notes (e.g. &ldquo;start Point 2 by 1:45&rdquo;)."],
-["Explained one focused topic (informative, not persuasive)","Narrow the topic until it fits in 3&ndash;4 minutes: &ldquo;AI&rdquo; is too big, &ldquo;how AI screens job applications&rdquo; works. Replace &ldquo;we should&hellip;&rdquo; claims with &ldquo;this is how / why&hellip;&rdquo; explanations; save arguing for the Persuasive Speech."],
-["Defined key terms","Define each key term the first time you use it, in plain words, then give a quick example: &ldquo;Automation, meaning machines doing tasks people used to do, for example self-checkout.&rdquo; Put the term and short definition on a slide."],
-["Used 2&ndash;3 sources with oral citations","Name each source out loud when you use it: author, credentials, year and where it was published. &ldquo;According to economist David Autor, in a 2016 TED talk&hellip;&rdquo; A source on the reference slide that you never mention aloud does not count."],
-["Showed 3 visual aids","Plan exactly which point each visual supports. A chart, photo, diagram or short quote slide all count; a slide full of your script does not."],
-["Signposted clearly","Use a preview (&ldquo;I&rsquo;ll cover three things&hellip;&rdquo;), transitions (&ldquo;Moving on to my second point&hellip;&rdquo;) and a closing signal (&ldquo;To sum up&hellip;&rdquo;). Write them into your cue cards in a different color."],
-["Answered at least one audience question","Prepare answers to three likely questions. In the moment: thank the asker, repeat or paraphrase the question, answer in 2&ndash;3 sentences, link back to your topic. If you don&rsquo;t know: &ldquo;That&rsquo;s a great question; my sources didn&rsquo;t cover that, but&hellip;&rdquo;"],
-["Uploaded outline and slides to the Assignments folder <b>before</b> presenting","Upload the night before with a clear label (e.g. &ldquo;Lastname_InformativePresentation_Slides&rdquo;). Late uploads can cost marks even when the talk is strong."]
+{t:"Task",band:false,items:[
+["Stayed within 3&ndash;4 minutes","Rehearse twice with a timer."],
+["Used 2&ndash;3 sources, cited aloud","&ldquo;According to [who], in [year]&hellip;&rdquo;"],
+["Showed 3 visual aids","One visual per main point."],
+["Answered an audience question","Paraphrase, answer in 2&ndash;3 sentences."]
 ]},
-{t:"Organization",b:["Organizational pattern (introduction, conclusion, sequenced body, transitions) is clearly and consistently observable.","Pattern is intermittently observable; communicability is not impeded.","Pattern is not clearly observable, but communicability is not impeded.","Pattern is not clearly observable, and some communicability is lost."],groups:[
-["Introduction",[
-["Opened with a hook (question, surprising statistic, short story, image or quotation)","Avoid starting with &ldquo;Hello, my topic is&hellip;&rdquo;. Open with one strong sentence that makes the audience curious, then introduce yourself and the topic."],
-["Stated the topic and purpose clearly","Include one sentence that begins &ldquo;Today I&rsquo;m going to explain&hellip;&rdquo; within the first 30 seconds."],
-["Previewed the main points","List your main points in the order you will cover them: &ldquo;First&hellip; then&hellip; finally&hellip;&rdquo;. Consider a simple agenda slide."],
-["Showed why the topic matters to this audience","Add a relevance line that connects the topic to students, future careers or life in Shanghai: &ldquo;This matters to us because&hellip;&rdquo;."]
-]],
-["Body",[
-["Had 2&ndash;4 clearly separate main points","Write each main point as one sentence. If two points overlap, merge them; if one point has too much inside it, split it."],
-["Followed a logical order (chronological, cause&ndash;effect, problem&ndash;solution, or topical)","Choose one pattern before you build slides and say it aloud: &ldquo;I&rsquo;ll look at the causes, then the effects.&rdquo;"],
-["Developed each point with explanation and support","Use the pattern Point &rarr; Explain &rarr; Example/Evidence &rarr; Link back. Every main point needs at least one piece of support."],
-["Used clear transitions between points","Add a bridge sentence between every point: &ldquo;Now that we&rsquo;ve seen what X is, let&rsquo;s look at why it&rsquo;s happening.&rdquo;"],
-["Balanced time across points","Aim for roughly 15% intro, 70% body, 15% conclusion. Time each section separately in rehearsal."]
-]],
-["Conclusion",[
-["Signaled the ending clearly","Use a closing phrase (&ldquo;To conclude&hellip;&rdquo;, &ldquo;To sum up&hellip;&rdquo;) so the audience knows you are wrapping up."],
-["Reviewed the main points","Restate each main point in one short sentence, in the same order as your preview."],
-["Ended with a memorable final thought","Finish with a link back to your hook, a forward-looking statement or a question to reflect on. Avoid ending on &ldquo;&hellip;so, yeah, that&rsquo;s it.&rdquo; Pause, say &ldquo;Thank you,&rdquo; then invite questions."]
-]]
+{t:"Organization",items:[
+["Hook, topic and preview in the intro","Open with a question or statistic, not &ldquo;My topic is&hellip;&rdquo;"],
+["2&ndash;4 clear main points with transitions","&ldquo;Moving on to my second point&hellip;&rdquo;"],
+["Clear conclusion and final thought","Signal the end, recap, link back to the hook."]
 ]},
-{t:"Language",b:["Language choices consistently support effectiveness; all language suits a general academic audience.","Language generally supports effectiveness; most language suits a general academic audience.","Language is unclear and minimally supports effectiveness; some is not appropriate.","Language does not support effectiveness; frequently not appropriate."],groups:[
-["Word choice",[
-["Used precise, academic vocabulary","Replace vague words (&ldquo;things&rdquo;, &ldquo;stuff&rdquo;, &ldquo;a lot&rdquo;, &ldquo;good/bad&rdquo;) with specific ones (&ldquo;factors&rdquo;, &ldquo;significantly&rdquo;, &ldquo;beneficial&rdquo;). Use vocabulary from your Cornell notes lists."],
-["Kept language suitable for a general academic audience","Remove slang and very casual phrases (&ldquo;you guys&rdquo;, &ldquo;super&rdquo;, &ldquo;kinda&rdquo;). Explain any technical or field-specific terms; imagine a classmate from a different major listening."],
-["Hedged claims appropriately","Use cautious language for claims that aren&rsquo;t certain: &ldquo;research suggests&rdquo;, &ldquo;this may lead to&rdquo;, &ldquo;it is likely that&rdquo;. Avoid &ldquo;always&rdquo;, &ldquo;never&rdquo;, &ldquo;everyone&rdquo;."],
-["Varied signposting and linking language","Build a bank of alternatives: &ldquo;In addition&rdquo;, &ldquo;However&rdquo;, &ldquo;As a result&rdquo;, &ldquo;For instance&rdquo;, &ldquo;This brings me to&hellip;&rdquo;. Avoid repeating &ldquo;and then&hellip;&rdquo; or &ldquo;next&hellip;&rdquo;."]
-]],
-["Sentences and accuracy",[
-["Used sentences that are easy to follow by ear","Spoken sentences should be shorter than written ones. Break long sentences into two; put the key idea at the end of the sentence, where stress falls naturally."],
-["Grammar errors did not interfere with meaning","Record a rehearsal and listen for your personal patterns (verb tense, subject&ndash;verb agreement, plural -s, articles). Fix the two most frequent ones first."],
-["Used correct oral citation language","Practice the frames: &ldquo;According to&hellip;&rdquo;, &ldquo;As [author] points out&hellip;&rdquo;, &ldquo;A [year] report by [organization] found that&hellip;&rdquo;."]
-]],
-["Pronunciation and style",[
-["Pronounced key terms clearly, with correct word stress","List your 5&ndash;10 most important words, check stress in a dictionary (e.g. au-TO-ma-tion, e-CO-no-my), and practice them aloud until automatic."],
-["Spoke in a natural, spoken style (not reading a written script)","Write cue cards with keywords only, not full sentences. Practice explaining each point to a friend in your own words before rehearsing with slides."]
-]]
+{t:"Language",items:[
+["Precise, academic word choice","Swap &ldquo;things/a lot&rdquo; for specific words."],
+["Short, clear spoken sentences","Break long sentences in two."],
+["Key terms defined and pronounced clearly","Check word stress in a dictionary."]
 ]},
-{t:"Delivery",b:["A range of delivery techniques (posture, gesture, eye contact, vocal expressiveness) consistently enhance content.","Delivery techniques generally enhance content.","Delivery techniques sometimes detract from content or are insufficiently used.","Delivery techniques frequently detract from content or are insufficiently used."],groups:[
-["Posture and gesture",[
-["Stood upright and balanced, facing the audience","Plant both feet shoulder-width apart; avoid swaying, leaning on the desk or turning your back to read the screen. Move deliberately only at transitions."],
-["Used purposeful gestures","Use gestures that match your words: count points on fingers, point to the visual, show size or contrast with hands. Keep hands out of pockets and away from hair, pens or clothing."],
-["Looked confident and engaged (facial expression)","Smile at the start and end; let your face match the content. Take one breath and look at the audience before your first word."]
-]],
-["Eye contact",[
-["Made eye contact with the whole room for most of the talk","Divide the room into three zones (left, center, right) and move between them. Hold eye contact for a full sentence with one person, then move on."],
-["Used notes as reminders, not a script","Glance down, then look up before you speak (&ldquo;look, pause, speak&rdquo;). If you read more than one sentence at a time, cut your notes down to keywords."],
-["Did not read from the slides","Stand to the side of the screen, glance at it only to point something out, and talk to the audience. If you need to read a slide, there are too many words on it."]
-]],
-["Voice",[
-["Spoke loudly enough to be heard at the back","Aim your voice at the back wall. Ask a friend to sit in the back row during rehearsal and signal if they can&rsquo;t hear."],
-["Used a clear, controlled pace with pauses","Target about 130&ndash;150 words per minute. Mark pause points (//) in your notes after key ideas, statistics and transitions."],
-["Varied intonation and stressed key words","Underline the key word in each important sentence and stress it. Avoid flat delivery by rising and falling with your meaning; record yourself to check."],
-["Kept fillers (um, uh, like, so) to a minimum","Replace fillers with a silent pause. Rehearse transitions until automatic; most fillers happen at transitions."]
-]],
-["Handling visuals and questions",[
-["Moved through visuals smoothly","Use a clicker or arrow keys; practice slide changes with your speech so each slide appears as you mention it. Don&rsquo;t block the projector."],
-["Handled questions calmly and clearly","Listen to the full question, pause, then answer. Look at the whole audience when answering, not only the person who asked."]
-]]
+{t:"Delivery",items:[
+["Eye contact with the whole room","Keyword cue cards only, no script."],
+["Clear voice, steady pace, few fillers","Pause instead of &ldquo;um&rdquo;."],
+["Confident posture and gestures","Feet planted, face the audience."]
 ]},
-{t:"Supporting Material",b:["Supporting materials consistently support content; all sources accurately cited (minor errors possible); own research at the highest level expected.","Supporting materials generally support content; most sources accurately cited, occasional errors; some good evidence of own research.","Supporting materials often do not support content; citation may be insufficient, with some errors.","Supporting materials rarely support content; citation insufficient, frequent errors or absent."],groups:[
-["Visual aids",[
-["Visuals were easy to read (large font, high contrast, little text)","Use at least 24-point font, no more than about 6 lines per slide, dark text on a light background (or the reverse). Test by viewing from the back of the room."],
-["Visuals added to the talk rather than repeating it","Use images, charts, diagrams and short key phrases instead of full sentences. Each visual should show something easier to see than to hear."],
-["Each visual was introduced and explained","Tell the audience what to look at: &ldquo;This chart shows&hellip; notice how&hellip;&rdquo;. Never leave a visual on screen without mentioning it."],
-["Charts and images were labeled and credited","Add a title, axis labels and units to every chart, and a short source line (author, year) under each borrowed image or chart."]
-]],
-["Evidence",[
-["Used a variety of support (examples, statistics, explanations, analogies, quotations)","Aim for at least two different types. Pair a statistic with a real example, or explain a complex idea through an analogy (&ldquo;It works like&hellip;&rdquo;)."],
-["Explained statistics so they were meaningful","Round numbers and put them in context: &ldquo;about 1 in 4 workers&rdquo; rather than &ldquo;24.7%&rdquo;. Say what the number means for your point."],
-["Used quotations from relevant authorities, and explained them","Keep quotes short (one sentence). Introduce who said it and why they matter, then explain it in your own words: &ldquo;In other words&hellip;&rdquo;."],
-["Linked each piece of evidence back to the point","After every piece of support, add a link sentence: &ldquo;This shows that&hellip;&rdquo;, &ldquo;This is important because&hellip;&rdquo;."]
-]],
-["Sources and research",[
-["Used credible, relevant and reasonably recent sources","Prefer academic articles, reputable news outlets, government or organization reports, and expert talks. Check the author&rsquo;s credentials and the date. Use the library databases, not just the first search result."],
-["Showed evidence of independent research beyond course materials","Add at least one source you found yourself beyond the Reading Packet and class videos. Book a library consultation or use the EAP Library Workshop resources."],
-["Cited every source orally","Each time you use a source, name it aloud with enough detail for the audience to judge it (who, credentials, when, where)."],
-["Included in-text citations on slides","Put (Author, Year) on every slide that uses a source&rsquo;s idea, data or image."],
-["Included an accurate APA 7 reference list","Final slide titled &ldquo;References&rdquo;, alphabetical by author, hanging indent, sentence-case titles, italics for stand-alone works, and DOIs/URLs. Check each entry against the APA guide."]
-]]
+{t:"Supporting Material",items:[
+["Readable visuals that add to the talk","24pt+, images over text."],
+["Evidence explained and linked to the point","&ldquo;This shows that&hellip;&rdquo;"],
+["(Author, Year) on slides + APA 7 references","Check each entry against the APA guide."]
 ]},
-{t:"Central Message",b:["Central message is clear and consistent with the supporting material.","Central message is generally clear and consistent with the supporting material.","Central message lacks clarity, but can be deduced.","Central message is unclear and difficult to deduce."],groups:[
-["Clarity",[
-["Stated the central message in one clear sentence near the start","Write your message as one sentence before you build anything else: &ldquo;Automation is changing which skills employers value most.&rdquo; Say it in the introduction, word for word."],
-["Restated the central message in the conclusion","Repeat the message in the conclusion, in the same or slightly different words, so it&rsquo;s the last idea the audience hears."],
-["Title reflected the central message","Make the title tell the audience what they will learn (&ldquo;How AI Is Changing Hiring&rdquo; rather than &ldquo;AI&rdquo;)."]
-]],
-["Consistency",[
-["Every main point clearly supported the central message","Test each point with &ldquo;Does this help explain my message?&rdquo; If not, cut it or rewrite it so the connection is explicit."],
-["Stayed on topic, without tangents","Remove interesting but unrelated facts and stories. Save them for Q&amp;A if someone asks."],
-["Audience could summarize the message in one sentence afterwards","Try the &ldquo;one-sentence test&rdquo; in rehearsal: ask a listener what your talk was about. If their answer doesn&rsquo;t match your message, sharpen your intro, transitions and conclusion."]
-]]
+{t:"Central Message",items:[
+["Message stated in one sentence early","Write the sentence before the slides."],
+["Every point supports it; restated at the end","Cut anything off-message."]
 ]}
 ];
-var box=document.getElementById("secs"),sum=document.getElementById("sumrows"),h="",sh="",id=0;
-function item(it){id++;return'<div class="item"><label><input type="checkbox" id="c'+id+'"><span>'+it[0]+'</span></label><div class="tip">'+it[1]+'</div></div>'}
-S.forEach(function(s,i){var n=i;h+='<section class="sec" data-s="'+i+'"><div class="sec-h"><span class="n">'+(n===0?'00':'0'+n)+'</span><h2>'+s.t+'</h2><span class="score" id="sc'+i+'"></span></div>';
-if(s.b){h+='<div class="bands" role="radiogroup" aria-label="'+s.t+' band">'+["A","B","C","D"].map(function(L,j){return'<label class="band"><b><input type="radio" name="b'+i+'" value="'+L+'">'+L+'</b>'+s.b[j]+'</label>'}).join("")+'</div>';sh+='<tr><td>'+s.t+'</td><td id="sb'+i+'">&nbsp;</td></tr>'}
-else{h+='<div class="sub">'+s.note+'</div>'}
-if(s.items){s.items.forEach(function(it){h+=item(it)})}
-if(s.groups){s.groups.forEach(function(g){h+='<div class="sub">'+g[0]+'</div>';g[1].forEach(function(it){h+=item(it)})})}
-h+='<div class="notes"><label for="n'+i+'">Comments</label><textarea id="n'+i+'"></textarea></div></section>'});
-box.innerHTML=h;sum.innerHTML=sh;
-function upd(){document.querySelectorAll(".sec").forEach(function(sec){var c=sec.querySelectorAll(".item input"),m=0;c.forEach(function(x){x.closest(".item").classList.toggle("met",x.checked);if(x.checked)m++});var i=sec.getAttribute("data-s");document.getElementById("sc"+i).textContent=m+" / "+c.length+" met";var r=sec.querySelector(".bands input:checked");var t=document.getElementById("sb"+i);if(t)t.textContent=r?r.value:"\u00a0"})}
-document.addEventListener("change",upd);upd();
-var tb=document.getElementById("tips");tb.addEventListener("click",function(){var on=document.body.classList.toggle("alltips");tb.setAttribute("aria-pressed",on)});
-document.getElementById("reset").addEventListener("click",function(){if(!confirm("Clear all ticks, bands and comments?"))return;document.querySelectorAll("input[type=checkbox],input[type=radio]").forEach(function(x){x.checked=false});document.querySelectorAll("input[type=text],textarea").forEach(function(x){x.value=""});upd();window.scrollTo(0,0)});
+var h="",id=0;
+S.forEach(function(s,i){h+='<section class="sec"><div class="sec-h"><span class="n">0'+i+'</span><h2>'+s.t+'</h2>';
+if(s.band!==false){h+='<div class="bands" role="radiogroup" aria-label="'+s.t+' band">'+["A","B","C","D"].map(function(L){return'<label><input type="radio" name="b'+i+'" value="'+L+'">'+L+'</label>'}).join("")+'</div>'}
+h+='</div>';s.items.forEach(function(it){id++;h+='<div class="item"><label><input type="checkbox" id="c'+id+'"><span>'+it[0]+'</span></label><div class="tip">'+it[1]+'</div></div>'});h+='</section>'});
+document.getElementById("secs").innerHTML=h;
+document.addEventListener("change",function(e){if(e.target.type==="checkbox")e.target.closest(".item").classList.toggle("met",e.target.checked)});
+document.getElementById("reset").addEventListener("click",function(){if(!confirm("Clear everything?"))return;document.querySelectorAll("input[type=checkbox],input[type=radio]").forEach(function(x){x.checked=false});document.querySelectorAll("input[type=text],textarea").forEach(function(x){x.value=""});document.querySelectorAll(".item").forEach(function(x){x.classList.remove("met")});window.scrollTo(0,0)});
 </script>
 </body>
 </html>
