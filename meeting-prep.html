@@ -106,8 +106,6 @@ var TODO=[
 ["Book your slot","Use the booking link above, at least 24 hours ahead. Put it in your calendar."],
 ["Finish all 3 CCD online modules","Industry Exploration, Write Your First Winning Resume, Become an Interview Master Today. Due Thu Oct 22 on Brightspace."],
 ["Write a rough resume draft (1 page)","Use the resume module. Rough is fine: contact details, education, experience or activities, skills. It does not need to be perfect, but it must exist."],
-["Read your Informative Presentation feedback","Pick the one thing you most need to fix before the Persuasive Speech (Tue Nov 24)."],
-["Review Listening Exam 1","Compare your notes with the <a href='listening-exam-1-transcript.html'>transcript</a>. Find one place where your notes broke down."],
 ["Update your portfolio","Build 1 plus your Weeks 4&ndash;7 work, uploaded to the Assignments folder with clear labels. Do <b>not</b> write Build 2 yet: it is due after the meeting on purpose."],
 ["Update your Experiential Learning Tracker","CCD Visit 1 log done. Visit 2 was cancelled, so you do not need it."],
 ["Fill in Part 3 of this page","Self-ratings, one artifact, and 2&ndash;3 written questions. &ldquo;I don&rsquo;t have any questions&rdquo; wastes the most useful part of the meeting."]
@@ -121,7 +119,7 @@ var BRING=[
 ["A pen","You write the two actions down during the meeting."]
 ];
 var RATES=["Academic listening and Cornell notes","Selecting relevant information from sources","Summarizing, paraphrasing and citing out loud","Synthesizing sources with my own ideas","Speaking up in discussion and asking questions"];
-var KEY="eap100-meeting-prep-v1",st={};try{st=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){}
+var KEY="eap100-meeting-prep-v2",st={};try{st=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
 function list(el,arr,p){var h="";arr.forEach(function(it,i){var id=p+i;h+='<div class="item'+(st[id]?' met':'')+'"><label><input type="checkbox" data-id="'+id+'"'+(st[id]?' checked':'')+'><span>'+it[0]+'</span></label><div class="why">'+it[1]+'</div></div>'});document.getElementById(el).innerHTML=h}
 list("todo",TODO,"d");list("bring",BRING,"b");
