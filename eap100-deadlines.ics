@@ -219,15 +219,6 @@ SUMMARY:EAP 100: Video 5 Cornell Notes due
 DESCRIPTION:Video 5 (David Autor\, Will Automation Take Away All Our Jobs?): Cornell notes + vocabulary. Upload to the Assignments folder with a clear label.
 END:VEVENT
 BEGIN:VEVENT
-UID:155ba838-0e70-473d-a331-1112aced2716
-DTSTAMP:20261006T134500Z
-SEQUENCE:1
-DTSTART;VALUE=DATE:20261019
-DTEND;VALUE=DATE:20261019
-SUMMARY:EAP 100: CCD Visit 2 log due - Fall Career Fair
-DESCRIPTION:CCD Visit 2 = Fall Career Fair. 150-200 words connecting the visit to your portfolio and future plans. Submit to the Experiential Learning Tracker and upload to the Assignments folder with a clear label.
-END:VEVENT
-BEGIN:VEVENT
 UID:32c909d4-c8f6-41b2-84e3-2d0d380ce609
 DTSTAMP:20261006T134500Z
 SEQUENCE:1
