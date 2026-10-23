@@ -27,15 +27,15 @@ You do not need to cover a whole issue. A focused, well-supported argument is st
 | --- | --- |
 | Tuesday, November 24, before your own section starts | Upload your outline, slide deck, and APA reference list to the course Google Drive Assignments folder. This is the presentation-specific deadline, not Monday midnight. |
 | Tuesday, November 24, during your normal section | Deliver your presentation in the assigned room. Arrange for two people in your group to record it. Your presentation will be video recorded for assessment. |
-| After you have recorded your presentation | Add a working video link to the Excel spreadsheet in the Final Presentation assessment folder. A separate video-link deadline has not been specified; your instructor will confirm it. |
+| **By midnight (23:59) on Tuesday, November 24** | **Add a working video link to the Excel spreadsheet in the Final Presentation assessment folder by midnight on the day of the presentation (Nov 24).** |
 
-Your upload cutoff is your section start time: **9:45 AM, 11:15 AM, or 2:15 PM, Shanghai time**. Upload early and check that every file opens. Do not wait until your individual speaking turn.
+Your upload cutoff is your section start time: **9:45 AM, 11:15 AM, or 2:15 PM, Shanghai time**. Upload early and check that every file opens. Do not wait until your individual speaking turn. Your video link is due later the same day: **by midnight (23:59) on November 24**.
 
 There is no class on Thursday, November 26 (Thanksgiving). All sections present on Tuesday, November 24.
 
 File label: `Persuasive Speech_YourName_Section`. Submit an outline with key points and cue words, not a full script. Put the APA references in your slide deck and submit the reference list as well.
 
-Other assigned homework is due Monday at 23:59 unless a task states otherwise. The presentation upload deadline above is an explicit exception. Late-work penalty: 5% per day, as stated in the original handout and syllabus policy.
+Other assigned homework is due Monday at 23:59 unless a task states otherwise. The presentation deadlines above are explicit exceptions. Late-work penalty: 5% per day, as stated in the original handout and syllabus policy.
 
 ## 3. Choose a topic and build your claim
 
@@ -134,7 +134,7 @@ These are recommended preparation checkpoints, **not extra graded deadlines**. R
 | November 10 to 12 | Write your own outline, connect evidence to your reasons, and prepare a fair counterargument. |
 | November 17 to 19 | Build your slides and use the self-assessment and peer-assessment checklists below. |
 | By Monday, November 23 | Rehearse aloud at least twice with a timer, revise, arrange two recorders, and check files and access. |
-| Tuesday, November 24 | Upload before your section begins, then present during class. |
+| Tuesday, November 24 | Upload before your section begins, present during class, then add your working video link to the Excel spreadsheet by midnight (23:59). |
 
 **AI use:** follow the syllabus policy. With disclosure, you may use AI to brainstorm topics, test counterarguments, check slide design, or practice Q&A. Do not submit AI-generated scripts, outlines, or speaking notes as your own. Your wording and reasoning must be yours. If you use AI, disclose the tool, version, developer, and how you used it on your AI Use Statement slide.
 
@@ -169,7 +169,7 @@ Use this before uploading. Tick an item only when you can point to evidence in y
 - [ ] My outline, slides, and APA reference list are ready, clearly labeled, and uploaded before my section starts on Tuesday, November 24.
 - [ ] My files open and my sharing permissions allow the instructor to access them.
 - [ ] Two people in my group have agreed to record my presentation.
-- [ ] I know where to put my video link after recording and will check that it works.
+- [ ] I will add a working video link to the Excel spreadsheet in the Final Presentation assessment folder by midnight on Tuesday, November 24, and check that it opens.
 - [ ] If I used AI, my disclosure explains exactly how I used it.
 
 My rehearsal time: __________
