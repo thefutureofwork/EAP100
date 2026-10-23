@@ -335,11 +335,12 @@ DESCRIPTION:Signposting\, hedging or pronunciation for Q&A. Upload to the Assign
 END:VEVENT
 BEGIN:VEVENT
 UID:d3f0be21-5c44-4f10-9a90-eap100src09
-DTSTAMP:20260831T060800Z
+DTSTAMP:20261023T052000Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261103
 SUMMARY:EAP 100: Start gathering persuasive speech sources (recommended)
-DESCRIPTION:Recommended this week\, no submission. Week 9 is light - collect 3-4 credible sources now for the Week 12 persuasive speech.
+DESCRIPTION:Recommended this week\, no submission. Collect 3 credible sources for the Week 12 persuasive speech\, including at least one primary and one secondary source. Student Guide: https://github.com/thefutureofwork/EAP100/blob/main/persuasive-presentation/README.md
 END:VEVENT
 BEGIN:VEVENT
 UID:6e2b4c81-7f93-4d05-b166-eap100libw10
@@ -372,7 +373,7 @@ DTSTAMP:20260911T085500Z
 DTSTART;TZID=Asia/Shanghai:20261118T173000
 DTEND;TZID=Asia/Shanghai:20261118T183000
 SUMMARY:📚 EAP Library Workshop: Powerful Visuals, Powerful Stories
-DESCRIPTION:Toolkit for Academic Success series. How to design great presentation slides - directly relevant to your Persuasive Speech visuals.
+DESCRIPTION:Toolkit for Academic Success series. How to design great presentation slides - directly relevant to your Persuasive Speech slides.
 END:VEVENT
 BEGIN:VEVENT
 UID:8a4b6e03-9d25-4f37-c988-eap100libw11b
@@ -411,12 +412,20 @@ DESCRIPTION:400-500 word DIEP reflection. Refine artifacts + synthesise your fou
 END:VEVENT
 BEGIN:VEVENT
 UID:8e38cdee-fb7d-45ee-8a3b-c50d9b31f9f3
-DTSTAMP:20261006T134500Z
-SEQUENCE:1
+DTSTAMP:20261023T052000Z
+SEQUENCE:2
 DTSTART;TZID=Asia/Shanghai:20261124T094500
 DTEND;TZID=Asia/Shanghai:20261124T094500
 SUMMARY:⚠️ EAP 100: PERSUASIVE SPEECH (20%)
-DESCRIPTION:5-6 minutes\, delivered live in class on Tuesday Nov 24 and video recorded. Upload outline\, slides and APA reference list to the Assignments folder with a clear label BEFORE you present. The recording is used for assessment only and is not a portfolio artifact. Thursday = Thanksgiving\, no class.
+DESCRIPTION:4-5 minutes plus Q&A\, delivered live in class on Tuesday Nov 24 and video recorded. 3 researched sources (including primary and secondary)\, ethos/pathos/logos\, a counterargument\, 3-4 content slides plus references. Upload outline\, slides and APA reference list to the Assignments folder with a clear label BEFORE your section begins. Add a working video link to the Excel spreadsheet in the Final Presentation assessment folder by midnight on the day of the presentation (Nov 24). Student Guide: https://github.com/thefutureofwork/EAP100/blob/main/persuasive-presentation/README.md
+END:VEVENT
+BEGIN:VEVENT
+UID:a1d7e3c9-5b42-4f8e-9c61-eap100vid12
+DTSTAMP:20261023T052000Z
+DTSTART;TZID=Asia/Shanghai:20261124T235900
+DTEND;TZID=Asia/Shanghai:20261124T235900
+SUMMARY:🚨 EAP 100: Persuasive Speech video link due
+DESCRIPTION:Add a working video link to the Excel spreadsheet in the Final Presentation assessment folder by midnight on the day of the presentation (Nov 24). Check that the link opens.
 END:VEVENT
 BEGIN:VEVENT
 UID:9b5c7f14-0e36-4a48-da99-eap100libw12
