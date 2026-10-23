@@ -19,7 +19,7 @@ BEGIN:VEVENT
 UID:8e3eff13-1b47-449b-809c-63f607af67ac
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260907
-DTEND;VALUE=DATE:20260907
+DTEND;VALUE=DATE:20260908
 SUMMARY:EAP 100: Reading 1 Paragraph due
 DESCRIPTION:Reading 1 (What Counts as Work?): 200-250 word paragraph defining work\, using the reading. Submit to Student Folder > Week 1.
 END:VEVENT
@@ -27,7 +27,7 @@ BEGIN:VEVENT
 UID:3aaf8bba-a8b0-4641-9f4c-cf974b81e57d
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260907
-DTEND;VALUE=DATE:20260907
+DTEND;VALUE=DATE:20260908
 SUMMARY:EAP 100: Video 1 Cornell Notes due
 DESCRIPTION:Video 1 (Sugata Mitra\, The Future of Work): Cornell notes + 5-10 academic vocabulary words. Submit to Student Folder > Week 1 Listening.
 END:VEVENT
@@ -35,7 +35,7 @@ BEGIN:VEVENT
 UID:463071ec-f1e9-43b4-976d-ef2d289812de
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260907
-DTEND;VALUE=DATE:20260907
+DTEND;VALUE=DATE:20260908
 SUMMARY:EAP 100: Portfolio Setup due
 DESCRIPTION:Create your portfolio folder + 5-10 bullet points on your course goals. Submit to Student Folder > Week 1.
 END:VEVENT
@@ -43,7 +43,7 @@ BEGIN:VEVENT
 UID:bdc13f50-b900-49a2-b2f8-5a8446c15c99
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260907
-DTEND;VALUE=DATE:20260907
+DTEND;VALUE=DATE:20260908
 SUMMARY:EAP 100: DIEP Reflection 1 due
 DESCRIPTION:~200 word DIEP reflection on a past work or English-learning experience. Submit to Student Folder > Week 1. Keep a copy in your portfolio.
 END:VEVENT
@@ -51,7 +51,7 @@ BEGIN:VEVENT
 UID:b1a4c2d0-1f00-4a11-9c01-eap100start01
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260901
-DTEND;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20260902
 SUMMARY:EAP 100: Start the CCD online course (3 modules)
 DESCRIPTION:Begin the CCD Brightspace modules (Industry Exploration\, Write Your First Winning Resume\, Become an Interview Master Today) in Week 1. All three must be complete by Thu Oct 22.
 END:VEVENT
@@ -59,7 +59,7 @@ BEGIN:VEVENT
 UID:308f9901-ddc4-4c1a-9c36-328986cde36f
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260914
-DTEND;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20260915
 SUMMARY:EAP 100: Reading 2 Two-Column Notes due
 DESCRIPTION:Main claims about future-ready learning + how each connects to EAP 100. Submit to Student Folder > Week 2.
 END:VEVENT
@@ -67,7 +67,7 @@ BEGIN:VEVENT
 UID:52908ec9-00b1-4b0a-a984-f289596d3167
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260914
-DTEND;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20260915
 SUMMARY:EAP 100: Video 2 Cornell Notes due
 DESCRIPTION:Video 2 (Erik Brynjolfsson\, Race with the Machines): Cornell notes + 5-10 vocabulary words. Submit to Student Folder > Week 2 Listening.
 END:VEVENT
@@ -75,7 +75,7 @@ BEGIN:VEVENT
 UID:71d9ef3d-a3a1-4b98-90ff-3d37ca6f373c
 DTSTAMP:20260910T085500Z
 DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
 SUMMARY:EAP 100: CCD Visit 1 log due - CCD Orientation
 DESCRIPTION:Watch the CCD Orientation online or attend in person. Write a 150-200 word DIEP log. Submit to Experiential Learning Tracker + Student Folder > CCD.
 END:VEVENT
@@ -83,7 +83,7 @@ BEGIN:VEVENT
 UID:4da4bc52-5f27-4d40-a88e-4d80afd4ec8d
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260914
-DTEND;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20260915
 SUMMARY:EAP 100: Homework Time Tracking + Mini-Reflection due
 DESCRIPTION:Track your EAP homework time for one week\, then write a 100-150 word reflection. Submit to Student Folder > Week 2.
 END:VEVENT
@@ -91,7 +91,7 @@ BEGIN:VEVENT
 UID:c4de7e44-0df2-430c-a048-0c1f7607d1b5
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260917
-DTEND;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
 SUMMARY:EAP 100: Portfolio Build 1 due
 DESCRIPTION:Choose 2-3 artifacts + 250-300 word DIEP reflection. Submit to Student Folder > Week 3.
 END:VEVENT
@@ -99,7 +99,7 @@ BEGIN:VEVENT
 UID:8f212a0d-4116-4d7c-9272-fb470d8dde61
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260921
-DTEND;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
 SUMMARY:EAP 100: Reading 3 Guided Notes due
 DESCRIPTION:Key ideas\, examples and questions on future-ready focus. Submit to Student Folder > Week 3.
 END:VEVENT
@@ -107,7 +107,7 @@ BEGIN:VEVENT
 UID:5aee6191-989d-4417-b471-26490cbbcb6a
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260921
-DTEND;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
 SUMMARY:EAP 100: Video 3 Cornell Notes due
 DESCRIPTION:Video 3 (Jacob Morgan\, Future-Proof Your Career): Cornell notes + 5-10 vocabulary words. Submit to Student Folder > Week 3 Listening.
 END:VEVENT
@@ -139,7 +139,7 @@ BEGIN:VEVENT
 UID:8fdbda8b-2b8d-46c2-9bc4-2df841fe2422
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
 SUMMARY:EAP 100: Reading 4 Source-Based Questions due
 DESCRIPTION:Technology\, AI and the changing workplace. Submit to Student Folder > Week 4.
 END:VEVENT
@@ -147,7 +147,7 @@ BEGIN:VEVENT
 UID:db4ed8aa-1230-4849-a6bd-d9aa156562e5
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
 SUMMARY:EAP 100: Video 4 Cornell Notes due
 DESCRIPTION:Video 4 (Rainer Strack\, The Workforce Crisis of 2030): Cornell notes + 5-10 vocabulary words. Submit to Student Folder > Week 4 Listening.
 END:VEVENT
@@ -155,7 +155,7 @@ BEGIN:VEVENT
 UID:a77c1e55-2b31-4a77-8f22-eap100ahead04
 DTSTAMP:20260911T085500Z
 DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
 SUMMARY:EAP 100: Midterm Presentation - First Draft due
 DESCRIPTION:Begin building the first draft of your Midterm Presentation (3-4 hours). See the Assessment Folder for more information. Submit to Student Folder > Week 4.
 END:VEVENT
@@ -163,7 +163,7 @@ BEGIN:VEVENT
 UID:7b433105-79ac-46c3-b8fe-8b73480ea96e
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
 SUMMARY:EAP 100: Reading 5 Pre-Listening Task due
 DESCRIPTION:Predict main ideas\, highlight vocabulary\, write 2-3 questions. Submit to Student Folder > Week 5.
 END:VEVENT
@@ -172,7 +172,7 @@ UID:7eedc688-5365-4ab5-9eee-ae5ce4bffb4e
 DTSTAMP:20261003T075000Z
 SEQUENCE:1
 DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
 SUMMARY:📝 EAP 100: Practice Listening Exam 1 due
 DESCRIPTION:Sit the full practice paper under real exam conditions. Allow 70 minutes\, print the paper first\, and watch the lecture ONCE ONLY - no pausing and no rewinding.\n\nPractice paper (public\, no sign-in needed):\nhttps://thefutureofwork.github.io/EAP100/practice-exam-public.html\n\nThe lecture: Andrew McAfee\, "What will future jobs look like?" (TED2013\, 14:59)\nhttps://www.ted.com/talks/andrew_mcafee_what_will_future_jobs_look_like\n\nDue Mon Oct 12\, 23:59\, the day before Listening Exam 1. Upload your answers and Cornell notes to Student Folder > Week 5 Listening.
 END:VEVENT
@@ -180,7 +180,7 @@ BEGIN:VEVENT
 UID:46ea6628-2945-4ea2-a209-3c0ae74fe0bb
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
 SUMMARY:EAP 100: Reading 6 Selecting Relevant Information due
 DESCRIPTION:Key vs. extra information in listening. Submit to Student Folder > Week 5.
 END:VEVENT
@@ -193,28 +193,20 @@ SUMMARY:⚠️ EAP 100: LISTENING EXAM 1 (20%)
 DESCRIPTION:In-class exam\, Week 6. ~20 minute academic lecture\, played ONCE only. Bring a notebook for Cornell notes.
 END:VEVENT
 BEGIN:VEVENT
-UID:75d75cfb-c602-4005-8142-b66a30a062c7
-DTSTAMP:20260831T060800Z
-DTSTART;TZID=Asia/Shanghai:20261016T143000
-DTEND;TZID=Asia/Shanghai:20261016T143000
-SUMMARY:⭐ CCD: Fall Career Fair
-DESCRIPTION:Fri Oct 16\, 14:30-17:30\, E901-904. Attend and use it for CCD Visit 2 log.
-END:VEVENT
-BEGIN:VEVENT
 UID:6abedcd8-0088-4744-acef-55f1c3f64e7b
-DTSTAMP:20261006T134500Z
-SEQUENCE:1
+DTSTAMP:20261023T054500Z
+SEQUENCE:2
 DTSTART;VALUE=DATE:20261019
-DTEND;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
 SUMMARY:EAP 100: Reading 7 Short Response due
-DESCRIPTION:3 key points + 1 question on automation and labour. Upload to the Assignments folder with a clear label.
+DESCRIPTION:3 key points + 1 question on automation and labor. Upload to the Assignments folder with a clear label.
 END:VEVENT
 BEGIN:VEVENT
 UID:4e98c9d5-b1b6-46fe-a3ac-b8343e3c38f4
 DTSTAMP:20261006T134500Z
 SEQUENCE:1
 DTSTART;VALUE=DATE:20261019
-DTEND;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
 SUMMARY:EAP 100: Video 5 Cornell Notes due
 DESCRIPTION:Video 5 (David Autor\, Will Automation Take Away All Our Jobs?): Cornell notes + vocabulary. Upload to the Assignments folder with a clear label.
 END:VEVENT
@@ -231,7 +223,7 @@ BEGIN:VEVENT
 UID:7487866a-a566-489e-90ac-ba308982ff96
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
 SUMMARY:EAP 100: All 3 CCD online modules complete
 DESCRIPTION:Industry Exploration\, Write Your First Winning Resume\, and Become an Interview Master Today modules must all be finished by end of day.
 END:VEVENT
@@ -240,7 +232,7 @@ UID:9bde13d1-e312-4cac-bb10-8edd47c31ca4
 DTSTAMP:20261006T134500Z
 SEQUENCE:1
 DTSTART;VALUE=DATE:20261026
-DTEND;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261027
 SUMMARY:EAP 100: Video 6 Cornell Notes due
 DESCRIPTION:Video 6 (Vinciane Beauchêne\, Will AI Take Your Job in the Next 10 Years? Wrong Question): Cornell notes + vocabulary. Upload to the Assignments folder with a clear label.
 END:VEVENT
@@ -249,7 +241,7 @@ UID:3fe9752c-1304-459e-b5ba-bee273fa516c
 DTSTAMP:20261006T134500Z
 SEQUENCE:1
 DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
 SUMMARY:EAP 100: Portfolio Build 2 due
 DESCRIPTION:Add Weeks 4-7 artifacts + 300-400 word DIEP reflection. Upload to the Assignments folder with a clear label. Due after the individual meeting.
 END:VEVENT
@@ -275,7 +267,7 @@ UID:5bfde8c0-f789-446f-8c89-7aa4ffa196aa
 DTSTAMP:20261006T134500Z
 SEQUENCE:1
 DTSTART;VALUE=DATE:20261102
-DTEND;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
 SUMMARY:EAP 100: Reading 8 Question Set due
 DESCRIPTION:Ethics\, citizenship and the social impact of technology. Upload to the Assignments folder with a clear label.
 END:VEVENT
@@ -284,7 +276,7 @@ UID:4dfcfd59-a6fa-4aa0-ab23-988c7d38e4a3
 DTSTAMP:20261006T134500Z
 SEQUENCE:1
 DTSTART;VALUE=DATE:20261102
-DTEND;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
 SUMMARY:EAP 100: Video 7 Cornell Notes due
 DESCRIPTION:Video 7 (Akram Awad\, Will AI Make Humans Useless?): Cornell notes + vocabulary. Upload to the Assignments folder with a clear label.
 END:VEVENT
@@ -293,7 +285,7 @@ UID:765eafa3-96a5-4ae6-83b6-5f4daf46ba29
 DTSTAMP:20261006T134500Z
 SEQUENCE:1
 DTSTART;VALUE=DATE:20261102
-DTEND;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
 SUMMARY:EAP 100: CCD Visit 3 log due - CCD Open House
 DESCRIPTION:CCD Visit 3 = CCD Open House. 150-200 words on the professional interaction and what you learned. Submit to the Experiential Learning Tracker and upload to the Assignments folder with a clear label.
 END:VEVENT
@@ -302,25 +294,25 @@ UID:41f592ae-8ff0-4840-ba76-5317447ecc46
 DTSTAMP:20261006T134500Z
 SEQUENCE:1
 DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
 SUMMARY:EAP 100: Mini Portfolio Reflection due
 DESCRIPTION:~200 words: one strength and one area for growth. Upload to the Assignments folder with a clear label.
 END:VEVENT
 BEGIN:VEVENT
 UID:af3163da-bae2-4be0-8321-cb53764bce53
-DTSTAMP:20261006T134500Z
-SEQUENCE:1
+DTSTAMP:20261023T054500Z
+SEQUENCE:2
 DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
 SUMMARY:EAP 100: Model Persuasive Speech Analysis due
-DESCRIPTION:Analyse structure\, evidence\, audience moves and language. Upload to the Assignments folder with a clear label.
+DESCRIPTION:Analyze structure\, evidence\, audience moves\, language\, and use of ethos\, pathos\, or logos. Upload to the Assignments folder with a clear label.
 END:VEVENT
 BEGIN:VEVENT
 UID:ecfc2513-3773-433c-ae9e-0f60e24ec705
 DTSTAMP:20261006T134500Z
 SEQUENCE:1
 DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
 SUMMARY:EAP 100: Language Review Task due
 DESCRIPTION:Signposting\, hedging or pronunciation for Q&A. Upload to the Assignments folder with a clear label.
 END:VEVENT
@@ -329,7 +321,7 @@ UID:d3f0be21-5c44-4f10-9a90-eap100src09
 DTSTAMP:20261023T052000Z
 SEQUENCE:1
 DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
 SUMMARY:EAP 100: Start gathering persuasive speech sources (recommended)
 DESCRIPTION:Recommended this week\, no submission. Collect 3 credible sources for the Week 12 persuasive speech\, including at least one primary and one secondary source. Student Guide: https://github.com/thefutureofwork/EAP100/blob/main/persuasive-presentation/README.md
 END:VEVENT
@@ -354,7 +346,7 @@ UID:fb4724c1-ee2c-49ec-81a7-14c2ef3868d6
 DTSTAMP:20261006T134500Z
 SEQUENCE:1
 DTSTART;VALUE=DATE:20261116
-DTEND;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
 SUMMARY:EAP 100: Reading 9 Guided Notes due
 DESCRIPTION:Reading 9: Sustainability\, Resilience and Acting Under Uncertainty - guided note sheet. Upload to the Assignments folder with a clear label.
 END:VEVENT
@@ -379,7 +371,7 @@ UID:7528b870-973a-4510-a63b-2cf61ff52a90
 DTSTAMP:20261006T134500Z
 SEQUENCE:1
 DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
 SUMMARY:EAP 100: CCD Visit 4 log due - event of your choice
 DESCRIPTION:CCD Visit 4 = one CCD event of your choice. 150-200 words on employability skills. Submit to the Experiential Learning Tracker and upload to the Assignments folder with a clear label.
 END:VEVENT
@@ -388,18 +380,18 @@ UID:72ec6374-a066-4cdf-9505-97f15ede0558
 DTSTAMP:20261006T134500Z
 SEQUENCE:1
 DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
 SUMMARY:EAP 100: Reading 10 Guided Response due
 DESCRIPTION:Reading 10: From Academic English to Professional Communication. Short summary + connection to your portfolio and future work. Upload to the Assignments folder with a clear label.
 END:VEVENT
 BEGIN:VEVENT
 UID:de8cec73-25f5-4a8e-a340-849853b9fa48
-DTSTAMP:20261006T134500Z
-SEQUENCE:1
+DTSTAMP:20261023T054500Z
+SEQUENCE:2
 DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
 SUMMARY:EAP 100: Portfolio Build 3 due
-DESCRIPTION:400-500 word DIEP reflection. Refine artifacts + synthesise your four CCD visits. Upload to the Assignments folder with a clear label.
+DESCRIPTION:400-500 word DIEP reflection. Refine artifacts + synthesize your CCD visits. Upload to the Assignments folder with a clear label.
 END:VEVENT
 BEGIN:VEVENT
 UID:8e38cdee-fb7d-45ee-8a3b-c50d9b31f9f3
@@ -430,7 +422,7 @@ BEGIN:VEVENT
 UID:f0c9aa74-6d18-4f2e-b7c3-eap100prep13
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20261203
-DTEND;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
 SUMMARY:EAP 100: Portfolio Showcase Preparation - bring to class
 DESCRIPTION:Prepare your 2-3 showcase artifacts and your spoken introduction. Bring to class Thu Dec 3.
 END:VEVENT
@@ -438,7 +430,7 @@ BEGIN:VEVENT
 UID:05f5a568-d1a7-49fa-8236-8b71cfeae99f
 DTSTAMP:20260831T060800Z
 DTSTART;VALUE=DATE:20261203
-DTEND;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
 SUMMARY:EAP 100: Resume peer feedback session (in class)
 DESCRIPTION:Bring your final resume to class Thu Dec 3 for peer review.
 END:VEVENT
@@ -447,7 +439,7 @@ UID:ed0345db-5db9-4eaf-aaf4-1ccf8f8a0899
 DTSTAMP:20261006T134500Z
 SEQUENCE:1
 DTSTART;VALUE=DATE:20261210
-DTEND;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
 SUMMARY:EAP 100: End-of-Course Reflection due
 DESCRIPTION:300-400 words on how EAP 100 changed your academic English skills and your preparation for future work. Upload to the Assignments folder with a clear label.
 END:VEVENT
