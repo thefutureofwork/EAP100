@@ -41,11 +41,12 @@ DESCRIPTION:Create your portfolio folder + 5-10 bullet points on your course goa
 END:VEVENT
 BEGIN:VEVENT
 UID:bdc13f50-b900-49a2-b2f8-5a8446c15c99
-DTSTAMP:20260831T060800Z
+DTSTAMP:20261027T042000Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20260907
 DTEND;VALUE=DATE:20260908
-SUMMARY:EAP 100: DIEP Reflection 1 due
-DESCRIPTION:~200 word DIEP reflection on a past work or English-learning experience. Submit to Student Folder > Week 1. Keep a copy in your portfolio.
+SUMMARY:EAP 100: DEIP Reflection 1 due
+DESCRIPTION:~200 word DEIP reflection (Describe\, Explain\, Interpret\, Plan) on a past work or English-learning experience. Submit to Student Folder > Week 1. Keep a copy in your portfolio.
 END:VEVENT
 BEGIN:VEVENT
 UID:b1a4c2d0-1f00-4a11-9c01-eap100start01
@@ -73,11 +74,12 @@ DESCRIPTION:Video 2 (Erik Brynjolfsson\, Race with the Machines): Cornell notes 
 END:VEVENT
 BEGIN:VEVENT
 UID:71d9ef3d-a3a1-4b98-90ff-3d37ca6f373c
-DTSTAMP:20260910T085500Z
+DTSTAMP:20261027T042000Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:EAP 100: CCD Visit 1 log due - CCD Orientation
-DESCRIPTION:Watch the CCD Orientation online or attend in person. Write a 150-200 word DIEP log. Submit to Experiential Learning Tracker + Student Folder > CCD.
+DESCRIPTION:Watch the CCD Orientation online or attend in person. Write a 150-200 word DEIP log. Submit to Experiential Learning Tracker + Student Folder > CCD.
 END:VEVENT
 BEGIN:VEVENT
 UID:4da4bc52-5f27-4d40-a88e-4d80afd4ec8d
@@ -89,11 +91,12 @@ DESCRIPTION:Track your EAP homework time for one week\, then write a 100-150 wor
 END:VEVENT
 BEGIN:VEVENT
 UID:c4de7e44-0df2-430c-a048-0c1f7607d1b5
-DTSTAMP:20260831T060800Z
+DTSTAMP:20261027T042000Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20260917
 DTEND;VALUE=DATE:20260918
 SUMMARY:EAP 100: Portfolio Build 1 due
-DESCRIPTION:Choose 2-3 artifacts + 250-300 word DIEP reflection. Submit to Student Folder > Week 3.
+DESCRIPTION:Choose 2-3 artifacts + 250-300 word DEIP reflection. Submit to Student Folder > Week 3.
 END:VEVENT
 BEGIN:VEVENT
 UID:8f212a0d-4116-4d7c-9272-fb470d8dde61
@@ -238,12 +241,12 @@ DESCRIPTION:Video 6 (Vinciane Beauchêne\, Will AI Take Your Job in the Next 10 
 END:VEVENT
 BEGIN:VEVENT
 UID:3fe9752c-1304-459e-b5ba-bee273fa516c
-DTSTAMP:20261006T134500Z
-SEQUENCE:1
+DTSTAMP:20261027T042000Z
+SEQUENCE:2
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:EAP 100: Portfolio Build 2 due
-DESCRIPTION:Add Weeks 4-7 artifacts + 300-400 word DIEP reflection. Upload to the Assignments folder with a clear label. Due after the individual meeting.
+DESCRIPTION:Add Weeks 4-7 artifacts + 300-400 word DEIP reflection. Upload to the Assignments folder with a clear label. Due after the individual meeting.
 END:VEVENT
 BEGIN:VEVENT
 UID:c8ada9fa-0ec8-4fa1-87f7-f2882dab16b0
@@ -386,12 +389,12 @@ DESCRIPTION:Reading 10: From Academic English to Professional Communication. Sho
 END:VEVENT
 BEGIN:VEVENT
 UID:de8cec73-25f5-4a8e-a340-849853b9fa48
-DTSTAMP:20261023T054500Z
-SEQUENCE:2
+DTSTAMP:20261027T042000Z
+SEQUENCE:3
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:EAP 100: Portfolio Build 3 due
-DESCRIPTION:400-500 word DIEP reflection. Refine artifacts + synthesize your CCD visits. Upload to the Assignments folder with a clear label.
+DESCRIPTION:400-500 word DEIP reflection. Refine artifacts + synthesize your CCD visits. Upload to the Assignments folder with a clear label.
 END:VEVENT
 BEGIN:VEVENT
 UID:8e38cdee-fb7d-45ee-8a3b-c50d9b31f9f3
@@ -453,11 +456,11 @@ DESCRIPTION:Present 2-3 portfolio artifacts in class\, Thursday Dec 10.
 END:VEVENT
 BEGIN:VEVENT
 UID:456d8dd8-bfc9-41d1-ab84-f09223de1726
-DTSTAMP:20261006T134500Z
-SEQUENCE:1
+DTSTAMP:20261027T042000Z
+SEQUENCE:2
 DTSTART;TZID=Asia/Shanghai:20261213T235900
 DTEND;TZID=Asia/Shanghai:20261213T235900
 SUMMARY:🚨 EAP 100: FINAL PORTFOLIO DUE
-DESCRIPTION:5 artifacts + captions\, DIEP reflection (300-500 words) and closing statement (100-150 words). Upload to the Assignments folder with a clear label before midnight\, Sun Dec 13.
+DESCRIPTION:5 artifacts + captions\, DEIP reflection (300-500 words) and closing statement (100-150 words). Upload to the Assignments folder with a clear label before midnight\, Sun Dec 13.
 END:VEVENT
 END:VCALENDAR
