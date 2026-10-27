@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Build 2: Flow Chart &amp; Planner &mdash; EAP 100</title>
+<meta name="description" content="EAP 100 Portfolio Build 2: step-by-step flow chart and printable planner. First draft due Tue Nov 3.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#12253C;--bg:#F4F7FB;--fg:#142030;--line:#F5A420;--line-d:#934F00;--loop:#C22826;--go:#14874E;--tile:#E4EAF1;--soft:#586474;--on:#F5F1EA;--disp:'Bebas Neue','Oswald','Arial Narrow',Impact,sans-serif}
+@page{size:A4;margin:0}
+html,body{background:#DCE3EC;color:var(--fg);font-family:'Nunito',system-ui,-apple-system,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.d{font-family:var(--disp);font-weight:400;letter-spacing:.03em;line-height:1}
+.bar{position:sticky;top:0;z-index:5;background:var(--ink);border-bottom:3px solid var(--line);display:flex;align-items:center;gap:12px;padding:10px 16px;flex-wrap:wrap}
+.bar a,.bar button{font:700 14px/1 'Nunito',sans-serif;color:var(--on);text-decoration:none;padding:12px 16px;border-radius:6px;border:1px solid #3A4A60;background:none;cursor:pointer;min-height:44px}
+.bar button{margin-left:auto;background:var(--line);border-color:var(--line);color:var(--ink)}
+.bar a:focus-visible,.bar button:focus-visible{outline:3px solid var(--line);outline-offset:2px}
+.sheets{padding:24px 12px 48px}
+.page{position:relative;width:210mm;height:297mm;overflow:hidden;background:var(--bg);margin:0 auto 24px;box-shadow:0 4px 24px rgba(18,37,60,.18);break-after:page}
+.page:last-child{break-after:auto}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;background:var(--ink);color:var(--on);padding:26px 40px 22px}
+.hd h1{font-size:54px;line-height:.9;margin-top:8px}
+.k{font-size:15px;letter-spacing:.14em;color:var(--line)}
+.intro{margin:18px 40px 0;font-size:13.5px;font-weight:600;line-height:1.4;color:var(--soft)}
+.route{position:relative;margin:14px 24px 0;height:840px}
+.route>svg{position:absolute;left:0;top:0}
+.row{position:absolute;left:0;right:0;height:84px;display:flex}
+.row .nd{width:128px;flex-shrink:0;padding:2px 0 0 52px}
+.row .tx{padding:8px 16px 0 0}
+.row h3{font-size:24px;color:var(--ink)}
+.row h3.c{color:var(--loop)}
+.row p{margin-top:4px;max-width:600px;font-size:13.5px;line-height:1.38}
+.no{color:var(--loop)}.yes{color:var(--go)}
+.mono{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:var(--tile);padding:0 4px;border-radius:4px}
+.ft{position:absolute;left:40px;right:40px;bottom:26px;display:flex;justify-content:space-between;font-size:12.5px}
+.p2{padding:30px 40px 0}
+.box{border:2px solid rgba(18,37,60,.25);border-radius:12px;padding:12px;margin-top:10px}
+.box h4{font-size:19px;letter-spacing:.04em;color:var(--ink)}
+.ln{height:24px;border-bottom:1px solid rgba(18,37,60,.3)}
+.sm{font-size:12px;color:var(--soft)}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:6px}
+th{text-align:left;font-weight:600;color:var(--soft);padding-bottom:2px}
+td{height:28px;border-bottom:1px solid rgba(18,37,60,.3)}
+.flow{display:flex;gap:6px;margin-top:8px;align-items:center}
+.cell{flex:1;height:92px;border-radius:8px;background:var(--tile);padding:8px}
+.cell b{display:block;font-size:15px}
+.ar{font-weight:700;color:var(--line-d)}
+.deip{display:flex;gap:10px;align-items:flex-start;margin-top:4px}
+.L{width:34px;height:44px;flex-shrink:0;border-radius:6px;background:var(--tile);display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--ink)}
+.L.hi{background:var(--line)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.g3 div{height:70px;border-radius:8px;background:var(--tile);padding:8px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:3px 16px;margin-top:6px;font-size:12.5px;font-weight:600}
+@media screen and (max-width:860px){.sheets{padding:12px 0 32px}}
+@media print{html,body{background:var(--bg)}.bar{display:none}.sheets{padding:0}.page{margin:0;box-shadow:none;zoom:1!important}}
+</style>
+</head>
+<body>
+<div class="bar"><a href="index.html#week8">&larr; Back to schedule</a><button type="button" onclick="window.print()">Print / Save as PDF</button></div>
+<main class="sheets" id="main-content">
+
+<section class="page" aria-label="Page 1: Flow chart">
+<header class="hd">
+<div><p class="d k">EAP 100: Future Focused &middot; NYU Shanghai</p><h1 class="d">Portfolio Build 2</h1><p style="margin-top:4px;font-size:16px;font-weight:700;color:var(--line)">Show your growth.</p></div>
+<div style="text-align:right"><p class="d" style="font-size:16px;letter-spacing:.1em;color:var(--line)">First draft due</p><p class="d" style="font-size:30px;margin-top:4px">Tue Nov 3</p><p style="margin-top:6px;font-size:13px;font-weight:600;opacity:.85">Submit to your Student Folder</p></div>
+</header>
+<p class="intro">Follow the line from top to bottom. Do every stop. A <b style="color:var(--ink)">diamond</b> is a check: if the answer is <b class="no">NO</b>, follow the red arrow back.</p>
+<div class="route">
+<svg width="120" height="840" aria-hidden="true">
+<line x1="76" y1="26" x2="76" y2="782" stroke="#F5A420" stroke-width="12" stroke-linecap="round"/>
+<g fill="none" stroke="#F4F7FB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M71 65L76 71L81 65"/><path d="M71 149L76 155L81 149"/><path d="M71 233L76 239L81 233"/><path d="M71 317L76 323L81 317"/><path d="M71 401L76 407L81 401"/><path d="M71 485L76 491L81 485"/><path d="M71 569L76 575L81 569"/><path d="M71 653L76 659L81 653"/><path d="M71 737L76 743L81 737"/></g>
+<g fill="none" stroke="#C22826" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M60 274C26 268 26 204 54 198"/><path d="M44 190L55 198L45 208"/><path d="M60 694C26 688 26 624 54 618"/><path d="M44 610L55 618L45 628"/></g>
+<g fill="#C22826" font-family="Bebas Neue,Oswald,Arial Narrow,Impact,sans-serif" font-size="14" text-anchor="middle" letter-spacing=".7"><text x="14" y="241">NO</text><text x="14" y="661">NO</text></g>
+</svg>
+<div class="row" style="top:0"><div class="nd"><svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="#F4F7FB" stroke="#12253C" stroke-width="5"/><text x="24" y="32.5" text-anchor="middle" fill="#12253C" font-family="Bebas Neue,Oswald,Impact,sans-serif" font-size="24">1</text></svg></div><div class="tx"><h3 class="d">Stop 1: Look back</h3><p>Open your Build 1 feedback. Write down your <b>#1 next step</b>. Ask: where did I work on it in Weeks 4 to 7?</p></div></div>
+<div class="row" style="top:84px"><div class="nd"><svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="#F4F7FB" stroke="#12253C" stroke-width="5"/><text x="24" y="32.5" text-anchor="middle" fill="#12253C" font-family="Bebas Neue,Oswald,Impact,sans-serif" font-size="24">2</text></svg></div><div class="tx"><h3 class="d">Stop 2: Gather &amp; label</h3><p>Put Weeks 4 to 7 work in folders: <b>Reading, Listening, Speaking, CCD / Career</b>. Name files like <span class="mono">Week 6 - CCD Visit 2 Reflection</span>.</p></div></div>
+<div class="row" style="top:168px"><div class="nd"><svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="#F4F7FB" stroke="#12253C" stroke-width="5"/><text x="24" y="32.5" text-anchor="middle" fill="#12253C" font-family="Bebas Neue,Oswald,Impact,sans-serif" font-size="24">3</text></svg></div><div class="tx"><h3 class="d">Stop 3: Keep or swap</h3><p>Happy with the pieces you are tracking? Keep them. Not happy? <b>Pick a new piece and track it from the beginning.</b> <b class="no">Last chance: locked after Build 2.</b></p></div></div>
+<div class="row" style="top:252px"><div class="nd"><svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="4" transform="rotate(45 24 24)" fill="#12253C"/><text x="24" y="33" text-anchor="middle" fill="#F5F1EA" font-family="Bebas Neue,Oswald,Impact,sans-serif" font-size="24">?</text></svg></div><div class="tx"><h3 class="d c">Check: Can you explain it?</h3><p>Can you say what each piece shows about your learning? <b class="yes">YES:</b> go to Stop 4. <b class="no">NO:</b> go back and swap it now.</p></div></div>
+<div class="row" style="top:336px"><div class="nd"><svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="#F4F7FB" stroke="#12253C" stroke-width="5"/><text x="24" y="32.5" text-anchor="middle" fill="#12253C" font-family="Bebas Neue,Oswald,Impact,sans-serif" font-size="24">4</text></svg></div><div class="tx"><h3 class="d">Stop 4: Show 1 change</h3><p><b>Before</b> (what was weak?) &rarr; <b>Feedback</b> (what helped?) &rarr; <b>After</b> (what changed?) &rarr; <b>Proof</b> (which file?). Try your Midterm Presentation revision plan.</p></div></div>
+<div class="row" style="top:420px"><div class="nd"><svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="#F4F7FB" stroke="#12253C" stroke-width="5"/><text x="24" y="32.5" text-anchor="middle" fill="#12253C" font-family="Bebas Neue,Oswald,Impact,sans-serif" font-size="24">5</text></svg></div><div class="tx"><h3 class="d">Stop 5: Write DEIP: 300 to 400 words</h3><p><b>Describe, Explain, Interpret, Plan.</b> Interpret is the most important part. Name real files.</p></div></div>
+<div class="row" style="top:504px"><div class="nd"><svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="#F4F7FB" stroke="#12253C" stroke-width="5"/><text x="24" y="32.5" text-anchor="middle" fill="#12253C" font-family="Bebas Neue,Oswald,Impact,sans-serif" font-size="24">6</text></svg></div><div class="tx"><h3 class="d">Stop 6: Plan ahead</h3><p><b>Keep</b> 1 piece for the Final Portfolio. <b>Revise</b> 1 piece. <b>Develop</b> 1 skill with little evidence.</p></div></div>
+<div class="row" style="top:588px"><div class="nd"><svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="#F4F7FB" stroke="#12253C" stroke-width="5"/><text x="24" y="32.5" text-anchor="middle" fill="#12253C" font-family="Bebas Neue,Oswald,Impact,sans-serif" font-size="24">7</text></svg></div><div class="tx"><h3 class="d">Stop 7: Check</h3><p>Links open. File names say week + task. 300 to 400 words. Next steps are real actions.</p></div></div>
+<div class="row" style="top:672px"><div class="nd"><svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="4" transform="rotate(45 24 24)" fill="#12253C"/><text x="24" y="33" text-anchor="middle" fill="#F5F1EA" font-family="Bebas Neue,Oswald,Impact,sans-serif" font-size="24">?</text></svg></div><div class="tx"><h3 class="d c">Check: All good?</h3><p><b class="yes">YES:</b> submit. <b class="no">NO:</b> go back and fix it first.</p></div></div>
+<div class="row" style="top:756px"><div class="nd"><svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#12253C"/><path d="M14 25L21 32L34 17" fill="none" stroke="#F5A420" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="tx"><h3 class="d">Submit</h3><p>Upload your <b>first draft</b> to your <b>Student Folder</b> by <b>Tue Nov 3</b>. Keep a copy in your portfolio.</p></div></div>
+</div>
+<footer class="ft"><b style="color:var(--ink)">Proof, not perfection: you need work you can explain.</b><span style="color:var(--soft);font-weight:600">Planner on the next page &rarr;</span></footer>
+</section>
+
+<section class="page p2" aria-label="Page 2: Planner">
+<div style="display:flex;justify-content:space-between;align-items:flex-end"><h2 class="d" style="font-size:44px;color:var(--ink);letter-spacing:0">My Build 2 planner</h2><p class="d" style="font-size:18px;letter-spacing:.04em;color:var(--line-d)">First draft due Tue Nov 3</p></div>
+<div style="display:flex;gap:24px;margin-top:14px;font-size:13px;font-weight:600"><p style="flex:1;border-bottom:1px solid rgba(18,37,60,.4);padding-bottom:3px">Name:</p><p>Section: &#9744; 9:45 &#9744; 11:15 &#9744; 2:15</p></div>
+<div class="box" style="margin-top:14px"><h4 class="d">Stop 1 &middot; My #1 next step from Build 1</h4><div class="ln"></div><p class="sm" style="margin-top:6px">Where I worked on it:</p><div class="ln"></div></div>
+<div class="box"><h4 class="d">Stop 3 &middot; My tracked pieces (locked after Build 2)</h4>
+<table><thead><tr><th style="width:28px">#</th><th style="width:36%">File name</th><th style="width:20%">Skill area</th><th>What it shows</th><th style="width:17%">Kept or new?</th></tr></thead>
+<tbody><tr><td class="d" style="font-size:16px;color:var(--ink)">1</td><td></td><td></td><td></td><td class="sm">&#9744; Kept &#9744; New</td></tr><tr><td class="d" style="font-size:16px;color:var(--ink)">2</td><td></td><td></td><td></td><td class="sm">&#9744; Kept &#9744; New</td></tr><tr><td class="d" style="font-size:16px;color:var(--ink)">3</td><td></td><td></td><td></td><td class="sm">&#9744; Kept &#9744; New</td></tr></tbody></table>
+<p class="sm" style="margin-top:6px">New piece? Find your earliest version of it and save it too, so you can show growth from the beginning.</p></div>
+<div class="box"><h4 class="d">Stop 4 &middot; One change</h4><div class="flow"><div class="cell"><b class="d">Before</b><span class="sm">What was weak?</span></div><span class="ar">&rarr;</span><div class="cell"><b class="d">Feedback</b><span class="sm">What helped?</span></div><span class="ar">&rarr;</span><div class="cell"><b class="d">After</b><span class="sm">What changed?</span></div><span class="ar">&rarr;</span><div class="cell"><b class="d">Proof</b><span class="sm">Which file?</span></div></div></div>
+<div class="box"><h4 class="d">Stop 5 &middot; DEIP plan (300 to 400 words)</h4>
+<div class="deip" style="margin-top:6px"><span class="L d">D</span><div style="flex:1"><p class="sm"><b style="color:var(--ink)">Describe:</b> <i>In this task, I... / My goal was to...</i></p><div class="ln"></div></div></div>
+<div class="deip"><span class="L d">E</span><div style="flex:1"><p class="sm"><b style="color:var(--ink)">Explain:</b> <i>This mattered because... / This helped me practice...</i></p><div class="ln"></div></div></div>
+<div class="deip"><span class="L d hi">I</span><div style="flex:1"><p class="sm"><b style="color:var(--ink)">Interpret:</b> <i>At first... Later, I realized... / Previously, I thought... but now...</i></p><div class="ln"></div></div></div>
+<div class="deip"><span class="L d">P</span><div style="flex:1"><p class="sm"><b style="color:var(--ink)">Plan:</b> <i>Next time, I will... / As a next step, I need to...</i></p><div class="ln"></div></div></div></div>
+<div class="box"><h4 class="d">Stop 6 &middot; Plan ahead</h4><div class="g3"><div><b class="d" style="font-size:16px;color:var(--ink)">Keep</b><p class="sm">Ready for the Final Portfolio</p></div><div><b class="d" style="font-size:16px;color:var(--ink)">Revise</b><p class="sm">Worth improving</p></div><div><b class="d" style="font-size:16px;color:var(--ink)">Develop</b><p class="sm">Skill with little evidence</p></div></div></div>
+<div class="box"><h4 class="d">Stop 7 &middot; Final check</h4><div class="g2"><p>&#9744; Every link opens.</p><p>&#9744; File names say the week and task.</p><p>&#9744; Reflection is 300 to 400 words.</p><p>&#9744; Reflection names real files.</p><p>&#9744; Next steps are real actions.</p><p>&#9744; Copy saved in my portfolio.</p></div></div>
+</section>
+</main>
+<script>
+(function(){var s=document.querySelectorAll(".page");function fit(){var w=Math.min(1,(window.innerWidth-16)/794);for(var i=0;i<s.length;i++){s[i].style.zoom=w<1?w:""}}fit();window.addEventListener("resize",fit);window.addEventListener("beforeprint",function(){for(var i=0;i<s.length;i++){s[i].style.zoom=""}});window.addEventListener("afterprint",fit)})();
+</script>
+</body>
+</html>
