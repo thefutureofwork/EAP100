@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EAP 100: Timed Synthesis Practice: Will AI Take Your Job?</title>
+<meta name="description" content="EAP 100 Week 8 timed synthesis practice: writing frame, two color-coded sample answers, and a grading guide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Public+Sans:wght@400;500;600;700&family=Azeret+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{--board:#14161A;--board2:#1E2127;--amber:#F2A81D;--paper:#FAF9F7;--ink:#1A1C20;--ink2:#4A4E56;--muted:#787D86;--rule:#DEDAD2;--line:#BDB8AE;
+--claim:#2F5DA8;--claim-bg:#E6EEFA;--sec:#6A3FA0;--sec-bg:#F0EAFA;--pri:#1F6B4A;--pri-bg:#E6F3EA;--agr:#8A6A00;--agr-bg:#FFF4C7;--ten:#B5520A;--ten-bg:#FDE8D6;--eva:#B02418;--eva-bg:#FBE4E1;--opi:#A82C66;--opi-bg:#FCE6F0}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Public Sans',system-ui,sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3{font-family:Archivo,system-ui,sans-serif;line-height:1.05;letter-spacing:-.02em}
+a{color:inherit}
+.mast{background:var(--board);border-bottom:3px solid var(--amber)}
+.mast-in{max-width:1000px;margin:auto;padding:0 24px;height:60px;display:flex;align-items:center}
+.mark{font-family:Archivo,sans-serif;font-variation-settings:'wdth' 118,'wght' 800;font-size:15px;letter-spacing:.1em;color:#fff;text-decoration:none}
+.mark span{color:var(--amber)}
+.nav{margin-left:auto;display:flex;gap:5px}
+.nav a{font:500 11px 'Azeret Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#A9AEB8;text-decoration:none;padding:8px 12px;border-radius:4px}
+.nav a:hover{background:var(--board2);color:#fff}
+.wrap{max-width:860px;margin:auto;padding:50px 24px 90px}
+.kicker{font:600 11px 'Azeret Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.eyebrow{display:inline-block;background:var(--amber);color:var(--board);font:700 11px 'Azeret Mono',monospace;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:3px;margin-bottom:16px}
+h1{font-variation-settings:'wdth' 116,'wght' 800;font-size:clamp(2.1rem,7vw,3.8rem);text-transform:uppercase;margin:0}
+.lede{font-size:1.08rem;color:var(--ink2);max-width:62ch;margin:16px 0 22px}
+.vid{display:flex;align-items:center;gap:13px;background:var(--board);border-radius:4px;padding:14px 18px;text-decoration:none;margin:0 0 14px}
+.vid:hover{background:var(--board2)}
+.vid .pl{color:var(--amber);font-size:15px}
+.vid .vt{color:#fff;font-weight:600;font-size:15px;display:block;line-height:1.35}
+.vid .vs{font:10.5px 'Azeret Mono',monospace;color:#8A909C;letter-spacing:.04em;display:block;margin-top:2px}
+.vid .vl{font:600 11px 'Azeret Mono',monospace;color:var(--amber);margin-left:auto;flex-shrink:0}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;min-height:44px;background:var(--board);color:#fff;text-decoration:none;border:0;border-radius:4px;font:600 11px 'Azeret Mono',monospace;letter-spacing:.07em;text-transform:uppercase;cursor:pointer}
+.btn.primary{background:var(--amber);color:var(--board)}
+.btn.ghost{background:transparent;color:#C6CBD4;border:1px solid #363B45}
+.btn:hover{opacity:.85}
+.timer{background:var(--board);border-radius:6px;padding:22px 24px;margin:0 0 18px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;box-shadow:0 14px 36px rgba(20,22,26,.18)}
+.timer .lbl{font:700 10.5px 'Azeret Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:4px}
+.timer .clock{font:700 clamp(2.4rem,8vw,3.4rem) 'Azeret Mono',monospace;color:#fff;letter-spacing:-.03em;line-height:1}
+.timer .tb{display:flex;gap:9px;margin-left:auto;flex-wrap:wrap}
+.timer .msg{flex-basis:100%;font-size:14px;color:#C6CBD4;margin:0;min-height:1.4em}
+.sec{background:#fff;border:1px solid var(--rule);border-radius:5px;padding:22px 26px;margin-top:18px}
+.sec>h2{font-variation-settings:'wdth' 112,'wght' 800;font-size:1.25rem;text-transform:uppercase;margin:0 0 12px}
+.task{font-family:Archivo,sans-serif;font-variation-settings:'wdth' 110,'wght' 800;font-size:1.6rem;text-transform:uppercase;margin:0 0 12px}
+.reqs{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:8px 22px}
+.reqs li{font-size:15px;padding-left:26px;position:relative;line-height:1.45}
+.reqs li::before{content:"";position:absolute;left:0;top:3px;width:14px;height:14px;border:1.5px solid var(--ink);border-radius:2px}
+.must{margin:14px 0 0;font-size:15px;font-weight:700}
+.key{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.chip{font:600 12px 'Azeret Mono',monospace;letter-spacing:.03em;padding:6px 10px;border-radius:3px;border-left:4px solid}
+.c-claim{background:var(--claim-bg);border-color:var(--claim);color:var(--claim)}
+.c-sec{background:var(--sec-bg);border-color:var(--sec);color:var(--sec)}
+.c-pri{background:var(--pri-bg);border-color:var(--pri);color:var(--pri)}
+.c-agr{background:var(--agr-bg);border-color:var(--agr);color:var(--agr)}
+.c-ten{background:var(--ten-bg);border-color:var(--ten);color:var(--ten)}
+.c-eva{background:var(--eva-bg);border-color:var(--eva);color:var(--eva)}
+.c-opi{background:var(--opi-bg);border-color:var(--opi);color:var(--opi)}
+.part{border-left:4px solid;border-radius:3px;padding:11px 15px;margin:10px 0 0;font-size:15.5px;line-height:1.6;color:var(--ink)}
+.part b.l{font:700 10.5px 'Azeret Mono',monospace;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:3px}
+.p-claim{background:var(--claim-bg);border-color:var(--claim)}.p-claim b.l{color:var(--claim)}
+.p-sec{background:var(--sec-bg);border-color:var(--sec)}.p-sec b.l{color:var(--sec)}
+.p-pri{background:var(--pri-bg);border-color:var(--pri)}.p-pri b.l{color:var(--pri)}
+.p-agr{background:var(--agr-bg);border-color:var(--agr)}.p-agr b.l{color:var(--agr)}
+.p-ten{background:var(--ten-bg);border-color:var(--ten)}.p-ten b.l{color:var(--ten)}
+.p-eva{background:var(--eva-bg);border-color:var(--eva)}.p-eva b.l{color:var(--eva)}
+.opi{background:var(--opi-bg);box-shadow:inset 0 -2px 0 var(--opi);padding:1px 3px;border-radius:2px}
+.blank{font-family:'Azeret Mono',monospace;font-size:13px;color:var(--ink2);background:rgba(255,255,255,.7);border-bottom:1px dashed var(--ink2);padding:0 3px}
+.sample-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.sample-h h2{font-variation-settings:'wdth' 112,'wght' 800;font-size:1.25rem;text-transform:uppercase;margin:0}
+.wc{font:600 11px 'Azeret Mono',monospace;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.refs{margin-top:16px;padding-top:12px;border-top:1px solid var(--rule)}
+.refs h3{font:700 10.5px 'Azeret Mono',monospace;letter-spacing:.13em;text-transform:uppercase;margin:0 0 8px}
+.refs p{font-size:14.5px;padding-left:2em;text-indent:-2em;margin:0 0 6px;word-break:break-word}
+textarea{width:100%;min-height:260px;border:1px solid var(--line);border-radius:4px;padding:14px 16px;font:16px/1.6 'Public Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper);resize:vertical}
+.count{display:flex;align-items:center;gap:10px;margin-top:10px;font:600 12px 'Azeret Mono',monospace;letter-spacing:.04em}
+.count .n{padding:4px 9px;border-radius:3px;background:var(--rule);color:var(--ink)}
+.count .n.ok{background:var(--pri-bg);color:var(--pri)}
+.count .n.over{background:var(--eva-bg);color:var(--eva)}
+.small{font-size:14px;color:var(--ink2);margin:8px 0 0}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+th{font:700 10.5px 'Azeret Mono',monospace;letter-spacing:.12em;text-transform:uppercase;background:var(--paper)}
+td.g{font-family:'Azeret Mono',monospace;font-weight:700;white-space:nowrap;width:92px}
+.also{margin:14px 0 0;padding:12px 16px;background:var(--paper);border-left:3px solid var(--amber);border-radius:3px;font-size:14.5px}
+footer{background:var(--board);color:#8A909C;padding:34px 24px;font:11px 'Azeret Mono',monospace;letter-spacing:.05em}
+footer div{max-width:1000px;margin:auto}
+footer a{color:#B4BAC4;text-decoration:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:16px;top:8px;z-index:100;padding:10px 16px;background:var(--amber);color:var(--board);font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transform:translateY(-300%)}
+.skip-link:focus{transform:translateY(0)}
+:where(a,button,summary,input,select,textarea):focus-visible{outline:3px solid var(--amber);outline-offset:2px;box-shadow:0 0 0 5px rgba(20,22,26,.9)}
+@media(max-width:620px){.nav{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.mast-in{padding:0 16px}.nav a{padding:8px 7px;font-size:10px;min-height:44px;display:inline-flex;align-items:center}.wrap{padding:38px 16px 70px}.sec{padding:18px 16px}.reqs{grid-template-columns:1fr}.timer .tb{margin-left:0}td.g{width:auto}}
+@page{size:A4;margin:12mm 14mm}
+@media print{body{background:#fff;font-size:10.5pt;line-height:1.4}.skip-link,.mast,footer,.screen-only,.timer,.write{display:none!important}.wrap{max-width:none;padding:0}.sec{border:.6pt solid #999;border-radius:0;padding:4mm 5mm;margin-top:4mm;break-inside:avoid-page}.part{break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact}.chip,.opi{-webkit-print-color-adjust:exact;print-color-adjust:exact}h1{font-size:22pt}a{text-decoration:none}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="mast"><div class="mast-in"><a class="mark" href="index.html">EAP<span>100</span></a><nav class="nav" aria-label="Primary"><a href="index.html">Schedule</a><a href="course-info.html">Course Info</a><a href="due-dates.html">Checklist</a><a href="student-qa.html">Q&amp;A</a></nav></div></header>
+<main class="wrap" id="main-content">
+
+<div class="kicker">NYU Shanghai &middot; English for Academic Purposes &middot; Fall 2026</div>
+<span class="eyebrow">Week 8 &middot; Timed synthesis practice</span>
+<h1>Will AI take your job?</h1>
+<p class="lede"><b>250&ndash;300 words. Time how long it takes to write your answer.</b> Watch the talk, plan with the writing frame, write your answer, then compare it with the two color-coded samples and grade it with the guide.</p>
+<div class="screen-only">
+<a class="vid" href="https://www.ted.com/talks/vinciane_beauchene_will_ai_take_your_job_in_the_next_10_years_wrong_question" target="_blank" rel="noopener"><span class="pl" aria-hidden="true">&#9654;</span><span><span class="vt">Vinciane Beauch&ecirc;ne: Will AI take your job in the next 10 years? Wrong question</span><span class="vs">TED@BCG &middot; October 2025</span></span><span class="vl">12 min</span><span class="sr-only"> (opens in a new tab)</span></a>
+<div class="actions"><button class="btn primary" type="button" onclick="window.print()">Print frame &amp; samples</button><a class="btn" href="index.html#week8">See Week 8 schedule</a></div>
+
+<section class="timer" aria-label="Writing timer">
+<div><span class="lbl">Your writing time</span><span class="clock" id="clock" role="timer" aria-live="off">00:00</span></div>
+<div class="tb"><button class="btn primary" type="button" id="tStart">Start</button><button class="btn ghost" type="button" id="tStop">Stop</button><button class="btn ghost" type="button" id="tReset">Reset</button></div>
+<p class="msg" id="tMsg" aria-live="polite">Press Start when you begin writing. Press Stop when you finish your last sentence.</p>
+</section>
+</div>
+
+<section class="sec">
+<h2 class="task">Synthesis question</h2>
+<ul class="reqs">
+<li>The central claim</li>
+<li>1 Weeks 1&ndash;8 source (author, year)</li>
+<li>2&ndash;3 quotes from your quote sheet, in quotation marks, with APA citations, each explained</li>
+<li>One agreement</li>
+<li>One genuine tension</li>
+<li>Your own evaluation</li>
+<li>Two examples of the speaker&rsquo;s own opinion</li>
+</ul>
+<p class="must">Primary and secondary sources required.</p>
+</section>
+
+<section class="sec">
+<h2>Color key</h2>
+<div class="key">
+<span class="chip c-claim">&#x1F7E6; Central claim</span>
+<span class="chip c-sec">&#x1F7EA; Secondary source</span>
+<span class="chip c-pri">&#x1F7E9; Primary source</span>
+<span class="chip c-opi">&#x1FA77; Speaker&rsquo;s opinion</span>
+<span class="chip c-agr">&#x1F7E8; Agreement</span>
+<span class="chip c-ten">&#x1F7E7; Tension</span>
+<span class="chip c-eva">&#x1F7E5; Evaluation</span>
+</div>
+</section>
+
+<section class="sec">
+<h2>Writing frame</h2>
+<div class="part p-claim"><b class="l">&#x1F7E6; Central claim</b>AI will <span class="blank">[main effect on jobs or tasks]</span>, but <span class="blank">[your qualification or condition]</span>. Overall, the evidence suggests <span class="blank">[your answer to the question]</span>.</div>
+<div class="part p-sec"><b class="l">&#x1F7EA; Secondary source</b><span class="blank">[Author or organization]</span>&rsquo;s (<span class="blank">[year]</span>) <span class="blank">[report/article title]</span> is a secondary source because it <span class="blank">[analyzes, summarizes, or interprets evidence]</span>. It states, &ldquo;<span class="blank">[exact quote from your quote sheet]</span>&rdquo; (<span class="blank">[Author/Organization]</span>, <span class="blank">[year]</span>, p. <span class="blank">[page]</span>). This means <span class="blank">[explain the quote in your own words]</span> and supports/challenges my claim because <span class="blank">[why it matters]</span>.</div>
+<div class="part p-pri"><b class="l">&#x1F7E9; Primary source &middot; &#x1FA77; opinion 1</b>In <span class="blank">[speaker&rsquo;s name]</span>&rsquo;s (<span class="blank">[year]</span>) <span class="blank">[talk/interview/video]</span>, the speaker gives a personal view: &ldquo;<span class="blank">[exact quote showing opinion 1]</span>&rdquo; (<span class="blank">[Speaker]</span>, <span class="blank">[year]</span>, <span class="blank">[timestamp]</span>). This is the speaker&rsquo;s opinion that <span class="blank">[explain the opinion]</span>, rather than a proven fact because <span class="blank">[brief reason]</span>.</div>
+<div class="part p-pri"><b class="l">&#x1F7E9; Primary source &middot; &#x1FA77; opinion 2</b>The speaker also argues, &ldquo;<span class="blank">[exact quote showing opinion 2]</span>&rdquo; (<span class="blank">[Speaker]</span>, <span class="blank">[year]</span>, <span class="blank">[timestamp]</span>). This expresses the view that <span class="blank">[explain the second opinion]</span>. It matters because <span class="blank">[connect it to your claim]</span>.</div>
+<div class="part p-agr"><b class="l">&#x1F7E8; Agreement</b>The two sources agree that <span class="blank">[shared point]</span>. The secondary source shows this by <span class="blank">[evidence or idea]</span>, while the speaker emphasizes <span class="blank">[related idea]</span>.</div>
+<div class="part p-ten"><b class="l">&#x1F7E7; Tension</b>However, the sources differ about <span class="blank">[specific disagreement or difference in emphasis]</span>. While <span class="blank">[source 1&rsquo;s position]</span>, <span class="blank">[source 2&rsquo;s position]</span>. This is a genuine tension because <span class="blank">[explain why the ideas do not fully match]</span>.</div>
+<div class="part p-eva"><b class="l">&#x1F7E5; Evaluation</b>I find <span class="blank">[source/argument]</span> more convincing because <span class="blank">[your reason and evidence]</span>. However, <span class="blank">[limitation of the evidence or source]</span>. Therefore, I conclude that <span class="blank">[your final answer about AI and jobs]</span>.</div>
+</section>
+
+<section class="sec write screen-only">
+<h2>Write your answer</h2>
+<label class="sr-only" for="draft">Your synthesis answer</label>
+<textarea id="draft" placeholder="Start the timer, then write your 250&ndash;300 word answer here. Nothing is saved or submitted."></textarea>
+<div class="count"><span class="n" id="wcount">0 words</span><span id="wnote">Target: 250&ndash;300 words</span></div>
+<p class="small">This box does not save. Copy your answer into your Student Folder before you close the page, and write your time at the top.</p>
+</section>
+
+<section class="sec">
+<div class="sample-h"><h2>Sample 1</h2><span class="wc">Color-coded model answer</span></div>
+<div class="part p-claim"><b class="l">&#x1F7E6; Central claim</b>AI is likely to transform many jobs and replace some tasks, but whether workers lose their jobs will depend partly on how organizations redesign work and prepare employees.</div>
+<div class="part p-sec"><b class="l">&#x1F7EA; Secondary source</b>The World Economic Forum (WEF), a secondary source based on employers&rsquo; expectations, reports that &ldquo;employers expect 39% of workers&rsquo; core skills to change by 2030&rdquo; (World Economic Forum, 2025, &ldquo;Expected disruptions to skills&rdquo; section). This forecast suggests a major shift in what workers need to know, but it does not mean that 39% of jobs will disappear.</div>
+<div class="part p-pri"><b class="l">&#x1F7E9; Primary source &middot; &#x1FA77; two opinions</b>In her TED talk, leadership expert Vinciane Beauch&ecirc;ne shares her professional perspective. <span class="opi">She says, &ldquo;I believe the test was wrong&rdquo; (Beauch&ecirc;ne, 2025, 00:20)</span>, challenging the idea that human-like conversation is the best measure of intelligence. <span class="opi">Her second opinion is that &ldquo;there is no universal list&rdquo; of human qualities that AI cannot replace (Beauch&ecirc;ne, 2025, 06:43).</span> She argues that each organization must identify where people make a meaningful difference.</div>
+<div class="part p-agr"><b class="l">&#x1F7E8; Agreement</b>Both sources suggest that work will change and people need to prepare. The WEF highlights shifting skill demands, while Beauch&ecirc;ne advocates training and new role designs.</div>
+<div class="part p-ten"><b class="l">&#x1F7E7; Tension</b>The WEF describes expected changes in skills across the workforce, whereas Beauch&ecirc;ne warns that AI agents may perform entire work processes. Her warning is more dramatic, but it is supported mainly by client examples rather than broad evidence.</div>
+<div class="part p-eva"><b class="l">&#x1F7E5; Evaluation</b>Beauch&ecirc;ne&rsquo;s argument is persuasive because organizations should not expect workers to adapt without support. However, neither source proves exactly how many jobs AI will eliminate. The WEF reports forecasts, and Beauch&ecirc;ne presents a leadership perspective. I conclude that AI will replace some tasks and reshape some jobs; training and job design will influence who benefits from the change.</div>
+</section>
+
+<section class="sec">
+<div class="sample-h"><h2>Sample 2</h2><span class="wc">Color-coded model answer</span></div>
+<div class="part p-claim"><b class="l">&#x1F7E6; Central claim</b>AI is likely to change many jobs, but whether it replaces workers or reshapes their roles depends on how organizations use technology and prepare employees.</div>
+<div class="part p-sec"><b class="l">&#x1F7EA; Secondary source</b>The Week 4 reading presents the World Economic Forum&rsquo;s <i>Future of Jobs Report</i>, which summarizes employers&rsquo; expectations. It reports, &ldquo;employers expect 39% of workers&rsquo; core skills to change by 2030&rdquo; (World Economic Forum, 2025, Section 3.1). This predicts skill change, not 39% job loss.</div>
+<div class="part p-pri"><b class="l">&#x1F7E9; Primary source &middot; &#x1FA77; two opinions</b>Beauch&ecirc;ne&rsquo;s TED talk is a primary source. <span class="opi">&#x1FA77; First, she says, &ldquo;I believe the test was wrong&rdquo; (Beauch&ecirc;ne, 2025, 00:20)</span>, challenging the idea that conversation alone proves intelligence. <span class="opi">&#x1FA77; She also says, &ldquo;I believe we have real hard work to do if we want this narrative to stay true&rdquo; (Beauch&ecirc;ne, 2025, 03:35).</span> She means AI augmentation is not guaranteed; leaders must act to make it true.</div>
+<div class="part p-agr"><b class="l">&#x1F7E8; Agreement</b>Both sources agree work and required skills are changing. However, the Week 4 reading explains that many roles change in content rather than disappear, while Beauch&ecirc;ne warns agents may complete whole processes, such as selling a product.</div>
+<div class="part p-ten"><b class="l">&#x1F7E7; Tension</b>This raises a genuine question: will AI mainly alter tasks, or eliminate some roles?</div>
+<div class="part p-eva"><b class="l">&#x1F7E5; Evaluation</b>Beauch&ecirc;ne&rsquo;s warning is persuasive because her sales example shows automation can shift human work toward relationships. Still, one client example cannot predict every industry, and the WEF report records forecasts, not outcomes. I conclude that AI will replace some tasks and reshape jobs, but the scale of job loss depends on organizational choices, worker training, and whether new roles emerge.</div>
+<div class="refs">
+<h3>References (both samples)</h3>
+<p>Beauch&ecirc;ne, V. (2025, October). <i>Will AI take your job in the next 10 years? Wrong question</i> [Video]. TED. https://www.ted.com/talks/vinciane_beauchene_will_ai_take_your_job_in_the_next_10_years_wrong_question</p>
+<p>World Economic Forum. (2025). <i>The future of jobs report 2025</i>. https://reports.weforum.org/docs/WEF_Future_of_Jobs_Report_2025.pdf</p>
+</div>
+</section>
+
+<section class="sec">
+<h2>Grading guide</h2>
+<table>
+<thead><tr><th scope="col">Grade</th><th scope="col">What the response demonstrates</th></tr></thead>
+<tbody>
+<tr><td class="g">A</td><td>Specific source ideas are clearly explained and interact insightfully. Agreement and tension are meaningful; evaluation adds a thoughtful judgment.</td></tr>
+<tr><td class="g">A&minus;</td><td>Source ideas are explained and connected importantly, though the interaction has less insight or depth.</td></tr>
+<tr><td class="g">B+</td><td>Ideas are well explained and sources mostly interact, but the analysis lacks some depth.</td></tr>
+<tr><td class="g">B</td><td>Ideas are understandable; source interaction is basic or partly developed.</td></tr>
+<tr><td class="g">B&minus;</td><td>Mostly general explanation, with minimal or obvious connection between sources.</td></tr>
+<tr><td class="g">C+ to C&minus;</td><td>Attempts synthesis, but connections are incomplete, unclear, or include significant misunderstanding.</td></tr>
+<tr><td class="g">D / F</td><td>D: little or no interaction between sources. F: no actual attempt to answer.</td></tr>
+</tbody>
+</table>
+<p class="also"><b>Also consider:</b> Does the writing stay in the student&rsquo;s own words? Are citations complete and appropriate? Do language or organization make the synthesis hard to understand?</p>
+</section>
+
+</main>
+<footer><div>EAP 100: FUTURE FOCUSED / NYU SHANGHAI / FALL 2026 &nbsp; &middot; &nbsp; <a href="index.html#week8">WEEK 8 SCHEDULE</a></div></footer>
+<script>
+(function(){
+var clock=document.getElementById('clock'),msg=document.getElementById('tMsg'),t0=null,acc=0,iv=null;
+function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;return(m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+function now(){return acc+(t0?Date.now()-t0:0)}
+function tick(){clock.textContent=fmt(now())}
+document.getElementById('tStart').addEventListener('click',function(){if(t0)return;t0=Date.now();iv=setInterval(tick,250);msg.textContent='Timing. Write your answer, then press Stop.'});
+document.getElementById('tStop').addEventListener('click',function(){if(!t0)return;acc=now();t0=null;clearInterval(iv);tick();msg.textContent='Your time: '+fmt(acc)+'. Write it at the top of your answer. Press Start to continue timing.'});
+document.getElementById('tReset').addEventListener('click',function(){t0=null;acc=0;clearInterval(iv);tick();msg.textContent='Press Start when you begin writing. Press Stop when you finish your last sentence.'});
+var ta=document.getElementById('draft'),wc=document.getElementById('wcount'),wn=document.getElementById('wnote');
+ta.addEventListener('input',function(){var n=(ta.value.trim().match(/\S+/g)||[]).length;wc.textContent=n+(n===1?' word':' words');wc.className='n'+(n>=250&&n<=300?' ok':(n>300?' over':''));wn.textContent=n<250?'Target: 250\u2013300 words ('+(250-n)+' to go)':(n<=300?'In range':'Over by '+(n-300))});
+})();
+</script>
+</body>
+</html>
