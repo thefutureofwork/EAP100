@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warm-up: Match the Claim to Its Reason &mdash; EAP 100</title>
+<meta name="description" content="EAP 100: Future Focused. Week 9 in-class warm-up: match each persuasive claim to its reason.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Public+Sans:wght@400;500;600;700&family=Azeret+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--board:#14161A;--board-2:#1E2127;--amber:#F2A81D;--paper:#FAF9F7;--card:#FFFFFF;--ink:#1A1C20;--ink-2:#4A4E56;--ink-3:#787D86;--rule:#DEDAD2;--signal:#B02418;--signal-bg:#FBEDEB;--go:#1F6B4A;--go-bg:#EAF3EE;--amber-bg:#FDF3DF;--r:4px}
+body{font-family:'Public Sans',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.55;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+h1,h2{font-family:'Archivo',system-ui,sans-serif;line-height:1.06;letter-spacing:-.02em}
+.mast{position:sticky;top:0;z-index:60;background:var(--board);border-bottom:3px solid var(--amber)}
+.mast-in{max-width:1180px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+.mark{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 118,'wght' 800;font-size:15px;letter-spacing:.1em;color:#fff;text-decoration:none;white-space:nowrap}
+.mark span{color:var(--amber)}
+.mast nav{margin-left:auto;display:flex;gap:4px}
+.mast nav a{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:#A9AEB8;text-decoration:none;padding:8px 14px;border-radius:var(--r)}
+.mast nav a:hover{background:var(--board-2);color:#fff}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px 64px}
+.kick{font-family:'Azeret Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-top:32px}
+h1{font-variation-settings:'wdth' 112,'wght' 800;font-size:clamp(1.8rem,4vw,2.6rem);margin-top:8px}
+.lede{font-size:18px;color:var(--ink-2);margin-top:10px;max-width:62ch}
+.lede b{color:var(--ink)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:24px 0}
+.timer{font-family:'Azeret Mono',monospace;font-size:28px;font-weight:700;background:var(--board);color:var(--amber);padding:6px 16px;border-radius:var(--r);min-width:120px;text-align:center}
+.timer.done{background:var(--signal);color:#fff}
+button{font-family:'Azeret Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:10px 16px;min-height:44px;border-radius:3px;border:1px solid var(--ink-3);background:var(--card);color:var(--ink);cursor:pointer}
+button:hover{border-color:var(--ink)}
+button.pri{background:var(--amber);border-color:var(--amber);color:var(--board)}
+.score{font-family:'Azeret Mono',monospace;font-size:14px;font-weight:700;color:var(--ink);margin-left:auto}
+.grid{display:grid;grid-template-columns:1.35fr 1fr;gap:28px;align-items:start}
+.claims{list-style:none;display:flex;flex-direction:column;gap:8px}
+.claim{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--rule);border-radius:var(--r);padding:12px 14px}
+.claim .n{font-family:'Azeret Mono',monospace;font-weight:700;font-size:14px;color:var(--ink-3);min-width:22px}
+.claim p{flex:1;font-size:16px}
+.claim select{font-family:'Azeret Mono',monospace;font-size:16px;font-weight:700;padding:8px 10px;min-height:44px;min-width:64px;border:1.5px solid var(--ink-3);border-radius:3px;background:var(--paper);color:var(--ink)}
+.claim.ok{border-left-color:var(--go);background:var(--go-bg)}
+.claim.no{border-left-color:var(--signal);background:var(--signal-bg)}
+.bank{position:sticky;top:76px;background:var(--board);border-radius:6px;padding:20px 22px;color:#DDE1E7}
+.bank h2{font-family:'Azeret Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
+.bank ol{list-style:none}
+.bank li{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid #2C3039;font-size:15.5px;line-height:1.45;transition:opacity .2s}
+.bank li:last-child{border-bottom:none}
+.bank li b{font-family:'Azeret Mono',monospace;color:var(--amber);min-width:18px}
+.bank li.used{opacity:.4}
+.extra{margin-top:28px;background:var(--amber-bg);border-left:4px solid var(--amber);border-radius:var(--r);padding:16px 20px;font-size:16px}
+.foot{font-family:'Azeret Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--ink-3);margin-top:40px}
+:where(a,button,select):focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}.bank{position:static;order:-1}.mast nav{display:none}}
+@media print{.mast,.bar{display:none}.bank{position:static;background:#fff;color:#000;border:1px solid #000}.bank h2,.bank li b{color:#000}.bank li{border-color:#ccc}.claim{break-inside:avoid}body{background:#fff}}
+</style>
+</head>
+<body>
+<header class="mast"><div class="mast-in"><a class="mark" href="index.html">EAP<span>100</span></a><nav aria-label="Primary"><a href="index.html">Schedule</a><a href="course-info.html">Course Info</a><a href="due-dates.html">Checklist</a><a href="student-qa.html">Q&amp;A</a></nav></div></header>
+<main class="wrap" id="main-content">
+<p class="kick">Week 9 &middot; In-class warm-up</p>
+<h1>Match the Claim to Its Reason</h1>
+<p class="lede">Each claim is missing its reason. Choose the best reason (A&ndash;O) for each claim (1&ndash;15). <b>Use each letter only once.</b> You have 8 minutes.</p>
+<div class="bar">
+<span class="timer" id="t" aria-live="polite">8:00</span>
+<button type="button" class="pri" id="go">Start</button>
+<button type="button" id="rs">Reset timer</button>
+<button type="button" id="ck">Check my answers</button>
+<button type="button" id="sh">Show answers</button>
+<span class="score" id="sc" aria-live="polite"></span>
+</div>
+<div class="grid">
+<ol class="claims" id="claims"></ol>
+<aside class="bank" aria-label="Reasons"><h2>Reasons</h2><ol id="bank"></ol></aside>
+</div>
+<div class="extra"><b>Finished early?</b> Pick one claim and write the opposite claim. Then ask yourself: could a reasonable person agree with your new claim?</div>
+<p class="foot">EAP 100: FUTURE FOCUSED &nbsp;/&nbsp; NYU SHANGHAI &nbsp;/&nbsp; FALL 2026</p>
+</main>
+<noscript><p style="padding:24px">This warm-up needs JavaScript.</p></noscript>
+<script>
+(function(){
+var C=[
+"Companies should keep hiring beginners even when AI can do easy tasks, because&hellip;",
+"Companies that replace workers with machines should pay for those workers to retrain, because&hellip;",
+"Care homes should use AI only for paperwork, not for caring for people, because&hellip;",
+"Employers should judge job applicants by their portfolios, not their degrees, because&hellip;",
+"NYU Shanghai should give course credit for CCD workshops and events, because&hellip;",
+"Teachers should let students lead more of their own learning, because&hellip;",
+"Universities should teach students how to use AI well instead of banning it, because&hellip;",
+"Universities should grade skills like teamwork and empathy, because&hellip;",
+"Governments should count unpaid care work at home as part of the economy, because&hellip;",
+"Companies in China should hire and keep more older workers, because&hellip;",
+"Delivery apps should give their riders accident insurance, because&hellip;",
+"Companies should not track remote workers through their keyboards and webcams, because&hellip;",
+"Video apps should have to label videos made by AI, because&hellip;",
+"Companies should let workers ignore work messages after work hours, because&hellip;",
+"Companies should let job applicants choose a human interviewer instead of an AI, because&hellip;"
+];
+var R=[
+["A","constant watching destroys trust."],
+["B","a portfolio shows what you can really do."],
+["C","AI may give lower scores to people who speak English as a second language."],
+["D","this work makes all other work possible."],
+["E","young workers need a first job to learn the skills for better jobs later."],
+["F","people can no longer tell what is real."],
+["G","students who learn on their own are better prepared for new kinds of jobs."],
+["H","sick and older people need real human kindness."],
+["I","the population is getting older and there will not be enough young workers."],
+["J","rest time should not become unpaid work time."],
+["K","almost every future job will use AI."],
+["L","the workers did not choose to lose their jobs."],
+["M","riders face real danger on the road without employee protection."],
+["N","these are the skills AI cannot easily replace."],
+["O","preparing for a career early helps students choose the right major."]
+];
+var K="ELHBOGKNDIMAFJC";
+var cl=document.getElementById("claims"),bk=document.getElementById("bank");
+var opts='<option value="">&ndash;</option>'+R.map(function(r){return'<option>'+r[0]+'</option>'}).join("");
+cl.innerHTML=C.map(function(c,i){return'<li class="claim"><span class="n">'+(i+1)+'</span><p>'+c+'</p><select aria-label="Reason for claim '+(i+1)+'">'+opts+'</select></li>'}).join("");
+bk.innerHTML=R.map(function(r){return'<li data-l="'+r[0]+'"><b>'+r[0]+'</b><span>&hellip;'+r[1]+'</span></li>'}).join("");
+var sel=Array.prototype.slice.call(cl.querySelectorAll("select"));
+var items=Array.prototype.slice.call(bk.querySelectorAll("li"));
+var sc=document.getElementById("sc");
+function used(){var u={};sel.forEach(function(s){if(s.value)u[s.value]=1});items.forEach(function(li){li.classList.toggle("used",!!u[li.getAttribute("data-l")])})}
+sel.forEach(function(s){s.addEventListener("change",function(){s.parentNode.classList.remove("ok","no");sc.textContent="";used()})});
+function check(){var n=0;sel.forEach(function(s,i){var li=s.parentNode;li.classList.remove("ok","no");if(!s.value)return;if(s.value===K.charAt(i)){li.classList.add("ok");n++}else{li.classList.add("no")}});sc.textContent=n+" / 15 correct"}
+document.getElementById("ck").addEventListener("click",check);
+document.getElementById("sh").addEventListener("click",function(){if(!confirm("Show all the answers?"))return;sel.forEach(function(s,i){s.value=K.charAt(i)});used();check()});
+var total=480,left=total,iv=null,t=document.getElementById("t"),go=document.getElementById("go");
+function draw(){var m=Math.floor(left/60),s=left%60;t.textContent=m+":"+(s<10?"0":"")+s;t.classList.toggle("done",left===0)}
+go.addEventListener("click",function(){if(iv){clearInterval(iv);iv=null;go.textContent="Start";return}if(left<=0)left=total;iv=setInterval(function(){left--;draw();if(left<=0){clearInterval(iv);iv=null;go.textContent="Start"}},1000);go.textContent="Pause"});
+document.getElementById("rs").addEventListener("click",function(){clearInterval(iv);iv=null;left=total;go.textContent="Start";draw()});
+draw();
+})();
+</script>
+</body>
+</html>
