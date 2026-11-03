@@ -7,7 +7,7 @@ Your task: take a clear position on a future-of-work issue and persuade your aud
 
 **Worth 20% of your final grade | 4 to 5 minutes, plus Q&A | Tuesday, November 24, 2026**
 
-This corrected guide replaces the older presentation specifications of 5 to 6 minutes, 3 to 4 sources, and 4 required visuals. Use the requirements below.
+This will be recorded. This will not be performed in front of the class. You must submit your video link to me by following this link VIDEO SUBMISSION CLICK HERE
 
 ## 1. What you need to do
 
@@ -35,7 +35,7 @@ There is no class on Thursday, November 26 (Thanksgiving). All sections present 
 
 File label: `Persuasive Speech_YourName_Section`. Submit an outline with key points and cue words, not a full script. Put the APA references in your slide deck and submit the reference list as well.
 
-Other assigned homework is due Monday at 23:59 unless a task states otherwise. The presentation deadlines above are explicit exceptions. Late-work penalty: 5% per day, as stated in the original handout and syllabus policy.
+Other assigned homework is due Monday at 23:59 unless a task states otherwise. The presentation upload deadline above is an explicit exception. Late-work penalty: 5% per day, as stated in the original handout and syllabus policy.
 
 ## 3. Choose a topic and build your claim
 
@@ -55,7 +55,7 @@ Claim formula: **[Who] should [do what] because [main reason].**
 - **Sustainability:** green skills for all majors; AI energy and water use; remote or hybrid work.
 - **Employability:** AI-assisted applications; professional online presence; human interviews versus AI video interviews.
 
-Course starting points include the readings, Videos 1 to 7, optional ethics and technology listening, and your CCD learning. A topic is not a claim: narrow it to one action for one audience. CCD visits are career-development experiences; this course has no internship requirement.
+Course starting points include the readings, Videos 1–12, optional ethics and technology listening, and your CCD learning. A topic is not a claim: narrow it to one action for one audience. CCD visits are career-development experiences; this course has no internship requirement.
 
 - [ ] Could a reasonable person disagree with my claim?
 - [ ] Can I explain it clearly in 4 to 5 minutes?
@@ -125,7 +125,7 @@ This is a suggested layout, not a required template. Use one clear idea per slid
 
 ## 8. Prepare without leaving everything to the last night
 
-These are recommended preparation checkpoints, **not extra graded deadlines**. Required uploads and presentation timing are in Section 2. Other assigned course tasks retain their published deadlines.
+These are recommended preparation checkpoints, **not extra graded deadlines**. Required uploads and presentation timing are in Section 2.
 
 | Preparation window | Suggested checkpoint |
 | --- | --- |
