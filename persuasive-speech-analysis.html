@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EAP 100: Model Speech Analysis + Language Review</title>
-<meta name="description" content="EAP 100 Week 9: analyze Jason Shen's TED talk and practice persuasive language. Two tasks due Monday November 9, 23:59. Printable.">
+<meta name="description" content="EAP 100 Week 9: analyze Jason Shen's TED talk and practice persuasive language. Two short tasks with hints, due Monday November 9, 23:59. Printable.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Public+Sans:wght@400;500;600;700&family=Azeret+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box}
-:root{--board:#14161A;--board2:#1E2127;--amber:#F2A81D;--paper:#FAF9F7;--ink:#1A1C20;--ink2:#4A4E56;--muted:#787D86;--rule:#DEDAD2;--line:#BDB8AE}
+:root{--board:#14161A;--board2:#1E2127;--amber:#F2A81D;--amberbg:#FDF3DF;--paper:#FAF9F7;--ink:#1A1C20;--ink2:#4A4E56;--muted:#787D86;--rule:#DEDAD2;--line:#BDB8AE}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:'Public Sans',system-ui,sans-serif;font-size:17px;line-height:1.55}
 h1,h2,h3{font-family:Archivo,system-ui,sans-serif;line-height:1.08;letter-spacing:-.02em}
 a{color:inherit}
@@ -42,36 +42,45 @@ h1{font-variation-settings:'wdth' 116,'wght' 800;font-size:clamp(2.1rem,7vw,3.6r
 .namebar div{flex:1;border-bottom:1px solid var(--ink);padding-bottom:4px}
 .namebar div.s{flex:.55}
 .brief{background:var(--board);color:#fff;border-radius:5px;padding:22px 24px;margin-bottom:18px}
-.brief .tools-t{color:var(--amber)}
+.brief .tt{color:var(--amber)}
 .brief ol{margin:6px 0 0;padding-left:22px}
-.brief li{margin:4px 0}
+.brief li{margin:5px 0}
 .brief code{font:600 14px 'Azeret Mono',monospace;color:var(--amber);word-break:break-all}
 .due{font-family:Archivo,sans-serif;font-variation-settings:'wdth' 110,'wght' 800;font-size:1.35rem;margin:0 0 10px}
-.tools{background:#fff;border:1px solid var(--rule);border-radius:5px;padding:18px 20px;margin-bottom:18px}
-.tools-t{font:700 10.5px 'Azeret Mono',monospace;letter-spacing:.13em;text-transform:uppercase;margin-bottom:10px}
-.tools ul{margin:0;padding-left:20px}
-.tools li{margin:3px 0;font-size:15.5px}
+.tt{font:700 10.5px 'Azeret Mono',monospace;letter-spacing:.13em;text-transform:uppercase;margin-bottom:10px}
+.box{background:#fff;border:1px solid var(--rule);border-radius:5px;padding:18px 20px;margin-bottom:18px}
+.box ul,.box ol{margin:0;padding-left:20px}
+.box li{margin:4px 0;font-size:15.5px}
+.matters{border:2px solid var(--ink)}
+.star{display:inline-block;background:var(--ink);color:var(--amber);font:700 10px 'Azeret Mono',monospace;letter-spacing:.08em;padding:2px 7px;border-radius:2px;vertical-align:2px;margin-left:6px;text-transform:uppercase}
 .task{margin-top:34px;font-variation-settings:'wdth' 112,'wght' 800;font-size:1.7rem;text-transform:uppercase;border-bottom:3px solid var(--amber);padding-bottom:6px}
 .task small{display:block;font:600 11px 'Azeret Mono',monospace;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-top:6px}
+.plan{width:100%;border-collapse:collapse;font-size:15px;margin-top:4px}
+.plan th,.plan td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+.plan th{font:700 10.5px 'Azeret Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.plan td.m{font:700 14px 'Azeret Mono',monospace;white-space:nowrap}
+.plan tr.tot td{border-bottom:0;font-weight:700}
 .sec{background:#fff;border:1px solid var(--rule);border-radius:5px;padding:20px 24px;margin-top:16px}
 .sec h2{font-variation-settings:'wdth' 112,'wght' 800;font-size:1.18rem;text-transform:uppercase;margin:0 0 4px}
 .time{font:600 10.5px 'Azeret Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
-.do{background:#FDF3DF;border-left:4px solid var(--amber);padding:10px 14px;margin:0 0 10px;font-size:15.5px}
-.blk{break-inside:avoid;page-break-inside:avoid;margin-top:14px}
-.q{font-weight:600}
+.do{background:var(--amberbg);border-left:4px solid var(--amber);padding:10px 14px;margin:0 0 10px;font-size:15.5px}
+.blk{break-inside:avoid;page-break-inside:avoid;margin-top:16px}
+.q{font-weight:600;margin-bottom:2px}
 .q b{display:inline-block;min-width:2.4em;font-family:'Azeret Mono',monospace;font-size:14px}
-.hint{font-size:14px;color:var(--ink2);margin:2px 0 0}
+.hint{font-size:14.5px;color:var(--ink2);margin:0 0 4px;padding-left:2.4em}
+.hint::before{content:"\1F4A1  Hint: ";font-weight:700;color:var(--ink)}
+.starter{font-size:15px;padding-left:2.4em;margin:4px 0 0}
 p{margin:0 0 6px}
-.line{border-bottom:1px solid var(--line);height:30px}
-.row{display:flex;gap:10px;align-items:flex-end;margin-top:6px;font-size:15px}
+.line{border-bottom:1px solid var(--line);height:30px;margin-left:2.4em}
+.row{display:flex;gap:10px;align-items:flex-end;margin:6px 0 0 2.4em;font-size:15px}
 .row span{white-space:nowrap}
 .row .g{flex:1;border-bottom:1px solid var(--line);height:24px}
-.fill{border:1px solid var(--rule);border-radius:4px;padding:10px 14px;margin-top:12px}
-.fill h3{font-size:1rem;margin:0 0 4px}
-.checks{list-style:none;padding:0;margin:8px 0 0}
+.opts{margin:6px 0 0 2.4em;font-size:15px}
+.opts span{margin-right:18px;white-space:nowrap;display:inline-block}
+.cb{display:inline-block;width:13px;height:13px;border:1.5px solid var(--ink);vertical-align:-1px;margin-right:6px}
+.checks{list-style:none;padding:0;margin:10px 0 0}
 .checks li{margin:5px 0;font-size:15px}
-.cb{display:inline-block;width:13px;height:13px;border:1.5px solid var(--ink);vertical-align:-1px;margin-right:8px}
-.moves{margin:6px 0 8px;padding-left:22px;font-size:15.5px}
+.ex{font-size:14.5px;background:var(--paper);border:1px dashed var(--line);border-radius:4px;padding:8px 12px;margin:6px 0 0 2.4em}
 .no{font-weight:700}
 footer{background:var(--board);color:#8A909C;padding:34px 24px;font:11px 'Azeret Mono',monospace;letter-spacing:.05em}
 footer div{max-width:1000px;margin:auto}
@@ -80,7 +89,7 @@ footer a{color:#B4BAC4;text-decoration:none}
 .skip-link{position:absolute;left:16px;top:8px;z-index:100;padding:10px 16px;background:var(--amber);color:var(--board);font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transform:translateY(-300%)}
 .skip-link:focus{transform:translateY(0)}
 :where(a,button,summary,input,select,textarea):focus-visible{outline:3px solid var(--amber);outline-offset:2px;box-shadow:0 0 0 5px rgba(20,22,26,.9)}
-@media(max-width:620px){.nav{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.mast-in{padding:0 16px}.nav a{padding:8px 7px;font-size:10px;min-height:44px;display:inline-flex;align-items:center}.wrap{padding:38px 16px 70px}.sec{padding:18px 16px}.namebar{flex-direction:column;gap:12px}.row{flex-wrap:wrap}}
+@media(max-width:620px){.nav{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.mast-in{padding:0 16px}.nav a{padding:8px 7px;font-size:10px;min-height:44px;display:inline-flex;align-items:center}.wrap{padding:38px 16px 70px}.sec{padding:18px 16px}.namebar{flex-direction:column;gap:12px}.row{flex-wrap:wrap}.hint,.starter{padding-left:0}.line,.row,.opts,.ex{margin-left:0}}
 @page{size:A4;margin:12mm 15mm 13mm}
 @media print{
   body{background:#fff;font-size:10.3pt;line-height:1.36;color:#000}
@@ -92,22 +101,24 @@ footer a{color:#B4BAC4;text-decoration:none}
   .print-head p{font-size:9pt;color:#222;margin:0 0 3mm}
   .namebar{font-size:9.5pt;margin-bottom:3mm;gap:6mm}
   .brief{background:none;color:#000;border:1.2pt solid #000;border-radius:0;padding:3mm 4mm;margin-bottom:3mm}
-  .brief .tools-t,.brief code{color:#000}
+  .brief .tt,.brief code{color:#000}
   .due{font-size:12pt;margin-bottom:1.5mm}
-  .tools{border:.8pt solid #000;border-radius:0;padding:2.5mm 3.5mm;margin-bottom:3mm}
-  .tools li{font-size:9.5pt}
+  .box{border:.8pt solid #000;border-radius:0;padding:2.5mm 3.5mm;margin-bottom:3mm;break-inside:avoid;page-break-inside:avoid}
+  .box li,.plan{font-size:9.5pt}
+  .plan th,.plan td{padding:1mm 2mm}
+  .star{background:#000;color:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:7pt}
   .task{font-size:14pt;margin-top:5mm;border-bottom:1.5pt solid #000;break-after:avoid;page-break-after:avoid}
   .task.p2{break-before:page;page-break-before:always;margin-top:0}
   .sec{border:0;border-radius:0;padding:0;margin-top:3.5mm;background:none}
   .sec h2{font-size:11pt;background:#ececec;border-left:3pt solid #000;padding:1.2mm 3mm;margin:0 0 1mm;break-after:avoid;page-break-after:avoid}
   .do{background:none;border-left:2pt solid #000;padding:1mm 3mm;font-size:9.5pt}
-  .blk{margin-top:2mm}
-  .hint{font-size:8.8pt;color:#222}
+  .blk{margin-top:2.2mm}
+  .hint,.starter,.opts,.ex{font-size:9pt;color:#222}
+  .ex{background:none}
   p{margin:0 0 1.2mm}
   .line{height:6.6mm;border-bottom:.5pt solid #888}
   .row{font-size:9.5pt;margin-top:1.2mm}.row .g{height:5mm;border-bottom:.5pt solid #888}
-  .fill{border:.6pt solid #666;border-radius:0;padding:2mm 3mm;margin-top:2mm;break-inside:avoid;page-break-inside:avoid}
-  .checks li,.moves{font-size:9.5pt}
+  .checks li{font-size:9.5pt}
   .cb{width:3.2mm;height:3.2mm;border:.7pt solid #000}
   a{text-decoration:none}
 }
@@ -122,165 +133,168 @@ footer a{color:#B4BAC4;text-decoration:none}
 <div class="kicker">NYU Shanghai · English for Academic Purposes · Fall 2026</div>
 <span class="eyebrow">Week 9 · Two homework tasks</span>
 <h1>Show Your Ability</h1>
-<p class="lede">Watch one persuasive talk. Analyze how it works. Then practice the language you will need for your own speech on Nov 24.</p>
-<a class="vid" href="https://www.youtube.com/watch?v=guXxy8LH2QM" target="_blank" rel="noopener"><span class="pl" aria-hidden="true">&#9654;</span><span><span class="vt">Jason Shen: Looking for a Job? Highlight Your Ability, Not Your Experience</span><span class="vs">TED Residency · November 2017 · YouTube</span></span><span class="vl">Watch</span><span class="sr-only"> (opens in a new tab)</span></a>
-<p class="alt">Video will not play? Try the <a href="https://www.ted.com/talks/jason_shen_looking_for_a_job_highlight_your_ability_not_your_experience" target="_blank" rel="noopener"><b>same talk on TED.com</b></a>. Turn on English captions if they help. If neither link works, tell your teacher. Do not answer as if you watched it.</p>
+<p class="lede">Watch one short TED talk. Find out how it persuades. Then practice the language you need for your own speech on Nov 24.</p>
+<a class="vid" href="https://www.youtube.com/watch?v=guXxy8LH2QM" target="_blank" rel="noopener"><span class="pl" aria-hidden="true">&#9654;</span><span><span class="vt">Jason Shen: Looking for a Job? Highlight Your Ability, Not Your Experience</span><span class="vs">TED Residency · 2017 · YouTube</span></span><span class="vl">Watch</span><span class="sr-only"> (opens in a new tab)</span></a>
+<p class="alt">Video will not play? Try the <a href="https://www.ted.com/talks/jason_shen_looking_for_a_job_highlight_your_ability_not_your_experience" target="_blank" rel="noopener"><b>same talk on TED.com</b></a>. English captions are fine. If neither link works, tell your teacher.</p>
 <div class="actions"><button class="btn primary" type="button" onclick="window.print()">Print worksheet</button><a class="btn" href="index.html#week9">See Week 9 schedule</a></div>
 </div>
 
 <div class="print-head">
 <p class="k">NYU Shanghai · English for Academic Purposes · EAP 100: Future Focused</p>
 <h1>Show Your Ability: Model Speech Analysis + Language Review</h1>
-<p>Video: Jason Shen, “Looking for a Job? Highlight Your Ability, Not Your Experience” (TED Residency, 2017) · youtube.com/watch?v=guXxy8LH2QM</p>
+<p>Video: Jason Shen, “Looking for a Job? Highlight Your Ability, Not Your Experience” (TED, 2017) · youtube.com/watch?v=guXxy8LH2QM</p>
 </div>
 
 <div class="namebar"><div>Name:</div><div class="s">Section:</div><div class="s">Date:</div></div>
 
 <section class="brief" aria-label="What to submit">
 <p class="due">Due Monday, November 9, 23:59</p>
-<div class="tools-t">Upload two separate files to the Assignments folder</div>
+<div class="tt">Upload two separate files to the Assignments folder</div>
 <ol>
-<li><b>Task 1, Model Speech Analysis</b> (about 75 min): answers A1&ndash;F4<br><code>Week9_ModelSpeechAnalysis_YourName_Section</code></li>
-<li><b>Task 2, Language Review</b> (about 45 min): answers A1&ndash;E3<br><code>Week9_LanguageReview_YourName_Section</code></li>
+<li><b>Task 1: Model Speech Analysis</b> (about 75 min)<br><code>Week9_ModelSpeechAnalysis_YourName_Section</code></li>
+<li><b>Task 2: Language Review</b> (about 45 min)<br><code>Week9_LanguageReview_YourName_Section</code></li>
 </ol>
-<p style="margin-top:10px">Replace <i>YourName</i> and <i>Section</i> with your own details. <b>Work you finish in class counts.</b> At home, finish only the questions you have not answered. <span class="no">Do not upload a recording, slides, or a new speech.</span></p>
+<p style="margin-top:10px"><b>Work you finish in class counts.</b> At home, finish only what is left. Type your answers with the question numbers (A1, A2&hellip;), or upload a clear photo of this sheet. <span class="no">No recording. No slides.</span></p>
 </section>
 
-<div class="tools">
-<div class="tools-t">How to answer</div>
-<ul>
-<li>Type your answers using the question labels (A1, A2&hellip;), <b>or</b> write on this printed sheet and upload a clear photo or scan of each task.</li>
-<li>Use your own words. Do not submit AI-written answers.</li>
-<li><b>Locator</b> = a timestamp from your player (for example, 02:10) <b>or</b> a short phrase copied from the talk.</li>
-<li>You may disagree with Shen. Explain why. The talk is from 2017: a confident speaker is not proof.</li>
-</ul>
-</div>
+<section class="box matters" aria-label="What matters most">
+<div class="tt">What matters most <span class="star">★ Key</span></div>
+<p style="font-size:15.5px">Questions marked <span class="star">★ Key</span> matter most. If you are short on time, do these first.</p>
+<ol>
+<li><b>Find the argument:</b> What does Shen want, and what are his three ideas?</li>
+<li><b>Check the evidence:</b> A story shows <i>one</i> person&rsquo;s experience. It does not prove something is true for <i>everyone</i>.</li>
+<li><b>Give your opinion:</b> Did he persuade you? Why or why not?</li>
+<li><b>Use careful language:</b> Words like <i>may</i>, <i>can</i> and <i>some</i> make claims more accurate.</li>
+</ol>
+<p style="font-size:14.5px;margin-top:8px">Short answers are fine. Use your own words. You may disagree with Shen. A confident speaker is not always right.</p>
+</section>
 
-<h2 class="task">Task 1: Model Speech Analysis<small>About 75 minutes · Answers A1&ndash;F4 · Week9_ModelSpeechAnalysis_YourName_Section</small></h2>
+<h2 class="task">Task 1: Model Speech Analysis<small>About 75 minutes · Week9_ModelSpeechAnalysis_YourName_Section</small></h2>
 
 <section class="sec">
-<h2>A. Watch once for the main message</h2>
+<h2>A. First viewing: the big message</h2>
 <p class="time">About 10 minutes</p>
-<p class="do">Watch the <b>whole</b> video once. Then answer. Short notes are fine for A1&ndash;A3. A4 is one full sentence.</p>
-<div class="blk"><p class="q"><b>A1</b>What problem with hiring does Shen identify?</p><div class="line"></div></div>
-<div class="blk"><p class="q"><b>A2</b>Who does he want to act? What should they change?</p><div class="line"></div></div>
-<div class="blk"><p class="q"><b>A3</b>List the <u>three</u> recommendations he names.</p><div class="row"><span>1.</span><div class="g"></div></div><div class="row"><span>2.</span><div class="g"></div></div><div class="row"><span>3.</span><div class="g"></div></div></div>
-<div class="blk"><p class="q"><b>A4</b>Complete the sentence:</p><div class="row"><span>Shen argues that</span><div class="g"></div></div><div class="line"></div></div>
+<p class="do">Watch the whole video once. Do not pause. Then answer in short notes.</p>
+<div class="blk"><p class="q"><b>A1</b>What is the problem with hiring?</p><p class="hint">He thinks employers look at the wrong things. What do they look at?</p><div class="line"></div></div>
+<div class="blk"><p class="q"><b>A2</b>What are his three ideas? <span class="star">★ Key</span></p><p class="hint">He numbers them: &ldquo;One&hellip; Two&hellip; Three&hellip;&rdquo; Each one is three or four words.</p><div class="row"><span>1.</span><div class="g"></div></div><div class="row"><span>2.</span><div class="g"></div></div><div class="row"><span>3.</span><div class="g"></div></div></div>
+<div class="blk"><p class="q"><b>A3</b>Finish this sentence:</p><div class="row"><span>Shen argues that employers should</span><div class="g"></div></div><div class="line"></div></div>
 </section>
 
 <section class="sec">
-<h2>B. Watch again for structure</h2>
+<h2>B. Second viewing: the details</h2>
 <p class="time">About 15 minutes</p>
-<p class="do">Watch a <b>second</b> time. Pause when you need to. Write 1&ndash;2 sentences per answer and <b>add a locator</b> to each one.</p>
-<div class="blk"><p class="q"><b>B1</b>How does the opening get the audience interested?</p><div class="line"></div><div class="line"></div></div>
-<div class="blk"><p class="q"><b>B2</b>What does his story about applying to Etsy show?</p><div class="line"></div><div class="line"></div></div>
-<div class="blk"><p class="q"><b>B3</b>Where does he move from his own story to a bigger hiring problem?</p><div class="line"></div><div class="line"></div></div>
-<div class="blk"><p class="q"><b>B4</b>Give <u>one</u> example he uses for <u>each</u> recommendation.</p><div class="row"><span>Recommendation 1:</span><div class="g"></div></div><div class="row"><span>Recommendation 2:</span><div class="g"></div></div><div class="row"><span>Recommendation 3:</span><div class="g"></div></div></div>
-<div class="blk"><p class="q"><b>B5</b>At the end, what does he ask employers to do? What does he ask candidates to do?</p><div class="line"></div><div class="line"></div></div>
+<p class="do">Watch again with captions. Pause when you need to. One or two sentences per answer.</p>
+<div class="blk"><p class="q"><b>B1</b>How does he start the talk?</p><p class="hint">Listen to the first sentence. It is a question.</p><div class="line"></div></div>
+<div class="blk"><p class="q"><b>B2</b>What happened when he applied to Etsy? What does the story show?</p><p class="hint">He did not have the right job title. What did he make instead?</p><div class="line"></div><div class="line"></div></div>
+<div class="blk"><p class="q"><b>B3</b>Give one example for each of his three ideas.</p><p class="hint">Listen for: a baseball team · a data analyst with a spreadsheet · his kindergarten teacher.</p><div class="row"><span>Idea 1:</span><div class="g"></div></div><div class="row"><span>Idea 2:</span><div class="g"></div></div><div class="row"><span>Idea 3:</span><div class="g"></div></div></div>
+<div class="blk"><p class="q"><b>B4</b>At the end, what does he ask employers to do? What does he ask job seekers to do?</p><p class="hint">Listen for &ldquo;Let&rsquo;s stop&hellip;&rdquo; and &ldquo;candidates can help by&hellip;&rdquo;</p><div class="line"></div><div class="line"></div></div>
 </section>
 
 <section class="sec">
-<h2>C. Check three kinds of support</h2>
+<h2>C. Check the evidence <span class="star">★ Key</span></h2>
 <p class="time">About 15 minutes</p>
-<p class="do">Fill in <b>all five lines</b> for C1, C2 and C3. Short notes are enough. You do <b>not</b> need to find the original sources. If you have not checked a claim, write <b>not verified</b>. Never invent a study or citation.</p>
-<div class="fill"><h3>C1. A personal story</h3><div class="row"><span>Claim + locator:</span><div class="g"></div></div><div class="row"><span>Type of support:</span><div class="g"></div></div><div class="row"><span>What it supports:</span><div class="g"></div></div><div class="row"><span>What it cannot prove alone:</span><div class="g"></div></div><div class="row"><span>What I would check next:</span><div class="g"></div></div></div>
-<div class="fill"><h3>C2. A research claim</h3><p class="hint">Think about: When was the study? Who was studied? What was measured?</p><div class="row"><span>Claim + locator:</span><div class="g"></div></div><div class="row"><span>Type of support:</span><div class="g"></div></div><div class="row"><span>What it supports:</span><div class="g"></div></div><div class="row"><span>What it cannot prove alone:</span><div class="g"></div></div><div class="row"><span>What I would check next:</span><div class="g"></div></div></div>
-<div class="fill"><h3>C3. A company or sports example</h3><div class="row"><span>Claim + locator:</span><div class="g"></div></div><div class="row"><span>Type of support:</span><div class="g"></div></div><div class="row"><span>What it supports:</span><div class="g"></div></div><div class="row"><span>What it cannot prove alone:</span><div class="g"></div></div><div class="row"><span>What I would check next:</span><div class="g"></div></div></div>
+<p class="do">Evidence can show <b>something</b>, but not <b>everything</b>. Finish both sentences for each example. You do <b>not</b> need to look for other sources.</p>
+<div class="blk"><p class="q"><b>C1</b>His Etsy story</p><div class="row"><span>This story shows that</span><div class="g"></div></div><div class="row"><span>But it cannot prove that</span><div class="g"></div></div><p class="hint">It is one person&rsquo;s story. Would it work for everyone?</p></div>
+<div class="blk"><p class="q"><b>C2</b>The 2010 study about graduates&rsquo; jobs and degrees</p><div class="row"><span>This study shows that</span><div class="g"></div></div><div class="row"><span>But it cannot prove that</span><div class="g"></div></div><p class="hint">The study is from 2010 and he does not name it. Is it still true today? In every country?</p></div>
 </section>
 
 <section class="sec">
-<h2>D. Ethos, pathos, logos and audience</h2>
+<h2>D. How does he persuade?</h2>
 <p class="time">About 10 minutes</p>
-<p class="do">Write 2&ndash;3 sentences for each. Use a <b>specific moment</b> from the talk. Your Week 8 Pause &amp; Predict sheet can help.</p>
-<div class="blk"><p class="q"><b>D1</b><i>Ethos:</i> What makes Shen seem credible? He co-founded a hiring company. How might that also affect your judgment?</p><div class="line"></div><div class="line"></div></div>
-<div class="blk"><p class="q"><b>D2</b><i>Pathos:</i> Choose one personal story. What feeling might it create, and how does that help his argument?</p><div class="line"></div><div class="line"></div></div>
-<div class="blk"><p class="q"><b>D3</b><i>Logos:</i> Choose one claim and its support. Explain the link. What is convincing, and what is missing?</p><div class="line"></div><div class="line"></div></div>
-<div class="blk"><p class="q"><b>D4</b><i>Audience:</i> How might an employer react to his proposal? How might a job applicant react differently?</p><div class="line"></div><div class="line"></div></div>
+<p class="do">Complete each sentence. Your Week 8 <a href="pause-and-predict.html">Pause &amp; Predict</a> sheet can help.</p>
+<div class="blk"><p class="q"><b>D1</b><i>Ethos (trust)</i></p><div class="row"><span>We trust Shen because</span><div class="g"></div></div><div class="row"><span>But he started a hiring company, so</span><div class="g"></div></div><p class="hint">Could he gain something if employers agree with him?</p></div>
+<div class="blk"><p class="q"><b>D2</b><i>Pathos (feelings)</i></p><div class="row"><span>The kindergarten story makes me feel</span><div class="g"></div></div><div class="row"><span>because</span><div class="g"></div></div></div>
+<div class="blk"><p class="q"><b>D3</b><i>Logos (reasons)</i></p><div class="row"><span>He says employers should test skills because</span><div class="g"></div></div><p class="hint">Think about the data analyst example. Why is doing the task a good test?</p></div>
 </section>
 
 <section class="sec">
-<h2>E. Anticipated Objections</h2>
+<h2>E. What could someone say against him?</h2>
 <p class="time">About 10 minutes</p>
-<p class="do">An objection is a serious reason someone could disagree. Choose <b>one</b>: unpaid work, accessibility, time burden, fair scoring, or your own.</p>
-<div class="blk"><p class="q"><b>E1</b>State the objection fairly in <u>two</u> sentences.</p><div class="line"></div><div class="line"></div></div>
-<div class="blk"><p class="q"><b>E2</b>Does Shen answer it? If yes, give a locator. If no, write <i>Not explicitly addressed</i>.</p><div class="line"></div></div>
-<div class="blk"><p class="q"><b>E3</b>Your response plus <u>one</u> safeguard (2&ndash;3 sentences). Start: <i>My proposed response is&hellip;</i></p><p class="hint">This is your idea. Do not present it as Shen&rsquo;s.</p><div class="line"></div><div class="line"></div></div>
-<div class="blk"><p class="q"><b>E4</b>Name <u>one</u> type of evidence that would show whether your safeguard works.</p><div class="line"></div></div>
+<div class="blk"><p class="q"><b>E1</b>Choose one problem with hiring tasks. Explain it in one sentence.</p><div class="opts"><span><i class="cb"></i>Unpaid work</span><span><i class="cb"></i>Takes too much time</span><span><i class="cb"></i>Unfair to some people</span></div><div class="line"></div></div>
+<div class="blk"><p class="q"><b>E2</b>Does Shen answer this problem in his talk?</p><div class="opts"><span><i class="cb"></i>Yes</span><span><i class="cb"></i>No</span></div><p class="hint">Listen carefully. Does he talk about pay, time or fairness for applicants?</p></div>
+<div class="blk"><p class="q"><b>E3</b>How would <u>you</u> fix the problem? <span class="star">★ Key</span></p><div class="row"><span>My idea is that employers should</span><div class="g"></div></div><div class="line"></div><p class="hint">For example: a time limit, a short task, or paying for long tasks.</p></div>
 </section>
 
 <section class="sec">
-<h2>F. Your judgment</h2>
+<h2>F. Your opinion <span class="star">★ Key</span></h2>
 <p class="time">About 15 minutes, including saving</p>
-<div class="blk"><p class="q"><b>F1</b>One paragraph, <u>120&ndash;150 words</u>: How persuasive is this talk, and what would make it stronger?</p><p class="hint">Include one strength, one limitation, and one specific improvement.</p><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
-<div class="blk"><p class="q"><b>F2</b>One technique I can use in my speech, without copying his words:</p><div class="line"></div></div>
-<div class="blk"><p class="q"><b>F3</b>My own claim: <i>[Who] should [do what] because [reason].</i></p><div class="line"></div></div>
-<div class="blk"><p class="q"><b>F4</b>One piece of evidence I need before I can defend my claim:</p><div class="line"></div></div>
+<div class="blk"><p class="q"><b>F1</b>Write <u>80&ndash;100 words</u>. Did the talk persuade you? Use these sentence starters:</p>
+<div class="ex"><b>1.</b> The talk is persuasive because&hellip;<br><b>2.</b> One weakness is&hellip;<br><b>3.</b> He could make it stronger by&hellip;<br><b>4.</b> Overall, I think&hellip;</div>
+<div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+<div class="blk"><p class="q"><b>F2</b>One thing I will copy in my own speech (the technique, not his words):</p><p class="hint">For example: starting with a question, or numbering my ideas.</p><div class="line"></div></div>
+<div class="blk"><p class="q"><b>F3</b>My speech claim:</p><div class="row"><span><i>[Who]</i> should <i>[do what]</i> because <i>[reason]</i>:</span><div class="g"></div></div><div class="line"></div></div>
+<div class="blk"><p class="q"><b>F4</b>One piece of evidence I still need to find:</p><div class="line"></div></div>
 <ul class="checks">
-<li><i class="cb"></i>I answered A1&ndash;F4, with locators in B and all five lines in C1&ndash;C3.</li>
-<li><i class="cb"></i>F1 is 120&ndash;150 words.</li>
+<li><i class="cb"></i>I answered A1&ndash;F4. The <span class="star">★ Key</span> questions are complete.</li>
 <li><i class="cb"></i>I uploaded <b>Week9_ModelSpeechAnalysis_YourName_Section</b> to the Assignments folder.</li>
 </ul>
 </section>
 
-<h2 class="task p2">Task 2: Language Review<small>About 45 minutes · Answers A1&ndash;E3 · Week9_LanguageReview_YourName_Section</small></h2>
-<p class="do" style="margin-top:14px">A <b>separate</b> task and a <b>separate</b> file. Same video, but you do not need to watch the whole talk again. Go back only to the parts you need.</p>
+<h2 class="task p2">Task 2: Language Review<small>45 minutes · Week9_LanguageReview_YourName_Section</small></h2>
 
-<section class="sec">
-<h2>A. Find four persuasive phrases</h2>
-<p class="time">About 8 minutes</p>
-<p class="do">Copy <b>one short phrase</b> from the talk for each item. Then write <b>one sentence</b> on what it does for the listener.</p>
-<div class="fill"><h3>A1. A question or hook</h3><div class="row"><span>Phrase:</span><div class="g"></div></div><div class="row"><span>What it does:</span><div class="g"></div></div></div>
-<div class="fill"><h3>A2. A numbered signpost</h3><div class="row"><span>Phrase:</span><div class="g"></div></div><div class="row"><span>What it does:</span><div class="g"></div></div></div>
-<div class="fill"><h3>A3. A recommendation</h3><div class="row"><span>Phrase:</span><div class="g"></div></div><div class="row"><span>What it does:</span><div class="g"></div></div></div>
-<div class="fill"><h3>A4. An inclusive call to action</h3><div class="row"><span>Phrase:</span><div class="g"></div></div><div class="row"><span>What it does:</span><div class="g"></div></div></div>
+<section class="box" style="margin-top:16px" aria-label="How to use your 45 minutes">
+<div class="tt">How to use your 45 minutes</div>
+<table class="plan">
+<thead><tr><th>Time</th><th>Part</th><th>What you do</th></tr></thead>
+<tbody>
+<tr><td class="m">8 min</td><td>A. Find phrases</td><td>Find 3 short phrases in the talk.</td></tr>
+<tr><td class="m">10 min</td><td>B. Fix claims <span class="star">★ Key</span></td><td>Make 3 sentences more careful.</td></tr>
+<tr><td class="m">12 min</td><td>C. Write <span class="star">★ Key</span></td><td>Write 5 sentences about your own topic.</td></tr>
+<tr><td class="m">10 min</td><td>D. Speak</td><td>Say your 5 sentences aloud twice.</td></tr>
+<tr><td class="m">5 min</td><td>E. Reflect</td><td>Write 3 short bullets, then upload.</td></tr>
+<tr class="tot"><td class="m">45 min</td><td colspan="2">This is a separate file. You only need to replay the parts of the video you need.</td></tr>
+</tbody>
+</table>
 </section>
 
 <section class="sec">
-<h2>B. Fix four overclaims</h2>
-<p class="time">About 10 minutes</p>
-<p class="do">These sentences are <b>practice sentences, not quotes from Shen</b>. Rewrite each one so it is accurate, not absolute. Then explain <b>one change</b> you made.</p>
-<p class="hint">Useful words: may · can · in some roles · when carefully designed · suggests · does not necessarily</p>
-<div class="fill"><h3>B1. &ldquo;Degrees tell employers nothing about ability.&rdquo;</h3><div class="row"><span>My revision:</span><div class="g"></div></div><div class="line"></div><div class="row"><span>What I changed and why:</span><div class="g"></div></div></div>
-<div class="fill"><h3>B2. &ldquo;Work samples always identify the best candidate.&rdquo;</h3><div class="row"><span>My revision:</span><div class="g"></div></div><div class="line"></div><div class="row"><span>What I changed and why:</span><div class="g"></div></div></div>
-<div class="fill"><h3>B3. &ldquo;Shen&rsquo;s experience proves every applicant should build a website.&rdquo;</h3><div class="row"><span>My revision:</span><div class="g"></div></div><div class="line"></div><div class="row"><span>What I changed and why:</span><div class="g"></div></div></div>
-<div class="fill"><h3>B4. &ldquo;AI will replace all jobs, so experience is useless.&rdquo;</h3><div class="row"><span>My revision:</span><div class="g"></div></div><div class="line"></div><div class="row"><span>What I changed and why:</span><div class="g"></div></div></div>
+<h2>A. Find three persuasive phrases</h2>
+<p class="time">8 minutes</p>
+<p class="do">Copy a short phrase from the talk. Then tick what it does.</p>
+<div class="blk"><p class="q"><b>A1</b>A question at the start</p><p class="hint">It is his very first sentence.</p><div class="row"><span>Phrase:</span><div class="g"></div></div><div class="opts"><span><i class="cb"></i>Makes us curious</span><span><i class="cb"></i>Organizes ideas</span><span><i class="cb"></i>Asks us to act</span></div></div>
+<div class="blk"><p class="q"><b>A2</b>A numbered signpost</p><p class="hint">He uses a number before each main idea.</p><div class="row"><span>Phrase:</span><div class="g"></div></div><div class="opts"><span><i class="cb"></i>Makes us curious</span><span><i class="cb"></i>Organizes ideas</span><span><i class="cb"></i>Asks us to act</span></div></div>
+<div class="blk"><p class="q"><b>A3</b>A call to action at the end</p><p class="hint">It is his last sentence. It starts with &ldquo;So let&rsquo;s&hellip;&rdquo;</p><div class="row"><span>Phrase:</span><div class="g"></div></div><div class="opts"><span><i class="cb"></i>Makes us curious</span><span><i class="cb"></i>Organizes ideas</span><span><i class="cb"></i>Asks us to act</span></div></div>
 </section>
 
 <section class="sec">
-<h2>C. Write your own short argument</h2>
-<p class="time">About 10 minutes</p>
-<p class="do">Choose <b>your own</b> future-of-work issue (you can reuse your F3 claim). Write <b>6&ndash;8 sentences</b> that use <b>all seven</b> moves. Two moves can share one sentence.</p>
-<ol class="moves">
-<li><b>Claim:</b> I argue that [who] should [do what].</li>
-<li><b>Reason:</b> My first reason is&hellip;</li>
-<li><b>Evidence plan:</b> To support this, I need evidence about&hellip;</li>
-<li><b>Explanation:</b> This matters because&hellip;</li>
-<li><b>Objection:</b> A reasonable objection is&hellip;</li>
-<li><b>Response:</b> This concern is valid; however&hellip;</li>
-<li><b>Limit:</b> This approach may help if&hellip;</li>
-</ol>
-<p class="hint">Move 3 is what you still <i>need to find</i>. Do not invent a statistic. This is practice, not your speech script.</p>
-<div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+<h2>B. Make claims more careful <span class="star">★ Key</span></h2>
+<p class="time">10 minutes</p>
+<p class="do">These sentences are too strong. Rewrite each one using a word from the box. They are practice sentences, not Shen&rsquo;s words.</p>
+<p class="starter"><b>Word box:</b> may · can · some · many · often · not always · not necessarily</p>
+<div class="ex"><b>Example:</b> &ldquo;Everyone needs a degree.&rdquo; &rarr; &ldquo;<u>Many</u> jobs <u>may</u> require a degree.&rdquo;</div>
+<div class="blk"><p class="q"><b>B1</b>&ldquo;Degrees tell employers nothing about ability.&rdquo;</p><div class="row"><span>Careful version:</span><div class="g"></div></div><div class="line"></div></div>
+<div class="blk"><p class="q"><b>B2</b>&ldquo;Work samples always find the best person.&rdquo;</p><div class="row"><span>Careful version:</span><div class="g"></div></div><div class="line"></div></div>
+<div class="blk"><p class="q"><b>B3</b>&ldquo;AI will replace all jobs.&rdquo;</p><div class="row"><span>Careful version:</span><div class="g"></div></div><div class="line"></div></div>
 </section>
 
 <section class="sec">
-<h2>D. Mark it, say it, improve it</h2>
-<p class="time">About 12 minutes</p>
-<div class="blk"><p class="q"><b>D1</b>Choose <u>three</u> sentences from C. Mark pauses with <b>/</b> and <u>underline</u> the words you will stress. <span class="hint">(Submit these marked sentences.)</span></p><p class="hint">Example: Employers / should use <u>brief</u>, <u>job-relevant</u> tasks / when they can provide <u>fair</u> access.</p></div>
-<div class="blk"><p class="q"><b>D2</b>Say them aloud. Then give a 45&ndash;60 second version of your argument to a partner, <b>or</b> record it privately on your phone and listen back.</p></div>
-<div class="blk"><p class="q"><b>D3</b>Answer aloud: <i>&ldquo;What is the strongest objection to your proposal?&rdquo;</i> Admit it, respond, and state one limit.</p></div>
-<div class="blk"><p class="q"><b>D4</b>Check: could the listener hear your claim, a signpost, and a limit? Fix <u>one</u> thing and try once more.</p></div>
-<p class="do" style="margin-top:12px">D2&ndash;D4 are speaking only: <b>nothing to write and nothing to upload.</b> Aim for clear meaning, not a perfect accent.</p>
+<h2>C. Write five sentences <span class="star">★ Key</span></h2>
+<p class="time">12 minutes</p>
+<p class="do">Use <b>your own</b> speech topic. You can use your claim from F3. Finish each sentence starter.</p>
+<p class="hint">Sentence 4 must use a careful word from Part B, such as <i>may</i> or <i>can</i>.</p>
+<div class="blk"><div class="row"><span><b>1. Claim:</b> I argue that</span><div class="g"></div></div>
+<div class="row"><span><b>2. Reason:</b> My first reason is</span><div class="g"></div></div>
+<div class="row"><span><b>3. Other side:</b> Some people may say</span><div class="g"></div></div>
+<div class="row"><span><b>4. My answer:</b> However,</span><div class="g"></div></div>
+<div class="row"><span><b>5. Action:</b> So I recommend that</span><div class="g"></div></div></div>
 </section>
 
 <section class="sec">
-<h2>E. Reflect in three bullets</h2>
-<p class="time">About 5 minutes</p>
-<div class="blk"><p class="q"><b>E1</b>One overclaim I fixed (before &rarr; after):</p><div class="line"></div></div>
-<div class="blk"><p class="q"><b>E2</b>One thing I improved when speaking:</p><div class="line"></div></div>
-<div class="blk"><p class="q"><b>E3</b>One speaking goal for next time:</p><div class="line"></div></div>
+<h2>D. Say it aloud</h2>
+<p class="time">10 minutes</p>
+<div class="blk"><p class="q"><b>D1</b>In your sentence 1, mark pauses with <b>/</b> and <u>underline</u> the 2&ndash;3 most important words.</p><div class="ex"><b>Example:</b> I argue / that <u>universities</u> should give <u>credit</u> / for career <u>workshops</u>.</div></div>
+<div class="blk"><p class="q"><b>D2</b>Say all five sentences aloud to a partner, or to yourself. Then say them a second time, more slowly and clearly.</p><p class="hint">Pause at each /. Speak clearly. You do not need a perfect accent.</p></div>
+<p class="do" style="margin-top:12px">D2 is speaking only. <b>Nothing to upload.</b></p>
+</section>
+
+<section class="sec">
+<h2>E. Reflect</h2>
+<p class="time">5 minutes</p>
+<div class="blk"><p class="q"><b>E1</b>One sentence I made more careful (before &rarr; after):</p><div class="line"></div></div>
+<div class="blk"><p class="q"><b>E2</b>One thing that was better the second time I spoke:</p><div class="line"></div></div>
+<div class="blk"><p class="q"><b>E3</b>One thing I will practice before November 24:</p><div class="line"></div></div>
 <ul class="checks">
-<li><i class="cb"></i>I answered A1&ndash;A4, B1&ndash;B4, C, D1 (three marked sentences) and E1&ndash;E3.</li>
+<li><i class="cb"></i>I answered A1&ndash;A3, B1&ndash;B3, C (5 sentences), D1 and E1&ndash;E3.</li>
 <li><i class="cb"></i>I uploaded <b>Week9_LanguageReview_YourName_Section</b> to the Assignments folder.</li>
 <li><i class="cb"></i>Both files are in by <b>Monday, November 9, 23:59</b>.</li>
 </ul>
