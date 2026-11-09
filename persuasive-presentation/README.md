@@ -55,7 +55,7 @@ Claim formula: **[Who] should [do what] because [main reason].**
 - **Sustainability:** green skills for all majors; AI energy and water use; remote or hybrid work.
 - **Employability:** AI-assisted applications; professional online presence; human interviews versus AI video interviews.
 
-Course starting points include the readings, Videos 1–12, optional ethics and technology listening, and your CCD learning. A topic is not a claim: narrow it to one action for one audience. CCD visits are career-development experiences; this course has no internship requirement.
+Course starting points include the course materials from Weeks 1–12 (readings and videos), optional ethics and technology listening, and your CCD learning. A topic is not a claim: narrow it to one action for one audience. CCD visits are career-development experiences; this course has no internship requirement.
 
 - [ ] Could a reasonable person disagree with my claim?
 - [ ] Can I explain it clearly in 4 to 5 minutes?

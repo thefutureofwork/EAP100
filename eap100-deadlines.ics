@@ -414,20 +414,21 @@ DESCRIPTION:400-500 word DEIP reflection. Refine artifacts + synthesize your CCD
 END:VEVENT
 BEGIN:VEVENT
 UID:8e38cdee-fb7d-45ee-8a3b-c50d9b31f9f3
-DTSTAMP:20261023T052000Z
-SEQUENCE:2
+DTSTAMP:20261109T074800Z
+SEQUENCE:3
 DTSTART;TZID=Asia/Shanghai:20261124T094500
 DTEND;TZID=Asia/Shanghai:20261124T094500
 SUMMARY:⚠️ EAP 100: PERSUASIVE SPEECH (20%)
-DESCRIPTION:4-5 minutes plus Q&A\, delivered live in class on Tuesday Nov 24 and video recorded. 3 researched sources (including primary and secondary)\, ethos/pathos/logos\, a counterargument\, 3-4 content slides plus references. Upload outline\, slides and APA reference list to the Assignments folder with a clear label BEFORE your section begins. Add a working video link to the Excel spreadsheet in the Final Presentation assessment folder by midnight on the day of the presentation (Nov 24). Student Guide: https://github.com/thefutureofwork/EAP100/blob/main/persuasive-presentation/README.md
+DESCRIPTION:4-5 minutes plus Q&A\, delivered in small groups in a reserved classroom on Tuesday Nov 24 and video recorded (two people in your group record it). 3 researched sources (including primary and secondary)\, ethos/pathos/logos\, a counterargument\, 3-4 content slides plus references. Upload outline\, slides and APA reference list to the Assignments folder with a clear label BEFORE your section begins. Add a working video link to the Video Submission spreadsheet by midnight on the day of the presentation (Nov 24): https://docs.google.com/spreadsheets/d/1BiIh7PDEzCig7WB3oY82YCdFNG2SbAZcCCUVa2svCuo/edit?gid=29920142#gid=29920142\n\nStudent Guide: https://github.com/thefutureofwork/EAP100/blob/main/persuasive-presentation/README.md
 END:VEVENT
 BEGIN:VEVENT
 UID:a1d7e3c9-5b42-4f8e-9c61-eap100vid12
-DTSTAMP:20261023T052000Z
+DTSTAMP:20261109T074800Z
+SEQUENCE:1
 DTSTART;TZID=Asia/Shanghai:20261124T235900
 DTEND;TZID=Asia/Shanghai:20261124T235900
 SUMMARY:🚨 EAP 100: Persuasive Speech video link due
-DESCRIPTION:Add a working video link to the Excel spreadsheet in the Final Presentation assessment folder by midnight on the day of the presentation (Nov 24). Check that the link opens.
+DESCRIPTION:Add a working video link to the Video Submission spreadsheet by midnight on the day of the presentation (Nov 24). Check that the link opens.\nhttps://docs.google.com/spreadsheets/d/1BiIh7PDEzCig7WB3oY82YCdFNG2SbAZcCCUVa2svCuo/edit?gid=29920142#gid=29920142
 END:VEVENT
 BEGIN:VEVENT
 UID:9b5c7f14-0e36-4a48-da99-eap100libw12
