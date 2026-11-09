@@ -47,6 +47,8 @@ h1{font-variation-settings:'wdth' 116,'wght' 800;font-size:clamp(2.1rem,7vw,3.6r
 .plan td.m{font:700 14px 'Azeret Mono',monospace;white-space:nowrap}
 .plan td.blank{min-width:110px;height:38px}
 .plan tr.tot td{border-bottom:0;font-weight:700}
+.doc td:first-child{font-weight:700;white-space:nowrap}
+.doc td:last-child{font-size:14px;color:var(--ink2)}
 .sec{background:#fff;border:1px solid var(--rule);border-radius:5px;padding:20px 24px;margin-top:16px}
 .sec h2{font-variation-settings:'wdth' 112,'wght' 800;font-size:1.18rem;text-transform:uppercase;margin:0 0 4px}
 .time{font:600 10.5px 'Azeret Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
@@ -67,6 +69,8 @@ p{margin:0 0 6px}
 .checks{list-style:none;padding:0;margin:10px 0 0}
 .checks li{margin:5px 0;font-size:15px}
 .ex{font-size:14.5px;background:var(--paper);border:1px dashed var(--line);border-radius:4px;padding:8px 12px;margin:6px 0 0 2.4em}
+.steps{margin:8px 0 0 2.4em;padding-left:20px;font-size:15px}
+.steps li{margin:4px 0}
 footer{background:var(--board);color:#8A909C;padding:34px 24px;font:11px 'Azeret Mono',monospace;letter-spacing:.05em}
 footer div{max-width:1000px;margin:auto}
 footer a{color:#B4BAC4;text-decoration:none}
@@ -74,7 +78,7 @@ footer a{color:#B4BAC4;text-decoration:none}
 .skip-link{position:absolute;left:16px;top:8px;z-index:100;padding:10px 16px;background:var(--amber);color:var(--board);font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transform:translateY(-300%)}
 .skip-link:focus{transform:translateY(0)}
 :where(a,button,summary,input,select,textarea):focus-visible{outline:3px solid var(--amber);outline-offset:2px;box-shadow:0 0 0 5px rgba(20,22,26,.9)}
-@media(max-width:620px){.nav{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.mast-in{padding:0 16px}.nav a{padding:8px 7px;font-size:10px;min-height:44px;display:inline-flex;align-items:center}.wrap{padding:38px 16px 70px}.sec{padding:18px 16px}.namebar{flex-direction:column;gap:12px}.row{flex-wrap:wrap}.hint{padding-left:0}.line,.row,.opts,.ex{margin-left:0}.plan{font-size:14px}}
+@media(max-width:620px){.nav{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.mast-in{padding:0 16px}.nav a{padding:8px 7px;font-size:10px;min-height:44px;display:inline-flex;align-items:center}.wrap{padding:38px 16px 70px}.sec{padding:18px 16px}.namebar{flex-direction:column;gap:12px}.row{flex-wrap:wrap}.hint{padding-left:0}.line,.row,.opts,.ex,.steps{margin-left:0}.plan{font-size:14px}.doc td:first-child{white-space:normal}}
 @page{size:A4;margin:12mm 15mm 13mm}
 @media print{
   body{background:#fff;font-size:10.3pt;line-height:1.36;color:#000}
@@ -90,12 +94,13 @@ footer a{color:#B4BAC4;text-decoration:none}
   .due{font-size:12pt;margin-bottom:1.5mm}
   .plan{font-size:9.5pt}
   .plan th,.plan td{padding:1.4mm 2mm;border-bottom:.5pt solid #888}
+  .doc td:last-child{font-size:8.8pt;color:#222}
   .star{background:#000;color:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:7pt}
   .sec{border:0;border-radius:0;padding:0;margin-top:3.5mm;background:none}
   .sec h2{font-size:11pt;background:#ececec;border-left:3pt solid #000;padding:1.2mm 3mm;margin:0 0 1mm;break-after:avoid;page-break-after:avoid}
   .do{background:none;border-left:2pt solid #000;padding:1mm 3mm;font-size:9.5pt}
   .blk{margin-top:2.2mm}
-  .hint,.opts,.ex{font-size:9pt;color:#222}
+  .hint,.opts,.ex,.steps{font-size:9pt;color:#222}
   .ex{background:none}
   p{margin:0 0 1.2mm}
   .line{height:6.6mm;border-bottom:.5pt solid #888}
@@ -143,12 +148,32 @@ footer a{color:#B4BAC4;text-decoration:none}
 <div class='blk'><p class='q'><b>1a</b>My claim</p><div class='ex'><b>Formula:</b> [Who] should [do what] because [main reason].<br><b>Example:</b> NYU Shanghai should require a first-year AI literacy module because students need to evaluate AI output in every field.</div><div class='line'></div><div class='line'></div></div>
 <div class='blk'><p class='q'><b>1b</b>My audience, and what I want them to do</p><div class='line'></div></div>
 <div class='blk'><p class='q'><b>1c</b>Claim check</p>
+<p class='hint'>Swap planners. Your partner reads your claim and ticks each box that is true. Then swap back.</p>
 <ul class='checks'>
 <li><i class='cb'></i>A reasonable person could disagree with it.</li>
 <li><i class='cb'></i>It names who should do what.</li>
 <li><i class='cb'></i>It connects to the future of work.</li>
 <li><i class='cb'></i>I can explain it clearly in 4&ndash;5 minutes.</li>
-</ul></div>
+</ul>
+<div class='opts'><span><b>All 4 ticked?</b> Skip 1d. Go to 1b.</span><span><b>1 box empty?</b> Fix only that row in 1d.</span><span><b>2+ empty, or no claim?</b> Do all of 1d.</span></div></div>
+<div class='blk'><p class='q'><b>1d</b>Claim Doctor: fix the box you missed</p>
+<p class='do'>Find the box your partner did not tick. Read the problem, apply the fix, and look at the example. Then write your new claim below.</p>
+<table class='plan doc'>
+<thead><tr><th>Box missed</th><th>The problem</th><th>The fix</th><th>Before &rarr; after</th></tr></thead>
+<tbody>
+<tr><td>Could disagree</td><td>It is a fact or a topic, not an argument.</td><td>Add <b>should</b> and an action that some people would resist.</td><td>&ldquo;AI is changing work.&rdquo; &rarr; &ldquo;Universities should teach AI literacy to every first-year student because&hellip;&rdquo;</td></tr>
+<tr><td>Who should do what</td><td>No actor, or a vague action.</td><td>Name <b>one actor</b> (a university, employers, a government, students) and <b>one concrete action</b>.</td><td>&ldquo;There should be more training.&rdquo; &rarr; &ldquo;Employers should pay for reskilling when automation changes a job because&hellip;&rdquo;</td></tr>
+<tr><td>Future of work</td><td>The topic is off course.</td><td>Link it to <b>jobs, skills, careers or workplaces</b>.</td><td>&ldquo;Students should sleep more.&rdquo; &rarr; &ldquo;Companies should stop sending work messages after 8 p.m. because&hellip;&rdquo;</td></tr>
+<tr><td>Fits 4&ndash;5 min</td><td>Too big to prove in one speech.</td><td><b>Shrink</b> it: one actor, one place, one action.</td><td>&ldquo;Governments should solve AI unemployment.&rdquo; &rarr; &ldquo;Companies that use AI to screen job applications should have a human review every rejection because&hellip;&rdquo;</td></tr>
+</tbody>
+</table>
+<p class='hint' style='margin-top:10px'>No &ldquo;because&rdquo; yet? Add your main reason last. It can change after you check your sources.</p>
+<div class='row'><span>My new claim:</span><div class='g'></div></div><div class='line'></div>
+<ol class='steps'>
+<li>Write your new claim above, then copy it into 1a.</li>
+<li>Give it back to your partner. They tick 1c again.</li>
+<li>All 4 ticked? Done. Still missing one? Fix that row once more, then raise your hand.</li>
+</ol></div>
 </section>
 
 <section class='sec'>
