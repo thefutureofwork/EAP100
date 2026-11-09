@@ -355,12 +355,12 @@ DESCRIPTION:Toolkit for Academic Success series. DATE CHANGED: moved forward fro
 END:VEVENT
 BEGIN:VEVENT
 UID:847e8bcd-adb9-4d0d-bf53-bad4d781233f
-DTSTAMP:20261109T111500Z
-SEQUENCE:1
+DTSTAMP:20261109T114500Z
+SEQUENCE:2
 DTSTART;TZID=Asia/Shanghai:20261201T094500
 DTEND;TZID=Asia/Shanghai:20261201T094500
 SUMMARY:⚠️ EAP 100: LISTENING EXAM 2 (20%)
-DESCRIPTION:In-class exam\, Week 13 (Tue Dec 1). ~20 minute academic lecture\, played ONCE only. Advanced listening + synthesis. Warm up first with Practice Listening Exam 2 (due Mon Nov 30): https://thefutureofwork.github.io/EAP100/practice-listening-exam-2.html
+DESCRIPTION:In-class exam\, Week 13 (Tue Dec 1). ~20 minute academic lecture\, played ONCE only. Advanced listening + synthesis. Warm up first with the optional Practice Listening Exam 2: https://thefutureofwork.github.io/EAP100/practice-listening-exam-2.html
 END:VEVENT
 BEGIN:VEVENT
 UID:fb4724c1-ee2c-49ec-81a7-14c2ef3868d6
@@ -443,11 +443,12 @@ DESCRIPTION:Toolkit for Academic Success series. Same day as the Persuasive Spee
 END:VEVENT
 BEGIN:VEVENT
 UID:c3e9f2a7-6d14-4b85-a0f3-eap100prac2
-DTSTAMP:20261109T111500Z
+DTSTAMP:20261109T114500Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
-SUMMARY:📝 EAP 100: Practice Listening Exam 2 due
-DESCRIPTION:Sit the full practice paper under real exam conditions. Allow 70 minutes and watch the talk ONCE ONLY - no pausing and no rewinding. Do the pre-listening tasks and key vocabulary first.\n\nStart here: https://thefutureofwork.github.io/EAP100/practice-listening-exam-2.html\nPractice paper: https://thefutureofwork.github.io/EAP100/practice-exam-2-public.html\n\nThe lecture: Daniel Susskind\, "3 myths about the future of work (and why they're not true)" (TED\, about 16 min)\nhttps://www.ted.com/talks/daniel_susskind_3_myths_about_the_future_of_work_and_why_they_re_not_true\n\nDue Mon Nov 30\, 23:59\, the night before Listening Exam 2. Upload Week12_PracticeExam2_YourName_Section (answers + Cornell notes) to the Assignments folder.
+SUMMARY:📝 EAP 100: Practice Listening Exam 2 (optional\, recommended)
+DESCRIPTION:OPTIONAL\, not graded\, no submission. Strongly recommended before Listening Exam 2 on Tue Dec 1. Allow 70 minutes and watch the talk ONCE ONLY - no pausing and no rewinding. Do the pre-listening tasks and key vocabulary first.\n\nStart here: https://thefutureofwork.github.io/EAP100/practice-listening-exam-2.html\nPractice paper: https://thefutureofwork.github.io/EAP100/practice-exam-2-public.html\n\nThe lecture: Daniel Susskind\, "3 myths about the future of work (and why they're not true)" (TED\, about 16 min)\nhttps://www.ted.com/talks/daniel_susskind_3_myths_about_the_future_of_work_and_why_they_re_not_true\n\nKeep your scored paper and Cornell notes in your Student Folder for Exam 2 review.
 END:VEVENT
 BEGIN:VEVENT
 UID:f0c9aa74-6d18-4f2e-b7c3-eap100prep13
