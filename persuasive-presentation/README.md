@@ -7,7 +7,7 @@ Your task: take a clear position on a future-of-work issue and persuade your aud
 
 **Worth 20% of your final grade | 4 to 5 minutes, plus Q&A | Tuesday, November 24, 2026**
 
-This will be recorded. This will not be performed in front of the class. Submit your video link in the **[Video Submission spreadsheet](https://docs.google.com/spreadsheets/d/1BiIh7PDEzCig7WB3oY82YCdFNG2SbAZcCCUVa2svCuo/edit?gid=29920142#gid=29920142)** by midnight (23:59) on Tuesday, November 24.
+You will present **in a small group, in a reserved classroom, on Tuesday, November 24**, not in front of the whole class. Every presentation is video recorded for assessment. Submit your video link in the **[Video Submission spreadsheet](https://docs.google.com/spreadsheets/d/1BiIh7PDEzCig7WB3oY82YCdFNG2SbAZcCCUVa2svCuo/edit?gid=29920142#gid=29920142)** by midnight (23:59) on Tuesday, November 24.
 
 ## 1. What you need to do
 
@@ -26,7 +26,7 @@ You do not need to cover a whole issue. A focused, well-supported argument is st
 | When | What you must do |
 | --- | --- |
 | Tuesday, November 24, before your own section starts | Upload your outline, slide deck, and APA reference list to the course Google Drive Assignments folder. This is the presentation-specific deadline, not Monday midnight. |
-| Tuesday, November 24, during your normal section | Deliver your presentation in the assigned room. Arrange for two people in your group to record it. Your presentation will be video recorded for assessment. |
+| Tuesday, November 24, during your normal section | Deliver your presentation to your small group in the reserved classroom. Arrange for two people in your group to record it. Your presentation will be video recorded for assessment. |
 | **By midnight (23:59) on Tuesday, November 24** | **Add a working video link to the [Video Submission spreadsheet](https://docs.google.com/spreadsheets/d/1BiIh7PDEzCig7WB3oY82YCdFNG2SbAZcCCUVa2svCuo/edit?gid=29920142#gid=29920142) in the Final Presentation assessment folder by midnight on the day of the presentation (Nov 24).** |
 
 Your upload cutoff is your section start time: **9:45 AM, 11:15 AM, or 2:15 PM, Shanghai time**. Upload early and check that every file opens. Do not wait until your individual speaking turn. Your video link is due later the same day: **by midnight (23:59) on November 24**.
@@ -134,7 +134,7 @@ These are recommended preparation checkpoints, **not extra graded deadlines**. R
 | November 10 to 12 | Write your own outline, connect evidence to your reasons, and prepare a fair counterargument. |
 | November 17 to 19 | Build your slides and use the self-assessment and peer-assessment checklists below. |
 | By Monday, November 23 | Rehearse aloud at least twice with a timer, revise, arrange two recorders, and check files and access. |
-| Tuesday, November 24 | Upload before your section begins, present during class, then add your working video link to the [Video Submission spreadsheet](https://docs.google.com/spreadsheets/d/1BiIh7PDEzCig7WB3oY82YCdFNG2SbAZcCCUVa2svCuo/edit?gid=29920142#gid=29920142) by midnight (23:59). |
+| Tuesday, November 24 | Upload before your section begins, present to your small group in the reserved classroom, then add your working video link to the [Video Submission spreadsheet](https://docs.google.com/spreadsheets/d/1BiIh7PDEzCig7WB3oY82YCdFNG2SbAZcCCUVa2svCuo/edit?gid=29920142#gid=29920142) by midnight (23:59). |
 
 **AI use:** follow the syllabus policy. With disclosure, you may use AI to brainstorm topics, test counterarguments, check slide design, or practice Q&A. Do not submit AI-generated scripts, outlines, or speaking notes as your own. Your wording and reasoning must be yours. If you use AI, disclose the tool, version, developer, and how you used it on your AI Use Statement slide.
 
