@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>EAP 100: Reading 9 Guided Notes</title>
+<meta name='description' content='EAP 100 Week 10: guided notes for Reading 9, Sustainability, Resilience, and Acting Under Uncertainty. Due Monday November 16, 23:59. Printable.'>
+<link rel='preconnect' href='https://fonts.googleapis.com'>
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+<link href='https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Public+Sans:wght@400;500;600;700&family=Azeret+Mono:wght@400;500;600;700&display=swap' rel='stylesheet'>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{--board:#14161A;--board2:#1E2127;--amber:#F2A81D;--amberbg:#FDF3DF;--paper:#FAF9F7;--ink:#1A1C20;--ink2:#4A4E56;--muted:#787D86;--rule:#DEDAD2;--line:#BDB8AE}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Public Sans',system-ui,sans-serif;font-size:17px;line-height:1.55}
+h1,h2,h3{font-family:Archivo,system-ui,sans-serif;line-height:1.08;letter-spacing:-.02em}
+a{color:inherit}
+.mast{background:var(--board);border-bottom:3px solid var(--amber)}
+.mast-in{max-width:1000px;margin:auto;padding:0 24px;height:60px;display:flex;align-items:center}
+.mark{font-family:Archivo,sans-serif;font-variation-settings:'wdth' 118,'wght' 800;font-size:15px;letter-spacing:.1em;color:#fff;text-decoration:none}
+.mark span{color:var(--amber)}
+.nav{margin-left:auto;display:flex;gap:5px}
+.nav a{font:500 11px 'Azeret Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#A9AEB8;text-decoration:none;padding:8px 12px;border-radius:4px}
+.nav a:hover{background:var(--board2);color:#fff}
+.wrap{max-width:820px;margin:auto;padding:50px 24px 90px}
+.kicker{font:600 11px 'Azeret Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.eyebrow{display:inline-block;background:var(--amber);color:var(--board);font:700 11px 'Azeret Mono',monospace;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:3px;margin-bottom:16px}
+h1{font-variation-settings:'wdth' 116,'wght' 800;font-size:clamp(2.1rem,7vw,3.6rem);text-transform:uppercase;margin:0}
+.lede{font-size:1.08rem;color:var(--ink2);max-width:60ch;margin:16px 0 22px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
+.btn{display:inline-flex;align-items:center;padding:12px 16px;min-height:44px;background:var(--board);color:#fff;text-decoration:none;border:0;border-radius:4px;font:600 11px 'Azeret Mono',monospace;letter-spacing:.07em;text-transform:uppercase;cursor:pointer}
+.btn.primary{background:var(--amber);color:var(--board)}
+.btn:hover{opacity:.85}
+.print-head{display:none}
+.namebar{display:flex;gap:18px;margin:0 0 18px;font-size:14px}
+.namebar div{flex:1;border-bottom:1px solid var(--ink);padding-bottom:4px}
+.namebar div.s{flex:.55}
+.brief{background:var(--board);color:#fff;border-radius:5px;padding:22px 24px;margin-bottom:18px}
+.brief .tt{color:var(--amber)}
+.brief code{font:600 14px 'Azeret Mono',monospace;color:var(--amber);word-break:break-all}
+.due{font-family:Archivo,sans-serif;font-variation-settings:'wdth' 110,'wght' 800;font-size:1.35rem;margin:0 0 10px}
+.tt{font:700 10.5px 'Azeret Mono',monospace;letter-spacing:.13em;text-transform:uppercase;margin-bottom:10px}
+.box{background:#fff;border:1px solid var(--rule);border-radius:5px;padding:18px 20px;margin-bottom:18px}
+.star{display:inline-block;background:var(--ink);color:var(--amber);font:700 10px 'Azeret Mono',monospace;letter-spacing:.08em;padding:2px 7px;border-radius:2px;vertical-align:2px;margin-left:6px;text-transform:uppercase}
+.plan{width:100%;border-collapse:collapse;font-size:15px;margin-top:4px}
+.plan th,.plan td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+.plan th{font:700 10.5px 'Azeret Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.plan td.m{font:700 14px 'Azeret Mono',monospace;white-space:nowrap}
+.plan td.blank{min-width:90px}
+.plan tr.tot td{border-bottom:0;font-weight:700}
+.sec{background:#fff;border:1px solid var(--rule);border-radius:5px;padding:20px 24px;margin-top:16px}
+.sec h2{font-variation-settings:'wdth' 112,'wght' 800;font-size:1.18rem;text-transform:uppercase;margin:0 0 4px}
+.time{font:600 10.5px 'Azeret Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.do{background:var(--amberbg);border-left:4px solid var(--amber);padding:10px 14px;margin:0 0 10px;font-size:15.5px}
+.blk{break-inside:avoid;page-break-inside:avoid;margin-top:16px}
+.q{font-weight:600;margin-bottom:2px}
+.q b{display:inline-block;min-width:2.4em;font-family:'Azeret Mono',monospace;font-size:14px}
+.hint{font-size:14.5px;color:var(--ink2);margin:0 0 4px;padding-left:2.4em}
+.hint::before{content:'\1F4A1  Hint: ';font-weight:700;color:var(--ink)}
+p{margin:0 0 6px}
+.line{border-bottom:1px solid var(--line);height:30px;margin-left:2.4em}
+.row{display:flex;gap:10px;align-items:flex-end;margin:6px 0 0 2.4em;font-size:15px}
+.row span{white-space:nowrap}
+.row .g{flex:1;border-bottom:1px solid var(--line);height:24px}
+.opts{margin:6px 0 0 2.4em;font-size:15px}
+.opts span{margin-right:18px;white-space:nowrap;display:inline-block}
+.cb{display:inline-block;width:13px;height:13px;border:1.5px solid var(--ink);vertical-align:-1px;margin-right:6px}
+.checks{list-style:none;padding:0;margin:10px 0 0}
+.checks li{margin:5px 0;font-size:15px}
+.ex{font-size:14.5px;background:var(--paper);border:1px dashed var(--line);border-radius:4px;padding:8px 12px;margin:6px 0 0 2.4em}
+footer{background:var(--board);color:#8A909C;padding:34px 24px;font:11px 'Azeret Mono',monospace;letter-spacing:.05em}
+footer div{max-width:1000px;margin:auto}
+footer a{color:#B4BAC4;text-decoration:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:16px;top:8px;z-index:100;padding:10px 16px;background:var(--amber);color:var(--board);font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transform:translateY(-300%)}
+.skip-link:focus{transform:translateY(0)}
+:where(a,button,summary,input,select,textarea):focus-visible{outline:3px solid var(--amber);outline-offset:2px;box-shadow:0 0 0 5px rgba(20,22,26,.9)}
+@media(max-width:620px){.nav{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.mast-in{padding:0 16px}.nav a{padding:8px 7px;font-size:10px;min-height:44px;display:inline-flex;align-items:center}.wrap{padding:38px 16px 70px}.sec{padding:18px 16px}.namebar{flex-direction:column;gap:12px}.row{flex-wrap:wrap}.hint{padding-left:0}.line,.row,.opts,.ex{margin-left:0}.plan{font-size:14px}}
+@page{size:A4;margin:12mm 15mm 13mm}
+@media print{
+  body{background:#fff;font-size:10.3pt;line-height:1.36;color:#000}
+  .skip-link,.mast,footer,.screen-only{display:none!important}
+  .wrap{max-width:none;padding:0}
+  .print-head{display:block}
+  .print-head .k{font:600 7.5pt 'Azeret Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#444;margin:0 0 1.5mm}
+  .print-head h1{font-size:18pt;text-transform:none;letter-spacing:-.01em;margin:0 0 1.2mm}
+  .print-head p{font-size:9pt;color:#222;margin:0 0 3mm}
+  .namebar{font-size:9.5pt;margin-bottom:3mm;gap:6mm}
+  .brief{background:none;color:#000;border:1.2pt solid #000;border-radius:0;padding:3mm 4mm;margin-bottom:3mm}
+  .brief .tt,.brief code{color:#000}
+  .due{font-size:12pt;margin-bottom:1.5mm}
+  .box{border:.8pt solid #000;border-radius:0;padding:2.5mm 3.5mm;margin-bottom:3mm;break-inside:avoid;page-break-inside:avoid}
+  .plan{font-size:9.5pt}
+  .plan th,.plan td{padding:1.4mm 2mm;border-bottom:.5pt solid #888}
+  .star{background:#000;color:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:7pt}
+  .sec{border:0;border-radius:0;padding:0;margin-top:3.5mm;background:none}
+  .sec h2{font-size:11pt;background:#ececec;border-left:3pt solid #000;padding:1.2mm 3mm;margin:0 0 1mm;break-after:avoid;page-break-after:avoid}
+  .do{background:none;border-left:2pt solid #000;padding:1mm 3mm;font-size:9.5pt}
+  .blk{margin-top:2.2mm}
+  .hint,.opts,.ex{font-size:9pt;color:#222}
+  .ex{background:none}
+  p{margin:0 0 1.2mm}
+  .line{height:6.6mm;border-bottom:.5pt solid #888}
+  .row{font-size:9.5pt;margin-top:1.2mm}.row .g{height:5mm;border-bottom:.5pt solid #888}
+  .checks li{font-size:9.5pt}
+  .cb{width:3.2mm;height:3.2mm;border:.7pt solid #000}
+  a{text-decoration:none}
+}
+</style>
+</head>
+<body>
+<a class='skip-link' href='#main-content'>Skip to main content</a>
+<header class='mast'><div class='mast-in'><a class='mark' href='index.html'>EAP<span>100</span></a><nav class='nav' aria-label='Primary'><a href='index.html'>Schedule</a><a href='course-info.html'>Course Info</a><a href='due-dates.html'>Checklist</a><a href='student-qa.html'>Q&amp;A</a></nav></div></header>
+<main class='wrap' id='main-content'>
+
+<div class='screen-only'>
+<div class='kicker'>NYU Shanghai &middot; English for Academic Purposes &middot; Fall 2026</div>
+<span class='eyebrow'>Week 10 &middot; Reading 9 guided notes</span>
+<h1>Bend, Don&rsquo;t Break</h1>
+<p class='lede'>Read Reading 9 twice. Take notes on its key ideas. Then use them on something real: your own deadlines for the rest of the semester.</p>
+<div class='actions'><a class='btn primary' href='reading-packet.html#r09'>Open Reading 9</a><a class='btn' href='https://drive.google.com/file/d/1ivrdhiXrE4MGP0XZwqqG1wV0OF_dJ51m/view' target='_blank' rel='noopener'>Full PDF packet<span class='sr-only'> (opens in a new tab)</span></a><button class='btn' type='button' onclick='window.print()'>Print worksheet</button></div>
+</div>
+
+<div class='print-head'>
+<p class='k'>NYU Shanghai &middot; English for Academic Purposes &middot; EAP 100: Future Focused</p>
+<h1>Reading 9 Guided Notes: Sustainability, Resilience, and Acting Under Uncertainty</h1>
+<p>Week 10 &middot; Reading Packet, Reading 9 &middot; Due Monday, November 16, 23:59</p>
+</div>
+
+<div class='namebar'><div>Name:</div><div class='s'>Section:</div><div class='s'>Date:</div></div>
+
+<section class='brief' aria-label='What to submit'>
+<p class='due'>Due Monday, November 16, 23:59</p>
+<div class='tt'>Upload one file to the Assignments folder</div>
+<p><code>Week10_Reading9_YourName_Section</code></p>
+<p style='margin-top:10px'>About 90 minutes in total. Type your answers with the question numbers (A1, A2&hellip;), or upload a clear photo of this sheet. Use your own words. Questions marked <span class='star'>&#9733; Key</span> matter most.</p>
+</section>
+
+<section class='box' aria-label='How to use your 90 minutes'>
+<div class='tt'>How to use your 90 minutes</div>
+<table class='plan'>
+<thead><tr><th>Time</th><th>Part</th><th>What you do</th></tr></thead>
+<tbody>
+<tr><td class='m'>25 min</td><td>Read</td><td>Read once for the argument, then again to annotate.</td></tr>
+<tr><td class='m'>15 min</td><td>A. Key terms <span class='star'>&#9733; Key</span></td><td>Define four terms in your own words.</td></tr>
+<tr><td class='m'>20 min</td><td>B. Four principles <span class='star'>&#9733; Key</span></td><td>Explain each principle with an example from your studies.</td></tr>
+<tr><td class='m'>15 min</td><td>C. Deadline map <span class='star'>&#9733; Key</span></td><td>Map your deadlines and find where you have no slack.</td></tr>
+<tr><td class='m'>10 min</td><td>D. Connect</td><td>Link resilience and sustainability, with a citation.</td></tr>
+<tr><td class='m'>5 min</td><td>E. Vocabulary</td><td>Record 5 words, then upload.</td></tr>
+<tr class='tot'><td class='m'>90 min</td><td colspan='2'>One file. Keep a copy in your portfolio folder.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class='sec'>
+<h2>A. Key terms <span class='star'>&#9733; Key</span></h2>
+<p class='time'>About 15 minutes</p>
+<p class='do'>Define each term in your own words. Add the in-text citation the reading gives you.</p>
+<div class='blk'><p class='q'><b>A1</b>Sustainability</p><p class='hint'>The Brundtland Commission compares two groups of people: the present and the future.</p><div class='row'><span>Sustainability means</span><div class='g'></div></div><div class='line'></div><div class='row'><span>Citation:</span><div class='g'></div></div></div>
+<div class='blk'><p class='q'><b>A2</b>Resilience</p><p class='hint'>Think about what happens after a shock. Does the system stop, or keep working?</p><div class='row'><span>Resilience means</span><div class='g'></div></div><div class='line'></div><div class='row'><span>Citation:</span><div class='g'></div></div></div>
+<div class='blk'><p class='q'><b>A3</b>Endurance vs. resilience</p><p class='hint'>Look at the pull quote. What does resilience allow that endurance does not?</p><div class='row'><span>Endurance means</span><div class='g'></div></div><div class='row'><span>Resilience is different because</span><div class='g'></div></div></div>
+<div class='blk'><p class='q'><b>A4</b>Antifragility</p><p class='hint'>Taleb says the best systems do more than survive shocks. What do they do?</p><div class='row'><span>An antifragile system</span><div class='g'></div></div><div class='row'><span>One example from my life or studies:</span><div class='g'></div></div></div>
+</section>
+
+<section class='sec'>
+<h2>B. The four principles <span class='star'>&#9733; Key</span></h2>
+<p class='time'>About 20 minutes</p>
+<p class='do'>The reading gives four principles for acting under uncertainty and says each one &ldquo;is executed through language.&rdquo; For each one, explain what it means, then give a real example from this course or your own studies.</p>
+<div class='blk'><p class='q'><b>B1</b>Prefer reversible decisions.</p><div class='row'><span>This means</span><div class='g'></div></div><div class='row'><span>Example:</span><div class='g'></div></div><p class='hint'>Which decisions can you change later, and which can you not? Think about your speech topic and your sources.</p></div>
+<div class='blk'><p class='q'><b>B2</b>Keep slack.</p><div class='row'><span>This means</span><div class='g'></div></div><div class='row'><span>Example:</span><div class='g'></div></div><p class='hint'>Slack is spare time or capacity. What happens to a plan with no spare time when one thing goes wrong?</p></div>
+<div class='blk'><p class='q'><b>B3</b>Decide what would change your mind, in advance.</p><div class='row'><span>This means</span><div class='g'></div></div><div class='row'><span>Example:</span><div class='g'></div></div><p class='hint'>Your speech needs a counterargument. What evidence would make you change your own claim?</p></div>
+<div class='blk'><p class='q'><b>B4</b>Act, then revise.</p><div class='row'><span>This means</span><div class='g'></div></div><div class='row'><span>Example:</span><div class='g'></div></div><p class='hint'>Think about drafts: Portfolio Build 2, a first speech rehearsal, a first outline.</p></div>
+<div class='blk'><p class='q'><b>B5</b>Which principle is hardest for you? Why?</p><div class='line'></div><div class='line'></div></div>
+</section>
+
+<section class='sec'>
+<h2>C. Map your deadlines <span class='star'>&#9733; Key</span></h2>
+<p class='time'>About 15 minutes</p>
+<p class='do'>Here are your remaining EAP 100 deadlines. Estimate the hours each one needs. Add deadlines from your other courses. Then mark each week: do you have slack, or not?</p>
+<table class='plan'>
+<thead><tr><th>Date</th><th>EAP 100 task</th><th>Hours I need</th><th>Slack?</th></tr></thead>
+<tbody>
+<tr><td class='m'>Mon Nov 16</td><td>Reading 9 Guided Notes (this sheet)</td><td class='blank'></td><td>Yes / No</td></tr>
+<tr><td class='m'>Thu Nov 19</td><td>CCD Visit 4 log &middot; Reading 10 Guided Response &middot; Portfolio Build 3</td><td class='blank'></td><td>Yes / No</td></tr>
+<tr><td class='m'>Tue Nov 24</td><td>Persuasive Speech (20%): upload before your section; video link by 23:59</td><td class='blank'></td><td>Yes / No</td></tr>
+<tr><td class='m'>Tue Dec 1</td><td>Listening Exam 2 (20%)</td><td class='blank'></td><td>Yes / No</td></tr>
+<tr><td class='m'>Thu Dec 10</td><td>Student Showcase &middot; End-of-Course Reflection</td><td class='blank'></td><td>Yes / No</td></tr>
+<tr><td class='m'>Sun Dec 13</td><td>Final Portfolio (10%)</td><td class='blank'></td><td>Yes / No</td></tr>
+<tr><td class='m'>&nbsp;</td><td>Other course:</td><td class='blank'></td><td>Yes / No</td></tr>
+<tr><td class='m'>&nbsp;</td><td>Other course:</td><td class='blank'></td><td>Yes / No</td></tr>
+</tbody>
+</table>
+<div class='blk'><p class='q'><b>C1</b>Where do you have <u>no</u> slack? Name the week and the reason.</p><div class='line'></div><div class='line'></div></div>
+<div class='blk'><p class='q'><b>C2</b>Use one principle from Part B to protect that week.</p><div class='ex'><b>Example:</b> To keep slack before Thu Nov 19, I will finish my CCD Visit 4 log by Sunday Nov 15, so one late task does not break the whole week.</div><div class='row'><span>To keep slack before</span><div class='g'></div></div><div class='row'><span>I will</span><div class='g'></div></div><div class='row'><span>by (day)</span><div class='g'></div></div></div>
+</section>
+
+<section class='sec'>
+<h2>D. Connect the ideas</h2>
+<p class='time'>About 10 minutes</p>
+<div class='blk'><p class='q'><b>D1</b>In 2&ndash;3 sentences, explain the relationship between resilience and sustainability. Use one in-text citation.</p><p class='hint'>Can something be resilient but not sustainable? Think about a student who survives every week by not sleeping.</p><div class='line'></div><div class='line'></div><div class='line'></div><div class='line'></div></div>
+<div class='blk'><p class='q'><b>D2</b>Could Reading 9 be a source for your Persuasive Speech?</p><p class='hint'>Your speech needs at least one source from EAP 100 materials. This reading may connect to topics like remote work, green skills, or well-being at work.</p><div class='opts'><span><i class='cb'></i>Yes</span><span><i class='cb'></i>No</span></div><div class='row'><span>Because</span><div class='g'></div></div></div>
+</section>
+
+<section class='sec'>
+<h2>E. Vocabulary</h2>
+<p class='time'>About 5 minutes</p>
+<p class='do'>Choose 5 academic words from Reading 9. Write a short meaning in your own words.</p>
+<div class='blk'>
+<div class='row'><span>1.</span><div class='g'></div></div>
+<div class='row'><span>2.</span><div class='g'></div></div>
+<div class='row'><span>3.</span><div class='g'></div></div>
+<div class='row'><span>4.</span><div class='g'></div></div>
+<div class='row'><span>5.</span><div class='g'></div></div>
+</div>
+<ul class='checks'>
+<li><i class='cb'></i>I answered A1&ndash;E. The <span class='star'>&#9733; Key</span> parts (A, B, C) are complete.</li>
+<li><i class='cb'></i>I used at least one in-text citation in Part D.</li>
+<li><i class='cb'></i>I uploaded <b>Week10_Reading9_YourName_Section</b> to the Assignments folder by <b>Monday, November 16, 23:59</b>.</li>
+</ul>
+</section>
+
+<div class='actions screen-only' style='margin-top:26px'><a class='btn primary' href='reading-packet.html#r09'>Back to Reading 9</a><a class='btn' href='index.html#week10'>See Week 10 schedule</a></div>
+
+</main>
+<footer><div>EAP 100: FUTURE FOCUSED / NYU SHANGHAI / FALL 2026 &nbsp; &middot; &nbsp; <a href='index.html'>WEEKLY SCHEDULE</a></div></footer>
+</body>
+</html>
