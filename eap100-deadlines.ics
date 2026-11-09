@@ -346,11 +346,12 @@ DESCRIPTION:Week 10 in class (Tue Nov 10 and Thu Nov 12). Bring your Week 9 clai
 END:VEVENT
 BEGIN:VEVENT
 UID:6e2b4c81-7f93-4d05-b166-eap100libw10
-DTSTAMP:20260911T085500Z
-DTSTART;TZID=Asia/Shanghai:20261111T173000
-DTEND;TZID=Asia/Shanghai:20261111T183000
+DTSTAMP:20261109T113000Z
+SEQUENCE:1
+DTSTART;TZID=Asia/Shanghai:20261104T173000
+DTEND;TZID=Asia/Shanghai:20261104T183000
 SUMMARY:📚 EAP Library Workshop: Talk This Way - Signposting for Confident Presentations
-DESCRIPTION:Toolkit for Academic Success series. Great preparation for the Week 12 Persuasive Speech.
+DESCRIPTION:Toolkit for Academic Success series. DATE CHANGED: moved forward from Wed Nov 11 to Wed Nov 4. Great preparation for the Week 12 Persuasive Speech.
 END:VEVENT
 BEGIN:VEVENT
 UID:847e8bcd-adb9-4d0d-bf53-bad4d781233f
@@ -372,11 +373,12 @@ DESCRIPTION:Read Reading 9 (Sustainability\, Resilience\, and Acting Under Uncer
 END:VEVENT
 BEGIN:VEVENT
 UID:7f3a5d92-8c14-4e26-b877-eap100libw11a
-DTSTAMP:20260911T085500Z
-DTSTART;TZID=Asia/Shanghai:20261118T173000
-DTEND;TZID=Asia/Shanghai:20261118T183000
+DTSTAMP:20261109T113000Z
+SEQUENCE:1
+DTSTART;TZID=Asia/Shanghai:20261125T173000
+DTEND;TZID=Asia/Shanghai:20261125T183000
 SUMMARY:📚 EAP Library Workshop: Powerful Visuals, Powerful Stories
-DESCRIPTION:Toolkit for Academic Success series. How to design great presentation slides - directly relevant to your Persuasive Speech slides.
+DESCRIPTION:Toolkit for Academic Success series. How to design great presentation slides. DATE CHANGED: moved from Wed Nov 18 to Wed Nov 25\, the day after the Persuasive Speech. Useful for your Student Showcase slides (Thu Dec 10).
 END:VEVENT
 BEGIN:VEVENT
 UID:8a4b6e03-9d25-4f37-c988-eap100libw11b
