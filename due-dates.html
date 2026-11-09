@@ -42,7 +42,7 @@ a{color:inherit}
 .wk-head h2{font-variation-settings:'wdth' 112,'wght' 800;font-size:1.1rem;text-transform:uppercase}
 .wk-head .wk-dates{font-family:'Azeret Mono',monospace;font-size:11px;color:var(--ink-3);margin-left:auto;letter-spacing:.05em}
 .wk-hrs{font-family:'Azeret Mono',monospace;font-size:10.5px;font-weight:600;color:#5CB88A;letter-spacing:.04em;margin-left:8px}
-.wk-note{background:var(--amber-bg);border-left:3px solid var(--amber);border-radius:3px;padding:10px 15px;margin:12px 0 4px;font-size:13.5px;line-height:1.5;color:var(--ink-2)}
+.wk-note{background:var(--amber-bg);border-left:3px solid var(--amber);border-radius:3px;padding:10px 15px;margin:12px 0 4px;font-size:13.5px;line-height:1.5;color:var(--ink-2);overflow-wrap:anywhere}
 .wk-note b{color:var(--ink)}
 .behind{background:var(--signal-bg);border:1px solid var(--signal);border-radius:5px;padding:20px 24px;margin:0 0 36px}
 .behind b{display:block;font-family:'Azeret Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--signal);margin-bottom:10px}
@@ -56,9 +56,12 @@ a{color:inherit}
 .item input[type="checkbox"]:checked{background:var(--board);border-color:var(--board)}
 .item input[type="checkbox"]:checked::after{content:"\2713";position:absolute;top:-1px;left:2px;font-size:13px;font-weight:700;color:var(--amber)}
 .item.done .info{opacity:.45;text-decoration:line-through;text-decoration-color:var(--ink-3)}
-.info{flex:1;min-width:0}
+.info{flex:1;min-width:0;overflow-wrap:anywhere}
 .info .nm{font-weight:700;font-size:15px;line-height:1.35}
 .info .sub{font-size:13px;color:var(--ink-2);margin-top:2px}
+.sub-list{list-style:none;margin:6px 0 0;padding:0;font-size:13px;color:var(--ink-2)}
+.sub-list li{position:relative;padding-left:16px;margin:3px 0;line-height:1.45}
+.sub-list li::before{content:"\2610";position:absolute;left:0;top:0;color:var(--ink-3)}
 .due-chip{font-family:'Azeret Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:4px 9px;border-radius:3px;background:var(--board);color:var(--amber);white-space:nowrap;flex-shrink:0;margin-top:2px}
 .due-chip.soft{background:var(--paper);color:var(--ink-2);border:1px solid var(--rule)}
 .due-chip.assess{background:var(--signal);color:#fff}
@@ -263,11 +266,12 @@ body{font-size:16px}
 <!-- WEEK 11 -->
 <div class="wk-sec" id="week11">
 <div class="wk-head"><span class="wk-num">WEEK 11</span><h2>Employability and Self-Presentation</h2><span class="wk-hrs">~5h 15min homework</span><span class="wk-dates">Nov 17 / Nov 19</span></div>
-<div class="wk-note"><b>Heavy week.</b> Three deadlines on the same Thursday.</div>
+<div class="wk-note"><b>Heavy week.</b> Three deadlines on the same Thursday. <b>Speech prep:</b> build your slides with <a href="https://github.com/thefutureofwork/EAP100/blob/main/persuasive-presentation/README.md#7-make-slides-that-help-not-distract" target="_blank" rel="noopener"><b>Student Guide Section 7</b><span class="sr-only"> (opens in a new tab)</span></a> and the slide checklist below, before you rehearse. The Presentation Skills session (Tue Nov 24, 15:45) is after all three sections present.</div>
 <ul class="items">
 <li class="item"><input type="checkbox" aria-labelledby="task-41"><div class="info"><span class="nm" id="task-41">CCD Visit 4 log: event of your choice<span class="est">~2h</span><span class="tag t-ccd">CCD</span></span><span class="sub">Any CCD event, 1&ndash;2 hours. DEIP log &rarr; <a href="https://docs.google.com/document/d/171CUgMEXdJtxZXIA4YjtDx9iNukZgohDjVY6ozQOps8/edit" target="_blank" rel="noopener">Tracker<span class="sr-only"> (opens in a new tab)</span></a> + Assignments folder (clear label)</span></div><span class="due-chip">Thu Nov 19</span></li>
 <li class="item"><input type="checkbox" aria-labelledby="task-42"><div class="info"><span class="nm" id="task-42">Reading 10 Guided Response<span class="est">~1h 15m</span></span><span class="sub">Summary + connection to portfolio/future. &rarr; Assignments folder (clear label)</span></div><span class="due-chip">Thu Nov 19</span></li>
 <li class="item"><input type="checkbox" aria-labelledby="task-43"><div class="info"><span class="nm" id="task-43">Portfolio Build 3<span class="est">~2h</span><span class="tag t-port">Portfolio</span></span><span class="sub">Refine artifacts + 400&ndash;500 word DEIP reflection. <a href="https://docs.google.com/document/d/1RMW_A-eV3rVe0p3-we9mGKREdnsn26QWvnXd6yf9SDY/edit" target="_blank" rel="noopener">Portfolio Guide<span class="sr-only"> (opens in a new tab)</span></a> &rarr; Assignments folder (clear label) + portfolio</span></div><span class="due-chip">Thu Nov 19</span></li>
+<li class="item"><input type="checkbox" aria-labelledby="task-43b" data-new><div class="info"><span class="nm" id="task-43b">Slide checklist (Student Guide Section 7)<span class="tag t-speech">Speech</span></span><span class="sub">Check your deck against <a href="https://github.com/thefutureofwork/EAP100/blob/main/persuasive-presentation/README.md#7-make-slides-that-help-not-distract" target="_blank" rel="noopener">Section 7<span class="sr-only"> (opens in a new tab)</span></a> before your timed rehearsal. Tick this box when every line below is true. No submission.</span><ul class="sub-list"><li>3&ndash;4 content slides, plus a separate APA references slide</li><li>AI Use Statement slide right after the references (only if you used AI)</li><li>Slide 1: your hook, the issue and your claim</li><li>Slide 2: key evidence for your reasons, with short citations</li><li>Slide 3 (or 3 and 4): counterargument, your response and your recommendations</li><li>One clear idea per slide, minimal text, no pasted script</li><li>A short citation beside every borrowed statistic, image or idea</li><li>Fonts, charts, labels and citations readable from the back of the room</li><li>A partner flagged one crowded or unclear slide, and you revised it</li></ul></div><span class="due-chip soft">Recommended</span></li>
 <li class="item"><input type="checkbox" aria-labelledby="task-45"><div class="info"><span class="nm" id="task-45">Listening Skills Practice Session<span class="tag t-lib">Library</span></span><span class="sub"><b>EAP Library Workshop:</b> Toolkit for Academic Success. Mon Nov 23, 3:45&ndash;4:45 PM. Useful review before Listening Exam 2.</span></div><span class="due-chip soft">Mon Nov 23</span></li>
 </ul>
 </div>
@@ -278,7 +282,7 @@ body{font-size:16px}
 <div class="wk-note"><b>No class Thu Nov 26 &ndash; Fri Nov 27</b> (Thanksgiving). Everyone presents Tuesday, <b>in small groups in a reserved classroom</b>. <b>Video link due by 23:59 Tue Nov 24</b> in the <a href="https://docs.google.com/spreadsheets/d/1BiIh7PDEzCig7WB3oY82YCdFNG2SbAZcCCUVa2svCuo/edit?gid=29920142#gid=29920142" target="_blank" rel="noopener">Video Submission spreadsheet<span class="sr-only"> (opens in a new tab)</span></a>. <b>Optional but recommended:</b> Practice Listening Exam 2, before Listening Exam 2 on Tue Dec 1.</div>
 <ul class="items">
 <li class="item"><input type="checkbox" aria-labelledby="task-46"><div class="info"><span class="nm" id="task-46">Persuasive Speech (20%)<span class="est">~4h prep</span><span class="tag t-speech">Speech</span></span><span class="sub">4&ndash;5 min plus Q&amp;A, <b>delivered in small groups in a reserved classroom and video recorded</b> (two people in your group record it). 3 sources (primary + secondary), ethos/pathos/logos, a counterargument, 3&ndash;4 content slides plus references. Follow the <a href="https://github.com/thefutureofwork/EAP100/blob/main/persuasive-presentation/README.md" target="_blank" rel="noopener">Student Guide<span class="sr-only"> (opens in a new tab)</span></a>. Upload outline, slides, APA refs &rarr; Assignments folder (clear label) <b>before your section begins</b>. Add a working video link to the <a href="https://docs.google.com/spreadsheets/d/1BiIh7PDEzCig7WB3oY82YCdFNG2SbAZcCCUVa2svCuo/edit?gid=29920142#gid=29920142" target="_blank" rel="noopener">Video Submission spreadsheet<span class="sr-only"> (opens in a new tab)</span></a> <b>by 23:59 Nov 24</b>.</span></div><span class="due-chip assess">Tue Nov 24</span></li>
-<li class="item"><input type="checkbox" aria-labelledby="task-47"><div class="info"><span class="nm" id="task-47">Presentation Skills Practice Session<span class="tag t-lib">Library</span></span><span class="sub"><b>EAP Library Workshop:</b> Toolkit for Academic Success. Tue Nov 24, 3:45&ndash;4:45 PM. Same day as your speech!</span></div><span class="due-chip soft">Tue Nov 24</span></li>
+<li class="item"><input type="checkbox" aria-labelledby="task-47"><div class="info"><span class="nm" id="task-47">Presentation Skills Practice Session<span class="tag t-lib">Library</span></span><span class="sub"><b>EAP Library Workshop:</b> Toolkit for Academic Success. Tue Nov 24, 3:45&ndash;4:45 PM, after all three sections present. Useful for feedback and your Student Showcase.</span></div><span class="due-chip soft">Tue Nov 24</span></li>
 <li class="item"><input type="checkbox" aria-labelledby="task-47a"><div class="info"><span class="nm" id="task-47a">Practice Listening Exam 2 (Susskind), optional<span class="est">~2h</span><span class="tag t-listen">Listening</span></span><span class="sub"><b>Optional but strongly recommended.</b> Start on the <a href="practice-listening-exam-2.html">Practice Listening Exam 2 page</a> (pre-listening + key vocabulary). Then sit the <a href="practice-exam-2-public.html">practice paper</a> under real conditions: 70 minutes, <b>watch the talk once only</b>. Check with the <a href="practice-exam-2-answers.html">answer key</a>. No submission: keep your scored paper and Cornell notes in your Student Folder.</span></div><span class="due-chip soft">Optional</span></li>
 <li class="item"><input type="checkbox" aria-labelledby="task-44"><div class="info"><span class="nm" id="task-44">Powerful Visuals, Powerful Stories: How to Design Great Presentation Slides<span class="tag t-lib">Library</span></span><span class="sub"><b>EAP Library Workshop:</b> Toolkit for Academic Success. <b>Date changed:</b> moved from Wed Nov 18 to <b>Wed Nov 25</b>, 5:30&ndash;6:30 PM, the day after the Persuasive Speech. Useful for your Student Showcase slides (Thu Dec 10).</span></div><span class="due-chip soft">Wed Nov 25</span></li>
 </ul>
@@ -310,10 +314,18 @@ body{font-size:16px}
 
 <script>
 (function(){
+/* Ticks are saved by task id, so adding a task never shifts saved ticks.
+   One-time migration: older ticks were saved by position (eap100-chk-0, -1, ...).
+   Boxes marked data-new did not exist then, so they are skipped when counting legacy positions. */
 var boxes=document.querySelectorAll('.item input[type="checkbox"]');
-boxes.forEach(function(cb,i){
-var key='eap100-chk-'+i;
-if(localStorage.getItem(key)==='1'){cb.checked=true;cb.closest('.item').classList.add('done')}
+var legacy=0;
+boxes.forEach(function(cb){
+var id=cb.getAttribute('aria-labelledby');
+var key='eap100-chk-id-'+id;
+var li=cb.hasAttribute('data-new')?-1:legacy++;
+var v=localStorage.getItem(key);
+if(v===null&&li>=0){var old=localStorage.getItem('eap100-chk-'+li);if(old!==null){v=old;localStorage.setItem(key,old)}}
+if(v==='1'){cb.checked=true;cb.closest('.item').classList.add('done')}
 cb.addEventListener('change',function(){
 localStorage.setItem(key,cb.checked?'1':'0');
 cb.closest('.item').classList.toggle('done',cb.checked);
