@@ -303,21 +303,29 @@ DESCRIPTION:~200 words: one strength and one area for growth. Upload to the Assi
 END:VEVENT
 BEGIN:VEVENT
 UID:af3163da-bae2-4be0-8321-cb53764bce53
-DTSTAMP:20261023T054500Z
-SEQUENCE:2
+DTSTAMP:20261109T073500Z
+SEQUENCE:3
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:EAP 100: Model Persuasive Speech Analysis due
-DESCRIPTION:Analyze structure\, evidence\, audience moves\, language\, and use of ethos\, pathos\, or logos. Upload to the Assignments folder with a clear label.
+DESCRIPTION:Jason Shen's TED talk: answer Task 1 (A1-F4) on the Week 9 task page. Do the Key questions first.\nhttps://thefutureofwork.github.io/EAP100/persuasive-speech-analysis.html\n\nUpload Week9_ModelSpeechAnalysis_YourName_Section to the Assignments folder by 23:59.
 END:VEVENT
 BEGIN:VEVENT
 UID:ecfc2513-3773-433c-ae9e-0f60e24ec705
-DTSTAMP:20261006T134500Z
-SEQUENCE:1
+DTSTAMP:20261109T073500Z
+SEQUENCE:2
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:EAP 100: Language Review Task due
-DESCRIPTION:Signposting\, hedging or pronunciation for Q&A. Upload to the Assignments folder with a clear label.
+DESCRIPTION:Task 2 (A1-E3) on the same Week 9 task page: persuasive phrases\, careful claims\, five sentences\, speaking aloud. No recording to upload.\nhttps://thefutureofwork.github.io/EAP100/persuasive-speech-analysis.html\n\nSeparate file: upload Week9_LanguageReview_YourName_Section to the Assignments folder by 23:59.
+END:VEVENT
+BEGIN:VEVENT
+UID:2c7e9a14-3b58-4d06-a1f2-eap100guide09
+DTSTAMP:20261109T073500Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:EAP 100: Read the Persuasive Presentation Student Guide
+DESCRIPTION:Read the full Student Guide before class on Tue Nov 10. No submission. Bring questions and a topic idea to class.\nhttps://github.com/thefutureofwork/EAP100/blob/main/persuasive-presentation/README.md
 END:VEVENT
 BEGIN:VEVENT
 UID:d3f0be21-5c44-4f10-9a90-eap100src09
@@ -327,6 +335,14 @@ DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:EAP 100: Start gathering persuasive speech sources (recommended)
 DESCRIPTION:Recommended this week\, no submission. Collect 3 credible sources for the Week 12 persuasive speech\, including at least one primary and one secondary source. Student Guide: https://github.com/thefutureofwork/EAP100/blob/main/persuasive-presentation/README.md
+END:VEVENT
+BEGIN:VEVENT
+UID:5e8b1d37-9c42-4a70-b3e5-eap100plan10
+DTSTAMP:20261109T073500Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261111
+SUMMARY:EAP 100: In class - Persuasive Speech Planner (bring your claim + sources)
+DESCRIPTION:Week 10 in class (Tue Nov 10 and Thu Nov 12). Bring your Week 9 claim (F3) and the sources you have found so far. Print the planner or open it on your laptop. No submission: keep it and bring it to the Week 11 rehearsal.\nhttps://thefutureofwork.github.io/EAP100/speech-planner.html
 END:VEVENT
 BEGIN:VEVENT
 UID:6e2b4c81-7f93-4d05-b166-eap100libw10
@@ -346,12 +362,12 @@ DESCRIPTION:In-class exam\, Week 13 (Tue Dec 1). ~20 minute academic lecture\, p
 END:VEVENT
 BEGIN:VEVENT
 UID:fb4724c1-ee2c-49ec-81a7-14c2ef3868d6
-DTSTAMP:20261006T134500Z
-SEQUENCE:1
+DTSTAMP:20261109T073500Z
+SEQUENCE:2
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:EAP 100: Reading 9 Guided Notes due
-DESCRIPTION:Reading 9: Sustainability\, Resilience and Acting Under Uncertainty - guided note sheet. Upload to the Assignments folder with a clear label.
+DESCRIPTION:Read Reading 9 (Sustainability\, Resilience\, and Acting Under Uncertainty) twice. Complete the Reading 9 Guided Notes sheet\, Parts A-E: key terms\, the four principles\, your deadline map\, resilience + sustainability\, and 5 vocabulary words.\nhttps://thefutureofwork.github.io/EAP100/reading-9-guided-notes.html\n\nUpload Week10_Reading9_YourName_Section to the Assignments folder by 23:59.
 END:VEVENT
 BEGIN:VEVENT
 UID:7f3a5d92-8c14-4e26-b877-eap100libw11a
