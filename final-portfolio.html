@@ -33,6 +33,9 @@ a{color:inherit}
 .kicker{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
 .page-h h1{font-variation-settings:'wdth' 116,'wght' 800;font-size:clamp(2.1rem,6vw,3.3rem);text-transform:uppercase;letter-spacing:-.025em}
 .lede{font-size:1.12rem;color:var(--ink);margin-top:14px;max-width:56ch;font-weight:500}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:20px;background:var(--amber);color:var(--board);font-family:'Azeret Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:14px 20px;border-radius:var(--r);min-height:44px;transition:background .18s}
+.btn:hover{background:#FFC34D}
+.btn-note{display:block;margin-top:8px;font-size:14px;color:var(--ink-3)}
 .dates{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:26px}
 .date{background:var(--card);border:1px solid var(--rule);border-radius:var(--r);padding:16px 18px}
 .date.dark{background:var(--board);border-color:var(--board);color:#fff}
@@ -98,7 +101,7 @@ tbody tr:nth-child(even){background:#FCFBFA}
 :where(a,button,summary):focus-visible{outline:3px solid var(--amber);outline-offset:2px;box-shadow:0 0 0 5px rgba(20,22,26,.9)}
 @media(max-width:940px){.shell{grid-template-columns:1fr;gap:0}.toc{position:static;padding:32px 0 0;display:flex;flex-wrap:wrap;gap:5px}.toc-label{width:100%;margin-bottom:8px}.toc a{border-left:none;border:1px solid var(--rule);border-radius:var(--r);background:#fff;font-size:13px;padding:7px 13px;min-height:44px;display:flex;align-items:center}.toc .back{margin-top:0;padding-top:7px;border:1px solid var(--ink);border-radius:var(--r);min-height:44px;display:flex;align-items:center}.main{padding-top:34px}}
 @media(max-width:620px){.mast nav{overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap;scrollbar-width:none}body{font-size:16px}.shell,.mast-in,.foot-in{padding-left:16px;padding-right:16px}.mast nav a{padding:8px 10px;font-size:10.5px;min-height:44px;display:inline-flex;align-items:center}.rules,.checks{grid-template-columns:1fr}table{font-size:13.5px}th,td{padding:10px 11px}}
-@media print{.mast,.toc,.foot,.skip-link{display:none!important}.shell{display:block}.main{max-width:none;padding:0}section{margin-top:28px;break-inside:avoid-page}.rubric{min-width:0}body{background:#fff}}
+@media print{.mast,.toc,.foot,.skip-link,.btn{display:none!important}.shell{display:block}.main{max-width:none;padding:0}section{margin-top:28px;break-inside:avoid-page}.rubric{min-width:0}body{background:#fff}}
 </style>
 </head>
 <body>
@@ -107,7 +110,8 @@ tbody tr:nth-child(even){background:#FCFBFA}
 <div class="shell">
 <aside class="toc"><p class="toc-label">On this page</p><a href="#steps">6 Steps</a><a href="#focus">Your Focus</a><a href="#pieces">Your 5 Pieces</a><a href="#sections">What Goes In</a><a href="#captions">Captions</a><a href="#rubric">Rubric</a><a href="#check">Final Check</a><a class="back" href="index.html#week14">&larr; Week 14</a></aside>
 <main class="main" id="main-content">
-<div class="page-h"><p class="kicker">NYU Shanghai &middot; English for Academic Purposes &middot; Fall 2026</p><h1>Final Portfolio</h1><p class="lede">Show how you improved in the skills <strong>you</strong> chose. You choose your five pieces of work.</p></div>
+<div class="page-h"><p class="kicker">NYU Shanghai &middot; English for Academic Purposes &middot; Fall 2026</p><h1>Final Portfolio</h1><p class="lede">Show how you improved in the skills <strong>you</strong> chose. You choose your five pieces of work.</p>
+<a class="btn" href="https://drive.google.com/drive/folders/1oVu9n4YMoOSYMy_5iLj1cFNPCjEkK1OJ" target="_blank" rel="noopener">Open the Portfolio Documents folder &rarr;<span class="sr-only"> (opens Google Drive in a new tab)</span></a><span class="btn-note">Template, rubric and guides, all in one Google Drive folder.</span></div>
 <dl class="dates">
 <div class="date"><dt>Student Showcase</dt><dd>Thu Dec 10<small>In class. Show 2 or 3 pieces. Required.</small></dd></div>
 <div class="date dark"><dt>Final Portfolio due</dt><dd>Sun Dec 13, 23:59<small>All 8 sections. All 5 pieces.</small></dd></div>
@@ -117,7 +121,7 @@ tbody tr:nth-child(even){background:#FCFBFA}
 
 <section id="steps" style="margin-top:44px"><div class="sh"><span class="num">01</span><h2>6 Steps</h2></div>
 <ol class="steps">
-<li><div><b>Get your template</b><span>Open the Google Doc template your teacher shared. Make a copy in your Student Folder. Name it <strong>FamilyName_GivenName_EAP100_FinalPortfolio</strong>. Type in the boxes. You do not need to delete the instructions.</span></div></li>
+<li><div><b>Get your template</b><span>Open the <a href="https://drive.google.com/drive/folders/1oVu9n4YMoOSYMy_5iLj1cFNPCjEkK1OJ" target="_blank" rel="noopener">Portfolio Documents folder<span class="sr-only"> (opens in a new tab)</span></a> and find the Final Portfolio template. Choose <strong>File &rarr; Make a copy</strong> and save it in your Student Folder. Name it <strong>FamilyName_GivenName_EAP100_FinalPortfolio</strong>. Type in the boxes. You do not need to delete the instructions.</span></div></li>
 <li><div><b>Choose your focus</b><span>Pick 1 or 2 skills you wanted to improve. <a href="#focus">See the list.</a></span></div></li>
 <li><div><b>Choose your 5 pieces</b><span>You choose. Follow the <a href="#pieces">four rules</a>. Fill in the &ldquo;My plan&rdquo; table.</span></div></li>
 <li><div><b>Write a caption for each piece</b><span>75&ndash;125 words. Answer <a href="#captions">3 questions</a>.</span></div></li>
