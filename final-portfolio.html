@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EAP 100: Final Portfolio</title>
-<meta name="description" content="EAP 100 Final Portfolio: choose your focus areas, choose your five pieces, write captions, and check the rubric. Showcase Thu Dec 10. Due Sun Dec 13, 23:59, in your Student Folder.">
+<meta name="description" content="EAP 100 Final Portfolio: choose your focus areas, choose your five pieces, write captions, and check the rubric. Showcase Thu Dec 10. Submit your link by Sun Dec 13, 23:59.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Public+Sans:wght@400;500;600;700&family=Azeret+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -33,8 +33,11 @@ a{color:inherit}
 .kicker{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
 .page-h h1{font-variation-settings:'wdth' 116,'wght' 800;font-size:clamp(2.1rem,6vw,3.3rem);text-transform:uppercase;letter-spacing:-.025em}
 .lede{font-size:1.12rem;color:var(--ink);margin-top:14px;max-width:56ch;font-weight:500}
-.btn{display:inline-flex;align-items:center;gap:10px;margin-top:20px;background:var(--amber);color:var(--board);font-family:'Azeret Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:14px 20px;border-radius:var(--r);min-height:44px;transition:background .18s}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--amber);color:var(--board);font-family:'Azeret Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:14px 20px;border-radius:var(--r);min-height:44px;transition:background .18s}
 .btn:hover{background:#FFC34D}
+.btn.dark{background:var(--board);color:#fff}
+.btn.dark:hover{background:var(--board-2)}
 .btn-note{display:block;margin-top:8px;font-size:14px;color:var(--ink-3)}
 .dates{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:26px}
 .date{background:var(--card);border:1px solid var(--rule);border-radius:var(--r);padding:16px 18px}
@@ -81,6 +84,7 @@ tbody tr:nth-child(even){background:#FCFBFA}
 .rubric th.ny{background:var(--signal)}
 .callout{background:var(--amber-bg);border-left:3px solid var(--amber);border-radius:3px;padding:15px 19px;margin:18px 0;font-size:15px;line-height:1.55;color:var(--ink-2)}
 .callout b{color:var(--ink)}
+.callout a{font-weight:700;color:var(--ink)}
 .callout.red{background:var(--signal-bg);border-left-color:var(--signal)}
 .callout.go{background:var(--go-bg);border-left-color:var(--go)}
 .qs{list-style:none;margin:6px 0 16px;padding:0}
@@ -101,7 +105,7 @@ tbody tr:nth-child(even){background:#FCFBFA}
 :where(a,button,summary):focus-visible{outline:3px solid var(--amber);outline-offset:2px;box-shadow:0 0 0 5px rgba(20,22,26,.9)}
 @media(max-width:940px){.shell{grid-template-columns:1fr;gap:0}.toc{position:static;padding:32px 0 0;display:flex;flex-wrap:wrap;gap:5px}.toc-label{width:100%;margin-bottom:8px}.toc a{border-left:none;border:1px solid var(--rule);border-radius:var(--r);background:#fff;font-size:13px;padding:7px 13px;min-height:44px;display:flex;align-items:center}.toc .back{margin-top:0;padding-top:7px;border:1px solid var(--ink);border-radius:var(--r);min-height:44px;display:flex;align-items:center}.main{padding-top:34px}}
 @media(max-width:620px){.mast nav{overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap;scrollbar-width:none}body{font-size:16px}.shell,.mast-in,.foot-in{padding-left:16px;padding-right:16px}.mast nav a{padding:8px 10px;font-size:10.5px;min-height:44px;display:inline-flex;align-items:center}.rules,.checks{grid-template-columns:1fr}table{font-size:13.5px}th,td{padding:10px 11px}}
-@media print{.mast,.toc,.foot,.skip-link,.btn{display:none!important}.shell{display:block}.main{max-width:none;padding:0}section{margin-top:28px;break-inside:avoid-page}.rubric{min-width:0}body{background:#fff}}
+@media print{.mast,.toc,.foot,.skip-link,.btns{display:none!important}.shell{display:block}.main{max-width:none;padding:0}section{margin-top:28px;break-inside:avoid-page}.rubric{min-width:0}body{background:#fff}}
 </style>
 </head>
 <body>
@@ -111,10 +115,10 @@ tbody tr:nth-child(even){background:#FCFBFA}
 <aside class="toc"><p class="toc-label">On this page</p><a href="#steps">6 Steps</a><a href="#focus">Your Focus</a><a href="#pieces">Your 5 Pieces</a><a href="#sections">What Goes In</a><a href="#captions">Captions</a><a href="#rubric">Rubric</a><a href="#check">Final Check</a><a class="back" href="index.html#week14">&larr; Week 14</a></aside>
 <main class="main" id="main-content">
 <div class="page-h"><p class="kicker">NYU Shanghai &middot; English for Academic Purposes &middot; Fall 2026</p><h1>Final Portfolio</h1><p class="lede">Show how you improved in the skills <strong>you</strong> chose. You choose your five pieces of work.</p>
-<a class="btn" href="https://drive.google.com/drive/folders/1oVu9n4YMoOSYMy_5iLj1cFNPCjEkK1OJ" target="_blank" rel="noopener">Open the Portfolio Documents folder &rarr;<span class="sr-only"> (opens Google Drive in a new tab)</span></a><span class="btn-note">Template, rubric and guides, all in one Google Drive folder.</span></div>
+<div class="btns"><a class="btn" href="https://drive.google.com/drive/folders/1oVu9n4YMoOSYMy_5iLj1cFNPCjEkK1OJ" target="_blank" rel="noopener">Portfolio Documents folder &rarr;<span class="sr-only"> (opens Google Drive in a new tab)</span></a><a class="btn dark" href="https://docs.google.com/spreadsheets/d/1obOVVazzLmNGmQBQ20ghUr3PplS2xN0ohkXnL_6Hw7Y/edit?gid=29920142#gid=29920142" target="_blank" rel="noopener">Submit your link here &rarr;<span class="sr-only"> (opens the Final Portfolio submission spreadsheet in a new tab)</span></a></div><span class="btn-note">Folder: template, rubric and guides. Spreadsheet: where your final portfolio link goes.</span></div>
 <dl class="dates">
 <div class="date"><dt>Student Showcase</dt><dd>Thu Dec 10<small>In class. Show 2 or 3 pieces. Required.</small></dd></div>
-<div class="date dark"><dt>Final Portfolio due</dt><dd>Sun Dec 13, 23:59<small>In your Student Folder. All 8 sections, all 5 pieces.</small></dd></div>
+<div class="date dark"><dt>Final Portfolio due</dt><dd>Sun Dec 13, 23:59<small>Add your working link to the submission spreadsheet.</small></dd></div>
 <div class="date"><dt>Weight</dt><dd>10%<small>Portfolio + Showcase, 100 points.</small></dd></div>
 </dl>
 <div class="callout"><b>Two words to know.</b> A <b>focus area</b> is a skill you chose to improve this semester. A <b>caption</b> is a short paragraph that explains one piece of your work.</div>
@@ -126,7 +130,7 @@ tbody tr:nth-child(even){background:#FCFBFA}
 <li><div><b>Choose your 5 pieces</b><span>You choose. Follow the <a href="#pieces">four rules</a>. Fill in the &ldquo;My plan&rdquo; table.</span></div></li>
 <li><div><b>Write a caption for each piece</b><span>75&ndash;125 words. Answer <a href="#captions">3 questions</a>.</span></div></li>
 <li><div><b>Write three more parts</b><span>Introduction, DEIP reflection and closing statement. <a href="#sections">Word counts here.</a></span></div></li>
-<li><div><b>Check, then submit</b><span>Use the <a href="#check">final check</a>. Your finished portfolio must be in your <strong>Student Folder</strong> by <strong>Sun Dec 13, 23:59</strong>.</span></div></li>
+<li><div><b>Check, then submit your link</b><span>Use the <a href="#check">final check</a>. Then add a working link to your portfolio in the <a href="https://docs.google.com/spreadsheets/d/1obOVVazzLmNGmQBQ20ghUr3PplS2xN0ohkXnL_6Hw7Y/edit?gid=29920142#gid=29920142" target="_blank" rel="noopener">Final Portfolio submission spreadsheet<span class="sr-only"> (opens in a new tab)</span></a> by <strong>Sun Dec 13, 23:59</strong>.</span></div></li>
 </ol>
 </section>
 
@@ -210,9 +214,9 @@ tbody tr:nth-child(even){background:#FCFBFA}
 <li>My teacher can open every link.</li>
 <li>I followed the course AI policy.</li>
 <li>No Persuasive Speech video.</li>
-<li>It is in my Student Folder.</li>
+<li>My link is in the submission spreadsheet, and it opens.</li>
 </ul>
-<div class="callout go"><b>Submit by Sun Dec 13, 23:59, in your Student Folder.</b> Save your finished portfolio in your <b>Student Folder</b> on the course Google Drive, <b>not</b> the Assignments folder. Name it <b>FamilyName_GivenName_EAP100_FinalPortfolio</b>. More files do not mean more points. Clear evidence of growth does.</div>
+<div class="callout go"><b>Submit by Sun Dec 13, 23:59.</b> Add a working link to your finished portfolio in the <a href="https://docs.google.com/spreadsheets/d/1obOVVazzLmNGmQBQ20ghUr3PplS2xN0ohkXnL_6Hw7Y/edit?gid=29920142#gid=29920142" target="_blank" rel="noopener">Final Portfolio submission spreadsheet<span class="sr-only"> (opens in a new tab)</span></a>. Click your link once to check that it opens. More files do not mean more points. Clear evidence of growth does.</div>
 </section>
 </main>
 </div>
