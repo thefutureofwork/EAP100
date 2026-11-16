@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EAP 100: Final Portfolio</title>
+<meta name="description" content="EAP 100 Final Portfolio: choose your focus areas, choose your five pieces, write captions, and check the rubric. Showcase Thu Dec 10. Due Sun Dec 13, 23:59.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Public+Sans:wght@400;500;600;700&family=Azeret+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--board:#14161A;--board-2:#1E2127;--amber:#F2A81D;--paper:#FAF9F7;--card:#FFFFFF;--ink:#1A1C20;--ink-2:#4A4E56;--ink-3:#787D86;--rule:#DEDAD2;--rule-2:#EBE8E2;--signal:#B02418;--signal-bg:#FBEDEB;--go:#1F6B4A;--go-bg:#EAF3EE;--amber-bg:#FDF3DF;--r:4px}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Public Sans',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Archivo',system-ui,sans-serif;line-height:1.08;letter-spacing:-.02em}
+a{color:inherit}
+.mast{position:sticky;top:0;z-index:60;background:var(--board);border-bottom:3px solid var(--amber)}
+.mast-in{max-width:1180px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+.mark{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 118,'wght' 800;font-size:15px;letter-spacing:.1em;color:#fff;text-decoration:none;white-space:nowrap}
+.mark span{color:var(--amber)}
+.mast nav{margin-left:auto;display:flex;gap:4px}
+.mast nav a{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:#A9AEB8;text-decoration:none;padding:8px 14px;border-radius:var(--r);transition:background .18s,color .18s}
+.mast nav a:hover{background:var(--board-2);color:#fff}
+.shell{max-width:1180px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:216px 1fr;gap:52px;align-items:start}
+.toc{position:sticky;top:84px;padding:48px 0 40px}
+.toc-label{font-family:'Azeret Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px}
+.toc a{display:block;font-size:14px;font-weight:500;color:var(--ink-2);text-decoration:none;padding:7px 12px;border-left:2px solid var(--rule-2);transition:all .16s}
+.toc a:hover{color:var(--ink);border-left-color:var(--amber);background:#fff}
+.toc .back{margin-top:20px;padding-top:16px;border-top:1px solid var(--rule);border-left:none;font-family:'Azeret Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--ink)}
+.toc .back:hover{border-left:none;background:none;color:var(--amber)}
+.main{padding:48px 0 80px;min-width:0;max-width:800px}
+.kicker{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+.page-h h1{font-variation-settings:'wdth' 116,'wght' 800;font-size:clamp(2.1rem,6vw,3.3rem);text-transform:uppercase;letter-spacing:-.025em}
+.lede{font-size:1.12rem;color:var(--ink);margin-top:14px;max-width:56ch;font-weight:500}
+.dates{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:26px}
+.date{background:var(--card);border:1px solid var(--rule);border-radius:var(--r);padding:16px 18px}
+.date.dark{background:var(--board);border-color:var(--board);color:#fff}
+.date dt{font-family:'Azeret Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
+.date.dark dt{color:var(--amber)}
+.date dd{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 110,'wght' 800;font-size:1.35rem;line-height:1.15}
+.date dd small{display:block;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:500;color:var(--ink-2);margin-top:4px;font-variation-settings:normal}
+.date.dark dd small{color:#C9CDD4}
+section{scroll-margin-top:76px;margin-top:60px}
+.sh{display:flex;align-items:baseline;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:22px}
+.sh h2{font-variation-settings:'wdth' 112,'wght' 800;font-size:1.32rem;text-transform:uppercase}
+.sh .num{font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:700;color:var(--amber);letter-spacing:.1em}
+p{margin-bottom:14px;max-width:68ch;color:var(--ink-2)}
+p strong,li strong{color:var(--ink);font-weight:600}
+h3{font-size:1.05rem;font-weight:700;font-variation-settings:'wdth' 105,'wght' 700;margin:30px 0 10px;color:var(--ink)}
+ul,ol{margin:0 0 16px 22px;color:var(--ink-2);font-size:15.5px}
+li{margin-bottom:7px;line-height:1.55}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:52px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--rule-2);margin:0}
+.steps li:last-child{border-bottom:none}
+.steps li::before{content:counter(s);display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--board);color:var(--amber);font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 110,'wght' 800;font-size:20px}
+.steps b{display:block;font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 108,'wght' 750;font-size:1.08rem;color:var(--ink)}
+.steps span{color:var(--ink-2);font-size:15.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 18px;padding:0;list-style:none}
+.chips li{margin:0;background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:7px 15px;font-size:15px;font-weight:600;color:var(--ink)}
+.chips li.other{border-style:dashed;color:var(--ink-2);font-weight:500}
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:6px 0 18px}
+.rule{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--amber);border-radius:var(--r);padding:14px 16px;font-size:15.5px;color:var(--ink-2)}
+.rule b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
+table{border-collapse:collapse;width:100%;margin:6px 0 18px;font-size:14.5px;background:var(--card);border:1px solid var(--rule);border-radius:var(--r);overflow:hidden}
+th{text-align:left;font-family:'Azeret Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#fff;background:var(--board);padding:11px 15px}
+td{padding:13px 15px;border-top:1px solid var(--rule-2);vertical-align:top;color:var(--ink-2);line-height:1.5}
+td strong{color:var(--ink)}
+tbody tr:nth-child(even){background:#FCFBFA}
+.pct{font-family:'Azeret Mono',monospace;font-weight:700;color:var(--ink);white-space:nowrap}
+.wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.rubric{font-size:13.5px;min-width:720px}
+.rubric td{padding:11px 12px}
+.rubric td b{display:block;font-family:'Azeret Mono',monospace;font-size:12px;color:var(--ink);margin-bottom:3px}
+.rubric th.ex{background:var(--go)}
+.rubric th.st{background:#2E4E7A}
+.rubric th.dv{background:#8A5D06}
+.rubric th.ny{background:var(--signal)}
+.callout{background:var(--amber-bg);border-left:3px solid var(--amber);border-radius:3px;padding:15px 19px;margin:18px 0;font-size:15px;line-height:1.55;color:var(--ink-2)}
+.callout b{color:var(--ink)}
+.callout.red{background:var(--signal-bg);border-left-color:var(--signal)}
+.callout.go{background:var(--go-bg);border-left-color:var(--go)}
+.qs{list-style:none;margin:6px 0 16px;padding:0}
+.qs li{display:flex;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--rule-2);font-size:16px;color:var(--ink);font-weight:600;margin:0}
+.qs li:last-child{border-bottom:none}
+.qs .n{font-family:'Azeret Mono',monospace;font-size:12px;font-weight:700;color:var(--amber);min-width:24px}
+.starter{font-style:italic;color:var(--ink-2);background:var(--card);border:1px dashed var(--rule);border-radius:var(--r);padding:12px 16px;font-size:15px;margin:8px 0 16px}
+.checks{list-style:none;margin:6px 0 16px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
+.checks li{font-size:15px;color:var(--ink-2);margin:0;padding:6px 0 6px 28px;position:relative}
+.checks li::before{content:"\2610";position:absolute;left:0;top:4px;font-size:18px;color:var(--ink)}
+.foot{background:var(--board);margin-top:80px;padding:40px 0;color:#6E7480}
+.foot-in{max-width:1180px;margin:0 auto;padding:0 24px;font-family:'Azeret Mono',monospace;font-size:11px;letter-spacing:.05em;display:flex;gap:20px;flex-wrap:wrap}
+.foot-in a{color:#B4BAC4;text-decoration:none}
+.foot-in a:hover{color:var(--amber)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:16px;top:8px;z-index:100;padding:10px 16px;background:var(--amber);color:var(--board);font-family:'Azeret Mono',monospace;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transform:translateY(-300%)}
+.skip-link:focus{transform:translateY(0)}
+:where(a,button,summary):focus-visible{outline:3px solid var(--amber);outline-offset:2px;box-shadow:0 0 0 5px rgba(20,22,26,.9)}
+@media(max-width:940px){.shell{grid-template-columns:1fr;gap:0}.toc{position:static;padding:32px 0 0;display:flex;flex-wrap:wrap;gap:5px}.toc-label{width:100%;margin-bottom:8px}.toc a{border-left:none;border:1px solid var(--rule);border-radius:var(--r);background:#fff;font-size:13px;padding:7px 13px;min-height:44px;display:flex;align-items:center}.toc .back{margin-top:0;padding-top:7px;border:1px solid var(--ink);border-radius:var(--r);min-height:44px;display:flex;align-items:center}.main{padding-top:34px}}
+@media(max-width:620px){.mast nav{overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap;scrollbar-width:none}body{font-size:16px}.shell,.mast-in,.foot-in{padding-left:16px;padding-right:16px}.mast nav a{padding:8px 10px;font-size:10.5px;min-height:44px;display:inline-flex;align-items:center}.rules,.checks{grid-template-columns:1fr}table{font-size:13.5px}th,td{padding:10px 11px}}
+@media print{.mast,.toc,.foot,.skip-link{display:none!important}.shell{display:block}.main{max-width:none;padding:0}section{margin-top:28px;break-inside:avoid-page}.rubric{min-width:0}body{background:#fff}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="mast"><div class="mast-in"><a class="mark" href="index.html">EAP<span>100</span></a><nav aria-label="Primary"><a href="index.html">Schedule</a><a href="course-info.html">Course Info</a><a href="due-dates.html">Checklist</a><a href="student-qa.html">Q&amp;A</a></nav></div></header>
+<div class="shell">
+<aside class="toc"><p class="toc-label">On this page</p><a href="#steps">6 Steps</a><a href="#focus">Your Focus</a><a href="#pieces">Your 5 Pieces</a><a href="#sections">What Goes In</a><a href="#captions">Captions</a><a href="#rubric">Rubric</a><a href="#check">Final Check</a><a class="back" href="index.html#week14">&larr; Week 14</a></aside>
+<main class="main" id="main-content">
+<div class="page-h"><p class="kicker">NYU Shanghai &middot; English for Academic Purposes &middot; Fall 2026</p><h1>Final Portfolio</h1><p class="lede">Show how you improved in the skills <strong>you</strong> chose. You choose your five pieces of work.</p></div>
+<dl class="dates">
+<div class="date"><dt>Student Showcase</dt><dd>Thu Dec 10<small>In class. Show 2 or 3 pieces. Required.</small></dd></div>
+<div class="date dark"><dt>Final Portfolio due</dt><dd>Sun Dec 13, 23:59<small>All 8 sections. All 5 pieces.</small></dd></div>
+<div class="date"><dt>Weight</dt><dd>10%<small>Portfolio + Showcase, 100 points.</small></dd></div>
+</dl>
+<div class="callout"><b>Two words to know.</b> A <b>focus area</b> is a skill you chose to improve this semester. A <b>caption</b> is a short paragraph that explains one piece of your work.</div>
+
+<section id="steps" style="margin-top:44px"><div class="sh"><span class="num">01</span><h2>6 Steps</h2></div>
+<ol class="steps">
+<li><div><b>Get your template</b><span>Open the Google Doc template your teacher shared. Make a copy in your Student Folder. Name it <strong>FamilyName_GivenName_EAP100_FinalPortfolio</strong>. Type in the boxes. You do not need to delete the instructions.</span></div></li>
+<li><div><b>Choose your focus</b><span>Pick 1 or 2 skills you wanted to improve. <a href="#focus">See the list.</a></span></div></li>
+<li><div><b>Choose your 5 pieces</b><span>You choose. Follow the <a href="#pieces">four rules</a>. Fill in the &ldquo;My plan&rdquo; table.</span></div></li>
+<li><div><b>Write a caption for each piece</b><span>75&ndash;125 words. Answer <a href="#captions">3 questions</a>.</span></div></li>
+<li><div><b>Write three more parts</b><span>Introduction, DEIP reflection and closing statement. <a href="#sections">Word counts here.</a></span></div></li>
+<li><div><b>Check, then submit</b><span>Use the <a href="#check">final check</a>. Submit by <strong>Sun Dec 13, 23:59</strong>.</span></div></li>
+</ol>
+</section>
+
+<section id="focus"><div class="sh"><span class="num">02</span><h2>Choose Your Focus</h2></div>
+<p>Choose <strong>1 or 2</strong> skills you wanted to improve this semester. Not sure? Look at your <strong>Self-Assessment</strong> and your <strong>Portfolio Build reflections</strong>. What did you say you wanted to work on?</p>
+<ul class="chips">
+<li>Listening and note-taking</li>
+<li>Reading for main ideas</li>
+<li>Vocabulary and academic language</li>
+<li>Summarizing, paraphrasing and using sources</li>
+<li>Speaking and presenting</li>
+<li>Reflection</li>
+<li>Self-direction: planning and managing my work</li>
+<li class="other">Something else? Ask me first.</li>
+</ul>
+<p>One clear focus is better than five. A narrow focus with strong evidence earns more than a broad focus with thin evidence.</p>
+</section>
+
+<section id="pieces"><div class="sh"><span class="num">03</span><h2>Choose Your 5 Pieces</h2></div>
+<p><strong>You choose.</strong> There are no fixed categories. The only question is: <strong>does this piece show my focus area?</strong></p>
+<div class="rules">
+<div class="rule"><b>1. All from EAP 100</b>All five pieces are work you did in this course.</div>
+<div class="rule"><b>2. All show your focus</b>Every piece connects to your focus area.</div>
+<div class="rule"><b>3. One earlier, one later</b>Include at least one earlier piece and one later piece. A before-and-after pair counts as one piece.</div>
+<div class="rule"><b>4. No speech video</b>The Persuasive Speech video is not a portfolio artifact. Your slides, outline or notes are fine.</div>
+</div>
+<p><strong>Ideas:</strong> Cornell notes, vocabulary sheets, reading responses, paragraphs with sources, slides, outlines, speaker notes, feedback you used, CCD reflections, resume drafts, DEIP reflections, revised drafts. The pieces you tracked in Portfolio Build 2 are a great place to start.</p>
+<p>Five pieces is the minimum. Add more only if they help explain your growth.</p>
+</section>
+
+<section id="sections"><div class="sh"><span class="num">04</span><h2>What Goes In</h2></div>
+<table><thead><tr><th>Section</th><th>What to write</th><th>Length</th></tr></thead><tbody>
+<tr><td><strong>1. Introduction</strong></td><td>Your focus area(s), why you chose them, and what your pieces will show.</td><td class="pct">150&ndash;200</td></tr>
+<tr><td><strong>2&ndash;6. Pieces 1 to 5</strong></td><td>Title, task and date, focus area, earlier or later, your work or a link, and a caption.</td><td class="pct">75&ndash;125 each</td></tr>
+<tr><td><strong>7. DEIP reflection</strong></td><td>How you improved in your focus area. Compare an earlier piece with a later piece.</td><td class="pct">300&ndash;500 total</td></tr>
+<tr><td><strong>8. Closing statement</strong></td><td>Where you will use this skill next, in future study or work.</td><td class="pct">100&ndash;150</td></tr>
+</tbody></table>
+<h3>DEIP for your focus area</h3>
+<ul>
+<li><strong>Describe:</strong> Where did I start? Keep it short.</li>
+<li><strong>Explain:</strong> Why does this skill matter to me?</li>
+<li><strong>Interpret:</strong> What changed? Compare an earlier piece with a later piece. This part gets the most words.</li>
+<li><strong>Plan:</strong> What will I do next, and how will I check my progress?</li>
+</ul>
+</section>
+
+<section id="captions"><div class="sh"><span class="num">05</span><h2>Captions</h2></div>
+<p>One paragraph, <strong>75&ndash;125 words</strong>, for every piece. Answer the same three questions each time:</p>
+<ol class="qs">
+<li><span class="n">01</span>What is it?</li>
+<li><span class="n">02</span>What does it show about my focus area?</li>
+<li><span class="n">03</span>Why did I choose it?</li>
+</ol>
+<p class="starter">&ldquo;This is my &hellip; from Week &hellip; It shows my progress in &hellip; For example, &hellip; I chose it because &hellip;&rdquo;</p>
+<p>Sentence starters are optional. Use them, or write your own sentences.</p>
+</section>
+
+<section id="rubric"><div class="sh"><span class="num">06</span><h2>Rubric</h2></div>
+<p>The Final Portfolio and Student Showcase are marked out of <strong>100 points</strong>. Your score &times; 0.1 = your course grade points (for example, 86/100 = 8.6 out of 10).</p>
+<div class="wrap"><table class="rubric"><thead><tr><th>Criterion</th><th class="ex">Excellent</th><th class="st">Strong</th><th class="dv">Developing</th><th class="ny">Not yet</th></tr></thead><tbody>
+<tr><td><strong>Focus and choice of pieces</strong><br>20 points</td><td><b>18&ndash;20</b>1 or 2 clear focus areas, with a reason from your self-assessment or goals. All 5 pieces clearly show your focus. Earlier and later pieces make the change easy to see.</td><td><b>15&ndash;17</b>Clear focus area and reason. Most pieces show your focus. Earlier and later pieces are included.</td><td><b>12&ndash;14</b>Focus area is named, but the reason is general. Some pieces do not connect to your focus, or the change is hard to see.</td><td><b>0&ndash;11</b>No clear focus, fewer than 5 pieces, or no earlier and later pieces.</td></tr>
+<tr><td><strong>Captions</strong><br>15 points</td><td><b>14&ndash;15</b>Every caption answers all 3 questions and points to a specific example in the work. All are 75&ndash;125 words.</td><td><b>12&ndash;13</b>Every caption answers all 3 questions. Most point to a specific example.</td><td><b>9&ndash;11</b>Captions describe the task but say little about your focus or why you chose the piece. Some are too short or too long.</td><td><b>0&ndash;8</b>Captions are missing, very short, or do not explain the pieces.</td></tr>
+<tr><td><strong>Evidence of English growth</strong><br>15 points</td><td><b>14&ndash;15</b>Your pieces clearly show growth in academic English in your focus area, for example clearer notes, better source use or better organization.</td><td><b>12&ndash;13</b>Growth is visible in most pieces.</td><td><b>9&ndash;11</b>Some growth is visible, but the evidence is limited.</td><td><b>0&ndash;8</b>Little or no evidence of growth.</td></tr>
+<tr><td><strong>DEIP reflection</strong><br>20 points</td><td><b>18&ndash;20</b>All 4 parts. Explains your growth with specific examples, comparing earlier and later work. Honest about challenges. Clear, realistic next step. 300&ndash;500 words.</td><td><b>15&ndash;17</b>All 4 parts with examples. The explanation of growth is mostly clear. The next step is specific.</td><td><b>12&ndash;14</b>Mostly describes tasks instead of explaining growth. Few examples. The next step is general.</td><td><b>0&ndash;11</b>Parts are missing, there are no examples, or it is far outside the word range.</td></tr>
+<tr><td><strong>Introduction, closing and connection</strong><br>10 points</td><td><b>9&ndash;10</b>The introduction names your focus and previews your portfolio. The closing looks ahead clearly. The whole portfolio reads as one growth story.</td><td><b>8</b>Introduction and closing are complete and connect to your focus. The portfolio mostly fits together.</td><td><b>6&ndash;7</b>Introduction or closing is general or repeats other sections. Parts feel disconnected.</td><td><b>0&ndash;5</b>Introduction or closing is missing. The pieces feel unrelated.</td></tr>
+<tr><td><strong>Presentation and accuracy</strong><br>10 points</td><td><b>9&ndash;10</b>Easy for an outside reader to follow. Every piece has a title, date and focus area. All links open. Clear, accurate English. Sources are acknowledged.</td><td><b>8</b>Clear and organized, with minor errors or one missing label.</td><td><b>6&ndash;7</b>Hard to follow in places. Several errors, or a link does not open.</td><td><b>0&ndash;5</b>Disorganized, many errors, or work cannot be opened.</td></tr>
+<tr><td><strong>Student Showcase (Dec 10)</strong><br>10 points</td><td><b>9&ndash;10</b>Presents 2 or 3 pieces. Clearly explains progress in your focus area, using the pieces as evidence. Answers questions well.</td><td><b>8</b>Presents 2 or 3 pieces, explains progress, and answers a question.</td><td><b>6&ndash;7</b>Describes the pieces, but progress is unclear. Limited answers to questions.</td><td><b>0&ndash;5</b>Did not present, or did not explain the pieces.</td></tr>
+</tbody></table></div>
+<div class="callout red"><b>Also counts.</b> Late work loses 5% per day and is not accepted after 7 days. Follow the course AI policy: submitting AI-generated work as your own is never allowed, and problems are handled under academic integrity, not this rubric.</div>
+</section>
+
+<section id="check"><div class="sh"><span class="num">07</span><h2>Final Check</h2></div>
+<ul class="checks">
+<li>I named 1 or 2 focus areas.</li>
+<li>I have 5 pieces. Every piece shows my focus.</li>
+<li>I have at least 1 earlier and 1 later piece.</li>
+<li>Every piece has a caption of 75&ndash;125 words.</li>
+<li>Introduction: 150&ndash;200 words.</li>
+<li>DEIP reflection: 300&ndash;500 words in total.</li>
+<li>Closing statement: 100&ndash;150 words.</li>
+<li>My teacher can open every link.</li>
+<li>I followed the course AI policy.</li>
+<li>No Persuasive Speech video.</li>
+</ul>
+<div class="callout go"><b>Submit by Sun Dec 13, 23:59.</b> Upload your finished portfolio to the Assignments folder on the course Google Drive with a clear label, for example <b>Week14_FinalPortfolio_YourName_Section</b>. More files do not mean more points. Clear evidence of growth does.</div>
+</section>
+</main>
+</div>
+<footer class="foot"><div class="foot-in"><span>EAP 100: FUTURE FOCUSED / NYU SHANGHAI / FALL 2026</span><a href="index.html" style="margin-left:auto">WEEKLY SCHEDULE</a><a href="course-info.html#portfolio">COURSE INFO</a><a href="due-dates.html">CHECKLIST</a></div></footer>
+</body>
+</html>
