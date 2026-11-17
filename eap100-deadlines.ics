@@ -390,30 +390,30 @@ DESCRIPTION:Toolkit for Academic Success series. Useful review before Listening 
 END:VEVENT
 BEGIN:VEVENT
 UID:7528b870-973a-4510-a63b-2cf61ff52a90
-DTSTAMP:20261006T134500Z
-SEQUENCE:1
-DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20261120
+DTSTAMP:20261117T025000Z
+SEQUENCE:2
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
 SUMMARY:EAP 100: CCD Visit 4 log due - event of your choice
-DESCRIPTION:CCD Visit 4 = one CCD event of your choice. 150-200 words on employability skills. Submit to the Experiential Learning Tracker and upload to the Assignments folder with a clear label.
+DESCRIPTION:DATE CHANGED: now due Fri Nov 20\, 23:59 (moved from Thursday). CCD Visit 4 = one CCD event of your choice. 150-200 words on employability skills. Submit to the Experiential Learning Tracker and upload to the Assignments folder with a clear label.
 END:VEVENT
 BEGIN:VEVENT
 UID:72ec6374-a066-4cdf-9505-97f15ede0558
-DTSTAMP:20261006T134500Z
-SEQUENCE:1
-DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20261120
+DTSTAMP:20261117T025000Z
+SEQUENCE:2
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
 SUMMARY:EAP 100: Reading 10 Guided Response due
-DESCRIPTION:Reading 10: From Academic English to Professional Communication. Short summary + connection to your portfolio and future work. Upload to the Assignments folder with a clear label.
+DESCRIPTION:DATE CHANGED: now due Fri Nov 20\, 23:59 (moved from Thursday). Reading 10: From Academic English to Professional Communication. Short summary + connection to your portfolio and future work. Upload to the Assignments folder with a clear label.
 END:VEVENT
 BEGIN:VEVENT
 UID:de8cec73-25f5-4a8e-a340-849853b9fa48
-DTSTAMP:20261027T042000Z
-SEQUENCE:3
-DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20261120
+DTSTAMP:20261117T025000Z
+SEQUENCE:4
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
 SUMMARY:EAP 100: Portfolio Build 3 due
-DESCRIPTION:400-500 word DEIP reflection. Refine artifacts + synthesize your CCD visits. Upload to the Assignments folder with a clear label.
+DESCRIPTION:DATE CHANGED: now due Fri Nov 20\, 23:59 (moved from Thursday). 400-500 word DEIP reflection. Refine artifacts + synthesize your CCD visits. Upload to the Assignments folder with a clear label.
 END:VEVENT
 BEGIN:VEVENT
 UID:8e38cdee-fb7d-45ee-8a3b-c50d9b31f9f3
